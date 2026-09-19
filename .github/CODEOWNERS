@@ -1,0 +1,3 @@
+# 队友账号确定后，为 fpga/、rk3566/、vision/ 增加对应负责人。
+# 自动指派评审是否生效取决于 GitHub 套餐和仓库设置。
+* @fengfengkang
