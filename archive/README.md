@@ -14,6 +14,9 @@
 | v2026-09-24_afh03_dual | AFH03-AFC03、双目相机的早期管线 | [技术路线](routes/v2026-09-24_afh03_dual/技术路线_MLK-AFH03-AFC03-2GB.docx) |
 | v2026-09-24_generic_fpga | 未指定最终板卡的双目 FPGA 管线 PDF | [技术路线](routes/v2026-09-24_generic_fpga/技术路线.pdf) |
 | v2026-09-27_afh03_dual_nv1100m | AFH03、双 NV1100M 摄像头方案 | [详细方案](routes/v2026-09-27_afh03_dual_nv1100m/技术路线_AFH03与双NV1100M详细方案.docx) |
+| v2026-09-28_afh03_sc130gs_fpga_mipi | SC130GS 经 FMC 转接板直入 FPGA 的单目路线 | [技术路线](routes/v2026-09-28_afh03_sc130gs_fpga_mipi/技术路线_AFH03与SC130GS单目测量方案.docx) |
+| v2026-09-28_afh03_sc130gs_rk_mipi | SC130GS 经 RK3576J MIPI CSI 直入的单目路线 | [Word](routes/v2026-09-28_afh03_sc130gs_rk_mipi/技术路线_AFH03与SC130GS单目神经网络测距方案.docx) · [PDF](routes/v2026-09-28_afh03_sc130gs_rk_mipi/技术路线_AFH03与SC130GS单目神经网络测距方案.pdf) |
+| v2026-09-28_afh03_sc130gs_mipi_team | 以上 RK 直入 MIPI 单目路线当时的三人分工和个人说明 | [总分工](routes/v2026-09-28_afh03_sc130gs_mipi_team/00_三人分工与一个月实施安排.docx) |
 
 ## 采购资料
 
@@ -22,4 +25,4 @@
 | v2026-09-21_h10_zero3e | H10、双 OV9281、ZERO 3E；Word 与 Markdown 属同一阶段的清单 | [Word 清单](procurement/v2026-09-21_h10_zero3e/硬件选型与采购参考清单.docx) · [Markdown 参考](procurement/v2026-09-21_h10_zero3e/硬件器件选型与采购参考.md) |
 | v2026-09-27_afh03_options | AFH03 搭配 DVP 双目或 SC130GS 单目的两种询价草案 | [购买物品清单](procurement/v2026-09-27_afh03_options/购买物品清单.pdf) |
 
-当前两条 AFH03 单目路线见[当前方案索引](../plans/current/README.md)。历史 `handoffs/` 是执行记录，按日期留在原目录；其中提到的旧文件名可由本页及校验清单定位。历史采购报价只供比较，采购前以现用板卡、相机实物和供应商报价重新核对。
+当前 AFH03 USB 同步双目自主命题路线见[当前方案索引](../plans/current/README.md)。历史 `handoffs/` 是执行记录，按日期留在原目录；其中提到的旧文件名可由本页及校验清单定位。历史采购报价只供比较，采购前以现用板卡、相机实物和供应商报价重新核对。
