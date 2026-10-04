@@ -93,7 +93,7 @@
     "private": true,
     "default_branch": "main"
   },
-  "main_protection_observed": {
+  "initial_main_protection_observed": {
     "required_approvals": 1,
     "required_check": "repository-checks",
     "strict": true,
@@ -101,7 +101,24 @@
     "allow_force_pushes": false,
     "allow_deletions": false
   },
-  "publication": {
+  "main_protection_after_owner_instruction": {
+    "required_approvals": 0,
+    "required_check": [
+      "repository-checks"
+    ],
+    "strict": true,
+    "enforce_admins": true,
+    "allow_force_pushes": false,
+    "allow_deletions": false
+  },
+  "approval_authorization": {
+    "instruction": "无需这么复杂，所有审批由我批准即可",
+    "approver": "蒲公英",
+    "scope": "Final approval belongs to the user; remove mandatory approval by a second GitHub account while retaining PR and CI protections.",
+    "other_protection_fields_unchanged": true,
+    "final_merge_status_source": "https://github.com/fengfengkang/pingpong-fpga/pull/9"
+  },
+  "initial_publication_observation": {
     "content_commit": "fe63a7a36abdf7775be1abbf3f8c8a0739d50cd1",
     "remote_ref_matches_local": true,
     "pr_url": "https://github.com/fengfengkang/pingpong-fpga/pull/9",
