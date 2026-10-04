@@ -100,5 +100,25 @@
     "enforce_admins": true,
     "allow_force_pushes": false,
     "allow_deletions": false
+  },
+  "publication": {
+    "content_commit": "fe63a7a36abdf7775be1abbf3f8c8a0739d50cd1",
+    "remote_ref_matches_local": true,
+    "pr_url": "https://github.com/fengfengkang/pingpong-fpga/pull/9",
+    "state": "OPEN",
+    "draft": false,
+    "base": "main",
+    "mergeable": "MERGEABLE",
+    "merge_state": "BLOCKED",
+    "review_decision": "REVIEW_REQUIRED",
+    "checks": [
+      {
+        "name": "repository-checks",
+        "conclusion": "SUCCESS",
+        "url": "https://github.com/fengfengkang/pingpong-fpga/actions/runs/37194215752/job/111412587107"
+      }
+    ],
+    "main_merged": false,
+    "note": "The published content commit passed CI. A follow-up documentation commit records this receipt; check the PR for the latest revision and review status."
   }
 }
