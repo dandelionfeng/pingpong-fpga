@@ -1,0 +1,141 @@
+{
+  "date": "2026-10-04",
+  "base_commit": "c638158281dff65ec9a7750ac85ae4b4d5f9dfcf",
+  "origin_main_at_start": "cb7d75024a7baf9f3deed55e97b0c176564f92bd",
+  "branch": "codex/sync-current-plan-archive-20261004",
+  "scope": "Publish current artifacts without rewriting their contents; archive superseded versions; update repository entries and collaboration guides.",
+  "preserved_current_artifacts": [
+    {
+      "path": "plans/current/usb-stereo/技术路线_AFH03与USB同步双目测量方案.md",
+      "sha256": "003641A291A387ABB00E63AACED802442B605411173FD3837B3051D6D3D2B583"
+    },
+    {
+      "path": "plans/current/usb-stereo/技术路线_AFH03与USB同步双目测量方案.docx",
+      "sha256": "F996C40AC6B7894167B02163A1FFBE0DD6AF375BEE3B9D237D2CE0C8C1592EDC"
+    },
+    {
+      "path": "plans/current/usb-stereo/技术路线_AFH03与USB同步双目测量方案.pdf",
+      "sha256": "058942D26A59D7F81223DF32DCBA13E081356D5B01474CAFD7EC76FCAC63044B"
+    },
+    {
+      "path": "项目规划/AFH03_USB同步双目方案一个月分工/00_三人分工与一个月实施安排.md",
+      "sha256": "2B673B27D2F656924026FEC86BDC443D2FC2FA8E9B1DF6914E907EAFDEE43407"
+    },
+    {
+      "path": "项目规划/AFH03_USB同步双目方案一个月分工/00_三人分工与一个月实施安排.docx",
+      "sha256": "3DE647DDAF917AF113F9A87B7F5C0BBD94585E1361CA46E612B16DCAE8D7C148"
+    },
+    {
+      "path": "项目规划/AFH03_USB同步双目方案一个月分工/01_A_USB采集与FPGA链路职责说明.md",
+      "sha256": "544135EE90BE5176252D28C2D06292A8817577F305C9C3B883A2A42012459893"
+    },
+    {
+      "path": "项目规划/AFH03_USB同步双目方案一个月分工/01_A_USB采集与FPGA链路职责说明.docx",
+      "sha256": "1352BE3CBFAAAF6AA8B3EEACE39304605725F3ACA8D0BB44D59AD8102637206B"
+    },
+    {
+      "path": "项目规划/AFH03_USB同步双目方案一个月分工/02_B_FPGA视觉与三维测量职责说明.md",
+      "sha256": "E45D219351ACB31A78ABB53BB085DF5AA3EDDB1D59F9642F24E5001E6222AF3B"
+    },
+    {
+      "path": "项目规划/AFH03_USB同步双目方案一个月分工/02_B_FPGA视觉与三维测量职责说明.docx",
+      "sha256": "E2DFBCAAF25E57268667566566D7318AB1CD04D5D06EAB3F18C603DB9865F81F"
+    },
+    {
+      "path": "项目规划/AFH03_USB同步双目方案一个月分工/03_C_AI模型训练与部署职责说明.md",
+      "sha256": "E39A161110EF2E541FEAE5AF8A7C8B1BDF8D62D6584667B35DAAB2B12B23B4EB"
+    },
+    {
+      "path": "项目规划/AFH03_USB同步双目方案一个月分工/03_C_AI模型训练与部署职责说明.docx",
+      "sha256": "D6D2B36E81AEE29A059872409875C245A271AE7EAFDFA2BD5B904CA8C766A03C"
+    }
+  ],
+  "archive_manifest": "archive/sync-2026-10-04-sha256.json",
+  "archive_files_verified": 26,
+  "active_markdown_documents": 27,
+  "local_links_checked": 158,
+  "broken_local_links": [],
+  "candidate_hygiene": {
+    "files": 184,
+    "problems": []
+  },
+  "not_executed": [
+    "No algorithm implementation, current seven-stage RTL simulation, model training, or board verification in this synchronization task."
+  ],
+  "notes": [
+    "Archived originals and dated historical handoffs retain their original relative paths and are indexed by the archive manifest.",
+    "Existing FPGA source and historical reports were preserved; the current motion pipeline is separately marked as pending implementation.",
+    "Git index checks, unit-test results and GitHub publication status are recorded in the task handoff."
+  ],
+  "staged_content_checks": {
+    "archive_files_exact": 26,
+    "current_binary_artifacts_exact": 6,
+    "current_markdown_exact_after_lf_normalization": 5
+  },
+  "executed_repository_checks": {
+    "index_hygiene": {
+      "files": 184,
+      "problems": 0
+    },
+    "working_tree_hygiene": {
+      "files": 184,
+      "problems": 0
+    },
+    "unittest": {
+      "tests": 5,
+      "result": "OK"
+    },
+    "git_diff_check": "passed",
+    "git_diff_cached_check": "passed"
+  },
+  "github_description": {
+    "updated_and_read_back": true,
+    "private": true,
+    "default_branch": "main"
+  },
+  "initial_main_protection_observed": {
+    "required_approvals": 1,
+    "required_check": "repository-checks",
+    "strict": true,
+    "enforce_admins": true,
+    "allow_force_pushes": false,
+    "allow_deletions": false
+  },
+  "main_protection_after_owner_instruction": {
+    "required_approvals": 0,
+    "required_check": [
+      "repository-checks"
+    ],
+    "strict": true,
+    "enforce_admins": true,
+    "allow_force_pushes": false,
+    "allow_deletions": false
+  },
+  "approval_authorization": {
+    "instruction": "无需这么复杂，所有审批由我批准即可",
+    "approver": "蒲公英",
+    "scope": "Final approval belongs to the user; remove mandatory approval by a second GitHub account while retaining PR and CI protections.",
+    "other_protection_fields_unchanged": true,
+    "final_merge_status_source": "https://github.com/fengfengkang/pingpong-fpga/pull/9"
+  },
+  "initial_publication_observation": {
+    "content_commit": "fe63a7a36abdf7775be1abbf3f8c8a0739d50cd1",
+    "remote_ref_matches_local": true,
+    "pr_url": "https://github.com/fengfengkang/pingpong-fpga/pull/9",
+    "state": "OPEN",
+    "draft": false,
+    "base": "main",
+    "mergeable": "MERGEABLE",
+    "merge_state": "BLOCKED",
+    "review_decision": "REVIEW_REQUIRED",
+    "checks": [
+      {
+        "name": "repository-checks",
+        "conclusion": "SUCCESS",
+        "url": "https://github.com/fengfengkang/pingpong-fpga/actions/runs/37194215752/job/111412587107"
+      }
+    ],
+    "main_merged": false,
+    "note": "The published content commit passed CI. A follow-up documentation commit records this receipt; check the PR for the latest revision and review status."
+  }
+}

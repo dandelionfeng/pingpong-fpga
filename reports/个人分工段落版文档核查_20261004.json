@@ -1,0 +1,194 @@
+{
+  "task": "个人分工文件改为通俗说明与具体方法两部分",
+  "checked_at": "2026-10-04T08:58:30.102858+00:00",
+  "branch": "codex/personal-guides-prose-20261004",
+  "documents": [
+    {
+      "key": "A",
+      "docx": "C:\\FPGA competition\\项目规划\\AFH03_USB同步双目方案一个月分工\\01_A_USB采集与FPGA链路职责说明.docx",
+      "markdown": "C:\\FPGA competition\\项目规划\\AFH03_USB同步双目方案一个月分工\\01_A_USB采集与FPGA链路职责说明.md",
+      "sections": [
+        "第一部分 你要做什么，需要哪些工具",
+        "第二部分 具体实现方法与交付材料"
+      ],
+      "paragraphs": 26,
+      "tables": 0,
+      "word_markdown_match": true,
+      "plain_part_has_algorithm_names": false,
+      "has_task_codes_paths_timetable": false,
+      "delivery_materials_have_pass_criteria": false,
+      "pages": [
+        {
+          "page": 1,
+          "png": "C:\\FPGA competition\\tmp\\personal-guides-prose-20261004\\render\\A-page-1.png",
+          "text_length": 1357,
+          "pixels": [
+            893,
+            1263
+          ]
+        },
+        {
+          "page": 2,
+          "png": "C:\\FPGA competition\\tmp\\personal-guides-prose-20261004\\render\\A-page-2.png",
+          "text_length": 1309,
+          "pixels": [
+            893,
+            1263
+          ]
+        }
+      ],
+      "docx_sha256": "36e74b6a47c86c2963c970e6af1b9f7a6b4e3aab246bb5d7cbface7aa92407f4",
+      "markdown_sha256": "533eeca62634cac90cd79cddf3e3e4bdd1419d73c65954a1c647774f1857661c"
+    },
+    {
+      "key": "B",
+      "docx": "C:\\FPGA competition\\项目规划\\AFH03_USB同步双目方案一个月分工\\02_B_FPGA视觉与三维测量职责说明.docx",
+      "markdown": "C:\\FPGA competition\\项目规划\\AFH03_USB同步双目方案一个月分工\\02_B_FPGA视觉与三维测量职责说明.md",
+      "sections": [
+        "第一部分 你要做什么，需要哪些工具",
+        "第二部分 具体实现方法与交付材料"
+      ],
+      "paragraphs": 28,
+      "tables": 0,
+      "word_markdown_match": true,
+      "plain_part_has_algorithm_names": false,
+      "has_task_codes_paths_timetable": false,
+      "delivery_materials_have_pass_criteria": false,
+      "pages": [
+        {
+          "page": 1,
+          "png": "C:\\FPGA competition\\tmp\\personal-guides-prose-20261004\\render\\B-page-1.png",
+          "text_length": 1211,
+          "pixels": [
+            893,
+            1263
+          ]
+        },
+        {
+          "page": 2,
+          "png": "C:\\FPGA competition\\tmp\\personal-guides-prose-20261004\\render\\B-page-2.png",
+          "text_length": 1385,
+          "pixels": [
+            893,
+            1263
+          ]
+        }
+      ],
+      "docx_sha256": "b3d5ecb7c9ce4a37fc1cf32b6ce7895a25b79842a5a9f7fddd115d71db6cff03",
+      "markdown_sha256": "bd7ce7f3857bad791f73a584498dda69c3ebdd8d653d81e52c158f67541b77f1"
+    },
+    {
+      "key": "C",
+      "docx": "C:\\FPGA competition\\项目规划\\AFH03_USB同步双目方案一个月分工\\03_C_AI模型训练与部署职责说明.docx",
+      "markdown": "C:\\FPGA competition\\项目规划\\AFH03_USB同步双目方案一个月分工\\03_C_AI模型训练与部署职责说明.md",
+      "sections": [
+        "第一部分 你要做什么，需要哪些工具",
+        "第二部分 具体实现方法与交付材料"
+      ],
+      "paragraphs": 27,
+      "tables": 0,
+      "word_markdown_match": true,
+      "plain_part_has_algorithm_names": false,
+      "has_task_codes_paths_timetable": false,
+      "delivery_materials_have_pass_criteria": false,
+      "pages": [
+        {
+          "page": 1,
+          "png": "C:\\FPGA competition\\tmp\\personal-guides-prose-20261004\\render\\C-page-1.png",
+          "text_length": 1267,
+          "pixels": [
+            893,
+            1263
+          ]
+        },
+        {
+          "page": 2,
+          "png": "C:\\FPGA competition\\tmp\\personal-guides-prose-20261004\\render\\C-page-2.png",
+          "text_length": 1147,
+          "pixels": [
+            893,
+            1263
+          ]
+        }
+      ],
+      "docx_sha256": "d5f53cc9f92de5f7dbb9fbfcd8d20c3dc65feb37685d30424151db8ae2fa2faa",
+      "markdown_sha256": "198ad4dc8879bc391fb02d6efe081f490371cbead456387dba05bf2886d305c8"
+    }
+  ],
+  "scope": {
+    "modified_existing_files": [
+      "项目规划/AFH03_USB同步双目方案一个月分工/01_A_USB采集与FPGA链路职责说明.docx",
+      "项目规划/AFH03_USB同步双目方案一个月分工/01_A_USB采集与FPGA链路职责说明.md",
+      "项目规划/AFH03_USB同步双目方案一个月分工/02_B_FPGA视觉与三维测量职责说明.docx",
+      "项目规划/AFH03_USB同步双目方案一个月分工/02_B_FPGA视觉与三维测量职责说明.md",
+      "项目规划/AFH03_USB同步双目方案一个月分工/03_C_AI模型训练与部署职责说明.docx",
+      "项目规划/AFH03_USB同步双目方案一个月分工/03_C_AI模型训练与部署职责说明.md"
+    ],
+    "unrelated_changes": [],
+    "unrelated_added_files": [],
+    "preexisting_deleted_files_preserved": [
+      "rk3566/fsm_eval/.gitkeep",
+      "rk3566/gui/.gitkeep",
+      "rk3566/receiver/.gitkeep",
+      "rk3566/rknn_infer/.gitkeep",
+      "rk3566/stereo_geo/.gitkeep"
+    ]
+  },
+  "rendering": {
+    "canonical_renderer_exit_code": 1,
+    "canonical_renderer_error": "LibreOffice soffice.exe was not found on PATH",
+    "fallback": "Microsoft Word read-only PDF export + pypdfium2 PNG rendering",
+    "fallback_export_exit_code": 0
+  },
+  "visual_review": {
+    "status": "passed",
+    "reviewed_at": "2026-10-04T09:00:26.466670+00:00",
+    "reviewed_pages": [
+      "A-1",
+      "A-2",
+      "B-1",
+      "B-2",
+      "C-1",
+      "C-2"
+    ],
+    "method": "Viewed all six final PNGs at original resolution",
+    "findings": "No clipping, overlap, missing glyphs, dangling headings or sparse tail page; final three documents are two pages each",
+    "layout_iteration": "Reduced paragraph and heading spacing after initial A/B sparse third-page review, retained 10.5pt body font"
+  },
+  "checks_not_run": [
+    "算法运行、RTL仿真、综合及实物检查；本轮仅修改分工文档"
+  ],
+  "executed_commands": [
+    {
+      "command": "python tmp/personal-guides-prose-20261004/author.py",
+      "exit_code": 0
+    },
+    {
+      "command": "python documents/render_docx.py A.docx --output_dir canonical-render --emit_pdf",
+      "exit_code": 1,
+      "reason": "LibreOffice soffice.exe was not found on PATH"
+    },
+    {
+      "command": "powershell tmp/personal-guides-prose-20261004/render_documents.ps1",
+      "exit_code": 0
+    },
+    {
+      "command": "python tmp/personal-guides-prose-20261004/verify_and_render.py",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check -- three personal Markdown files",
+      "exit_code": 0,
+      "note": "Git reported CRLF/LF normalization warnings; no whitespace errors"
+    }
+  ],
+  "final_file_checks": {
+    "line_ending_checksum_issue": "Initial final-file check compared raw CRLF bytes with normalized LF text hashes; corrected verifier to hash raw Markdown bytes. Document content unchanged.",
+    "status": "passed",
+    "document_hashes_match_reviewed_version": true,
+    "modified_existing_files": 6,
+    "only_handoff_and_report_added": true,
+    "unrelated_files_changed": 0,
+    "git_diff_check_exit_code": 0
+  }
+}

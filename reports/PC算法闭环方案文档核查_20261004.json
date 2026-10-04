@@ -1,0 +1,44 @@
+{
+  "kind": "documentation_verification",
+  "date": "2026-10-04",
+  "docx_count": 5,
+  "page_count": 27,
+  "documents": [
+    {
+      "file": "plans\\current\\usb-stereo\\技术路线_AFH03与USB同步双目测量方案.docx",
+      "markdown_docx_equal": true,
+      "tables": 2
+    },
+    {
+      "file": "项目规划\\AFH03_USB同步双目方案一个月分工\\00_三人分工与一个月实施安排.docx",
+      "markdown_docx_equal": true,
+      "tables": 2
+    },
+    {
+      "file": "项目规划\\AFH03_USB同步双目方案一个月分工\\01_A_USB采集与FPGA链路职责说明.docx",
+      "markdown_docx_equal": true,
+      "tables": 3
+    },
+    {
+      "file": "项目规划\\AFH03_USB同步双目方案一个月分工\\02_B_FPGA视觉与三维测量职责说明.docx",
+      "markdown_docx_equal": true,
+      "tables": 3
+    },
+    {
+      "file": "项目规划\\AFH03_USB同步双目方案一个月分工\\03_C_AI模型训练与部署职责说明.docx",
+      "markdown_docx_equal": true,
+      "tables": 3
+    }
+  ],
+  "comment_parts_unchanged": true,
+  "comment_anchor_paragraphs_unchanged": true,
+  "personal_tasks_each": 9,
+  "local_links_valid": true,
+  "render_method": "Word COM ExportAsFixedFormat plus pypdfium2",
+  "visual_review": "All 27 final pages inspected; changed pages re-rendered and reviewed; unchanged pages matched reviewed SHA256 hashes.",
+  "algorithm_tests_executed": false,
+  "hardware_tests_executed": false,
+  "renderer_limitation": "Bundled render_docx.py unavailable without LibreOffice soffice.exe; Microsoft Word COM export succeeded.",
+  "branch": "codex/pc-first-algorithm-plan-20261004",
+  "route_pdf_matches_export": true
+}
