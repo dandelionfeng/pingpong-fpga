@@ -29,4 +29,18 @@
 
 ## 2026-09-29 通用 USB 双目 1080p60 设计
 
-[技术路线](routes/v2026-09-29_afh03_usb_stereo_1080p60/route/技术路线_AFH03与USB同步双目测量方案.md)与同目录 `team/` 保留模组选定前的路线和分工。2026-09-30 当前路线改用拟采购双 OV9281 的 720p60/800×600@100 模式。此处为完整副本归档，11 个文件大小与 SHA-256 记录在清单中。
+[技术路线](routes/v2026-09-29_afh03_usb_stereo_1080p60/route/技术路线_AFH03与USB同步双目测量方案.md)与同目录 `team/` 保留模组选定前的路线和分工。2026-09-30 的下一历史阶段改用双 OV9281 的 720p60/800×600@100 设计，2026-10-04 现行路线已改为 72°、固定 YUY2 60fps 与 PC 算法先行安排。此处为完整副本归档，11 个文件大小与 SHA-256 记录在清单中。
+
+## 2026-10-04 整理的历史版本
+
+本轮额外归档 26 个文件，逐项来源、原路径、字节数和 SHA-256 见[本轮清单](sync-2026-10-04-sha256.json)。其中 11 份路线/分工从提交 `c638158281dff65ec9a7750ac85ae4b4d5f9dfcf` 读取原始 Git 字节；旧指南、相机说明和到货方案保留整理前工作区字节。空目录占位文件留存路径用于追溯。
+
+| 归档目录 | 适用历史背景 | 入口 |
+| --- | --- | --- |
+| `routes/v2026-09-30_afh03_usb_stereo_720p60/` | 100°/2.1 mm 双目、FPGA 局部球心、旧四周分工 | [路线](routes/v2026-09-30_afh03_usb_stereo_720p60/route/技术路线_AFH03与USB同步双目测量方案.md) · [分工](routes/v2026-09-30_afh03_usb_stereo_720p60/team/00_三人分工与一个月实施安排.md) |
+| `camera-selection/v2026-09-30_100deg_2p1mm/` | 旧 100° 商详、两模式预算与原图清单 | [选型核对](camera-selection/v2026-09-30_100deg_2p1mm/docs/OV9281_USB双目模组选型核对.md) · [清单](camera-selection/v2026-09-30_100deg_2p1mm/data/manifests/ov9281-usb-module.md) |
+| `planning/v2026-10-02_afh03_delay_h10/` | 预期先拿相机和 H10 的分拆预验证与细排期，已由 PC 先行版取代 | [Markdown](planning/v2026-10-02_afh03_delay_h10/AFH03延期后的技术方案与人员安排_2026-10-02.md) · [Word](planning/v2026-10-02_afh03_delay_h10/AFH03延期后的技术方案与人员安排_2026-10-02.docx) |
+| `collaboration/v2026-09-19_h10_rk3566/` | 旧 FSIN/UDP/RK3566 GitHub 分工与规则文本 | [GitHub 指南](collaboration/v2026-09-19_h10_rk3566/docs/协作使用指南.md) · [原规则](collaboration/v2026-09-19_h10_rk3566/AGENTS.md) |
+| `scaffolding/v2026-09-19_h10_rk3566/` | 旧 FPGA 直采/UDP/ROI 和 RK3566 空目录占位路径 | 8 个 `.gitkeep` 的原路径及哈希见本轮清单 |
+
+旧 [Agent 交接包](routes/v2026-09-20_h10_rk3566/项目规划/Agent协作交接包.md)继续保留原文。现行入口为[GitHub 指南](../docs/协作使用指南.md)、[AI agent 指南](../docs/AI_agent协作指南.md)和[当前方案](../plans/current/README.md)。历史相对链接及执行命令保留当时写法，定位被迁移文件时使用校验清单中的 `source_path` 与 `archive_path`；归档中的 AGENTS.md 和旧任务卡只作资料读取。

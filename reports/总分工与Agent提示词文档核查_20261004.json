@@ -1,0 +1,580 @@
+{
+  "task": "总分工分为通俗说明与具体实现，统一名称，个人文件追加 agent 提示词",
+  "checked_at": "2026-10-04T09:25:54.037925+00:00",
+  "branch": "codex/team-plan-agent-prompts-20261004",
+  "documents": [
+    {
+      "key": "T",
+      "docx": "C:\\FPGA competition\\项目规划\\AFH03_USB同步双目方案一个月分工\\00_三人分工与一个月实施安排.docx",
+      "markdown": "C:\\FPGA competition\\项目规划\\AFH03_USB同步双目方案一个月分工\\00_三人分工与一个月实施安排.md",
+      "sections": [
+        "第一部分 我们要做什么，各自需要哪些工具",
+        "第二部分 具体实现方法与交付安排"
+      ],
+      "paragraphs": 29,
+      "tables": 0,
+      "word_markdown_match": true,
+      "plain_part_has_algorithm_names": false,
+      "delivery_materials_have_success_criteria": false,
+      "original_personal_prose_preserved": false,
+      "agent_prompt_paragraphs": 0,
+      "pages": [
+        {
+          "page": 1,
+          "png": "C:\\FPGA competition\\tmp\\team-plan-agent-prompts-20261004\\render\\T-page-1.png",
+          "text_length": 1512,
+          "pixels": [
+            893,
+            1263
+          ]
+        },
+        {
+          "page": 2,
+          "png": "C:\\FPGA competition\\tmp\\team-plan-agent-prompts-20261004\\render\\T-page-2.png",
+          "text_length": 1596,
+          "pixels": [
+            893,
+            1263
+          ]
+        },
+        {
+          "page": 3,
+          "png": "C:\\FPGA competition\\tmp\\team-plan-agent-prompts-20261004\\render\\T-page-3.png",
+          "text_length": 1242,
+          "pixels": [
+            893,
+            1263
+          ]
+        }
+      ],
+      "docx_sha256": "3de647ddaf917af113f9a87b7f5c0bbd94585e1361ca46e612b16dcae8d7c148",
+      "markdown_sha256": "2b673b27d2f656924026fec86bdc443d2fc2fa8e9b1df6914e907eafdee43407"
+    },
+    {
+      "key": "A",
+      "docx": "C:\\FPGA competition\\项目规划\\AFH03_USB同步双目方案一个月分工\\01_A_USB采集与FPGA链路职责说明.docx",
+      "markdown": "C:\\FPGA competition\\项目规划\\AFH03_USB同步双目方案一个月分工\\01_A_USB采集与FPGA链路职责说明.md",
+      "sections": [
+        "第一部分 你要做什么，需要哪些工具",
+        "第二部分 具体实现方法与交付材料"
+      ],
+      "paragraphs": 28,
+      "tables": 0,
+      "word_markdown_match": true,
+      "plain_part_has_algorithm_names": false,
+      "delivery_materials_have_success_criteria": false,
+      "original_personal_prose_preserved": true,
+      "agent_prompt_paragraphs": 1,
+      "pages": [
+        {
+          "page": 1,
+          "png": "C:\\FPGA competition\\tmp\\team-plan-agent-prompts-20261004\\render\\A-page-1.png",
+          "text_length": 1357,
+          "pixels": [
+            893,
+            1263
+          ]
+        },
+        {
+          "page": 2,
+          "png": "C:\\FPGA competition\\tmp\\team-plan-agent-prompts-20261004\\render\\A-page-2.png",
+          "text_length": 875,
+          "pixels": [
+            893,
+            1263
+          ]
+        },
+        {
+          "page": 3,
+          "png": "C:\\FPGA competition\\tmp\\team-plan-agent-prompts-20261004\\render\\A-page-3.png",
+          "text_length": 1001,
+          "pixels": [
+            893,
+            1263
+          ]
+        }
+      ],
+      "docx_sha256": "1352be3cbfaaaf6aa8b3eeace39304605725f3aca8d0bb44d59ad8102637206b",
+      "markdown_sha256": "544135ee90be5176252d28c2d06292a8817577f305c9c3b883a2a42012459893"
+    },
+    {
+      "key": "B",
+      "docx": "C:\\FPGA competition\\项目规划\\AFH03_USB同步双目方案一个月分工\\02_B_FPGA视觉与三维测量职责说明.docx",
+      "markdown": "C:\\FPGA competition\\项目规划\\AFH03_USB同步双目方案一个月分工\\02_B_FPGA视觉与三维测量职责说明.md",
+      "sections": [
+        "第一部分 你要做什么，需要哪些工具",
+        "第二部分 具体实现方法与交付材料"
+      ],
+      "paragraphs": 30,
+      "tables": 0,
+      "word_markdown_match": true,
+      "plain_part_has_algorithm_names": false,
+      "delivery_materials_have_success_criteria": false,
+      "original_personal_prose_preserved": true,
+      "agent_prompt_paragraphs": 1,
+      "pages": [
+        {
+          "page": 1,
+          "png": "C:\\FPGA competition\\tmp\\team-plan-agent-prompts-20261004\\render\\B-page-1.png",
+          "text_length": 1211,
+          "pixels": [
+            893,
+            1263
+          ]
+        },
+        {
+          "page": 2,
+          "png": "C:\\FPGA competition\\tmp\\team-plan-agent-prompts-20261004\\render\\B-page-2.png",
+          "text_length": 1040,
+          "pixels": [
+            893,
+            1263
+          ]
+        },
+        {
+          "page": 3,
+          "png": "C:\\FPGA competition\\tmp\\team-plan-agent-prompts-20261004\\render\\B-page-3.png",
+          "text_length": 926,
+          "pixels": [
+            893,
+            1263
+          ]
+        }
+      ],
+      "docx_sha256": "e2dfbcaaf25e57268667566566d7318ab1cd04d5d06eab3f18c603db9865f81f",
+      "markdown_sha256": "e45d219351acb31a78abb53bb085df5aa3eddb1d59f9642f24e5001e6222af3b"
+    },
+    {
+      "key": "C",
+      "docx": "C:\\FPGA competition\\项目规划\\AFH03_USB同步双目方案一个月分工\\03_C_AI模型训练与部署职责说明.docx",
+      "markdown": "C:\\FPGA competition\\项目规划\\AFH03_USB同步双目方案一个月分工\\03_C_AI模型训练与部署职责说明.md",
+      "sections": [
+        "第一部分 你要做什么，需要哪些工具",
+        "第二部分 具体实现方法与交付材料"
+      ],
+      "paragraphs": 29,
+      "tables": 0,
+      "word_markdown_match": true,
+      "plain_part_has_algorithm_names": false,
+      "delivery_materials_have_success_criteria": false,
+      "original_personal_prose_preserved": true,
+      "agent_prompt_paragraphs": 1,
+      "pages": [
+        {
+          "page": 1,
+          "png": "C:\\FPGA competition\\tmp\\team-plan-agent-prompts-20261004\\render\\C-page-1.png",
+          "text_length": 1267,
+          "pixels": [
+            893,
+            1263
+          ]
+        },
+        {
+          "page": 2,
+          "png": "C:\\FPGA competition\\tmp\\team-plan-agent-prompts-20261004\\render\\C-page-2.png",
+          "text_length": 759,
+          "pixels": [
+            893,
+            1263
+          ]
+        },
+        {
+          "page": 3,
+          "png": "C:\\FPGA competition\\tmp\\team-plan-agent-prompts-20261004\\render\\C-page-3.png",
+          "text_length": 1001,
+          "pixels": [
+            893,
+            1263
+          ]
+        }
+      ],
+      "docx_sha256": "d6d2b36e81aee29a059872409875c245a271ae7eafdfa2bd5b904ca8c766a03c",
+      "markdown_sha256": "e39a161110ef2e541feae5af8a7c8b1bdf8d62d6584667b35daab2b12b23b4eb"
+    }
+  ],
+  "canonical_names": [
+    {
+      "owner": "A",
+      "canonical_name": "C++17",
+      "personal_and_team_match": true
+    },
+    {
+      "owner": "A",
+      "canonical_name": "CMake",
+      "personal_and_team_match": true
+    },
+    {
+      "owner": "A",
+      "canonical_name": "OpenCV",
+      "personal_and_team_match": true
+    },
+    {
+      "owner": "A",
+      "canonical_name": "Windows",
+      "personal_and_team_match": true
+    },
+    {
+      "owner": "A",
+      "canonical_name": "Linux",
+      "personal_and_team_match": true
+    },
+    {
+      "owner": "A",
+      "canonical_name": "Python",
+      "personal_and_team_match": true
+    },
+    {
+      "owner": "A",
+      "canonical_name": "Verilog",
+      "personal_and_team_match": true
+    },
+    {
+      "owner": "A",
+      "canonical_name": "Icarus Verilog",
+      "personal_and_team_match": true
+    },
+    {
+      "owner": "A",
+      "canonical_name": "TD",
+      "personal_and_team_match": true
+    },
+    {
+      "owner": "A",
+      "canonical_name": "FrameSource",
+      "personal_and_team_match": true
+    },
+    {
+      "owner": "A",
+      "canonical_name": "FileFrameSource",
+      "personal_and_team_match": true
+    },
+    {
+      "owner": "A",
+      "canonical_name": "MotionBackend",
+      "personal_and_team_match": true
+    },
+    {
+      "owner": "A",
+      "canonical_name": "DetectorBackend",
+      "personal_and_team_match": true
+    },
+    {
+      "owner": "A",
+      "canonical_name": "Gaussian",
+      "personal_and_team_match": true
+    },
+    {
+      "owner": "A",
+      "canonical_name": "replicate",
+      "personal_and_team_match": true
+    },
+    {
+      "owner": "A",
+      "canonical_name": "reference_id",
+      "personal_and_team_match": true
+    },
+    {
+      "owner": "A",
+      "canonical_name": "reference_valid=false",
+      "personal_and_team_match": true
+    },
+    {
+      "owner": "A",
+      "canonical_name": "source_pair_id",
+      "personal_and_team_match": true
+    },
+    {
+      "owner": "A",
+      "canonical_name": "UVC/V4L2",
+      "personal_and_team_match": true
+    },
+    {
+      "owner": "A",
+      "canonical_name": "AArch64",
+      "personal_and_team_match": true
+    },
+    {
+      "owner": "A",
+      "canonical_name": "DDR3L",
+      "personal_and_team_match": true
+    },
+    {
+      "owner": "A",
+      "canonical_name": "PCIe",
+      "personal_and_team_match": true
+    },
+    {
+      "owner": "A",
+      "canonical_name": "DMA",
+      "personal_and_team_match": true
+    },
+    {
+      "owner": "B",
+      "canonical_name": "C++",
+      "personal_and_team_match": true
+    },
+    {
+      "owner": "B",
+      "canonical_name": "OpenCV",
+      "personal_and_team_match": true
+    },
+    {
+      "owner": "B",
+      "canonical_name": "Python",
+      "personal_and_team_match": true
+    },
+    {
+      "owner": "B",
+      "canonical_name": "Verilog",
+      "personal_and_team_match": true
+    },
+    {
+      "owner": "B",
+      "canonical_name": "Icarus Verilog",
+      "personal_and_team_match": true
+    },
+    {
+      "owner": "B",
+      "canonical_name": "TD",
+      "personal_and_team_match": true
+    },
+    {
+      "owner": "B",
+      "canonical_name": "Gaussian",
+      "personal_and_team_match": true
+    },
+    {
+      "owner": "B",
+      "canonical_name": "replicate",
+      "personal_and_team_match": true
+    },
+    {
+      "owner": "B",
+      "canonical_name": "Otsu",
+      "personal_and_team_match": true
+    },
+    {
+      "owner": "B",
+      "canonical_name": "moments",
+      "personal_and_team_match": true
+    },
+    {
+      "owner": "B",
+      "canonical_name": "Sobel",
+      "personal_and_team_match": true
+    },
+    {
+      "owner": "B",
+      "canonical_name": "findChessboardCornersSB",
+      "personal_and_team_match": true
+    },
+    {
+      "owner": "B",
+      "canonical_name": "calibrateCamera",
+      "personal_and_team_match": true
+    },
+    {
+      "owner": "B",
+      "canonical_name": "stereoCalibrate",
+      "personal_and_team_match": true
+    },
+    {
+      "owner": "B",
+      "canonical_name": "stereoRectify",
+      "personal_and_team_match": true
+    },
+    {
+      "owner": "B",
+      "canonical_name": "solvePnP",
+      "personal_and_team_match": true
+    },
+    {
+      "owner": "B",
+      "canonical_name": "undistortPoints",
+      "personal_and_team_match": true
+    },
+    {
+      "owner": "B",
+      "canonical_name": "triangulatePoints",
+      "personal_and_team_match": true
+    },
+    {
+      "owner": "B",
+      "canonical_name": "Kalman",
+      "personal_and_team_match": true
+    },
+    {
+      "owner": "B",
+      "canonical_name": "带权稳健最小二乘",
+      "personal_and_team_match": true
+    },
+    {
+      "owner": "B",
+      "canonical_name": "source_pair_id",
+      "personal_and_team_match": true
+    },
+    {
+      "owner": "C",
+      "canonical_name": "C++",
+      "personal_and_team_match": true
+    },
+    {
+      "owner": "C",
+      "canonical_name": "Python",
+      "personal_and_team_match": true
+    },
+    {
+      "owner": "C",
+      "canonical_name": "PyTorch",
+      "personal_and_team_match": true
+    },
+    {
+      "owner": "C",
+      "canonical_name": "YOLOv8n",
+      "personal_and_team_match": true
+    },
+    {
+      "owner": "C",
+      "canonical_name": "ONNX",
+      "personal_and_team_match": true
+    },
+    {
+      "owner": "C",
+      "canonical_name": "DFL",
+      "personal_and_team_match": true
+    },
+    {
+      "owner": "C",
+      "canonical_name": "NMS",
+      "personal_and_team_match": true
+    },
+    {
+      "owner": "C",
+      "canonical_name": "Rockchip Model Zoo",
+      "personal_and_team_match": true
+    },
+    {
+      "owner": "C",
+      "canonical_name": "RKNN Toolkit2",
+      "personal_and_team_match": true
+    },
+    {
+      "owner": "C",
+      "canonical_name": "RKNN Runtime",
+      "personal_and_team_match": true
+    },
+    {
+      "owner": "C",
+      "canonical_name": "rk3576",
+      "personal_and_team_match": true
+    },
+    {
+      "owner": "C",
+      "canonical_name": "INT8",
+      "personal_and_team_match": true
+    },
+    {
+      "owner": "C",
+      "canonical_name": "source_pair_id",
+      "personal_and_team_match": true
+    },
+    {
+      "owner": "C",
+      "canonical_name": "replay",
+      "personal_and_team_match": true
+    }
+  ],
+  "implementation_parameters_match": true,
+  "scope": {
+    "modified_existing_files": [
+      "项目规划/AFH03_USB同步双目方案一个月分工/00_三人分工与一个月实施安排.docx",
+      "项目规划/AFH03_USB同步双目方案一个月分工/00_三人分工与一个月实施安排.md",
+      "项目规划/AFH03_USB同步双目方案一个月分工/01_A_USB采集与FPGA链路职责说明.docx",
+      "项目规划/AFH03_USB同步双目方案一个月分工/01_A_USB采集与FPGA链路职责说明.md",
+      "项目规划/AFH03_USB同步双目方案一个月分工/02_B_FPGA视觉与三维测量职责说明.docx",
+      "项目规划/AFH03_USB同步双目方案一个月分工/02_B_FPGA视觉与三维测量职责说明.md",
+      "项目规划/AFH03_USB同步双目方案一个月分工/03_C_AI模型训练与部署职责说明.docx",
+      "项目规划/AFH03_USB同步双目方案一个月分工/03_C_AI模型训练与部署职责说明.md"
+    ],
+    "unrelated_changes": [],
+    "unrelated_added_files": [],
+    "preexisting_deleted_files_preserved": [
+      "rk3566/fsm_eval/.gitkeep",
+      "rk3566/gui/.gitkeep",
+      "rk3566/receiver/.gitkeep",
+      "rk3566/rknn_infer/.gitkeep",
+      "rk3566/stereo_geo/.gitkeep"
+    ]
+  },
+  "rendering": {
+    "canonical_renderer_exit_code": 1,
+    "canonical_renderer_error": "LibreOffice soffice.exe was not found on PATH",
+    "fallback": "Microsoft Word read-only PDF export + pypdfium2 PNG rendering",
+    "fallback_export_exit_code": 0
+  },
+  "visual_review": {
+    "status": "passed",
+    "reviewed_at": "2026-10-04T09:28:33.529072+00:00",
+    "reviewed_pages": [
+      "T-1",
+      "T-2",
+      "T-3",
+      "A-1",
+      "A-2",
+      "A-3",
+      "B-1",
+      "B-2",
+      "B-3",
+      "C-1",
+      "C-2",
+      "C-3"
+    ],
+    "method": "Viewed all twelve final pages at original PNG resolution",
+    "findings": "No clipping, overlap, missing glyphs or dangling headings. Personal final pages group deployment or integration notes, deliverable materials and a single agent-prompt paragraph.",
+    "layout_iteration": "Personal page breaks adjusted; team document and its reviewed rendering were unchanged in this iteration."
+  },
+  "checks_not_run": [
+    "未运行算法、RTL 仿真、综合与实物检查；本轮修改的是分工文档及提示词",
+    "未启动其他 agent；末尾提示词为后续任务输入"
+  ],
+  "executed_commands": [
+    {
+      "command": "python tmp/team-plan-agent-prompts-20261004/author.py",
+      "exit_code": 0
+    },
+    {
+      "command": "python documents/render_docx.py team.docx --output_dir canonical-render --emit_pdf",
+      "exit_code": 1,
+      "reason": "LibreOffice soffice.exe was not found on PATH"
+    },
+    {
+      "command": "powershell tmp/team-plan-agent-prompts-20261004/render_documents.ps1",
+      "exit_code": 0
+    },
+    {
+      "command": "python tmp/team-plan-agent-prompts-20261004/author.py --personal-only",
+      "exit_code": 0
+    },
+    {
+      "command": "powershell tmp/team-plan-agent-prompts-20261004/render_documents.ps1 -PersonalOnly",
+      "exit_code": 0
+    },
+    {
+      "command": "python tmp/team-plan-agent-prompts-20261004/verify_and_render.py",
+      "exit_code": 0
+    },
+    {
+      "command": "git diff --check -- four personal and team Markdown files",
+      "exit_code": 0,
+      "note": "Only CRLF/LF normalization warnings; no whitespace errors"
+    }
+  ],
+  "final_file_checks": {
+    "status": "passed",
+    "hashes_match_reviewed_version": true,
+    "modified_existing_files": 8,
+    "only_new_handoff_and_report": true,
+    "unrelated_files_changed": 0,
+    "visual_reviewed_pages": 12
+  }
+}

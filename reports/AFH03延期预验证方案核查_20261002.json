@@ -1,0 +1,63 @@
+{
+  "task": "AFH03-DELAY-H10-PREVALIDATION-20261002",
+  "date": "2026-10-02",
+  "branch": "codex/afh03-delay-h10-prevalidation-20261002",
+  "board": "MLK H10 CK203 DDR3",
+  "afh03_order_from": "2026-10-13",
+  "afh03_delivery": "expected 2026-10-14 to 2026-10-15; actual receipt to confirm",
+  "status": "document QA passed; hardware not tested",
+  "pages": 8,
+  "tables": 5,
+  "links": 8,
+  "md_docx_matching_blocks": 152,
+  "original_paths_preserved": 150,
+  "visual_review": "all 8 final pages inspected",
+  "renderer": "Microsoft Word COM PDF export and pypdfium2; bundled LibreOffice unavailable",
+  "checks": {
+    "content": "PASS",
+    "preservation": "PASS",
+    "new_file_hygiene": "PASS",
+    "git_diff_check": "PASS"
+  },
+  "calculations": {
+    "h2c_MBps": 27.648,
+    "c2h_MBps": 3.456,
+    "prev_rw_MBps": 55.296,
+    "mask_bytes": 57600,
+    "UART115200_input_s": 40.0,
+    "UART1M_input_s": 4.608,
+    "core_100MHz_ms": 4.6080000000000005,
+    "YUY2_10min_GB": 132.7104,
+    "Y_10min_GB": 66.3552,
+    "burst_frame_memory_MBps": 200.0
+  },
+  "outputs": [
+    {
+      "path": "项目规划/AFH03延期与H10预验证/AFH03延期后的技术方案与人员安排_2026-10-02.md",
+      "sha256": "2e321320c805d9566d5616df5f86f92259594e78eec08b4208111907dad60be5"
+    },
+    {
+      "path": "项目规划/AFH03延期与H10预验证/AFH03延期后的技术方案与人员安排_2026-10-02.docx",
+      "sha256": "d23f3a6762415bf730ebf677325e82c69aeedd7562fa896307118c9d68921af7"
+    },
+    {
+      "path": "handoffs/2026-10-02-afh03-delay-h10-prevalidation.md",
+      "sha256": "27813e3d1b20fa6511eee0ae7581159154d442a1c181b1fd44794df564f9fd67"
+    }
+  ],
+  "not_executed": [
+    "camera capture",
+    "exposure synchronization measurement",
+    "H10 board test",
+    "AFH03 board test",
+    "complete seven-stage RTL simulation and implementation",
+    "DDR or PCIe throughput",
+    "model training and NPU performance"
+  ],
+  "delivery_estimate_source": "user supplied 1-2 days after order",
+  "transit_days_expected": [
+    1,
+    2
+  ],
+  "latest_revision": "Arrival estimate and fixed-date integration schedule updated"
+}
