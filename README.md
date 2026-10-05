@@ -18,7 +18,7 @@
 
 暂无实物时，文件输入、CPU 整数运动前端和 PC 三类模型替代相应硬件后端，后续测量核心共用。工作目标分为 10 月 4～8 日模块交付、9～12 日 PC 集成与部署材料、13～28 日按实际到货逐层联调。详细任务见[PC 算法闭环与部署验收](docs/PC算法闭环与部署验收.md)。这些是实施目标，当前完整 PC 闭环、七级运动 RTL 和实机部署尚待实现与验证。
 
-现有 [FPGA 基础图像内核](fpga/afh03_image/README.md)及[验证记录](reports/AFH03图像处理验证.md)可供行缓存、流控和测试方法参考，验证范围与现行七级运动前端分别记录。[相机选型核对](docs/OV9281_USB双目模组选型核对.md)区分当前 72° 方案与此前 100° 商详；最终 SKU、YUY2 模式、同步、手动曝光及完整帧率以所购实物确认。帧率、精度、延迟、功耗和板端资源均待实测。竞赛提交期限沿用项目记录 2026-11-04。
+旧 TD 调试工程、基础图像内核、测试脚本和验证记录已集中到[调试归档](archive/fpga-debug/v2026-10-05_td_experiments/README.md)，保留原文件与 SHA-256。当前 FPGA 开发从 [fpga/README.md](fpga/README.md)进入；参考旧行缓存或流控代码时，按新任务明确选取并重新验证。[相机选型核对](docs/OV9281_USB双目模组选型核对.md)区分当前 72° 方案与此前 100° 商详；最终 SKU、YUY2 模式、同步、手动曝光及完整帧率以所购实物确认。帧率、精度、延迟、功耗和板端资源均待实测。竞赛提交期限沿用项目记录 2026-11-04。
 
 ## 协作与资料入口
 
@@ -28,4 +28,4 @@
 - [板卡资料清单](data/manifests/afh03-vendor-package.md)、[相机资料清单](data/manifests/ov9281-usb-module.md)和[大文件管理](artifacts/README.md)记录本地资料、来源与哈希。厂商 SDK、原始视频、模型权重和生成工程留在本地。
 - [交接索引](handoffs/README.md)定位当前任务和历史执行记录；[报告索引](reports/README.md)区分文档核查、历史模块测试与之后的完整系统结果。
 
-`fpga/` 已有参考 RTL；`vision/` 和 `contracts/` 目前保留开发入口。方案建议的 `software/pc_pipeline/`、`tools/fixtures/`、`tests/pc_pipeline/` 尚待具体任务创建，目录名不代表功能已实现。新任务从最新已评审的 `origin/main` 开始；若依赖尚未合并的工作，明确基准提交和依赖 PR。
+`fpga/`、`vision/` 和 `contracts/` 目前保留开发入口，现行七级运动 RTL 尚待实现。方案建议的 `software/pc_pipeline/`、`tools/fixtures/`、`tests/pc_pipeline/` 尚待具体任务创建，目录名不代表功能已实现。新任务从最新已评审的 `origin/main` 开始；若依赖尚未合并的工作，明确基准提交和依赖 PR。

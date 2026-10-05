@@ -1,4 +1,4 @@
-# 历史方案和采购资料
+# 历史方案、采购资料与调试工程
 
 这里保存技术路线切换过程中的原始文件。目录名 `vYYYY-MM-DD_平台_主题` 是**归档版本标识**：日期取自文档版本、正文日期或文件时间，并不表示接口协议已经冻结。搬迁前后每个文件的 SHA-256 相同，逐项记录在 [校验清单](moved-files-sha256.csv)。旧文件正文和表格保持原样；其中的价格、器件选择与性能目标应按原时间背景阅读。
 
@@ -44,3 +44,9 @@
 | `scaffolding/v2026-09-19_h10_rk3566/` | 旧 FPGA 直采/UDP/ROI 和 RK3566 空目录占位路径 | 8 个 `.gitkeep` 的原路径及哈希见本轮清单 |
 
 旧 [Agent 交接包](routes/v2026-09-20_h10_rk3566/项目规划/Agent协作交接包.md)继续保留原文。现行入口为[GitHub 指南](../docs/协作使用指南.md)、[AI agent 指南](../docs/AI_agent协作指南.md)和[当前方案](../plans/current/README.md)。历史相对链接及执行命令保留当时写法，定位被迁移文件时使用校验清单中的 `source_path` 与 `archive_path`；归档中的 AGENTS.md 和旧任务卡只作资料读取。
+
+## 2026-10-05 TD 调试工程与代码归档
+
+[调试归档入口](fpga-debug/v2026-10-05_td_experiments/README.md)保存旧 PH1A180 工具链测试和 PH1A90 基础图像实验的 24 个源码、约束、脚本与报告，按原目录布局保留字节。[源码校验清单](fpga-debug/v2026-10-05_td_experiments/files-sha256.json)记录原路径、归档路径、大小、SHA-256 与原 Git blob。
+
+本机 20 组生成工程、仿真输出和调试辅助文件共 366 个文件，集中到被忽略的 `archive/local-debug/v2026-10-05_td_experiments/`。[本地工程摘要](fpga-debug/v2026-10-05_td_experiments/local-projects-summary.json)仅登记位置、数量和大小；完整工程、数据库、日志、波形及逐文件清单保留在本机。当前开发从 [FPGA 说明](../fpga/README.md)与[现行方案](../plans/current/README.md)进入。
