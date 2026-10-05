@@ -1,0 +1,9 @@
+第一部分源码、测试和说明
+
+内容：后四级形态学 RTL、Icarus testbench、仿真脚本、Python 独立参考、README、验收报告。
+
+复现：在仓库根目录运行
+  python tools/fixtures/morphology_reference.py
+  fpga/sim/morphology/run_morphology.ps1
+
+此包不含 build、VCD、vvp 和临时日志。
