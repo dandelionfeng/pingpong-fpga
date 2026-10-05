@@ -1,0 +1,20 @@
+{
+  "schema_version":1,
+  "target":{"host":"RK3576J","fpga":"PH1A90SEG324","usb":"dual OV9281, YUYV 2560x720@60"},
+  "status":"no_camera_no_board_no_vendor_sdk",
+  "needed":[
+    "RK3576J AArch64 rootfs/sysroot and compatible OpenCV 4.13.0",
+    "AFH03 PCIe1 endpoint project, BAR/register map and DMA descriptor/completion layouts",
+    "Linux DMA driver/API headers and libraries, IRQ/poll semantics, error codes, mmap/ownership and cache-coherency rules",
+    "PH1A90SEG324 DDR3L controller IP, calibrated reset/ready/error signals and timing constraints",
+    "DDR arbitration adapter for 4 Gaussian banks (minimum 921600 bytes), ordered read response/epoch bridge",
+    "Board schematic/pin constraints, clocks, reset synchronization, approved firmware/host protocol",
+    "B final four RTL stages and bit-mask packer",
+    "B actual measurement/calibration module and C actual three-class model/backend"
+  ],
+  "binding":{"cmake_option":"PIPELINE_DMA_MODULE_DIR","library":"pipeline_dma_module","entry":"pipeline::register_dma_module(Registry&)",
+    "transport":"DmaTransport submit/receive/cancel/reset","codec":"DmaBinding encode/decode plus approved_protocol",
+    "reset_rule":"cancel/drain DMA and clear firmware reference state before generation reuse",
+    "software_draft_is_vendor_protocol":false},
+  "next_acceptance":["USB actual format/stride/exposure/paired timing","DDR calibrated read/write and commit cancellation","PCIe integrity/backpressure/reset/latency","full B/C replay and independent stereo scoring","board timing/bitstream/end-to-end performance"]
+}
