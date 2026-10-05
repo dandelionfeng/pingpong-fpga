@@ -1,0 +1,132 @@
+{
+  "archive_date": "2026-10-05",
+  "storage": "local_only_gitignored",
+  "local_archive_root": "archive/local-debug/v2026-10-05_td_experiments",
+  "unit_count": 20,
+  "file_count": 366,
+  "bytes": 557408958,
+  "full_manifest_path": "archive/local-debug/v2026-10-05_td_experiments/files-sha256.json",
+  "full_manifest_sha256": "b02175e8d90cc72ddb04fecdd536397b54c7889af828363b3624eaaff8ba0c01",
+  "units": [
+    {
+      "source_path": "build/afh03-image-20260924-225022-c3cd8358",
+      "archive_path": "archive/local-debug/v2026-10-05_td_experiments/build/afh03-image-20260924-225022-c3cd8358",
+      "file_count": 13,
+      "bytes": 35218
+    },
+    {
+      "source_path": "build/afh03-image-20260924-225055-0eb8a844",
+      "archive_path": "archive/local-debug/v2026-10-05_td_experiments/build/afh03-image-20260924-225055-0eb8a844",
+      "file_count": 28,
+      "bytes": 2254260
+    },
+    {
+      "source_path": "build/afh03-image-20260924-225234-494a6319",
+      "archive_path": "archive/local-debug/v2026-10-05_td_experiments/build/afh03-image-20260924-225234-494a6319",
+      "file_count": 28,
+      "bytes": 2255210
+    },
+    {
+      "source_path": "build/afh03-image-20260924-225421-3394961d",
+      "archive_path": "archive/local-debug/v2026-10-05_td_experiments/build/afh03-image-20260924-225421-3394961d",
+      "file_count": 38,
+      "bytes": 7568179
+    },
+    {
+      "source_path": "build/afh03-image-20260924-225733-b58e9b85",
+      "archive_path": "archive/local-debug/v2026-10-05_td_experiments/build/afh03-image-20260924-225733-b58e9b85",
+      "file_count": 38,
+      "bytes": 7568186
+    },
+    {
+      "source_path": "build/afh03-image-20260924-225808-92b163e3",
+      "archive_path": "archive/local-debug/v2026-10-05_td_experiments/build/afh03-image-20260924-225808-92b163e3",
+      "file_count": 38,
+      "bytes": 7571477
+    },
+    {
+      "source_path": "build/afh03-image-20260924-225924-af6b692b",
+      "archive_path": "archive/local-debug/v2026-10-05_td_experiments/build/afh03-image-20260924-225924-af6b692b",
+      "file_count": 42,
+      "bytes": 5870846
+    },
+    {
+      "source_path": "build/afh03-image-latest.txt",
+      "archive_path": "archive/local-debug/v2026-10-05_td_experiments/build/afh03-image-latest.txt",
+      "file_count": 1,
+      "bytes": 67
+    },
+    {
+      "source_path": "tmp/afh03-image-finalize.py",
+      "archive_path": "archive/local-debug/v2026-10-05_td_experiments/tmp/afh03-image-finalize.py",
+      "file_count": 1,
+      "bytes": 3657
+    },
+    {
+      "source_path": "tmp/afh03-image-pipeline",
+      "archive_path": "archive/local-debug/v2026-10-05_td_experiments/tmp/afh03-image-pipeline",
+      "file_count": 1,
+      "bytes": 150083
+    },
+    {
+      "source_path": "tmp/afh03-image-tests-20260924-224919-928616",
+      "archive_path": "archive/local-debug/v2026-10-05_td_experiments/tmp/afh03-image-tests-20260924-224919-928616",
+      "file_count": 15,
+      "bytes": 124163328
+    },
+    {
+      "source_path": "tmp/afh03-image-tests-20260924-225129-489749",
+      "archive_path": "archive/local-debug/v2026-10-05_td_experiments/tmp/afh03-image-tests-20260924-225129-489749",
+      "file_count": 15,
+      "bytes": 118135611
+    },
+    {
+      "source_path": "tmp/afh03-image-tests-20260924-225840-697267",
+      "archive_path": "archive/local-debug/v2026-10-05_td_experiments/tmp/afh03-image-tests-20260924-225840-697267",
+      "file_count": 15,
+      "bytes": 118135611
+    },
+    {
+      "source_path": "tmp/afh03-image-tests-20260924-225948-699516",
+      "archive_path": "archive/local-debug/v2026-10-05_td_experiments/tmp/afh03-image-tests-20260924-225948-699516",
+      "file_count": 15,
+      "bytes": 118138923
+    },
+    {
+      "source_path": "tmp/afh03-image-tests-20260928-211512-734032",
+      "archive_path": "archive/local-debug/v2026-10-05_td_experiments/tmp/afh03-image-tests-20260928-211512-734032",
+      "file_count": 14,
+      "bytes": 21222117
+    },
+    {
+      "source_path": "tmp/afh03-image-tests-20260929-174330-264790",
+      "archive_path": "archive/local-debug/v2026-10-05_td_experiments/tmp/afh03-image-tests-20260929-174330-264790",
+      "file_count": 14,
+      "bytes": 21222117
+    },
+    {
+      "source_path": "tmp/td-probe.tcl",
+      "archive_path": "archive/local-debug/v2026-10-05_td_experiments/tmp/td-probe.tcl",
+      "file_count": 1,
+      "bytes": 140
+    },
+    {
+      "source_path": "tmp/td-smoke-01",
+      "archive_path": "archive/local-debug/v2026-10-05_td_experiments/tmp/td-smoke-01",
+      "file_count": 16,
+      "bytes": 991256
+    },
+    {
+      "source_path": "tmp/td-smoke-20260920-223114-07db72e5",
+      "archive_path": "archive/local-debug/v2026-10-05_td_experiments/tmp/td-smoke-20260920-223114-07db72e5",
+      "file_count": 16,
+      "bytes": 1061282
+    },
+    {
+      "source_path": "tmp/td-smoke-20260920-223216-7267ec4a",
+      "archive_path": "archive/local-debug/v2026-10-05_td_experiments/tmp/td-smoke-20260920-223216-7267ec4a",
+      "file_count": 17,
+      "bytes": 1061390
+    }
+  ]
+}

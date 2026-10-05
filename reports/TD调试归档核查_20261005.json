@@ -1,0 +1,28 @@
+{
+  "archive_date": "2026-10-05",
+  "source_commit": "3bc38b63d94498e76e4d456971729941c72139dd",
+  "tracked_files_verified": 24,
+  "local_units_archived": 20,
+  "local_files_verified": 366,
+  "local_bytes_preserved": 557408958,
+  "unchanged_tracked_files_verified": 151,
+  "unchanged_current_plan_artifacts": 11,
+  "active_local_links_verified": 188,
+  "all_archived_files_retain_mtime": true,
+  "local_archive_gitignored_and_untracked": true,
+  "staged_archive_bytes_verified": true,
+  "td_simulation_or_board_run_in_this_task": false,
+  "repository_checks": {
+    "checked_tracked_files": 190,
+    "problems": 0,
+    "unit_tests_passed": 5,
+    "cached_diff_whitespace_check_passed": true
+  },
+  "commands": [
+    "python tmp/td-debug-archive-20261005/archive_task.py verify --staged",
+    "python tools/check_repo.py --staged",
+    "python -m unittest discover -s tests -v",
+    "git diff --cached --check"
+  ],
+  "scope": "Byte-preserving archival and repository checks; historical RTL evidence unchanged."
+}
