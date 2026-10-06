@@ -1,0 +1,443 @@
+{
+  "total": 54,
+  "passed": 54,
+  "failed": 0,
+  "failed_cases": [],
+  "clear_count": 35,
+  "clear_p95_error_px": 0.07254059312856126,
+  "scope": "synthetic 2D fixtures and interface faults; not hardware/real-image evidence",
+  "cases": [
+    {
+      "name": "clear_bright_d12_p0",
+      "passed": true,
+      "source": "observed",
+      "reason": "ok",
+      "center_error_px": 0.0,
+      "errors": []
+    },
+    {
+      "name": "clear_bright_d12_p1",
+      "passed": true,
+      "source": "observed",
+      "reason": "ok",
+      "center_error_px": 0.0,
+      "errors": []
+    },
+    {
+      "name": "clear_bright_d12_p2",
+      "passed": true,
+      "source": "observed",
+      "reason": "ok",
+      "center_error_px": 0.0,
+      "errors": []
+    },
+    {
+      "name": "clear_bright_d20_p0",
+      "passed": true,
+      "source": "observed",
+      "reason": "ok",
+      "center_error_px": 0.0,
+      "errors": []
+    },
+    {
+      "name": "clear_bright_d20_p1",
+      "passed": true,
+      "source": "observed",
+      "reason": "ok",
+      "center_error_px": 0.0,
+      "errors": []
+    },
+    {
+      "name": "clear_bright_d20_p2",
+      "passed": true,
+      "source": "observed",
+      "reason": "ok",
+      "center_error_px": 0.0,
+      "errors": []
+    },
+    {
+      "name": "clear_bright_d32_p0",
+      "passed": true,
+      "source": "observed",
+      "reason": "ok",
+      "center_error_px": 0.0,
+      "errors": []
+    },
+    {
+      "name": "clear_bright_d32_p1",
+      "passed": true,
+      "source": "observed",
+      "reason": "ok",
+      "center_error_px": 0.0,
+      "errors": []
+    },
+    {
+      "name": "clear_bright_d32_p2",
+      "passed": true,
+      "source": "observed",
+      "reason": "ok",
+      "center_error_px": 0.0,
+      "errors": []
+    },
+    {
+      "name": "clear_bright_d40_p0",
+      "passed": true,
+      "source": "observed",
+      "reason": "ok",
+      "center_error_px": 0.0,
+      "errors": []
+    },
+    {
+      "name": "clear_bright_d40_p1",
+      "passed": true,
+      "source": "observed",
+      "reason": "ok",
+      "center_error_px": 0.0,
+      "errors": []
+    },
+    {
+      "name": "clear_bright_d40_p2",
+      "passed": true,
+      "source": "observed",
+      "reason": "ok",
+      "center_error_px": 0.0,
+      "errors": []
+    },
+    {
+      "name": "clear_dark_d12_p0",
+      "passed": true,
+      "source": "observed",
+      "reason": "ok",
+      "center_error_px": 0.0,
+      "errors": []
+    },
+    {
+      "name": "clear_dark_d12_p1",
+      "passed": true,
+      "source": "observed",
+      "reason": "ok",
+      "center_error_px": 0.0,
+      "errors": []
+    },
+    {
+      "name": "clear_dark_d12_p2",
+      "passed": true,
+      "source": "observed",
+      "reason": "ok",
+      "center_error_px": 0.0,
+      "errors": []
+    },
+    {
+      "name": "clear_dark_d20_p0",
+      "passed": true,
+      "source": "observed",
+      "reason": "ok",
+      "center_error_px": 0.0,
+      "errors": []
+    },
+    {
+      "name": "clear_dark_d20_p1",
+      "passed": true,
+      "source": "observed",
+      "reason": "ok",
+      "center_error_px": 0.0,
+      "errors": []
+    },
+    {
+      "name": "clear_dark_d20_p2",
+      "passed": true,
+      "source": "observed",
+      "reason": "ok",
+      "center_error_px": 0.0,
+      "errors": []
+    },
+    {
+      "name": "clear_dark_d32_p0",
+      "passed": true,
+      "source": "observed",
+      "reason": "ok",
+      "center_error_px": 0.0,
+      "errors": []
+    },
+    {
+      "name": "clear_dark_d32_p1",
+      "passed": true,
+      "source": "observed",
+      "reason": "ok",
+      "center_error_px": 0.0,
+      "errors": []
+    },
+    {
+      "name": "clear_dark_d32_p2",
+      "passed": true,
+      "source": "observed",
+      "reason": "ok",
+      "center_error_px": 0.0,
+      "errors": []
+    },
+    {
+      "name": "clear_dark_d40_p0",
+      "passed": true,
+      "source": "observed",
+      "reason": "ok",
+      "center_error_px": 0.0,
+      "errors": []
+    },
+    {
+      "name": "clear_dark_d40_p1",
+      "passed": true,
+      "source": "observed",
+      "reason": "ok",
+      "center_error_px": 0.0,
+      "errors": []
+    },
+    {
+      "name": "clear_dark_d40_p2",
+      "passed": true,
+      "source": "observed",
+      "reason": "ok",
+      "center_error_px": 0.0,
+      "errors": []
+    },
+    {
+      "name": "subpixel_bright_d12",
+      "passed": true,
+      "source": "observed",
+      "reason": "ok",
+      "center_error_px": 0.0645649258212326,
+      "errors": []
+    },
+    {
+      "name": "subpixel_bright_d20",
+      "passed": true,
+      "source": "observed",
+      "reason": "ok",
+      "center_error_px": 0.09115048351232839,
+      "errors": []
+    },
+    {
+      "name": "subpixel_bright_d32",
+      "passed": true,
+      "source": "observed",
+      "reason": "ok",
+      "center_error_px": 0.009214337877179244,
+      "errors": []
+    },
+    {
+      "name": "subpixel_bright_d40",
+      "passed": true,
+      "source": "observed",
+      "reason": "ok",
+      "center_error_px": 0.061910689650160944,
+      "errors": []
+    },
+    {
+      "name": "subpixel_dark_d12",
+      "passed": true,
+      "source": "observed",
+      "reason": "ok",
+      "center_error_px": 0.0645649258212326,
+      "errors": []
+    },
+    {
+      "name": "subpixel_dark_d20",
+      "passed": true,
+      "source": "observed",
+      "reason": "ok",
+      "center_error_px": 0.09115048351232839,
+      "errors": []
+    },
+    {
+      "name": "subpixel_dark_d32",
+      "passed": true,
+      "source": "observed",
+      "reason": "ok",
+      "center_error_px": 0.009214337877179244,
+      "errors": []
+    },
+    {
+      "name": "subpixel_dark_d40",
+      "passed": true,
+      "source": "observed",
+      "reason": "ok",
+      "center_error_px": 0.061910689650160944,
+      "errors": []
+    },
+    {
+      "name": "uniform_false_mask",
+      "passed": true,
+      "source": "invalid",
+      "reason": "low_local_contrast",
+      "center_error_px": null,
+      "errors": []
+    },
+    {
+      "name": "uniform_bright_background_false_mask",
+      "passed": true,
+      "source": "invalid",
+      "reason": "low_local_contrast",
+      "center_error_px": null,
+      "errors": []
+    },
+    {
+      "name": "low_contrast",
+      "passed": true,
+      "source": "invalid",
+      "reason": "low_local_contrast",
+      "center_error_px": null,
+      "errors": []
+    },
+    {
+      "name": "nearby_distractor_selected_region",
+      "passed": true,
+      "source": "observed",
+      "reason": "ok",
+      "center_error_px": 0.0,
+      "errors": []
+    },
+    {
+      "name": "background_step",
+      "passed": true,
+      "source": "invalid",
+      "reason": "no_ball_component",
+      "center_error_px": null,
+      "errors": []
+    },
+    {
+      "name": "elongated_foreground",
+      "passed": true,
+      "source": "invalid",
+      "reason": "non_ball_shape",
+      "center_error_px": null,
+      "errors": []
+    },
+    {
+      "name": "local_two_equal_balls",
+      "passed": true,
+      "source": "invalid",
+      "reason": "ambiguous_local_components",
+      "center_error_px": null,
+      "errors": []
+    },
+    {
+      "name": "old_mask_position",
+      "passed": true,
+      "source": "observed",
+      "reason": "ok",
+      "center_error_px": 0.0,
+      "errors": []
+    },
+    {
+      "name": "image_clipped_ball",
+      "passed": true,
+      "source": "invalid",
+      "reason": "image_boundary_truncation",
+      "center_error_px": null,
+      "errors": []
+    },
+    {
+      "name": "local_window_clipped_ball",
+      "passed": true,
+      "source": "invalid",
+      "reason": "local_boundary_truncation",
+      "center_error_px": null,
+      "errors": []
+    },
+    {
+      "name": "severe_occlusion",
+      "passed": true,
+      "source": "invalid",
+      "reason": "non_ball_shape",
+      "center_error_px": null,
+      "errors": []
+    },
+    {
+      "name": "partial_occlusion",
+      "passed": true,
+      "source": "observed",
+      "reason": "observed_reduced_quality",
+      "center_error_px": null,
+      "errors": []
+    },
+    {
+      "name": "apex_zero_mask_remeasure",
+      "passed": true,
+      "source": "observed",
+      "reason": "ok",
+      "center_error_px": 0.0,
+      "errors": []
+    },
+    {
+      "name": "apex_no_ball_prediction_only",
+      "passed": true,
+      "source": "predicted",
+      "reason": "prediction_only_no_observation",
+      "center_error_px": null,
+      "errors": []
+    },
+    {
+      "name": "empty_without_prediction",
+      "passed": true,
+      "source": "invalid",
+      "reason": "no_motion_candidates",
+      "center_error_px": null,
+      "errors": []
+    },
+    {
+      "name": "distant_object_prediction_gate",
+      "passed": true,
+      "source": "predicted",
+      "reason": "prediction_only_no_observation",
+      "center_error_px": null,
+      "errors": []
+    },
+    {
+      "name": "fault_pair_id",
+      "passed": true,
+      "source": "invalid",
+      "reason": "pair_id_mismatch",
+      "center_error_px": null,
+      "errors": []
+    },
+    {
+      "name": "fault_eye",
+      "passed": true,
+      "source": "invalid",
+      "reason": "eye_mismatch",
+      "center_error_px": null,
+      "errors": []
+    },
+    {
+      "name": "fault_sample_time_ns",
+      "passed": true,
+      "source": "invalid",
+      "reason": "sample_time_mismatch",
+      "center_error_px": null,
+      "errors": []
+    },
+    {
+      "name": "fault_mode_id",
+      "passed": true,
+      "source": "invalid",
+      "reason": "mode_mismatch",
+      "center_error_px": null,
+      "errors": []
+    },
+    {
+      "name": "fault_config_version",
+      "passed": true,
+      "source": "invalid",
+      "reason": "config_version_mismatch",
+      "center_error_px": null,
+      "errors": []
+    },
+    {
+      "name": "fault_calibration_version",
+      "passed": true,
+      "source": "invalid",
+      "reason": "calibration_version_mismatch",
+      "center_error_px": null,
+      "errors": []
+    }
+  ]
+}
