@@ -15,6 +15,7 @@ option(PIPELINE_SANITIZE "Enable address/undefined sanitizers on Linux" OFF)
 set(PIPELINE_B_MODULE_DIR "" CACHE PATH "B module with register_b_module(Registry&) entry")
 set(PIPELINE_C_MODULE_DIR "" CACHE PATH "C module with register_c_module(Registry&) entry")
 set(PIPELINE_DMA_MODULE_DIR "" CACHE PATH "Vendor transport with register_dma_module(Registry&) entry")
+include(cmake/LocalDependencies.cmake)
 find_package(OpenCV 4.13 EXACT REQUIRED COMPONENTS core imgproc imgcodecs)
 find_package(Threads REQUIRED)
 include(FetchContent)
@@ -59,6 +60,32 @@ if(PIPELINE_BUILD_GUI)
   set(CMAKE_AUTOMOC ON)
   add_executable(pipeline_gui WIN32 src/gui.cpp)
   target_link_libraries(pipeline_gui PRIVATE pipeline_core Qt6::Widgets Qt6::OpenGL Qt6::Test)
+endif()
+# Deploy the selected Debug/Release DLLs for builds started directly in an IDE.
+# The official Windows OpenCV package exposes its components via opencv_world.
+if(WIN32)
+  foreach(app pipeline_cli pipeline_gui pipeline_tests)
+    if(TARGET ${app})
+      foreach(dependency IN LISTS OpenCV_LIBS)
+        if(TARGET ${dependency})
+          get_target_property(dependency_type ${dependency} TYPE)
+          if(dependency_type STREQUAL "SHARED_LIBRARY")
+            add_custom_command(TARGET ${app} POST_BUILD
+              COMMAND ${CMAKE_COMMAND} -E copy_if_different
+                "$<TARGET_FILE:${dependency}>" "$<TARGET_FILE_DIR:${app}>"
+              VERBATIM)
+          endif()
+        endif()
+      endforeach()
+    endif()
+  endforeach()
+  if(TARGET pipeline_gui AND TARGET Qt6::windeployqt)
+    add_custom_command(TARGET pipeline_gui POST_BUILD
+      COMMAND "$<TARGET_FILE:Qt6::windeployqt>"
+        "$<IF:$<CONFIG:Debug>,--debug,--release>" --no-translations --no-compiler-runtime
+        "$<TARGET_FILE:pipeline_gui>"
+      VERBATIM)
+  endif()
 endif()
 install(TARGETS pipeline_cli RUNTIME DESTINATION bin)
 if(PIPELINE_BUILD_GUI)

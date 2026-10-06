@@ -6,6 +6,12 @@
 
 ## Windows 使用
 
+VS Code 开发入口为本目录的 `AUsbStereoPipeline-Windows.code-workspace`，双击后选择“在 VS Code 中打开”。工作区指定 CMake 源目录、代码提示提供者，并启用 `CMakePresets.json`。选择配置预设 `Windows x64 / MSVC 2022` 和生成预设 `windows-debug` 或 `windows-release`，在 CMake 面板执行配置、生成，再选择 `pipeline_gui` 或 `pipeline_cli` 启动。普通文件夹打开时，仓库根目录的 CMake 源目录应设置为 `${workspaceFolder}/software/pc_pipeline`。
+
+源码包省略 OpenCV/Qt 开发库；便携包内 DLL 用于运行程序。CMake 自动查找当前目录及父目录下由 `setup_windows.ps1` 安装的 `.tools/opencv413` 和 `.tools/qt`，因此本机 `dist/` 中解压的源码可以复用主仓库依赖。换电脑时先在解压根目录运行 `tools/a_pipeline/setup_windows.ps1`。依赖装在其他目录时，配置 `-DPIPELINE_DEPENDENCIES_ROOT=含.tools的目录`，或指定 `OpenCV_DIR` 和 `Qt6_DIR`。脚本构建可使用 `build_windows.ps1 -DependenciesRoot '依赖所在目录'`。默认固定 OpenCV 4.13.0 与 Qt 6.8.3；移除版本号无法解决找不到开发库的问题。
+
+IDE 生成会把所选 Debug/Release 的 OpenCV DLL 复制到输出目录，并为 GUI 部署 Qt 运行文件。Windows 便携包与 IDE 的构建目录各自保留。
+
 便携包在本地 `dist/A-USB-Stereo-Pipeline-1.0.0-Windows/`。双击 `启动回放界面.cmd`；使用“导入截图包”选择包含 `export.json`、`pairs.csv`、`stereo` 的父目录。也可打开 GRAY8/YUY2 输入清单。先播放或拖动进度条，再选择原图、搜索图或七级阶段，点击左/右画面检查同帧 256×256 ROI。
 
 预览使用 CPU 共用核心；“运行并导出全序列”按所选 CPU/模拟 DMA 后端运行。检测框回放的框属于指定 `source_pair_id`，异步迟到结果归档到用户 AppLocalDataLocation 下 `AUsbStereoPipeline/preview/`，只有与当前画面帧号、采样时间相符的框才叠加。实际 C 模型依赖可选库，界面会报告缺少的模块。
