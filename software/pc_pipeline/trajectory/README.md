@@ -4,13 +4,22 @@
 
 当前接口为 `b-trajectory-v2-draft`，标定配置继续使用 `b-calibration-v1-draft`。技术依据沿用原 AFH03 USB 同步双目路线；第一部分 RTL、第二部分源码及 A/C 代码均未修改。本文下方初版章节保留其历史范围，深化版结果以本节、v2 报告及交接为准。
 
-从仓库根执行：
+从仓库根执行（要求第二部分已经按 `software/pc_pipeline/ball_measurement/` 合入，且与本目录同级）：
 
 ```powershell
 & '.\software\pc_pipeline\trajectory\run_validation_v2.ps1'
 ```
 
 可传 `-OutputDirectory`、`-Python`、`-OpenCVDir`。Python 依赖见 `tools/fixtures/trajectory_v2_requirements.txt`。程序依次构建/测试、生成输入、两组棋盘标定与留出检查、使用估计参数跑图像链路、隔离真值评分、校正预览、事件证据与图表。输出目录不能复用其他任务的证据目录。Windows 本机已实际运行；Linux入口可构建，但本机 WSL 尚未安装，未验证 Linux/ARM。
+
+`build_and_test.bat`、`build_and_test.ps1` 和 `run_validation_v2.ps1` 都是仓库源码入口，必须随本模块提交；`build-ninja-release/` 只由脚本生成，不上传。v2 脚本每次先调用 builder，再检查生成的 `trajectory_cli.exe`，不会依赖提交外的本地构建残留。也可以显式指定构建目录：
+
+```powershell
+& '.\software\pc_pipeline\trajectory\run_validation_v2.ps1' `
+  -BuildDirectory '.\software\pc_pipeline\trajectory\build-ninja-release'
+```
+
+如果第二部分目录不存在，CMake 会直接报告缺少 `software/pc_pipeline/ball_measurement`；应先合并修复后的第二部分 PR，再更新本 PR 的依赖基准，不要保留 `BPart2/` 外层目录。
 
 新增行为：
 

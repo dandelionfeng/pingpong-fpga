@@ -1,13 +1,29 @@
 [CmdletBinding()]
-param([string]$OutputDirectory,[string]$Python,[string]$OpenCVDir)
+param(
+    [string]$OutputDirectory,
+    [string]$Python,
+    [string]$OpenCVDir,
+    [string]$BuildDirectory,
+    [string]$VisualStudioPath
+)
 $ErrorActionPreference='Stop'
 $taskRoot=Split-Path (Split-Path (Split-Path $PSScriptRoot -Parent) -Parent) -Parent
 if(-not $OutputDirectory){$OutputDirectory=Join-Path $taskRoot '_deliveries\part3_v2_validation'}
 if(-not $Python){$Python=Join-Path $taskRoot '.venv\Scripts\python.exe'}
+if(-not $BuildDirectory){$BuildDirectory=Join-Path $PSScriptRoot 'build-ninja-release'}
 if(-not(Test-Path -LiteralPath $Python)){throw 'Python missing; pass -Python with numpy/opencv-python/matplotlib.'}
+$taskDependency=Join-Path (Split-Path $PSScriptRoot -Parent) 'ball_measurement'
+if(-not(Test-Path -LiteralPath (Join-Path $taskDependency 'CMakeLists.txt'))){
+    throw "Second-part dependency missing: expected $taskDependency (merge/fix the B second-part path before running v2)."
+}
 $taskBuild=Join-Path $OutputDirectory 'build-console.txt'
 New-Item -ItemType Directory -Path $OutputDirectory -Force | Out-Null
-if($OpenCVDir){& (Join-Path $PSScriptRoot 'build_and_test.bat') -OpenCVDir $OpenCVDir > $taskBuild 2>&1}else{& (Join-Path $PSScriptRoot 'build_and_test.bat') > $taskBuild 2>&1}
+$taskBuilder=Join-Path $PSScriptRoot 'build_and_test.bat'
+if(-not(Test-Path -LiteralPath $taskBuilder)){throw "Build entry missing: $taskBuilder"}
+$taskBuildArgs=@('-BuildDirectory',$BuildDirectory)
+if($OpenCVDir){$taskBuildArgs+=@('-OpenCVDir',$OpenCVDir)}
+if($VisualStudioPath){$taskBuildArgs+=@('-VisualStudioPath',$VisualStudioPath)}
+& $taskBuilder @taskBuildArgs > $taskBuild 2>&1
 if($LASTEXITCODE -ne 0){throw "C++ build/test failed; see $taskBuild"}
 function Invoke-TaskStep([string]$Program,[string[]]$Arguments,[string]$Log){
     & $Program @Arguments 2>&1 | Tee-Object -FilePath $Log
@@ -17,7 +33,8 @@ $taskFixtures=Join-Path $taskRoot 'tools\fixtures'
 Invoke-TaskStep $Python @((Join-Path $taskFixtures 'trajectory_v2_fixture.py'),'--output',$OutputDirectory) (Join-Path $OutputDirectory 'fixture-run.txt')
 $taskInputs=Join-Path $OutputDirectory 'inputs';$taskResults=Join-Path $OutputDirectory 'results'
 New-Item -ItemType Directory -Path $taskResults -Force | Out-Null
-$taskCli=Join-Path $PSScriptRoot 'build-ninja-release\trajectory_cli.exe'
+$taskCli=Join-Path $BuildDirectory 'trajectory_cli.exe'
+if(-not(Test-Path -LiteralPath $taskCli)){throw "Built CLI missing: $taskCli"}
 foreach($taskMode in @('board','board_broad')){
     Invoke-TaskStep $taskCli @('calibrate',(Join-Path $taskInputs ($taskMode+'_manifest.json')),(Join-Path $taskResults ($taskMode+'_calibration.json'))) (Join-Path $OutputDirectory ($taskMode+'-run.txt'))
     $taskHeldout=$taskMode+'_heldout.json'
