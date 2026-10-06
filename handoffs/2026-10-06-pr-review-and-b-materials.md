@@ -11,5 +11,6 @@
 - 未执行/阻塞：B3 原验证入口不完整，整套 v2 评分未重跑；B/C 真正的 A 适配库、C 独立评分、真实双目标定与实际板卡仍待接入。B 公布的开发回归不替代独立评分。
 - 修改理由：队友在 GitHub 上原先拿不到本机未推送 A 核心；补充可下载源代码、程序和同帧输入/黄金输出，提供明确接入和复现入口。
 - 发布：<https://github.com/fengfengkang/pingpong-fpga/releases/tag/a-pipeline-pc-20261006>；访问权限保持 private；附件哈希与版本在 [发布清单附件](https://github.com/fengfengkang/pingpong-fpga/releases/download/a-pipeline-pc-20261006/a-pipeline-release-20261006.json) 及 `data/manifests/` 仓库副本中。GitHub 发布结果另由本次操作记录确认。
+- GitHub 实际结果：A 分支已推送并创建 [PR #15](https://github.com/fengfengkang/pingpong-fpga/pull/15)，`repository-checks` 通过；#12/#13/#14 均已在被测 head 上提交 `CHANGES_REQUESTED`，未合并。Release 的 6 个附件均为 uploaded，GitHub SHA-256 与本地一致；队友 cluepiggie 有 write 权限。实际下载样例并在中文路径解压后运行 CLI，8/8 对、0 错误，Mask 序列哈希一致。机器记录见 [发布核对](../reports/a-github-publication-20261006.json)。
 - 下一步/验收：B 修复三项 PR 的具体阻塞，从干净 checkout 复现入口；A/B 技术复核后实现 `pipeline_b_module`，C 接入实际模型，重跑共同 PC 闭环。设备到货后补 USB、PCIe、DDR3L 和整机日志。
 - 审批依据：蒲公英本轮明确授权“没问题就通过，有问题提出来；需要提供的东西也一并上传”。对存在已复现问题的 B PR 请求修改；上传使用私人仓库 PR/Release，符合 CONTRIBUTING.md。

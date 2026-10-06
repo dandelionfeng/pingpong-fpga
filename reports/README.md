@@ -4,6 +4,7 @@
 
 | 类型 | 记录 | 范围 |
 | --- | --- | --- |
+| GitHub 审查/发布核对 | [机器记录](a-github-publication-20261006.json) | 三个固定 head 已请求修改；A PR/私人 Release 上传、6 个远端哈希和实际下载样例 CLI |
 | 最新 B PR 审查 | [PR 审查](PR审查_20261006.md) | #12 启动/短帧故障、#13 上传路径、#14 构建与验证入口；实际通过范围分别记录 |
 | A/B 接入输入 | [人工样例验证](a-b-integration-20261006.json) | 8 对双眼、176 图、48,971,776 像素、CPU/mock 与参考身份核对；非米制/真实模型精度 |
 | A 源码开发入口 | [VS Code/OpenCV 修复](a-vscode-source-build-20261006.json) | Windows 配置、Debug/Release 构建、核心检查与样例结果一致；本轮 GUI 交互未重验 |
