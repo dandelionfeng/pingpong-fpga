@@ -1,0 +1,2 @@
+add_library(pipeline_c_module STATIC module.cpp)
+target_link_libraries(pipeline_c_module PRIVATE pipeline_module_api)

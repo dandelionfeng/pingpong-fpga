@@ -28,4 +28,6 @@
 - [板卡资料清单](data/manifests/afh03-vendor-package.md)、[相机资料清单](data/manifests/ov9281-usb-module.md)和[大文件管理](artifacts/README.md)记录本地资料、来源与哈希。厂商 SDK、原始视频、模型权重和生成工程留在本地。
 - [交接索引](handoffs/README.md)定位当前任务和历史执行记录；[报告索引](reports/README.md)区分文档核查、历史模块测试与之后的完整系统结果。
 
-`fpga/`、`vision/` 和 `contracts/` 目前保留开发入口，现行七级运动 RTL 尚待实现。方案建议的 `software/pc_pipeline/`、`tools/fixtures/`、`tests/pc_pipeline/` 尚待具体任务创建，目录名不代表功能已实现。新任务从最新已评审的 `origin/main` 开始；若依赖尚未合并的工作，明确基准提交和依赖 PR。
+A 的 [共用软件与回放程序](software/pc_pipeline/README.md)、七级整数参考、前三段 RTL、通信模拟及部署准备已实现，实际检查见 [2026-10-05 交付报告](reports/A职责交付_20261005.md)与[交接](handoffs/2026-10-05-a-usb-fpga-pipeline.md)。B/C 的实际测量/模型、后四段 RTL 和实物集成仍待接入，完整系统验收分别记录。新任务从最新已评审的 `origin/main` 开始；若依赖尚未合并的工作，明确基准提交和依赖 PR。
+
+B 的接入从 [A 交付材料](docs/B接入A交付材料.md) 开始，提供私人 Release 下载、源码构建、同帧原图/Mask/整数黄金输出与适配规则。最新 B PR 的问题及复现范围见 [2026-10-06 审查报告](reports/PR审查_20261006.md)。
