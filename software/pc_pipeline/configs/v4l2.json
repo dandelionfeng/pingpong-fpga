@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "mode": "v4l2",
+  "device": "/dev/video0",
+  "exposure_absolute": 10,
+  "max_pairs": 300,
+  "requested_format": "2560x720 YUYV 60fps",
+  "note": "Exposure units are V4L2 100us. Actual USB capture requires the camera; device mode never uses file fallback."
+}

@@ -1,0 +1,2942 @@
+{
+  "frames": [
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        1,
+        1
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        14000000000,
+        14000000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000001_L000001_R000001.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 1,
+      "sha256": "135749ba5ed9f06d7b56f4dc28ffff18711cdda3c30f29192478189220a94c5b",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 14000000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        2,
+        2
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        14016000000,
+        14016000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000002_L000002_R000002.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 2,
+      "sha256": "135749ba5ed9f06d7b56f4dc28ffff18711cdda3c30f29192478189220a94c5b",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 14016000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        3,
+        3
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        14032000000,
+        14032000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000003_L000003_R000003.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 3,
+      "sha256": "135749ba5ed9f06d7b56f4dc28ffff18711cdda3c30f29192478189220a94c5b",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 14032000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        4,
+        4
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        14048000000,
+        14048000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000004_L000004_R000004.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 4,
+      "sha256": "142b5ba7d7df81e568268376b790010cd739134140cc28555c9e1d44c9e870c7",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 14048000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        5,
+        5
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        14064000000,
+        14064000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000005_L000005_R000005.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 5,
+      "sha256": "142b5ba7d7df81e568268376b790010cd739134140cc28555c9e1d44c9e870c7",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 14064000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        6,
+        6
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        14080000000,
+        14080000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000006_L000006_R000006.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 6,
+      "sha256": "4ee5091d7947306c00e66c40d51075b819d8911cf46077ca04d0f57108c0af30",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 14080000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        7,
+        7
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        14096000000,
+        14096000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000007_L000007_R000007.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 7,
+      "sha256": "4ee5091d7947306c00e66c40d51075b819d8911cf46077ca04d0f57108c0af30",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 14096000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        8,
+        8
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        14112000000,
+        14112000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000008_L000008_R000008.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 8,
+      "sha256": "f0d62dc84739988ab95a4075671801e61ffc39fc9aa2959c6d8b391a22796082",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 14112000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        9,
+        9
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        14128000000,
+        14128000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000009_L000009_R000009.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 9,
+      "sha256": "f0d62dc84739988ab95a4075671801e61ffc39fc9aa2959c6d8b391a22796082",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 14128000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        10,
+        10
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        14144000000,
+        14144000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000010_L000010_R000010.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 10,
+      "sha256": "4adf2b98f60aa8d1f016b399d8579631ed9c9c14382fa6a8eceb96c0ef2c0752",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 14144000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        11,
+        11
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        14160000000,
+        14160000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000011_L000011_R000011.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 11,
+      "sha256": "4adf2b98f60aa8d1f016b399d8579631ed9c9c14382fa6a8eceb96c0ef2c0752",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 14160000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        12,
+        12
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        14176000000,
+        14176000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000012_L000012_R000012.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 12,
+      "sha256": "52768f4dfe1f11831204372cab3366b98b998e97d6e336a663b8c266cdc0a0c3",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 14176000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        13,
+        13
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        14192000000,
+        14192000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000013_L000013_R000013.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 13,
+      "sha256": "52768f4dfe1f11831204372cab3366b98b998e97d6e336a663b8c266cdc0a0c3",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 14192000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        14,
+        14
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        14208000000,
+        14208000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000014_L000014_R000014.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 14,
+      "sha256": "aebe9f072c19babdc1295a4d616967792d99a68814040d0db5ac7ee941ea15cc",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 14208000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        15,
+        15
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        14224000000,
+        14224000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000015_L000015_R000015.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 15,
+      "sha256": "aebe9f072c19babdc1295a4d616967792d99a68814040d0db5ac7ee941ea15cc",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 14224000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        16,
+        16
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        14240000000,
+        14240000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000016_L000016_R000016.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 16,
+      "sha256": "50690e9629a2a02a354564b2dc6163e55ef8d8a51291f5e62d4685bba2c98dd6",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 14240000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        17,
+        17
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        14256000000,
+        14256000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000017_L000017_R000017.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 17,
+      "sha256": "50690e9629a2a02a354564b2dc6163e55ef8d8a51291f5e62d4685bba2c98dd6",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 14256000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        18,
+        18
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        14272000000,
+        14272000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000018_L000018_R000018.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 18,
+      "sha256": "9cda601d044e179f9bfcaf7d70e6e4e89531d8bf36f59d5bfdce1aea0a44fd5c",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 14272000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        19,
+        19
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        14288000000,
+        14288000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000019_L000019_R000019.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 19,
+      "sha256": "9cda601d044e179f9bfcaf7d70e6e4e89531d8bf36f59d5bfdce1aea0a44fd5c",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 14288000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        20,
+        20
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        14304000000,
+        14304000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000020_L000020_R000020.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 20,
+      "sha256": "4cdf53c03231426e6534f0940820d8212dc5685f9809e00a717a778362a7c2c4",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 14304000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        21,
+        21
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        14320000000,
+        14320000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000021_L000021_R000021.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 21,
+      "sha256": "4cdf53c03231426e6534f0940820d8212dc5685f9809e00a717a778362a7c2c4",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 14320000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        22,
+        22
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        14336000000,
+        14336000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000022_L000022_R000022.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 22,
+      "sha256": "fe60f8b5bfb2ca3e2c1909b753c1f537fa2744d9b913a44c1fbedc31f83361f1",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 14336000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        23,
+        23
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        14352000000,
+        14352000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000023_L000023_R000023.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 23,
+      "sha256": "fe60f8b5bfb2ca3e2c1909b753c1f537fa2744d9b913a44c1fbedc31f83361f1",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 14352000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        24,
+        24
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        14368000000,
+        14368000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000024_L000024_R000024.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 24,
+      "sha256": "ae22a5fca2542abd947d303784c298cafe133b63b97992f602e3c185e41d2a5b",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 14368000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        25,
+        25
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        14384000000,
+        14384000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000025_L000025_R000025.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 25,
+      "sha256": "ae22a5fca2542abd947d303784c298cafe133b63b97992f602e3c185e41d2a5b",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 14384000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        26,
+        26
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        14400000000,
+        14400000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000026_L000026_R000026.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 26,
+      "sha256": "66eff6e3319579ed39f3a78d481cc1afc69c7a4987a12b0d4ab06b22fb9293ef",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 14400000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        27,
+        27
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        14416000000,
+        14416000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000027_L000027_R000027.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 27,
+      "sha256": "66eff6e3319579ed39f3a78d481cc1afc69c7a4987a12b0d4ab06b22fb9293ef",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 14416000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        28,
+        28
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        14432000000,
+        14432000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000028_L000028_R000028.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 28,
+      "sha256": "66eff6e3319579ed39f3a78d481cc1afc69c7a4987a12b0d4ab06b22fb9293ef",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 14432000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        29,
+        29
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        14448000000,
+        14448000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000029_L000029_R000029.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 29,
+      "sha256": "f184459fb201357456505ad8ac3977e2807f4f584d58a2d5905c146dd836ebfa",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 14448000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        30,
+        30
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        14464000000,
+        14464000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000030_L000030_R000030.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 30,
+      "sha256": "f184459fb201357456505ad8ac3977e2807f4f584d58a2d5905c146dd836ebfa",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 14464000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        31,
+        31
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        14480000000,
+        14480000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000031_L000031_R000031.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 31,
+      "sha256": "4cf8021234b0e75185f642cc010d2fb521767b2a6048f9b889acee2c901382a8",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 14480000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        32,
+        32
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        14496000000,
+        14496000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000032_L000032_R000032.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 32,
+      "sha256": "4cf8021234b0e75185f642cc010d2fb521767b2a6048f9b889acee2c901382a8",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 14496000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        33,
+        33
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        14512000000,
+        14512000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000033_L000033_R000033.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 33,
+      "sha256": "a36e91e6bdb5bf03ae649e9de32995b54568ba48327d27fc9627218b1f03f750",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 14512000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        34,
+        34
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        14528000000,
+        14528000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000034_L000034_R000034.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 34,
+      "sha256": "a36e91e6bdb5bf03ae649e9de32995b54568ba48327d27fc9627218b1f03f750",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 14528000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        35,
+        35
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        14544000000,
+        14544000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000035_L000035_R000035.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 35,
+      "sha256": "ab3fa3b0421544a5fd578128a307cbdd284a0ac33d4c3c411596b894fb9b63c3",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 14544000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        36,
+        36
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        14560000000,
+        14560000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000036_L000036_R000036.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 36,
+      "sha256": "ab3fa3b0421544a5fd578128a307cbdd284a0ac33d4c3c411596b894fb9b63c3",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 14560000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        37,
+        37
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        14576000000,
+        14576000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000037_L000037_R000037.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 37,
+      "sha256": "bd5c6ecb7dcff47b420321575af1bad7d7545c3f27a9002c837f3a6e376273d4",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 14576000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        38,
+        38
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        14592000000,
+        14592000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000038_L000038_R000038.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 38,
+      "sha256": "bd5c6ecb7dcff47b420321575af1bad7d7545c3f27a9002c837f3a6e376273d4",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 14592000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        39,
+        39
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        14608000000,
+        14608000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000039_L000039_R000039.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 39,
+      "sha256": "95620bcd5fd0403f661cfcc055650247f986b3397be43949cb64ebee45374ef7",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 14608000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        40,
+        40
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        14624000000,
+        14624000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000040_L000040_R000040.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 40,
+      "sha256": "95620bcd5fd0403f661cfcc055650247f986b3397be43949cb64ebee45374ef7",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 14624000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        41,
+        41
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        14640000000,
+        14640000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000041_L000041_R000041.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 41,
+      "sha256": "963803b49b21adb942c6efa5163b47214d022e99fda163745e3c1f24b94762e3",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 14640000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        42,
+        42
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        14656000000,
+        14656000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000042_L000042_R000042.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 42,
+      "sha256": "963803b49b21adb942c6efa5163b47214d022e99fda163745e3c1f24b94762e3",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 14656000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        43,
+        43
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        14672000000,
+        14672000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000043_L000043_R000043.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 43,
+      "sha256": "c183d78864a88877ddc99a05d5c60490b88380a11d0d4515488093c63a27b845",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 14672000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        44,
+        44
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        14688000000,
+        14688000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000044_L000044_R000044.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 44,
+      "sha256": "c183d78864a88877ddc99a05d5c60490b88380a11d0d4515488093c63a27b845",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 14688000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        45,
+        45
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        14704000000,
+        14704000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000045_L000045_R000045.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 45,
+      "sha256": "1b3ecbac12a144061810576b2bed0d0b493b530cea0fb5eb2782e6ba530b8aff",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 14704000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        46,
+        46
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        14720000000,
+        14720000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000046_L000046_R000046.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 46,
+      "sha256": "1b3ecbac12a144061810576b2bed0d0b493b530cea0fb5eb2782e6ba530b8aff",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 14720000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        47,
+        47
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        14736000000,
+        14736000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000047_L000047_R000047.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 47,
+      "sha256": "8ad5ae9656f1e9c61da310d298dc40c7af43cefa8274a97a84d5d14bae54297c",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 14736000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        48,
+        48
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        14752000000,
+        14752000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000048_L000048_R000048.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 48,
+      "sha256": "8ad5ae9656f1e9c61da310d298dc40c7af43cefa8274a97a84d5d14bae54297c",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 14752000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        49,
+        49
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        14768000000,
+        14768000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000049_L000049_R000049.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 49,
+      "sha256": "806437050685b6f92f3e6720cc6e3ebb99e4351900b271b3c6322715b446e433",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 14768000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        50,
+        50
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        14784000000,
+        14784000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000050_L000050_R000050.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 50,
+      "sha256": "806437050685b6f92f3e6720cc6e3ebb99e4351900b271b3c6322715b446e433",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 14784000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        51,
+        51
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        14800000000,
+        14800000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000051_L000051_R000051.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 51,
+      "sha256": "61b2930dc71f57c4be3d2ec8692f77a7bc4bf0de271f3c03fd254a0a588f6ed2",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 14800000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        52,
+        52
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        14816000000,
+        14816000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000052_L000052_R000052.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 52,
+      "sha256": "61b2930dc71f57c4be3d2ec8692f77a7bc4bf0de271f3c03fd254a0a588f6ed2",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 14816000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        53,
+        53
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        14832000000,
+        14832000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000053_L000053_R000053.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 53,
+      "sha256": "61b2930dc71f57c4be3d2ec8692f77a7bc4bf0de271f3c03fd254a0a588f6ed2",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 14832000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        54,
+        54
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        14848000000,
+        14848000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000054_L000054_R000054.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 54,
+      "sha256": "89d61b37a908913bf073d2d9effcf52736ef89a825f049a33df3fb1f291e4c9c",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 14848000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        55,
+        55
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        14864000000,
+        14864000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000055_L000055_R000055.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 55,
+      "sha256": "89d61b37a908913bf073d2d9effcf52736ef89a825f049a33df3fb1f291e4c9c",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 14864000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        56,
+        56
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        14880000000,
+        14880000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000056_L000056_R000056.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 56,
+      "sha256": "db9e9f18e4a4c4f7c8db546d9d045ebbb3891b0ab93f7d5b52fc5b215d799bfa",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 14880000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        57,
+        57
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        14896000000,
+        14896000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000057_L000057_R000057.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 57,
+      "sha256": "db9e9f18e4a4c4f7c8db546d9d045ebbb3891b0ab93f7d5b52fc5b215d799bfa",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 14896000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        58,
+        58
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        14912000000,
+        14912000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000058_L000058_R000058.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 58,
+      "sha256": "94349d1c263062293567ad35f3370f501aea5aba79bf8f238e11a990a5eec379",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 14912000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        59,
+        59
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        14928000000,
+        14928000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000059_L000059_R000059.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 59,
+      "sha256": "94349d1c263062293567ad35f3370f501aea5aba79bf8f238e11a990a5eec379",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 14928000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        60,
+        60
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        14944000000,
+        14944000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000060_L000060_R000060.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 60,
+      "sha256": "9d4477b8441fa197368d000a93eeaf0b8d7ca5c3ee6920194adafde51b2eafca",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 14944000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        61,
+        61
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        14960000000,
+        14960000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000061_L000061_R000061.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 61,
+      "sha256": "9d4477b8441fa197368d000a93eeaf0b8d7ca5c3ee6920194adafde51b2eafca",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 14960000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        62,
+        62
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        14976000000,
+        14976000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000062_L000062_R000062.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 62,
+      "sha256": "1bdd138a8959f05876a581ee321e4cedfdff88698eb0e0f21179aee592f04410",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 14976000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        63,
+        63
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        14992000000,
+        14992000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000063_L000063_R000063.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 63,
+      "sha256": "1bdd138a8959f05876a581ee321e4cedfdff88698eb0e0f21179aee592f04410",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 14992000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        64,
+        64
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        15008000000,
+        15008000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000064_L000064_R000064.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 64,
+      "sha256": "acb881d2b8055a57bffdd5bf6ec10d64632e77ddb14a9e44b18c8e7f15f62b18",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 15008000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        65,
+        65
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        15024000000,
+        15024000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000065_L000065_R000065.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 65,
+      "sha256": "acb881d2b8055a57bffdd5bf6ec10d64632e77ddb14a9e44b18c8e7f15f62b18",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 15024000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        66,
+        66
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        15040000000,
+        15040000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000066_L000066_R000066.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 66,
+      "sha256": "1243dffee65ac3b13438ba179dcd9b6da73dbdaa0a5b0d5d5677b05d88437b54",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 15040000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        67,
+        67
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        15056000000,
+        15056000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000067_L000067_R000067.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 67,
+      "sha256": "1243dffee65ac3b13438ba179dcd9b6da73dbdaa0a5b0d5d5677b05d88437b54",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 15056000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        68,
+        68
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        15072000000,
+        15072000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000068_L000068_R000068.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 68,
+      "sha256": "2527797bdd610ae2ed300f3deff5d7af2c37038d7d4b9cf352e69e0cfe96a0ff",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 15072000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        69,
+        69
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        15088000000,
+        15088000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000069_L000069_R000069.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 69,
+      "sha256": "2527797bdd610ae2ed300f3deff5d7af2c37038d7d4b9cf352e69e0cfe96a0ff",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 15088000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        70,
+        70
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        15104000000,
+        15104000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000070_L000070_R000070.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 70,
+      "sha256": "ebc8757b2438683c1cf0ccad6c120e8eb40a22a5fb30ddd56aad117940c5721e",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 15104000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        71,
+        71
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        15120000000,
+        15120000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000071_L000071_R000071.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 71,
+      "sha256": "ebc8757b2438683c1cf0ccad6c120e8eb40a22a5fb30ddd56aad117940c5721e",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 15120000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        72,
+        72
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        15136000000,
+        15136000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000072_L000072_R000072.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 72,
+      "sha256": "371d0f0d175df3e96ac36ebc15baeeee78e3d462c3faaf326fcbbf2437c37291",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 15136000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        73,
+        73
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        15152000000,
+        15152000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000073_L000073_R000073.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 73,
+      "sha256": "371d0f0d175df3e96ac36ebc15baeeee78e3d462c3faaf326fcbbf2437c37291",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 15152000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        74,
+        74
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        15168000000,
+        15168000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000074_L000074_R000074.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 74,
+      "sha256": "a9316981c4e4abfa3f5f4ecda58ea9510c26345b6667a3d32dfb0c84666a86f3",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 15168000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        75,
+        75
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        15184000000,
+        15184000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000075_L000075_R000075.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 75,
+      "sha256": "a9316981c4e4abfa3f5f4ecda58ea9510c26345b6667a3d32dfb0c84666a86f3",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 15184000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        76,
+        76
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        15200000000,
+        15200000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000076_L000076_R000076.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 76,
+      "sha256": "718bce90d658667ec046feaf404ef55a8c5e108d0f8b795d024a06c9b25ce9d8",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 15200000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        77,
+        77
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        15216000000,
+        15216000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000077_L000077_R000077.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 77,
+      "sha256": "718bce90d658667ec046feaf404ef55a8c5e108d0f8b795d024a06c9b25ce9d8",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 15216000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        78,
+        78
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        15232000000,
+        15232000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000078_L000078_R000078.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 78,
+      "sha256": "718bce90d658667ec046feaf404ef55a8c5e108d0f8b795d024a06c9b25ce9d8",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 15232000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        79,
+        79
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        15248000000,
+        15248000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000079_L000079_R000079.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 79,
+      "sha256": "f19a9df75055dafe60dcb380ef24cf643f5d5b4ac521a3397109b6c991b8f503",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 15248000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        80,
+        80
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        15264000000,
+        15264000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000080_L000080_R000080.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 80,
+      "sha256": "f19a9df75055dafe60dcb380ef24cf643f5d5b4ac521a3397109b6c991b8f503",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 15264000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        81,
+        81
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        15280000000,
+        15280000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000081_L000081_R000081.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 81,
+      "sha256": "bb8c636d3997d0c8e2cb9e1a8b688c82b6071736000750622644fd3754c5954b",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 15280000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        82,
+        82
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        15296000000,
+        15296000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000082_L000082_R000082.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 82,
+      "sha256": "bb8c636d3997d0c8e2cb9e1a8b688c82b6071736000750622644fd3754c5954b",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 15296000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        83,
+        83
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        15312000000,
+        15312000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000083_L000083_R000083.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 83,
+      "sha256": "91f09a35568da77a7c4301433c8b272c611db86e85bcc8d18618c6117bfb529f",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 15312000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        84,
+        84
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        15328000000,
+        15328000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000084_L000084_R000084.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 84,
+      "sha256": "91f09a35568da77a7c4301433c8b272c611db86e85bcc8d18618c6117bfb529f",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 15328000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        85,
+        85
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        15344000000,
+        15344000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000085_L000085_R000085.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 85,
+      "sha256": "756ffcfb5faf3825c7f497af891368b94cc65a16dfefe6759a40de243005016f",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 15344000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        86,
+        86
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        15360000000,
+        15360000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000086_L000086_R000086.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 86,
+      "sha256": "756ffcfb5faf3825c7f497af891368b94cc65a16dfefe6759a40de243005016f",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 15360000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        87,
+        87
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        15376000000,
+        15376000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000087_L000087_R000087.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 87,
+      "sha256": "4959095ef9c405110989a70935cb81c69f96f3b09cd3b936fd2d34c2481048ce",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 15376000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        88,
+        88
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        15392000000,
+        15392000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000088_L000088_R000088.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 88,
+      "sha256": "4959095ef9c405110989a70935cb81c69f96f3b09cd3b936fd2d34c2481048ce",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 15392000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        89,
+        89
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        15408000000,
+        15408000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000089_L000089_R000089.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 89,
+      "sha256": "cb3990a3e2469e04da30665d66289221172c1fc1960c9fbebdb822913393cfe8",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 15408000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        90,
+        90
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        15424000000,
+        15424000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000090_L000090_R000090.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 90,
+      "sha256": "cb3990a3e2469e04da30665d66289221172c1fc1960c9fbebdb822913393cfe8",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 15424000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        91,
+        91
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        15440000000,
+        15440000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000091_L000091_R000091.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 91,
+      "sha256": "a4b98e9ca822289bc8e2ea1880a7f460b0c88a3f64af6f7e1d37300356f21937",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 15440000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        92,
+        92
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        15456000000,
+        15456000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000092_L000092_R000092.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 92,
+      "sha256": "a4b98e9ca822289bc8e2ea1880a7f460b0c88a3f64af6f7e1d37300356f21937",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 15456000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        93,
+        93
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        15472000000,
+        15472000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000093_L000093_R000093.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 93,
+      "sha256": "479ddaa8f5c84f5a079c320a45c36ffc260d1ecede8b07f4827c1055f4f3747c",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 15472000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        94,
+        94
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        15488000000,
+        15488000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000094_L000094_R000094.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 94,
+      "sha256": "479ddaa8f5c84f5a079c320a45c36ffc260d1ecede8b07f4827c1055f4f3747c",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 15488000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        95,
+        95
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        15504000000,
+        15504000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000095_L000095_R000095.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 95,
+      "sha256": "e63e07067a6d149d106e19a7474fd2a133ed2d65cb298df948a02a6d2c0a84a0",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 15504000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        96,
+        96
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        15520000000,
+        15520000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000096_L000096_R000096.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 96,
+      "sha256": "e63e07067a6d149d106e19a7474fd2a133ed2d65cb298df948a02a6d2c0a84a0",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 15520000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        97,
+        97
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        15536000000,
+        15536000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000097_L000097_R000097.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 97,
+      "sha256": "52162a0fbd94e2f152f3206dc53c5aad9efe5916d857bf58a416b2e1c6a31832",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 15536000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        98,
+        98
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        15552000000,
+        15552000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000098_L000098_R000098.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 98,
+      "sha256": "52162a0fbd94e2f152f3206dc53c5aad9efe5916d857bf58a416b2e1c6a31832",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 15552000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        99,
+        99
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        15568000000,
+        15568000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000099_L000099_R000099.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 99,
+      "sha256": "58800e14135c08be9a20007c31c88f2e3d30df2555c204c3e4248db813aef27e",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 15568000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        100,
+        100
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        15584000000,
+        15584000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000100_L000100_R000100.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 100,
+      "sha256": "58800e14135c08be9a20007c31c88f2e3d30df2555c204c3e4248db813aef27e",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 15584000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        101,
+        101
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        15600000000,
+        15600000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000101_L000101_R000101.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 101,
+      "sha256": "00b1e95b2c18f4533bf3824022f82977e2c090def3c3b6094b536202b68978f7",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 15600000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        102,
+        102
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        15616000000,
+        15616000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000102_L000102_R000102.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 102,
+      "sha256": "00b1e95b2c18f4533bf3824022f82977e2c090def3c3b6094b536202b68978f7",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 15616000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        103,
+        103
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        15632000000,
+        15632000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000103_L000103_R000103.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 103,
+      "sha256": "00b1e95b2c18f4533bf3824022f82977e2c090def3c3b6094b536202b68978f7",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 15632000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        104,
+        104
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        15648000000,
+        15648000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000104_L000104_R000104.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 104,
+      "sha256": "0cdef28683039715e6bbb639f71d9079eff30e7e8ad3d2ddf39ee104f85cb396",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 15648000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        105,
+        105
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        15664000000,
+        15664000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000105_L000105_R000105.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 105,
+      "sha256": "0cdef28683039715e6bbb639f71d9079eff30e7e8ad3d2ddf39ee104f85cb396",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 15664000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        106,
+        106
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        15680000000,
+        15680000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000106_L000106_R000106.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 106,
+      "sha256": "c2b7e1f7b0b7766326839cb41771ed0e50fad191182e73d3849cd0a555fbf315",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 15680000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        107,
+        107
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        15696000000,
+        15696000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000107_L000107_R000107.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 107,
+      "sha256": "c2b7e1f7b0b7766326839cb41771ed0e50fad191182e73d3849cd0a555fbf315",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 15696000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        108,
+        108
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        15712000000,
+        15712000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000108_L000108_R000108.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 108,
+      "sha256": "da2194164e8f38a49df637194647bea146657a7b2832dc7705e95029105ac3b8",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 15712000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        109,
+        109
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        15728000000,
+        15728000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000109_L000109_R000109.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 109,
+      "sha256": "da2194164e8f38a49df637194647bea146657a7b2832dc7705e95029105ac3b8",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 15728000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        110,
+        110
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        15744000000,
+        15744000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000110_L000110_R000110.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 110,
+      "sha256": "4d31dc898ab002d7cb32a721b76e9886b81f555ef974c833b558c4706ef0fd57",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 15744000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        111,
+        111
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        15760000000,
+        15760000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000111_L000111_R000111.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 111,
+      "sha256": "4d31dc898ab002d7cb32a721b76e9886b81f555ef974c833b558c4706ef0fd57",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 15760000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        112,
+        112
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        15776000000,
+        15776000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000112_L000112_R000112.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 112,
+      "sha256": "fe026938aa069bd5c5196cd5ac072fb5a815f214e003f2410282fd2719b86fd7",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 15776000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        113,
+        113
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        15792000000,
+        15792000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000113_L000113_R000113.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 113,
+      "sha256": "fe026938aa069bd5c5196cd5ac072fb5a815f214e003f2410282fd2719b86fd7",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 15792000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        114,
+        114
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        15808000000,
+        15808000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000114_L000114_R000114.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 114,
+      "sha256": "a189578337c010a33b5d570bfebc5ab5a0a090064d6f090666d1678c21237640",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 15808000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        115,
+        115
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        15824000000,
+        15824000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000115_L000115_R000115.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 115,
+      "sha256": "a189578337c010a33b5d570bfebc5ab5a0a090064d6f090666d1678c21237640",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 15824000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        116,
+        116
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        15840000000,
+        15840000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000116_L000116_R000116.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 116,
+      "sha256": "eacb025e89ad41284e022d8e0b3b0008a5c9c69975810e978755341c80fa83ff",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 15840000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        117,
+        117
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        15856000000,
+        15856000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000117_L000117_R000117.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 117,
+      "sha256": "eacb025e89ad41284e022d8e0b3b0008a5c9c69975810e978755341c80fa83ff",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 15856000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        118,
+        118
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        15872000000,
+        15872000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000118_L000118_R000118.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 118,
+      "sha256": "b44669d6d85ebd60958ca1c132694e316e0acdef28ed92759d6cb67c4c841301",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 15872000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        119,
+        119
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        15888000000,
+        15888000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000119_L000119_R000119.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 119,
+      "sha256": "b44669d6d85ebd60958ca1c132694e316e0acdef28ed92759d6cb67c4c841301",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 15888000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        120,
+        120
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        15904000000,
+        15904000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000120_L000120_R000120.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 120,
+      "sha256": "d1c871b6a622987a6b7298e6b12ed358c681f975166a88357c201074c7cd00a6",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 15904000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        121,
+        121
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        15920000000,
+        15920000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000121_L000121_R000121.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 121,
+      "sha256": "d1c871b6a622987a6b7298e6b12ed358c681f975166a88357c201074c7cd00a6",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 15920000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        122,
+        122
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        15936000000,
+        15936000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000122_L000122_R000122.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 122,
+      "sha256": "9a1338bc4db3964176bdebadb66752ac55294549f31e16c6623483ac3d53bf68",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 15936000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        123,
+        123
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        15952000000,
+        15952000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000123_L000123_R000123.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 123,
+      "sha256": "9a1338bc4db3964176bdebadb66752ac55294549f31e16c6623483ac3d53bf68",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 15952000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        124,
+        124
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        15968000000,
+        15968000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000124_L000124_R000124.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 124,
+      "sha256": "60f028b301ac4234d381c043ed53a749ae24bdb547bcc683df9f3f2655075412",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 15968000000,
+      "width": 2560
+    },
+    {
+      "calibration_version": "unavailable",
+      "camera_frame_id": [
+        125,
+        125
+      ],
+      "config_version": "a-int-v1",
+      "eye_timestamp_ns": [
+        15984000000,
+        15984000000
+      ],
+      "file": "C:\\BiliLocal Converter\\tmp\\frame-export-package-qa-20261005\\exports\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球_截图_20261005_173916_976996\\stereo\\pair_000125_L000125_R000125.yuy2",
+      "format": "YUY2",
+      "height": 720,
+      "model_version": "unavailable",
+      "pair_id": 125,
+      "sha256": "60f028b301ac4234d381c043ed53a749ae24bdb547bcc683df9f3f2655075412",
+      "source": "file",
+      "stride": 5120,
+      "time_source": "video_requested_time_not_device_capture",
+      "timestamp_ns": 15984000000,
+      "width": 2560
+    }
+  ],
+  "geometry_status": "duplicated_monocular_not_calibrated_stereo",
+  "mode": "file",
+  "provenance": {
+    "black_border_detection": {
+      "crop_policy": "union of content boxes across the batch; all-black frames ignored; one fixed crop for all eyes",
+      "ignore_perpendicular_edge_fraction": 0.05,
+      "max_rgb_threshold": 24,
+      "minimum_black_fraction": 0.95
+    },
+    "byte_order": "Y0 U0 Y1 V0",
+    "color_matrix": "BT.601",
+    "color_range": "limited (Y 16-235, U/V 16-240)",
+    "crop_box": [
+      0,
+      0,
+      3840,
+      2160
+    ],
+    "end_seconds_exclusive": 16.0,
+    "expected_frames": 125,
+    "eye": {
+      "frame_bytes": 1843200,
+      "height": 720,
+      "stride_bytes": 2560,
+      "width": 1280
+    },
+    "ffmpeg_pixel_format": "yuyv422",
+    "file_header_bytes": 0,
+    "frame_count": 125,
+    "height": 720,
+    "orientation": "top-down",
+    "pair_count": 125,
+    "pair_rule": "right_index = left_index + right_delay_samples; unmatched edges are skipped",
+    "pixel_format": "YUY2",
+    "png_files": "RGB previews decoded from the actual YUY2 data, not the primary export format",
+    "processing_order": [
+      "capture",
+      "remove_black_borders",
+      "resize_each_eye",
+      "encode_each_eye_yuy2",
+      "join_rows"
+    ],
+    "resize_policy": "Lanczos direct resize to 1280x720; no letterboxing; non-16:9 content is stretched",
+    "right_delay_samples": 0,
+    "source": "C:\\Users\\20743\\Videos\\BiliLocalConverter\\省退教练讲乒乓·发球-一条视频讲解侧旋、勾手、逆旋转发球.mp4",
+    "source_size": [
+      3840,
+      2160
+    ],
+    "start_seconds": 14.0,
+    "status": "completed",
+    "step_seconds": 0.016,
+    "stereo": {
+      "frame_bytes": 3686400,
+      "height": 720,
+      "stride_bytes": 5120,
+      "width": 2560
+    },
+    "stereo_enabled": true,
+    "time_rule": "requested times start + index * step; use the source frame at or immediately before each requested time",
+    "width": 1280
+  },
+  "schema_version": 1
+}
