@@ -8,7 +8,7 @@
 
 ## 历史 100° 商详留存
 
-以下原图对应旧 100°、2.1 mm 选项，按历史资料追溯，不能据此把 72° 版本状态标为已核实。旧清单原样见[归档](../../archive/camera-selection/v2026-09-30_100deg_2p1mm/data/manifests/ov9281-usb-module.md)。
+以下原图对应旧 100°、2.1 mm 选项，按历史资料追溯，不能据此把 72° 版本状态标为已核实。旧清单原样见[归档](../../archive/README.md)。
 
 - 历史商品：https://item.taobao.com/item.htm?id=724745985665&skuId=5321852629199
 - 系列厂家页面：https://www.hbvcamera.com/1mp-global-shutter-camera/ov9281-1mp-usb3.0-dual-global-shutter-camera-module-with-black-and-white-image.html

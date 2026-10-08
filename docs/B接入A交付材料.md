@@ -1,12 +1,12 @@
 # B 接入 A 的交付材料
 
-2026-10-06。A 软件接口 `a-motion-v1-draft`，B 当前 PR 为 #12、#13、#14。本页提供共用核心、输入、整数参考与接入入口；B 的实际测量、三维、事件与后四级 RTL 仍由其模块完成。本次发布在团队私人仓库中。
+2026-10-08更新入口；Release仍是2026-10-06原交付。A软件接口 `a-motion-v1-draft`，旧B PR #12/#13/#14已关闭，修订#16/#17已合入，#18待修改；复核见[本轮报告](../reports/PR审查_20261008.md)。本页提供共用核心、输入、整数参考与接入入口；B 的实际测量、三维、事件与后四级 RTL 仍由其模块完成。本次发布在团队私人仓库中。
 
 ## 下载与运行
 
 发布入口：<https://github.com/fengfengkang/pingpong-fpga/releases/tag/a-pipeline-pc-20261006>。
 
-A 源码任务分支为 `codex/a-usb-fpga-pipeline-20261005`。在自己的干净 checkout 接手时可 `git fetch origin`，再从 `origin/codex/a-usb-fpga-pipeline-20261005` 建立自己的适配分支；保留已有 B 分支和未提交修改，避免在未接收 A 的旧 main 上直接运行这些构建入口。
+A的PR #15已合入`main`，B球心及形态学参考也已合入。从干净checkout执行`git fetch origin`，基于最新`origin/main`建立自己的适配分支；保留已有B分支与未提交修改。旧A任务分支已在合并后删除，不再作为接手入口。
 
 | 附件 | 用途 | 打开方式 |
 | --- | --- | --- |
@@ -15,7 +15,7 @@ A 源码任务分支为 `codex/a-usb-fpga-pipeline-20261005`。在自己的干�
 | `A-B-Integration-20261006.zip` | 8 对人工双眼输入、七级图、阈值与 Mask 位流、参考身份和文件哈希 | 解压后读取 `sample-index.json`；`inputs/manifest.json` 可导入 A GUI/CLI |
 | `PR-Review-Evidence-20261006.zip` | 本次 PR 的构建、测试、失败复现日志和原始测试程序 | 从包内 `README.md` 开始 |
 
-逐附件 SHA-256、字节数和源码版本见 [发布清单附件](https://github.com/fengfengkang/pingpong-fpga/releases/download/a-pipeline-pc-20261006/a-pipeline-release-20261006.json)，仓库副本保存在 `data/manifests/`。便携包中的内嵌源码对应首次交付，开发时使用独立源码附件或最新任务分支。源码附件不含 OpenCV/Qt 开发库；便携包 DLL 用于运行。
+逐附件 SHA-256、字节数和源码版本见 [发布清单附件](https://github.com/fengfengkang/pingpong-fpga/releases/download/a-pipeline-pc-20261006/a-pipeline-release-20261006.json)，仓库副本保存在 `data/manifests/`。便携包中的内嵌源码对应首次交付，开发时使用独立源码附件复现原交付，集成新B模块使用最新`origin/main`。源码附件不含 OpenCV/Qt 开发库；便携包 DLL 用于运行。
 
 新电脑先安装 Visual Studio 2022 的桌面 C++ 工具与 Windows SDK、CMake，以及 Python + NumPy/Pillow。仓库根执行：
 

@@ -1,6 +1,6 @@
 # AI agent 协作指南
 
-更新：2026-10-05，补充旧调试代码归档入口。适用最新 AFH03 USB 同步双目方案。旧 H10/RK3566 交接包保存在[历史版本](../archive/routes/v2026-09-20_h10_rk3566/项目规划/Agent协作交接包.md)；现行角色和入口以本页、AGENTS.md 及最新个人分工为准。
+更新：2026-10-08，改为本地历史资料定位并同步当前完成状态。适用最新 AFH03 USB 同步双目方案。旧 H10/RK3566 交接包保存在[历史版本](../archive/README.md)；现行角色和入口以本页、AGENTS.md 及最新个人分工为准。
 
 ## 先用通俗的话说明怎样开展任务
 
@@ -18,7 +18,7 @@ A 的 agent 主要把输入、图像保存、软件参考、硬件入口和整�
 
 正式目标是 AFH03 的 RK3576J + PH1A90SEG324，配 72°/3.6 mm 双 OV9281 USB3；YUY2 拼接 2560×720@60，每眼 1280×720。原图缓存保留 8 对，每眼搜索图 640×360；FPGA 返回 1 bit Mask，CPU 在同帧 256×256 ROI 内测量。H10 CK203 DDR3 是可选 RTL 参考平台，AFH03 的 DDR3L、PCIe1、资源与时序另验。上述参数沿用当前方案，本指南不改变协议、模型输入或判罚阈值。
 
-截至本次归档，完整 PC 闭环、现行七级 RTL、模型训练与正式硬件部署仍待实施。原 `fpga/rtl/afh03_image/` 基础去噪/亮度/ROI 内核及其测试脚本、报告已移到[调试归档](../archive/fpga-debug/v2026-10-05_td_experiments/README.md)，其中的历史证据按原日期和范围读取。现行运动链路的实现与验证另建记录。
+截至2026-10-08，A共用核心/CPU整数参考/前三段RTL、B局部球心和后四级帧缓存参考协议修复已合入。完整PC闭环、可综合七级RTL、实际C模型与正式硬件部署仍待实现或联调，详见[当前PC交付状态](当前PC阶段交付状态.md)。原 `fpga/rtl/afh03_image/` 基础去噪/亮度/ROI 内核及其测试脚本、报告已移到[调试归档](../archive/README.md)，其中的历史证据按原日期和范围读取。现行运动链路的实现与验证另建记录。
 
 ## 三个角色的具体实现入口
 
@@ -32,7 +32,7 @@ A 的 agent 主要把输入、图像保存、软件参考、硬件入口和整�
 
 ## 代码目录与协作边界
 
-当前 RTL、约束和测试入口分别为 `fpga/rtl/`、`fpga/constraints/`、`fpga/sim/`，先读 [FPGA 开发说明](../fpga/README.md)；`vision/train/`、`vision/quantize/`、`vision/calib/` 目前为开发入口。方案建议的 `software/pc_pipeline/`、`tools/fixtures/`、`tests/pc_pipeline/` 需在具体实现任务中创建，并由负责人与接口约定决定文件组织。
+当前RTL和测试入口为`fpga/rtl/`、`fpga/sim/`，A综合约束在`fpga/projects/a_motion_td/`，先读[FPGA开发说明](../fpga/README.md)；C当前入口为[vision/README.md](../vision/README.md)，具体训练/量化目录按任务建立。A共用入口已在 `software/pc_pipeline/` 实现，B独立球心在其 `ball_measurement/` 子目录；`tools/fixtures/`保存固定样例工具，A核心测试在 `software/pc_pipeline/tests/`。具体接入仍按现行API和注册库约定。
 
 旧源码、TD runner 和 testbench 只按归档资料读取，当前构建、测试发现和目录扫描均显式限定在任务允许的现行目录。需要复用某个旧模块时，将选定内容复制到新任务目录，说明来源、接口差异和新验证记录；归档正文与哈希清单保持原样。本机 `archive/local-debug/` 保存生成工程和日志，已被 Git 忽略，GitHub 只保存可共享的源码、报告与清单。
 

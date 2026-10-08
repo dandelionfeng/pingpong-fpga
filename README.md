@@ -1,33 +1,28 @@
 # FPGA AI 乒乓球发球测量项目
 
-2026 FPGA 创新设计赛道团队仓库，按**自主命题**准备。当前方案采用 AFH03（RK3576J + PH1A90SEG324）与 USB 同步双 OV9281；先在电脑上完成算法闭环，再接入相机和板卡。
+正式目标为 AFH03（RK3576J + PH1A90SEG324）与 72°/3.6 mm 双 OV9281 USB3。当前先完成 PC 算法闭环：每眼 1280×720 原图保留在 CPU，640×360 搜索图经七级运动前端生成 Mask，B 测量球心、三维和事件，C 提供 ball/hand/racket 语义与独立评分。
 
-## 从哪里开始
+## 当前入口
 
-先看[当前方案索引](plans/current/README.md)。完整技术路线提供 [Markdown](plans/current/usb-stereo/技术路线_AFH03与USB同步双目测量方案.md)、[Word](plans/current/usb-stereo/技术路线_AFH03与USB同步双目测量方案.docx)和 [PDF](plans/current/usb-stereo/技术路线_AFH03与USB同步双目测量方案.pdf)。[三人总分工](项目规划/AFH03_USB同步双目方案一个月分工/00_三人分工与一个月实施安排.md)及同目录四份 Word 是最新职责说明：前半段讲工作与工具，后半段讲具体实现；三份个人文件最后附有可复制的 agent 提示词。
+| 要做什么 | 从这里开始 |
+| --- | --- |
+| 理解技术路线与分工 | [当前方案](plans/current/README.md)、[总分工](项目规划/AFH03_USB同步双目方案一个月分工/00_三人分工与一个月实施安排.md) |
+| 了解真实完成状态 | [PC阶段交付状态](docs/当前PC阶段交付状态.md)、[本轮PR复核](reports/PR审查_20261008.md) |
+| 理解三人怎样接入、Qt做什么 | [系统架构与接口图](docs/architecture/README.md) |
+| 运行A的Qt/CLI、构建共用核心 | [software/pc_pipeline](software/pc_pipeline/README.md)、[B接入A材料](docs/B接入A交付材料.md) |
+| 使用B的球心模块 | [ball_measurement](software/pc_pipeline/ball_measurement/README.md) |
+| 开发与测试FPGA | [fpga](fpga/README.md) |
+| 准备C的模型与评分 | [vision](vision/README.md)、[C个人分工](项目规划/AFH03_USB同步双目方案一个月分工/03_C_AI模型训练与部署职责说明.md) |
+| 接手任务、查看证据 | [handoffs](handoffs/README.md)、[reports](reports/README.md) |
 
-| 人员 | 当前主责 | 个人说明 |
-| --- | --- | --- |
-| A（蒲公英） | 文件输入与原图缓存、共用 C++ 核心、CPU 整数参考与 FPGA 前三级、USB/PCIe/DDR 适配及系统集成 | [Markdown](项目规划/AFH03_USB同步双目方案一个月分工/01_A_USB采集与FPGA链路职责说明.md) · [Word](项目规划/AFH03_USB同步双目方案一个月分工/01_A_USB采集与FPGA链路职责说明.docx) |
-| B | FPGA 后四级与掩膜打包、CPU 球心、标定、三维、跟踪和事件 | [Markdown](项目规划/AFH03_USB同步双目方案一个月分工/02_B_FPGA视觉与三维测量职责说明.md) · [Word](项目规划/AFH03_USB同步双目方案一个月分工/02_B_FPGA视觉与三维测量职责说明.docx) |
-| C | 数据与三类模型、PC 实际推理、导出与 RKNN 部署准备、独立评分 | [Markdown](项目规划/AFH03_USB同步双目方案一个月分工/03_C_AI模型训练与部署职责说明.md) · [Word](项目规划/AFH03_USB同步双目方案一个月分工/03_C_AI模型训练与部署职责说明.docx) |
+截至 2026-10-08，A共用软件/CPU整数参考/前三段RTL已合入；B局部球心模块和后四级帧缓存功能参考的协议修复已合入。B三维/事件修订PR仍需处理依赖和重复目录。实际C模型、A/B/C共用适配与完整GUI叠加、正式设备链路仍待验证。独立模块通过不等于完整系统通过。
 
-## 当前路线与完成状态
+Qt是长期保留的显示、回放和证据复查层。当前程序已能查看左右图、各级图、Mask和ROI；最终目标包括AFH03 HDMI实时显示球心、识别框、轨迹和事件。后续算法沿用共用C++核心，文件输入/CPU运动/PC推理逐层换为相机/FPGA/NPU后端。
 
-正式目标采用 72°、3.6 mm 手动调焦双 OV9281 USB3 模组，YUY2 左右拼接 2560×720@60 fps，每眼 1280×720，安装基线 150～200 mm。相机由 RK3576J 的 J4 USB3 OTG0 采集；RK 保存原始 Y 和 8 对原图，每眼生成 640×360 搜索图，经 PCIe1 交给 FPGA。FPGA 的七级运动前端返回两张 1 bit Mask；CPU 在同帧原图的 256×256 ROI 内求球心、三维轨迹和离手/最高点/触拍事件，NPU 异步识别 ball、hand、racket。
+## 仓库保留什么
 
-暂无实物时，文件输入、CPU 整数运动前端和 PC 三类模型替代相应硬件后端，后续测量核心共用。工作目标分为 10 月 4～8 日模块交付、9～12 日 PC 集成与部署材料、13～28 日按实际到货逐层联调。详细任务见[PC 算法闭环与部署验收](docs/PC算法闭环与部署验收.md)。这些是实施目标，当前完整 PC 闭环、七级运动 RTL 和实机部署尚待实现与验证。
+`plans/current/`和当前三人职责保留现行Markdown、Word/PDF；`software/`、`fpga/`、`tools/`保留现用实现、验证与构建入口；`data/manifests/`记录输入、版本和本地产物；`handoffs/`、`reports/`保留当前接手材料及实际算法证据。
 
-旧 TD 调试工程、基础图像内核、测试脚本和验证记录已集中到[调试归档](archive/fpga-debug/v2026-10-05_td_experiments/README.md)，保留原文件与 SHA-256。当前 FPGA 开发从 [fpga/README.md](fpga/README.md)进入；参考旧行缓存或流控代码时，按新任务明确选取并重新验证。[相机选型核对](docs/OV9281_USB双目模组选型核对.md)区分当前 72° 方案与此前 100° 商详；最终 SKU、YUY2 模式、同步、手动曝光及完整帧率以所购实物确认。帧率、精度、延迟、功耗和板端资源均待实测。竞赛提交期限沿用项目记录 2026-11-04。
+旧路线、旧TD调试实验、旧文档核查和被替代的交接已移出当前文件树。原始文件及Git字节备份保存在本机，入口为[本地历史资料](archive/README.md)和[清单](data/manifests/local-history-20261008.json)。原始视频、模型权重、厂商SDK、授权和生成工程继续按[产物说明](artifacts/README.md)保存在本地；A运行包、固定人工输入与原始证据从[私人Release](https://github.com/fengfengkang/pingpong-fpga/releases/tag/a-pipeline-pc-20261006)取得。
 
-## 协作与资料入口
-
-- [GitHub 使用指南](docs/协作使用指南.md)、[AI agent 协作指南](docs/AI_agent协作指南.md)、[项目规则](AGENTS.md)和[贡献流程](CONTRIBUTING.md)说明怎样领取任务、提交、评审和交接。
-- [实施规划](项目规划/项目实施规划.md)、[接口与验收契约](项目规划/接口与验收契约.md)和[实施前待确认项](docs/实施前待确认项.md)是现行入口；二进制布局、模型输入与判罚阈值继续按负责人评审草案管理。
-- [历史归档](archive/README.md)保留旧路线、旧分工、旧协作指南及原始校验和。归档正文按当时背景阅读，现行开发从 `plans/current/` 进入。
-- [板卡资料清单](data/manifests/afh03-vendor-package.md)、[相机资料清单](data/manifests/ov9281-usb-module.md)和[大文件管理](artifacts/README.md)记录本地资料、来源与哈希。厂商 SDK、原始视频、模型权重和生成工程留在本地。
-- [交接索引](handoffs/README.md)定位当前任务和历史执行记录；[报告索引](reports/README.md)区分文档核查、历史模块测试与之后的完整系统结果。
-
-A 的 [共用软件与回放程序](software/pc_pipeline/README.md)、七级整数参考、前三段 RTL、通信模拟及部署准备已实现，实际检查见 [2026-10-05 交付报告](reports/A职责交付_20261005.md)与[交接](handoffs/2026-10-05-a-usb-fpga-pipeline.md)。B/C 的实际测量/模型、后四段 RTL 和实物集成仍待接入，完整系统验收分别记录。新任务从最新已评审的 `origin/main` 开始；若依赖尚未合并的工作，明确基准提交和依赖 PR。
-
-B 的接入从 [A 交付材料](docs/B接入A交付材料.md) 开始，提供私人 Release 下载、源码构建、同帧原图/Mask/整数黄金输出与适配规则。最新 B PR 的问题及复现范围见 [2026-10-06 审查报告](reports/PR审查_20261006.md)。
+协作前阅读[AGENTS.md](AGENTS.md)、[CONTRIBUTING.md](CONTRIBUTING.md)、[协作指南](docs/AI_agent协作指南.md)和[接口契约入口](项目规划/接口与验收契约.md)。新任务基于最新已评审的`origin/main`建立任务分支；性能、准确率、综合与上板各按实际证据记录。

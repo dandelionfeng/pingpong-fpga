@@ -35,3 +35,8 @@ data/raw/
 artifacts/files/
 vendor/
 /archive/local-debug/
+
+# Historical material is local; Git keeps its locator and manifest.
+/archive/**
+!/archive/README.md
+/docs/architecture/*.png
