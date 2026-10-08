@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="2320" viewBox="0 0 2400 2320" role="img" aria-labelledby="title description">
+<title id="title">系统架构与 A/B/C 接口</title>
+<desc id="description">目标系统：A 提供共用核心、图像和运动结果；B 提供球心、三维、轨迹事件和 FPGA 后四级；C 提供三类模型和独立评分。Qt 是正式显示和证据复查层，当前 B/C 叠加及板端仍待联调。真值仅进入独立评分。</desc>
+<style>text{font-family:"Microsoft YaHei","Noto Sans CJK SC",sans-serif} .api{font-family:"Microsoft YaHei",sans-serif}</style>
+<rect width="2400" height="2320" fill="#F6F8FC"/>
+<text x="70" y="48" font-size="59" font-weight="700" fill="#183248" dominant-baseline="hanging">系统架构与 A / B / C 接口</text>
+<text x="70" y="126" font-size="32" font-weight="400" fill="#42566A" dominant-baseline="hanging">正式目标：AFH03（RK3576J + PH1A90SEG324） ·  共用 C++ 核心  ·  Qt 显示与证据回放</text>
+<rect x="70" y="183" width="2260" height="65" rx="14" fill="#FFF2D6" stroke="#EDD29A" stroke-width="2"/>
+<text x="94" y="199" font-size="29" font-weight="400" fill="#183248" dominant-baseline="hanging">目标架构图：箭头表示交付方向；A 基础链路可运行，B/C 真实模块、结果叠加与设备绑定仍需联调。</text>
+<rect x="70" y="291" width="2260" height="151" rx="22" fill="white" stroke="#D8E1EB" stroke-width="2"/>
+<text x="99" y="312" font-size="34" font-weight="700" fill="#183248" dominant-baseline="hanging">输入可切换，后续测量逻辑共用</text>
+<text x="99" y="366" font-size="31" font-weight="400" fill="#146F78" dominant-baseline="hanging">当前 PC：YUY2 / 双 GRAY8 文件与清单</text>
+<text x="1200" y="366" font-size="31" font-weight="400" fill="#146F78" dominant-baseline="hanging">整机目标：同步双 OV9281 → USB3 / V4L2</text>
+<polyline points="1200,442 1200,514" fill="none" stroke="#146F78" stroke-width="5" stroke-linejoin="round"/><polygon points="1200.00,514.00 1209.00,495.00 1191.00,495.00" fill="#146F78"/>
+<rect x="70" y="514" width="2260" height="239" rx="22" fill="#EAF6F6" stroke="#146F78" stroke-width="3"/>
+<text x="98" y="539" font-size="38" font-weight="700" fill="#146F78" dominant-baseline="hanging">A · 共用运行核心：输入、缓存、运动后端、异步调度与模块注册</text>
+<text x="98" y="603" font-size="30" font-weight="400" fill="#42566A" dominant-baseline="hanging">FramePair：双眼 1280×720 原图 + 640×360 搜索图；保存 8 对原图及同帧 ROI 上下文</text>
+<text x="98" y="646" font-size="30" font-weight="400" fill="#42566A" dominant-baseline="hanging">FrameSource / MotionBackend / DetectorScheduler / Registry；统一帧号、采样时间、版本和错误</text>
+<text x="98" y="689" font-size="30" font-weight="400" fill="#42566A" dominant-baseline="hanging">PC：七级 CPU 整数参考 / 模拟 DMA；整机：PCIe FPGA 后端。B/C 模块由同一核心调用。</text>
+<polyline points="570,753 570,863" fill="none" stroke="#285FA9" stroke-width="5" stroke-linejoin="round"/><polygon points="570.00,863.00 579.00,844.00 561.00,844.00" fill="#285FA9"/>
+<rect x="322" y="784" width="490" height="52" rx="10" fill="#F6F8FC" stroke="#F6F8FC" stroke-width="2"/>
+<text x="335" y="792" font-size="29" font-weight="700" fill="#285FA9" dominant-baseline="hanging">I1  A → B：原图 + Mask + 帧身份</text>
+<polyline points="1810,753 1810,863" fill="none" stroke="#A86409" stroke-width="5" stroke-linejoin="round"/><polygon points="1810.00,863.00 1819.00,844.00 1801.00,844.00" fill="#A86409"/>
+<rect x="1452" y="784" width="430" height="52" rx="10" fill="#F6F8FC" stroke="#F6F8FC" stroke-width="2"/>
+<text x="1465" y="792" font-size="29" font-weight="700" fill="#A86409" dominant-baseline="hanging">I2  A → C：DetectorContext</text>
+<rect x="70" y="863" width="1020" height="302" rx="22" fill="#EDF3FD" stroke="#285FA9" stroke-width="3"/>
+<text x="98" y="888" font-size="38" font-weight="700" fill="#285FA9" dominant-baseline="hanging">B · 球心、三维、跟踪与事件</text>
+<text x="98" y="952" font-size="30" font-weight="400" fill="#42566A" dominant-baseline="hanging">MeasurementModule::process(...) → Json</text>
+<text x="98" y="995" font-size="30" font-weight="400" fill="#42566A" dominant-baseline="hanging">接收 FramePair、MotionResult、同帧类别框</text>
+<text x="98" y="1038" font-size="30" font-weight="400" fill="#42566A" dominant-baseline="hanging">原图 ROI 求球心 → 标定 / 三维 → 轨迹 / 事件</text>
+<text x="98" y="1081" font-size="30" font-weight="400" fill="#42566A" dominant-baseline="hanging">输出左右球心、三维米制、事件、质量与版本</text>
+<text x="98" y="1122" font-size="25" font-weight="400" fill="#687D90" dominant-baseline="hanging">待接 B 实际库并验收；观测 / 滤波 / 预测分栏</text>
+<rect x="1290" y="863" width="1040" height="302" rx="22" fill="#FFF6E7" stroke="#A86409" stroke-width="3"/>
+<text x="1318" y="888" font-size="38" font-weight="700" fill="#A86409" dominant-baseline="hanging">C · ball / hand / racket 三类识别</text>
+<text x="1318" y="952" font-size="30" font-weight="400" fill="#42566A" dominant-baseline="hanging">DetectorBackend::infer(context, stop, timeoutMs)</text>
+<text x="1318" y="995" font-size="30" font-weight="400" fill="#42566A" dominant-baseline="hanging">接收原眼灰度与身份；自行预处理和坐标还原</text>
+<text x="1318" y="1038" font-size="30" font-weight="400" fill="#42566A" dominant-baseline="hanging">DetectionResult：类别框、置信度、来源帧</text>
+<text x="1318" y="1081" font-size="30" font-weight="400" fill="#42566A" dominant-baseline="hanging">交付实际推理库、模型引用、配置与后处理</text>
+<text x="1318" y="1122" font-size="25" font-weight="400" fill="#687D90" dominant-baseline="hanging">PC 实际模型 → RKNN / NPU；与框回放分开验收</text>
+<polyline points="575,1165 575,1310 990,1310" fill="none" stroke="#285FA9" stroke-width="5" stroke-linejoin="round"/><polygon points="990.00,1310.00 971.00,1301.00 971.00,1319.00" fill="#285FA9"/>
+<rect x="387" y="1224" width="457" height="50" rx="10" fill="#F6F8FC" stroke="#F6F8FC" stroke-width="2"/>
+<text x="400" y="1232" font-size="27" font-weight="700" fill="#285FA9" dominant-baseline="hanging">I4  B → A：测量 JSON + 标定配置</text>
+<polyline points="1810,1165 1810,1310 1400,1310" fill="none" stroke="#A86409" stroke-width="5" stroke-linejoin="round"/><polygon points="1400.00,1310.00 1419.00,1319.00 1419.00,1301.00" fill="#A86409"/>
+<rect x="1502" y="1224" width="392" height="50" rx="10" fill="#F6F8FC" stroke="#F6F8FC" stroke-width="2"/>
+<text x="1515" y="1232" font-size="27" font-weight="700" fill="#A86409" dominant-baseline="hanging">I3  C → A：DetectionResult</text>
+<rect x="990" y="1269" width="410" height="124" rx="22" fill="#EAF6F6" stroke="#146F78" stroke-width="3"/>
+<text x="1018" y="1293" font-size="29" font-weight="700" fill="#146F78" dominant-baseline="hanging">A · 对齐、转交与记录</text>
+<text x="1018" y="1336" font-size="26" font-weight="400" fill="#42566A" dominant-baseline="hanging">按来源 pair_id / eye 绑定</text>
+<polyline points="1180,1269 1180,1008 1090,1008" fill="none" stroke="#A86409" stroke-width="5" stroke-linejoin="round"/><polygon points="1090.00,1008.00 1109.00,1017.00 1109.00,999.00" fill="#A86409"/>
+<rect x="1097" y="1112" width="52" height="50" rx="10" fill="#F6F8FC" stroke="#F6F8FC" stroke-width="2"/>
+<text x="1110" y="1120" font-size="27" font-weight="700" fill="#A86409" dominant-baseline="hanging">I3</text>
+<text x="1099" y="1166" font-size="25" font-weight="400" fill="#A86409" dominant-baseline="hanging">同帧框</text>
+<text x="1099" y="1197" font-size="25" font-weight="400" fill="#A86409" dominant-baseline="hanging">交给 B</text>
+<polyline points="1105,1393 1105,1445 865,1445 865,1530" fill="none" stroke="#146F78" stroke-width="5" stroke-linejoin="round"/><polygon points="865.00,1530.00 874.00,1511.00 856.00,1511.00" fill="#146F78"/>
+<rect x="207" y="1442" width="558" height="50" rx="10" fill="#F6F8FC" stroke="#F6F8FC" stroke-width="2"/>
+<text x="220" y="1450" font-size="27" font-weight="700" fill="#146F78" dominant-baseline="hanging">同一来源帧的图像、Mask、测量与检测结果</text>
+<polyline points="1320,1393 1320,1445 1400,1445 1400,1530" fill="none" stroke="#A86409" stroke-width="5" stroke-linejoin="round"/><polygon points="1400.00,1530.00 1409.00,1511.00 1391.00,1511.00" fill="#A86409"/>
+<rect x="1417" y="1442" width="367" height="50" rx="10" fill="#F6F8FC" stroke="#F6F8FC" stroke-width="2"/>
+<text x="1430" y="1450" font-size="27" font-weight="700" fill="#A86409" dominant-baseline="hanging">I5  A → C：运行结果 / 证据</text>
+<rect x="70" y="1530" width="1020" height="243" rx="22" fill="#EAF6F6" stroke="#146F78" stroke-width="3"/>
+<text x="98" y="1555" font-size="38" font-weight="700" fill="#146F78" dominant-baseline="hanging">A · Qt 显示 / 证据回放 + CLI 导出</text>
+<text x="98" y="1619" font-size="30" font-weight="400" fill="#42566A" dominant-baseline="hanging">现有：左右回放、阶段切换、ROI 检查、导出</text>
+<text x="98" y="1662" font-size="30" font-weight="400" fill="#42566A" dominant-baseline="hanging">待接：B 球心 / 轨迹 / 事件叠加、真实 C 模型</text>
+<text x="98" y="1705" font-size="30" font-weight="400" fill="#42566A" dominant-baseline="hanging">正式目标：AFH03 HDMI 显示；关键片段复查</text>
+<rect x="1290" y="1530" width="1040" height="243" rx="22" fill="#FFF6E7" stroke="#A86409" stroke-width="3"/>
+<text x="1318" y="1555" font-size="38" font-weight="700" fill="#A86409" dominant-baseline="hanging">C · 独立评分（离线验收）</text>
+<text x="1318" y="1619" font-size="30" font-weight="400" fill="#42566A" dominant-baseline="hanging">只在评分器加载独立 truth / 人工参考标签</text>
+<text x="1318" y="1662" font-size="30" font-weight="400" fill="#42566A" dominant-baseline="hanging">比较检测、球心、三维、轨迹与事件误差</text>
+<text x="1318" y="1705" font-size="30" font-weight="400" fill="#42566A" dominant-baseline="hanging">输出评分报告与失败样例 → A / B / C</text>
+<text x="1318" y="1741" font-size="25" font-weight="400" fill="#A86409" dominant-baseline="hanging">truth 不进入被测算法；测试输入与答案分开保存</text>
+<text x="70" y="1830" font-size="34" font-weight="700" fill="#183248" dominant-baseline="hanging">设备后端：A / B 的 FPGA 边界（接通后替换软件运动前端）</text>
+<rect x="70" y="1898" width="1020" height="150" rx="22" fill="#EAF6F6" stroke="#146F78" stroke-width="3"/>
+<text x="98" y="1918" font-size="32" font-weight="700" fill="#146F78" dominant-baseline="hanging">A RTL · Gaussian → 同眼帧差 → 阈值</text>
+<text x="98" y="1968" font-size="28" font-weight="400" fill="#42566A" dominant-baseline="hanging">输入：A 经 PCIe 发送的双眼 640×360 搜索图</text>
+<text x="98" y="2006" font-size="28" font-weight="400" fill="#42566A" dominant-baseline="hanging">I6 输出：1 bit 阈值像素 + valid/ready + 帧身份</text>
+<polyline points="1090,1963 1290,1963" fill="none" stroke="#285FA9" stroke-width="5" stroke-linejoin="round"/><polygon points="1290.00,1963.00 1271.00,1954.00 1271.00,1972.00" fill="#285FA9"/>
+<rect x="1129" y="1904" width="54" height="52" rx="10" fill="#F6F8FC" stroke="#F6F8FC" stroke-width="2"/>
+<text x="1142" y="1912" font-size="29" font-weight="700" fill="#285FA9" dominant-baseline="hanging">I6</text>
+<rect x="1290" y="1898" width="1040" height="150" rx="22" fill="#EDF3FD" stroke="#285FA9" stroke-width="3"/>
+<text x="1318" y="1918" font-size="32" font-weight="700" fill="#285FA9" dominant-baseline="hanging">B RTL · 后四级形态学 + 1 bit Mask 打包</text>
+<text x="1318" y="1968" font-size="28" font-weight="400" fill="#42566A" dominant-baseline="hanging">腐蚀 → 膨胀 → 膨胀 → 腐蚀；每对 57,600 字节</text>
+<text x="1318" y="2006" font-size="28" font-weight="400" fill="#42566A" dominant-baseline="hanging">I7 返回 A：双 Mask / 元数据 → PCIe 接收 / 解包</text>
+<polyline points="2330,1975 2367,1975 2367,682 2330,682" fill="none" stroke="#285FA9" stroke-width="4" stroke-linejoin="round"/><polygon points="2330.00,682.00 2349.00,691.00 2349.00,673.00" fill="#285FA9"/>
+<rect x="2328" y="1792" width="49" height="47" rx="10" fill="#F6F8FC" stroke="#F6F8FC" stroke-width="2"/>
+<text x="2341" y="1800" font-size="24" font-weight="700" fill="#285FA9" dominant-baseline="hanging">I7</text>
+<rect x="70" y="2100" width="2260" height="176" rx="16" fill="white" stroke="#D8E1EB" stroke-width="2"/>
+<text x="95" y="2120" font-size="27" font-weight="400" fill="#42566A" dominant-baseline="hanging">接库：B 提供 pipeline_b_module / register_b_module；C 提供 pipeline_c_module / register_c_module。</text>
+<text x="95" y="2160" font-size="27" font-weight="400" fill="#42566A" dominant-baseline="hanging">构建：PIPELINE_B_MODULE_DIR / PIPELINE_C_MODULE_DIR；双方链接 pipeline_module_api。</text>
+<text x="95" y="2200" font-size="27" font-weight="400" fill="#42566A" dominant-baseline="hanging">共同规则：pair_id、眼别、采样时间、reference_id、配置 / 标定 / 模型版本贯穿；三维单位为米。</text>
+<text x="95" y="2240" font-size="26" font-weight="400" fill="#42566A" dominant-baseline="hanging">范围：软件接口 a-motion-v1-draft；硬件绑定待 SDK / 复核；单目复制素材仅验证二维和链路。</text>
+</svg>

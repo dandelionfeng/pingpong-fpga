@@ -26,7 +26,7 @@ PC 文件 → Y提取/左右拆分 → 8对原图缓存和2×2缩图 → CPU七�
 | MeasurementCore | 连通域、ROI球心、三维、跟踪和事件共用 | 同一核心在RK构建 | B，A接ROI |
 | 回放与评分 | 参数、日志、CSV/JSON与叠加图；truth只在评分器 | 固定图、真实静态/动态验收 | A运行，C评分 |
 
-建议新代码入口为 `software/pc_pipeline/`、`tools/fixtures/`、`tests/pc_pipeline/`；当前 RTL 和测试在 `fpga/rtl/`、`fpga/sim/` 按任务组织，见 [FPGA 开发说明](../fpga/README.md)。2026-10-05 已将旧 `fpga/rtl/afh03_image/` 和关联脚本移入[调试归档](../archive/fpga-debug/v2026-10-05_td_experiments/README.md)，选取参考代码后需用新双路测试重新验收。大图、视频、权重和 SDK 使用本地清单引用。
+建议新代码入口为 `software/pc_pipeline/`、`tools/fixtures/`、`tests/pc_pipeline/`；当前 RTL 和测试在 `fpga/rtl/`、`fpga/sim/` 按任务组织，见 [FPGA 开发说明](../fpga/README.md)。2026-10-05 已将旧 `fpga/rtl/afh03_image/` 和关联脚本移入[调试归档](../archive/README.md)，选取参考代码后需用新双路测试重新验收。大图、视频、权重和 SDK 使用本地清单引用。
 
 ## 3 输入包和真值隔离
 
