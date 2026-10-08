@@ -1,0 +1,12 @@
+MSVC=19.43.34808.0
+WindowsSDK=10.0.22621.0\
+OpenCVDir=D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\x64\vc16\lib
+Source=D:\FPGA competition\software\pc_pipeline\ball_measurement
+Build=D:\FPGA competition\software\pc_pipeline\ball_measurement\build-ninja-release
+cmake version 3.30.5-msvc23
+Ninja=1.12.1
+OpenCV_CPP=4.10.0
+Python=3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]
+NumPy=1.26.4
+OpenCV_Python=4.10.0
+opencv-python=4.10.0.84

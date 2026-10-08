@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "release_tag": "a-pipeline-pc-20261006",
+  "repo": "fengfengkang/pingpong-fpga",
+  "visibility": "private",
+  "release_url": "https://github.com/fengfengkang/pingpong-fpga/releases/tag/a-pipeline-pc-20261006",
+  "release_target_commit": "63bc6179989e222f4393f506d3a135f30f6e6a2d",
+  "a_source_branch": "codex/a-usb-fpga-pipeline-20261005",
+  "assets": [
+    {
+      "name": "A-USB-Stereo-Pipeline-1.0.0-Windows.zip",
+      "purpose": "Windows x64 portable GUI/CLI",
+      "version": "2026-10-06 PC/A scope",
+      "download_url": "https://github.com/fengfengkang/pingpong-fpga/releases/download/a-pipeline-pc-20261006/A-USB-Stereo-Pipeline-1.0.0-Windows.zip",
+      "access": "private repository collaborators",
+      "sha256": "8897b7286d679033038bdfddcee27c0dedbbe6cc72d547b3cd424dc4cb8d4f17",
+      "bytes": 48368398,
+      "generated_source_commit": "3be59aa82b94c43563006c64d84b65a870de975d",
+      "generation_steps": [
+        "tools/a_pipeline/package_windows.ps1",
+        "original delivery packaging recorded in reports/A职责交付_20261005.*"
+      ],
+      "authorization_and_license": "Team application plus replaceable Qt LGPL shared libraries, OpenCV Apache/third-party notices and MSVC redistributables; see licenses inside ZIP."
+    },
+    {
+      "name": "A-USB-Stereo-Pipeline-source-20261006.zip",
+      "purpose": "Repository source snapshot, updated Windows build and handoff",
+      "version": "2026-10-06 PC/A scope",
+      "download_url": "https://github.com/fengfengkang/pingpong-fpga/releases/download/a-pipeline-pc-20261006/A-USB-Stereo-Pipeline-source-20261006.zip",
+      "access": "private repository collaborators",
+      "sha256": "b898393a57424902501ccf77ead5034d9730e034aae93cc28dc1cc17e0b80cd9",
+      "bytes": 6540815,
+      "generated_source_commit": "63bc6179989e222f4393f506d3a135f30f6e6a2d",
+      "generation_steps": [
+        "git archive --format=zip --output=dist/A-USB-Stereo-Pipeline-source-20261006.zip 63bc6179989e222f4393f506d3a135f30f6e6a2d"
+      ],
+      "authorization_and_license": "Existing private team repository source/documents; dependencies and manufacturer SDKs are excluded."
+    },
+    {
+      "name": "A-B-Integration-20261006.zip",
+      "purpose": "Eight synthetic stereo pairs and verified seven-stage outputs",
+      "version": "2026-10-06 PC/A scope",
+      "download_url": "https://github.com/fengfengkang/pingpong-fpga/releases/download/a-pipeline-pc-20261006/A-B-Integration-20261006.zip",
+      "access": "private repository collaborators",
+      "sha256": "ca07fc0cf068d3f2b2cc0cc29fe9f3ddf83d9df81b9790a14fefe110b0d033d7",
+      "bytes": 431272,
+      "generated_source_commit": "641df0a285a3947cd565009e0a9b3224f1e8ae3c",
+      "generation_steps": [
+        "python tools/a_pipeline/generate_fixture.py --output output/NEW/inputs",
+        "pipeline_cli --input output/NEW/inputs/manifest.json --output output/NEW/cpu --motion cpu",
+        "pipeline_cli --input output/NEW/inputs/manifest.json --output output/NEW/mock --motion mock-dma --no-images",
+        "python tools/a_pipeline/package_b_fixture.py --fixture-dir output/NEW --output dist/NEW.zip --report output/NEW/check.json --code-commit 641df0a285a3947cd565009e0a9b3224f1e8ae3c"
+      ],
+      "authorization_and_license": "Generated artificial test images and reference outputs for private team integration; no original video or actual model truth."
+    },
+    {
+      "name": "PR-Review-Evidence-20261006.zip",
+      "purpose": "Pinned PR source snapshots and raw functional-check logs",
+      "version": "2026-10-06 PC/A scope",
+      "download_url": "https://github.com/fengfengkang/pingpong-fpga/releases/download/a-pipeline-pc-20261006/PR-Review-Evidence-20261006.zip",
+      "access": "private repository collaborators",
+      "sha256": "6adad38046d138bc877fb931fad899dcf16598a8dd3b0cf6fdd9a630f5253502",
+      "bytes": 83013,
+      "generated_source_commit": "63bc6179989e222f4393f506d3a135f30f6e6a2d",
+      "generation_steps": [
+        "Reproduce pinned PR checks in reports/PR审查_20261006.md; package source snapshots/logs with checksums."
+      ],
+      "authorization_and_license": "Private team PR source and generated test logs, shared with the same repository collaborators."
+    }
+  ],
+  "tools": {
+    "cpp": "C++17 / MSVC 19.44.35229.0",
+    "opencv_cpp": "4.13.0",
+    "qt": "6.8.3",
+    "icarus": "12.0",
+    "fixture_python": "3.13",
+    "fixture_numpy": "2.5.2",
+    "review_opencv_python": "5.0.0"
+  },
+  "camera_and_board": {
+    "target": "AFH03 RK3576J + PH1A90SEG324, dual OV9281 USB3",
+    "input": "YUY2 2560x720, original eye 1280x720, search 640x360",
+    "physical_camera": "not_available",
+    "physical_board": "not_available",
+    "fixture_timing": "synthetic 16ms, not device capture timing",
+    "geometry": "synthetic or duplicated monocular, not calibrated metric stereo"
+  },
+  "model_io_and_quantization": {
+    "model": "unavailable",
+    "semantic_classes": [
+      "ball",
+      "hand",
+      "racket"
+    ],
+    "cpp_input": "GRAY8 original eye",
+    "boxes": "original-eye coordinates",
+    "quantization": "not_bound_no_actual_model"
+  },
+  "protocol": "a-motion-v1-draft, row-major LSB0 Mask, not approved vendor DMA binding",
+  "hardware_status": "not_executed",
+  "b_c_integration": "real adapters and independent scoring pending",
+  "reviews": {
+    "12": "REQUEST_CHANGES",
+    "13": "REQUEST_CHANGES",
+    "14": "REQUEST_CHANGES"
+  },
+  "source_package_note": "Source archive is the immutable release target snapshot. This checksum manifest is published separately to avoid a self-referential archive checksum."
+}

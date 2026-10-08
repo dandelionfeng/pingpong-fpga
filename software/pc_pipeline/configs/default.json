@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "config_version": "a-int-v1",
+  "threshold": 12,
+  "timeout_ms": 500,
+  "detector_rate": 25,
+  "queues": {"input":8, "detection":2, "completion":8, "motion":8}
+}

@@ -1,0 +1,9 @@
+{
+  "schema_version":1,
+  "protocol":"a-motion-v1-draft",
+  "fixed_prefix_hex":"414d3031010080026801",
+  "bytes_10_11":"little-endian uint16 length of UTF-8 JSON metadata",
+  "bytes_12_15_hex":"00080700",
+  "payload":"230400 left search bytes followed by 230400 right search bytes",
+  "status":"software_draft_not_vendor_descriptor"
+}
