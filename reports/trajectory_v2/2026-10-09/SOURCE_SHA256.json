@@ -1,0 +1,124 @@
+{
+  "schema": "b-trajectory-v2-draft",
+  "date": "2026-10-09",
+  "base": "latest main after Part 2 and Part 1 merge; exact commit to be recorded by GitHub PR",
+  "dependency": "software/pc_pipeline/ball_measurement/ supplied by merged main; not duplicated here",
+  "files": [
+    {
+      "path": "handoffs/2026-10-06-b-trajectory-v1.md",
+      "sha256": "34d4d92fd35451d059a76265c68bfdd918d2d23d0700501026ee165156acfd06"
+    },
+    {
+      "path": "handoffs/2026-10-06-b-trajectory-v2.md",
+      "sha256": "0b6c1615a23dac8325e284463456faa11e9b0ce7f1a6d82e49145648af30145d"
+    },
+    {
+      "path": "handoffs/2026-10-09-b-trajectory-v2-path-fix.md",
+      "sha256": "f023216e2d51544f1ad8521a6dd142f58ef03db52a8e0ca0c51085e5c7ec5a30"
+    },
+    {
+      "path": "reports/trajectory_v2/2026-10-09/README.md",
+      "sha256": "3b2ad71bed2d85cc4565be1433cabbf42113da0d5112ec80e6daf9520719df47"
+    },
+    {
+      "path": "reports/第三部分_三维轨迹事件_v2验证_2026-10-06.md",
+      "sha256": "a5659bdc22ce09608c291a4dad911027c6035c0da2d29968b1463bd8d54fddd7"
+    },
+    {
+      "path": "reports/第三部分_构建入口与依赖路径修复验证_2026-10-06.md",
+      "sha256": "135fd371698ea0649a8a5beed2b57d01a0425516bd4c0a84b0ae5f61f32e5bfb"
+    },
+    {
+      "path": "software/pc_pipeline/trajectory/.gitignore",
+      "sha256": "49c26750db91feb1bb16a5792dafcb03edcb71aeb86926ddda42fb4821cb0f5d"
+    },
+    {
+      "path": "software/pc_pipeline/trajectory/apps/trajectory_cli.cpp",
+      "sha256": "c277efe57bfc29348f04283bb886504d01c5d4fb270c075fba4f49da2a0db034"
+    },
+    {
+      "path": "software/pc_pipeline/trajectory/CMakeLists.txt",
+      "sha256": "7b481dd712ed8fc6f164644355908a03cd3612531686c84018399c6ace8020a2"
+    },
+    {
+      "path": "software/pc_pipeline/trajectory/include/trajectory.hpp",
+      "sha256": "4806cdb459a6bfa18110b15669d95b409cfc49bece66afee3ed99a627d986226"
+    },
+    {
+      "path": "software/pc_pipeline/trajectory/README.md",
+      "sha256": "cbc3a0445ac572d49f7384028bdb76f4810183b46aabf7ff0043858d5c39f3f9"
+    },
+    {
+      "path": "software/pc_pipeline/trajectory/run_validation.ps1",
+      "sha256": "03ae0e86dc8ea115a0c78ccff276ff68444e8fc78fafc5be08fe213e023e039f"
+    },
+    {
+      "path": "software/pc_pipeline/trajectory/run_validation_v2.ps1",
+      "sha256": "9fc910852fa94a795ce17f8e99ba0667247081b89f83954a4ed0c7412abea86c"
+    },
+    {
+      "path": "software/pc_pipeline/trajectory/src/events.cpp",
+      "sha256": "8baefe7a4942a9c937441e1e26cc0c1a05b221f4e9cca3155875beab0bdc3d92"
+    },
+    {
+      "path": "software/pc_pipeline/trajectory/src/geometry.cpp",
+      "sha256": "8c28524469b39dc2b1bc803d8e763af8500bd706f5f55a436b3232f66117e2e8"
+    },
+    {
+      "path": "software/pc_pipeline/trajectory/src/online_events.cpp",
+      "sha256": "3b9abadd8fa88567b7fb624b7a8eb0657c4ea1fa50bd8eb4114dd80c8b784521"
+    },
+    {
+      "path": "software/pc_pipeline/trajectory/src/tracking.cpp",
+      "sha256": "a04f57df8d3cc8b1aa12f31cfb248ea15d438a86d9694bc1c8cca9c322055734"
+    },
+    {
+      "path": "software/pc_pipeline/trajectory/tests/test_trajectory.cpp",
+      "sha256": "e124fbc2a4f50a6fe54decdea6668e2308e4a339b4aa907bb98c290e64631098"
+    },
+    {
+      "path": "tools/fixtures/trajectory_calibration_score.py",
+      "sha256": "04a9b42663f2c63e20ba7412a7d7ea4d9a992b6152474d4a859f1711f91ef879"
+    },
+    {
+      "path": "tools/fixtures/trajectory_event_evidence.py",
+      "sha256": "270aed0f8095acd57dbfaa8c3856ac3ba16a3362a8d562df8091302d9b665738"
+    },
+    {
+      "path": "tools/fixtures/trajectory_fixture.py",
+      "sha256": "640efd202612bc513834e321981fd93994623eaa2d00c2e56d83a8b84e0ebf08"
+    },
+    {
+      "path": "tools/fixtures/trajectory_gallery.py",
+      "sha256": "da0496983d03618f822ab47ac44f5eb28a563405e872dff1cc6509a832255db8"
+    },
+    {
+      "path": "tools/fixtures/trajectory_package_v2.py",
+      "sha256": "73349f84cb106fe457a4bfd87d7f3f79975c66054dd47d12ca75805db00e0a67"
+    },
+    {
+      "path": "tools/fixtures/trajectory_requirements.txt",
+      "sha256": "e4705480a6e9ff498e78071d360ff73d424b8fd50f75ff96a83dbfb8b81fb49b"
+    },
+    {
+      "path": "tools/fixtures/trajectory_score.py",
+      "sha256": "218fd2947726d47755fcbae6b422fb7aa8e0e6b6eae88f1715184ccdb53bbafe"
+    },
+    {
+      "path": "tools/fixtures/trajectory_v2_fixture.py",
+      "sha256": "99ae82064561f634423e2bff795b5190e179f5a80d37f1b0f61ad10fa2ad7d06"
+    },
+    {
+      "path": "tools/fixtures/trajectory_v2_gallery.py",
+      "sha256": "6309ca6ca61ebff623aef6e6c0c393c68dd8030fbe383ca0451dea122f8e776e"
+    },
+    {
+      "path": "tools/fixtures/trajectory_v2_requirements.txt",
+      "sha256": "d166f7a6ca036b2dafa76f0f6f5fe00e46af43eb2cac97f5f5a054a6d4fc2090"
+    },
+    {
+      "path": "tools/fixtures/trajectory_v2_score.py",
+      "sha256": "3e32a0621228d001287e48211ca817ff9640944fd8af3b172dc22f27977963d4"
+    }
+  ]
+}
