@@ -1,0 +1,64 @@
+{
+  "total": 6,
+  "passed": 6,
+  "source": "additional generated board poses; same camera family and renderer, not real or C independent",
+  "baseline_error_m": 0.00010482316709836681,
+  "world_rotation_error_rad": 0.002861207105896276,
+  "world_translation_error_m": 0.008616113565653873,
+  "cases": [
+    {
+      "pair": {
+        "left": "boards_broad/board_30_0.png",
+        "right": "boards_broad/board_30_1.png"
+      },
+      "passed": true,
+      "stereo_reprojection_rms_px": 0.09539071038893177,
+      "max_error_px": 0.21390301107198273
+    },
+    {
+      "pair": {
+        "left": "boards_broad/board_31_0.png",
+        "right": "boards_broad/board_31_1.png"
+      },
+      "passed": true,
+      "stereo_reprojection_rms_px": 0.08499802829267437,
+      "max_error_px": 0.16626876823265482
+    },
+    {
+      "pair": {
+        "left": "boards_broad/board_32_0.png",
+        "right": "boards_broad/board_32_1.png"
+      },
+      "passed": true,
+      "stereo_reprojection_rms_px": 0.05390354500846801,
+      "max_error_px": 0.10001110496471291
+    },
+    {
+      "pair": {
+        "left": "boards_broad/board_33_0.png",
+        "right": "boards_broad/board_33_1.png"
+      },
+      "passed": true,
+      "stereo_reprojection_rms_px": 0.11545431986142471,
+      "max_error_px": 0.4042418055875389
+    },
+    {
+      "pair": {
+        "left": "boards_broad/board_34_0.png",
+        "right": "boards_broad/board_34_1.png"
+      },
+      "passed": true,
+      "stereo_reprojection_rms_px": 0.07605261188325878,
+      "max_error_px": 0.12328758904292357
+    },
+    {
+      "pair": {
+        "left": "boards_broad/board_35_0.png",
+        "right": "boards_broad/board_35_1.png"
+      },
+      "passed": true,
+      "stereo_reprojection_rms_px": 0.06029783222368319,
+      "max_error_px": 0.1715314835116875
+    }
+  ]
+}

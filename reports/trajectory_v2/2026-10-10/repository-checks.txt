@@ -1,0 +1,22 @@
+$ D:\FPGA competition\.venv\Scripts\python.exe tools/check_repo.py --staged
+Checked 198 tracked files; 0 problem(s).
+
+EXIT=0
+
+$ D:\FPGA competition\.venv\Scripts\python.exe -m unittest discover -s tests -v
+test_conflict_is_rejected (test_repository_hygiene.HygieneTests.test_conflict_is_rejected) ... ok
+test_env_and_weights_are_rejected (test_repository_hygiene.HygieneTests.test_env_and_weights_are_rejected) ... ok
+test_large_file_rejected_but_small_binary_docs_allowed (test_repository_hygiene.HygieneTests.test_large_file_rejected_but_small_binary_docs_allowed) ... ok
+test_token_is_rejected_without_echo (test_repository_hygiene.HygieneTests.test_token_is_rejected_without_echo) ... ok
+test_valid_rtl_and_chinese_doc (test_repository_hygiene.HygieneTests.test_valid_rtl_and_chinese_doc) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.002s
+
+OK
+
+EXIT=0
+
+$ git diff --cached --check
+
+EXIT=0

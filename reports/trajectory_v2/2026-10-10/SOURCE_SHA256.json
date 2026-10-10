@@ -1,0 +1,182 @@
+{
+  "base_commit": "fe7af549464b290b2573199a1cf5a00ebf4432a5",
+  "date": "2026-10-10",
+  "files": [
+    {
+      "path": "handoffs/2026-10-10-b-trajectory-v2-path-fix.md",
+      "sha256": "155c09134b4fd8438198727b3bae295077fa2098257e0a08d82a21c66ad57ab2"
+    },
+    {
+      "path": "handoffs/README.md",
+      "sha256": "5f0bff5498ebddb8d115a6bf4a63d0a502e59b78e8e110cf317c41aadc9fbe42"
+    },
+    {
+      "path": "reports/README.md",
+      "sha256": "c1ef5059a7d1773f423d5f52191ecb118e597fe13ad4dc97f170686cf3f5a38b"
+    },
+    {
+      "path": "reports/trajectory_v2/2026-10-10/board-score.json",
+      "sha256": "c20bfa3f72f2af0497baafee8763976b317198203009cf1e642ec26dfc61631f"
+    },
+    {
+      "path": "reports/trajectory_v2/2026-10-10/board_broad-score.json",
+      "sha256": "15b08605f55196fa956957e317a3b965cdca36265914646402545981168ee53b"
+    },
+    {
+      "path": "reports/trajectory_v2/2026-10-10/board_broad_calibration.json",
+      "sha256": "b957ca47c8ed361b4d49bb93fc5189c93545187e002bf94f92923ce10ffa6316"
+    },
+    {
+      "path": "reports/trajectory_v2/2026-10-10/board_calibration.json",
+      "sha256": "cf1f33c4404753b5e31c713d71082b873fe21d82266b64aa616c16359ef0776d"
+    },
+    {
+      "path": "reports/trajectory_v2/2026-10-10/build-output.txt",
+      "sha256": "71009df31d65db43bc167894aea536d80c9edc1d751eaf1cdd41722a05806f53"
+    },
+    {
+      "path": "reports/trajectory_v2/2026-10-10/CONFIG_DEFAULTS.json",
+      "sha256": "ecf718fef421ff7ade83017abceb6e1aa33d9952a76eb0ece99abf901c0adb28"
+    },
+    {
+      "path": "reports/trajectory_v2/2026-10-10/configure-output.txt",
+      "sha256": "3157b8ff0fa2be9d8fd570a3f66547054a840cd827db5b2e02bab51cbc01041f"
+    },
+    {
+      "path": "reports/trajectory_v2/2026-10-10/ctest-output.txt",
+      "sha256": "947490e28ba4d890058ca7f7d83436e2122ae714d3c4bccbcf520d2f13e88fad"
+    },
+    {
+      "path": "reports/trajectory_v2/2026-10-10/DEPENDENCY_SHA256.json",
+      "sha256": "26ae885f9c0579956d6e11e88d12098fd023385bff2683ca9ea64f09e6e90490"
+    },
+    {
+      "path": "reports/trajectory_v2/2026-10-10/INPUT_SHA256.json",
+      "sha256": "df721dda9e858a107d65889ac3c2e870e25f1492580fdbdaf0c8dec8ba60e37a"
+    },
+    {
+      "path": "reports/trajectory_v2/2026-10-10/README.md",
+      "sha256": "034b0b735bc3acd5591b550e2ffc0e5964aa84e404fb6a59c420cb17063715e1"
+    },
+    {
+      "path": "reports/trajectory_v2/2026-10-10/repository-checks.txt",
+      "sha256": "727233422d4e0301913c52d4df70a9bafadd8ac45b4f98a34587553e2dfe1c69"
+    },
+    {
+      "path": "reports/trajectory_v2/2026-10-10/RUN_MANIFEST.json",
+      "sha256": "3669527627c5390f423f1b05fbb3c8621e315b9794f0b1c94d60d9f2cbc724b6"
+    },
+    {
+      "path": "reports/trajectory_v2/2026-10-10/SCENARIO_MATRIX.json",
+      "sha256": "b91f0be9e2a638e60aa6412a4fb938971b8d249e996c20d6960669396f4e73bc"
+    },
+    {
+      "path": "reports/trajectory_v2/2026-10-10/score-v2.json",
+      "sha256": "c2bc5f8c400e1fae2eebf7da0b0f76b254ef73262ca91d3ba361fe92e1690015"
+    },
+    {
+      "path": "reports/trajectory_v2/2026-10-10/tool-versions.txt",
+      "sha256": "cd20ae09cdc14abf354b4dc5ecd139b9b9b319168dff091b82bc73e9ccd1b25c"
+    },
+    {
+      "path": "reports/trajectory_v2/2026-10-10/validation-output.txt",
+      "sha256": "9171f579e55e2046590a65467bb339a2660a64e85dad4ea73363de99e521681e"
+    },
+    {
+      "path": "software/pc_pipeline/trajectory/.gitignore",
+      "sha256": "49c26750db91feb1bb16a5792dafcb03edcb71aeb86926ddda42fb4821cb0f5d"
+    },
+    {
+      "path": "software/pc_pipeline/trajectory/apps/trajectory_cli.cpp",
+      "sha256": "c277efe57bfc29348f04283bb886504d01c5d4fb270c075fba4f49da2a0db034"
+    },
+    {
+      "path": "software/pc_pipeline/trajectory/build_and_test.bat",
+      "sha256": "bf63beb46cdeb5ddd830fafbaf9ba5be9c9e6b810453f935b539abb5d2df3716"
+    },
+    {
+      "path": "software/pc_pipeline/trajectory/build_and_test.ps1",
+      "sha256": "d368ab74c6a81903663ddcd9c7c00323108f2ce60845222572a61fd597db862b"
+    },
+    {
+      "path": "software/pc_pipeline/trajectory/CMakeLists.txt",
+      "sha256": "7b481dd712ed8fc6f164644355908a03cd3612531686c84018399c6ace8020a2"
+    },
+    {
+      "path": "software/pc_pipeline/trajectory/include/trajectory.hpp",
+      "sha256": "4806cdb459a6bfa18110b15669d95b409cfc49bece66afee3ed99a627d986226"
+    },
+    {
+      "path": "software/pc_pipeline/trajectory/README.md",
+      "sha256": "c5fc1bb973cbc97aebbb88c92f635675531b6ffaa9a565fdbd646393a7d46f41"
+    },
+    {
+      "path": "software/pc_pipeline/trajectory/run_validation.ps1",
+      "sha256": "03ae0e86dc8ea115a0c78ccff276ff68444e8fc78fafc5be08fe213e023e039f"
+    },
+    {
+      "path": "software/pc_pipeline/trajectory/run_validation_v2.ps1",
+      "sha256": "9fc910852fa94a795ce17f8e99ba0667247081b89f83954a4ed0c7412abea86c"
+    },
+    {
+      "path": "software/pc_pipeline/trajectory/src/events.cpp",
+      "sha256": "8baefe7a4942a9c937441e1e26cc0c1a05b221f4e9cca3155875beab0bdc3d92"
+    },
+    {
+      "path": "software/pc_pipeline/trajectory/src/geometry.cpp",
+      "sha256": "8c28524469b39dc2b1bc803d8e763af8500bd706f5f55a436b3232f66117e2e8"
+    },
+    {
+      "path": "software/pc_pipeline/trajectory/src/online_events.cpp",
+      "sha256": "3b9abadd8fa88567b7fb624b7a8eb0657c4ea1fa50bd8eb4114dd80c8b784521"
+    },
+    {
+      "path": "software/pc_pipeline/trajectory/src/tracking.cpp",
+      "sha256": "a04f57df8d3cc8b1aa12f31cfb248ea15d438a86d9694bc1c8cca9c322055734"
+    },
+    {
+      "path": "software/pc_pipeline/trajectory/tests/test_trajectory.cpp",
+      "sha256": "e124fbc2a4f50a6fe54decdea6668e2308e4a339b4aa907bb98c290e64631098"
+    },
+    {
+      "path": "tools/fixtures/trajectory_calibration_score.py",
+      "sha256": "04a9b42663f2c63e20ba7412a7d7ea4d9a992b6152474d4a859f1711f91ef879"
+    },
+    {
+      "path": "tools/fixtures/trajectory_event_evidence.py",
+      "sha256": "270aed0f8095acd57dbfaa8c3856ac3ba16a3362a8d562df8091302d9b665738"
+    },
+    {
+      "path": "tools/fixtures/trajectory_fixture.py",
+      "sha256": "640efd202612bc513834e321981fd93994623eaa2d00c2e56d83a8b84e0ebf08"
+    },
+    {
+      "path": "tools/fixtures/trajectory_gallery.py",
+      "sha256": "da0496983d03618f822ab47ac44f5eb28a563405e872dff1cc6509a832255db8"
+    },
+    {
+      "path": "tools/fixtures/trajectory_requirements.txt",
+      "sha256": "e4705480a6e9ff498e78071d360ff73d424b8fd50f75ff96a83dbfb8b81fb49b"
+    },
+    {
+      "path": "tools/fixtures/trajectory_score.py",
+      "sha256": "218fd2947726d47755fcbae6b422fb7aa8e0e6b6eae88f1715184ccdb53bbafe"
+    },
+    {
+      "path": "tools/fixtures/trajectory_v2_fixture.py",
+      "sha256": "99ae82064561f634423e2bff795b5190e179f5a80d37f1b0f61ad10fa2ad7d06"
+    },
+    {
+      "path": "tools/fixtures/trajectory_v2_gallery.py",
+      "sha256": "6309ca6ca61ebff623aef6e6c0c393c68dd8030fbe383ca0451dea122f8e776e"
+    },
+    {
+      "path": "tools/fixtures/trajectory_v2_requirements.txt",
+      "sha256": "d166f7a6ca036b2dafa76f0f6f5fe00e46af43eb2cac97f5f5a054a6d4fc2090"
+    },
+    {
+      "path": "tools/fixtures/trajectory_v2_score.py",
+      "sha256": "3e32a0621228d001287e48211ca817ff9640944fd8af3b172dc22f27977963d4"
+    }
+  ]
+}

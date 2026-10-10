@@ -1,0 +1,184 @@
+Internal ctest changing into directory: D:/FPGA competition/_deliveries/main_review_20261010/pingpong-fpga-main/build/b-trajectory-release
+UpdateCTestConfiguration  from :D:/FPGA competition/_deliveries/main_review_20261010/pingpong-fpga-main/build/b-trajectory-release/DartConfiguration.tcl
+Parse Config file:D:/FPGA competition/_deliveries/main_review_20261010/pingpong-fpga-main/build/b-trajectory-release/DartConfiguration.tcl
+UpdateCTestConfiguration  from :D:/FPGA competition/_deliveries/main_review_20261010/pingpong-fpga-main/build/b-trajectory-release/DartConfiguration.tcl
+Parse Config file:D:/FPGA competition/_deliveries/main_review_20261010/pingpong-fpga-main/build/b-trajectory-release/DartConfiguration.tcl
+Test project D:/FPGA competition/_deliveries/main_review_20261010/pingpong-fpga-main/build/b-trajectory-release
+Constructing a list of tests
+Done constructing a list of tests
+Updating test list for fixtures
+Added 0 tests to meet fixture requirements
+Checking test dependency graph...
+Checking test dependency graph end
+test 1
+    Start 1: trajectory_geometry
+
+1: Test command: "D:\FPGA competition\_deliveries\main_review_20261010\pingpong-fpga-main\build\b-trajectory-release\test_trajectory.exe" "geometry"
+1: Working Directory: D:/FPGA competition/_deliveries/main_review_20261010/pingpong-fpga-main/build/b-trajectory-release
+1: Test timeout computed to be: 1500
+1: PASS nonzero_pose_distortion_world_roundtrip
+1: PASS frame_pair_mismatch
+1: PASS calibration_version
+1: PASS epipolar_mismatch
+1: PASS predicted_pixel_not_observation
+1: PASS square_units_not_metric
+1: PASS diameter_mismatch
+1: PASS covariance_positive
+1: PASS projection_behind_camera
+1: PASS calibration_save_load
+1: PASS low_disparity_rejected
+1: PASS negative_depth_rejected
+1: PASS stale_rectification_rejected
+1: PASS validation_does_not_mutate_parameters
+1: PASS stereo_candidate_prediction_selection
+1: PASS equivalent_stereo_candidates_ambiguous
+1: PASS invalid_distortion_shape_rejected
+1: PASS declared_budget_increases_covariance
+1: PASS invalid_uncertainty_budget
+1: PASS candidate_adapter_preserves_ambiguous_attempts
+1: PASS candidate_adapter_deduplicates
+1: TRAJECTORY_TESTS passed=21 failed=0 group=geometry
+1/8 Test #1: trajectory_geometry ..............   Passed    0.25 sec
+test 2
+    Start 2: trajectory_tracking
+
+2: Test command: "D:\FPGA competition\_deliveries\main_review_20261010\pingpong-fpga-main\build\b-trajectory-release\test_trajectory.exe" "tracking"
+2: Working Directory: D:/FPGA competition/_deliveries/main_review_20261010/pingpong-fpga-main/build/b-trajectory-release
+2: Test timeout computed to be: 1500
+2: PASS real_dt_and_gravity
+2: PASS outlier_gate
+2: PASS time_jump_reset
+2: PASS time_backward_rejected
+2: PASS configuration_reset
+2: PASS prediction_roi_second_part_integration
+2: PASS long_occlusion_expires
+2: PASS launch_impulse_changes_motion_mode
+2: PASS three_coherent_points_reacquire
+2: PASS indefinite_covariance_rejected
+2: PASS prediction_calibration_binding
+2: PASS contact_reset_uses_actual_velocity
+2: PASS contact_reset_rejects_gap
+2: TRAJECTORY_TESTS passed=13 failed=0 group=tracking
+2/8 Test #2: trajectory_tracking ..............   Passed    0.04 sec
+test 3
+    Start 3: trajectory_events
+
+3: Test command: "D:\FPGA competition\_deliveries\main_review_20261010\pingpong-fpga-main\build\b-trajectory-release\test_trajectory.exe" "events"
+3: Working Directory: D:/FPGA competition/_deliveries/main_review_20261010/pingpong-fpga-main/build/b-trajectory-release
+3: Test timeout computed to be: 1500
+3: PASS noiseless_height_fit
+3: PASS predictions_excluded_fit
+3: PASS apex_must_be_bracketed
+3: PASS robust_outlier_fit
+3: PASS missing_semantics_unknown
+3: PASS held_cancelled_no_contact
+3: PASS stale_detection_source_ignored
+3: PASS held_position_refines_release_height
+3: PASS missing_frames_not_cancelled
+3: PASS fit_envelope_includes_declared_noise
+3: PASS held_noise_constrains_release_within_interval
+3: TRAJECTORY_TESTS passed=11 failed=0 group=events
+3/8 Test #3: trajectory_events ................   Passed    0.02 sec
+test 4
+    Start 4: trajectory_calibration
+
+4: Test command: "D:\FPGA competition\_deliveries\main_review_20261010\pingpong-fpga-main\build\b-trajectory-release\test_trajectory.exe" "calibration"
+4: Working Directory: D:/FPGA competition/_deliveries/main_review_20261010/pingpong-fpga-main/build/b-trajectory-release
+4: Test timeout computed to be: 1500
+4: PASS world_solvepnp_nonzero_pose
+4: PASS board_insufficient_pairs_rejected
+4: PASS bad_rotation_rejected
+4: PASS rectified_preview_preserves_size
+4: PASS rectified_preview_rejects_wrong_size
+4: TRAJECTORY_TESTS passed=5 failed=0 group=calibration
+4/8 Test #4: trajectory_calibration ...........   Passed    0.03 sec
+test 5
+    Start 5: trajectory_online
+
+5: Test command: "D:\FPGA competition\_deliveries\main_review_20261010\pingpong-fpga-main\build\b-trajectory-release\test_trajectory.exe" "online"
+5: Working Directory: D:/FPGA competition/_deliveries/main_review_20261010/pingpong-fpga-main/build/b-trajectory-release
+5: Test timeout computed to be: 1500
+5: PASS late_detection_source_revision
+5: PASS future_completion_unavailable
+5: PASS actual_arrival_expiration
+5: PASS duplicate_detection_rejected
+5: PASS source_identity_rejected
+5: PASS bounded_frame_capacity
+5: PASS bounded_future_queue
+5: PASS time_gap_finalizes_unknown
+5: PASS finish_cancelled_without_contact
+5: PASS published_updates_are_drainable
+5: PASS invalid_online_configuration
+5: PASS configuration_change_separates_events
+5: TRAJECTORY_TESTS passed=12 failed=0 group=online
+5/8 Test #5: trajectory_online ................   Passed    0.02 sec
+test 6
+    Start 6: ball_region_selection
+
+6: Test command: "D:\FPGA competition\_deliveries\main_review_20261010\pingpong-fpga-main\build\b-trajectory-release\ball_measurement_dependency\test_ball_measurement.exe" "selection"
+6: Working Directory: D:/FPGA competition/_deliveries/main_review_20261010/pingpong-fpga-main/build/b-trajectory-release/ball_measurement_dependency
+6: Test timeout computed to be: 1500
+6: PASS bright_ball
+6: PASS dark_ball
+6: PASS uniform_false_mask
+6: PASS uniform_dark_background
+6: PASS low_contrast_ball
+6: PASS selected_component_not_all_foreground
+6: PASS background_step_rejected
+6: PASS elongated_region_rejected
+6: PASS local_equal_candidates_ambiguous
+6: PASS old_position_mask_uses_current_gray
+6: PASS candidate_limit_and_prediction_order
+6: PASS fractional_centroid
+6: BALL_MEASUREMENT_TESTS passed=12 failed=0 group=selection
+6/8 Test #6: ball_region_selection ............   Passed    0.30 sec
+test 7
+    Start 7: frame_identity_and_roi
+
+7: Test command: "D:\FPGA competition\_deliveries\main_review_20261010\pingpong-fpga-main\build\b-trajectory-release\ball_measurement_dependency\test_ball_measurement.exe" "identity"
+7: Working Directory: D:/FPGA competition/_deliveries/main_review_20261010/pingpong-fpga-main/build/b-trajectory-release/ball_measurement_dependency
+7: Test timeout computed to be: 1500
+7: PASS coordinate_mapping
+7: PASS roi_four_edges_and_stride
+7: PASS padded_roi_unclipped_ball
+7: PASS wrong_pair
+7: PASS wrong_eye
+7: PASS wrong_time
+7: PASS wrong_mode
+7: PASS wrong_version
+7: PASS wrong_calibration
+7: PASS failed_motion
+7: PASS missing_reference
+7: PASS future_reference
+7: PASS missing_metadata
+7: PASS active_configuration_checked
+7: PASS bad_size
+7: PASS stereo_pair_identity
+7: BALL_MEASUREMENT_TESTS passed=16 failed=0 group=identity
+7/8 Test #7: frame_identity_and_roi ...........   Passed    0.04 sec
+test 8
+    Start 8: quality_and_prediction
+
+8: Test command: "D:\FPGA competition\_deliveries\main_review_20261010\pingpong-fpga-main\build\b-trajectory-release\ball_measurement_dependency\test_ball_measurement.exe" "quality"
+8: Working Directory: D:/FPGA competition/_deliveries/main_review_20261010/pingpong-fpga-main/build/b-trajectory-release/ball_measurement_dependency
+8: Test timeout computed to be: 1500
+8: PASS image_truncation_rejected_with_evidence
+8: PASS local_window_truncation
+8: PASS severe_occlusion_rejected
+8: PASS clear_quality_sobel
+8: PASS partial_occlusion_quality_warning
+8: PASS zero_mask_remeasurement
+8: PASS prediction_only_no_ball
+8: PASS zero_mask_no_prediction
+8: PASS stale_prediction_rejected
+8: PASS prediction_does_not_switch_to_distant_object
+8: PASS wrong_prediction_target
+8: PASS large_timestamp_retains_nanoseconds
+8: PASS first_frame_zero_mask
+8: PASS distinct_objects_require_identity
+8: BALL_MEASUREMENT_TESTS passed=14 failed=0 group=quality
+8/8 Test #8: quality_and_prediction ...........   Passed    0.05 sec
+
+100% tests passed, 0 tests failed out of 8
+
+Total Test time (real) =   0.78 sec

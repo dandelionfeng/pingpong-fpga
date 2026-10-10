@@ -1,0 +1,1747 @@
+[1/1] Cleaning all built files...
+Cleaning... 0 files.
+
+[1/15] Building CXX object CMakeFiles\trajectory.dir\src\geometry.cpp.obj
+注意: 包含文件:  D:\FPGA competition\_deliveries\main_review_20261010\pingpong-fpga-main\software\pc_pipeline\trajectory\include\trajectory.hpp
+注意: 包含文件:   D:\FPGA competition\_deliveries\main_review_20261010\pingpong-fpga-main\software\pc_pipeline\ball_measurement\include\ball_measurement.hpp
+注意: 包含文件:    D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/cvdef.h
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/version.hpp
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\limits
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\yvals_core.h
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime.h
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\sal.h
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\concurrencysal.h
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vadefs.h
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xkeycheck.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cfloat
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\float.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\climits
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\limits.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cwchar
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cstdio
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\stdio.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wstdio.h
+注意: 包含文件:           C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_stdio_config.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\wchar.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_memcpy_s.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\errno.h
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime_string.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wconio.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wctype.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wdirect.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wio.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_share.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wprocess.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wstdlib.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wstring.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wtime.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\sys/stat.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\sys/types.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xtr1common
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\intrin0.h
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\intrin0.inl.h
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/hal/interface.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cstddef
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\stddef.h
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2\core\cv_cpu_dispatch.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\emmintrin.h
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xmmintrin.h
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\mmintrin.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\malloc.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_malloc.h
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\intrin.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\setjmp.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\immintrin.h
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\wmmintrin.h
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\nmmintrin.h
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\smmintrin.h
+注意: 包含文件:           C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\tmmintrin.h
+注意: 包含文件:            C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\pmmintrin.h
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\zmmintrin.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\ammintrin.h
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cstdint
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\stdint.h
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/base.hpp
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/opencv_modules.hpp
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\algorithm
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_heap_algorithms.hpp
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xutility
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\yvals.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\crtdbg.h
+注意: 包含文件:           C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime_new_debug.h
+注意: 包含文件:            C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime_new.h
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\crtdefs.h
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\use_ansi.h
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_iter_core.hpp
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\utility
+注意: 包含文件:           C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\initializer_list
+注意: 包含文件:           C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\type_traits
+注意: 包含文件:            C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cstring
+注意: 包含文件:             C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\string.h
+注意: 包含文件:              C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_memory.h
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cstdlib
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\math.h
+注意: 包含文件:           C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_math.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\stdlib.h
+注意: 包含文件:           C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_search.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_minmax.hpp
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xmemory
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\new
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\exception
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime_exception.h
+注意: 包含文件:           C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\eh.h
+注意: 包含文件:            C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_terminate.h
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xatomic.h
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/cvstd.hpp
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cctype
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\ctype.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\string
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xstring
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_sanitizer_annotate_container.hpp
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_string_view.hpp
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\iosfwd
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xpolymorphic_allocator.h
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\tuple
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cmath
+注意: 包含文件:       D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2\core\cvstd_wrapper.hpp
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\memory
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\typeinfo
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime_typeinfo.h
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/neon_utils.hpp
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/vsx_utils.hpp
+注意: 包含文件:       C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\assert.h
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/check.hpp
+注意: 包含文件:       D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/base.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/traits.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/matx.hpp
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/saturate.hpp
+注意: 包含文件:       D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/fast_math.hpp
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/matx.inl.hpp
+注意: 包含文件:       D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/matx.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/types.hpp
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vector
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_bit_utils.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/mat.hpp
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/bufferpool.hpp
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\array
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/mat.inl.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/persistence.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/operations.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/cvstd.inl.hpp
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\complex
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\sstream
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\istream
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_ostream.hpp
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\ios
+注意: 包含文件:           C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xlocnum
+注意: 包含文件:            C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\iterator
+注意: 包含文件:            C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\streambuf
+注意: 包含文件:             C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xiosbase
+注意: 包含文件:              C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\share.h
+注意: 包含文件:              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\system_error
+注意: 包含文件:               C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_system_error_abi.hpp
+注意: 包含文件:               C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cerrno
+注意: 包含文件:               C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\stdexcept
+注意: 包含文件:               C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xcall_once.h
+注意: 包含文件:               C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xerrc.h
+注意: 包含文件:               C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\atomic
+注意: 包含文件:                C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xthreads.h
+注意: 包含文件:                 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_threads_core.hpp
+注意: 包含文件:                 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xtimec.h
+注意: 包含文件:                  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\ctime
+注意: 包含文件:                   C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\time.h
+注意: 包含文件:              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xlocale
+注意: 包含文件:               C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xfacet
+注意: 包含文件:               C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xlocinfo
+注意: 包含文件:                C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_xlocinfo_types.hpp
+注意: 包含文件:                C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\clocale
+注意: 包含文件:                 C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\locale.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\ymath.h
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\ostream
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/utility.hpp
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core.hpp
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\functional
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\unordered_map
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xhash
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\list
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xbit_ops.h
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xnode_handle.h
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\mutex
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_chrono.hpp
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\ratio
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\thread
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\process.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_startup.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\math.h
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime_startup.h
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/optim.hpp
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/ovx.hpp
+注意: 包含文件:    C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\optional
+注意: 包含文件:     C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xsmf_control.h
+注意: 包含文件:   D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/calib3d.hpp
+注意: 包含文件:    D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/features2d.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/opencv_modules.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/flann/miniflann.hpp
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/flann/defines.h
+注意: 包含文件:       D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2\flann\config.h
+注意: 包含文件:    D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/affine.hpp
+注意: 包含文件:    D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/utils/logger.hpp
+注意: 包含文件:     C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\iostream
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2\core\utils\logger.defines.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2\core\utils\logtag.hpp
+注意: 包含文件:  D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/imgproc.hpp
+注意: 包含文件:   D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2\./imgproc/segmentation.hpp
+注意: 包含文件:    D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/imgproc.hpp
+[2/15] Building CXX object ball_measurement_dependency\CMakeFiles\ball_measurement.dir\src\ball_measurement.cpp.obj
+注意: 包含文件:  D:\FPGA competition\_deliveries\main_review_20261010\pingpong-fpga-main\software\pc_pipeline\ball_measurement\include\ball_measurement.hpp
+注意: 包含文件:   D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core.hpp
+注意: 包含文件:    D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/cvdef.h
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/version.hpp
+注意: 包含文件:     C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\limits
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\yvals_core.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime.h
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\sal.h
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\concurrencysal.h
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vadefs.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xkeycheck.h
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cfloat
+注意: 包含文件:       C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\float.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt.h
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\climits
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\limits.h
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cwchar
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cstdio
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\stdio.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wstdio.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_stdio_config.h
+注意: 包含文件:       C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\wchar.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_memcpy_s.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\errno.h
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime_string.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wconio.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wctype.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wdirect.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wio.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_share.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wprocess.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wstdlib.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wstring.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wtime.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\sys/stat.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\sys/types.h
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xtr1common
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\intrin0.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\intrin0.inl.h
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/hal/interface.h
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cstddef
+注意: 包含文件:       C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\stddef.h
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2\core\cv_cpu_dispatch.h
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\emmintrin.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xmmintrin.h
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\mmintrin.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\malloc.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_malloc.h
+注意: 包含文件:     C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\intrin.h
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\setjmp.h
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\immintrin.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\wmmintrin.h
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\nmmintrin.h
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\smmintrin.h
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\tmmintrin.h
+注意: 包含文件:           C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\pmmintrin.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\zmmintrin.h
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\ammintrin.h
+注意: 包含文件:     C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cstdint
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\stdint.h
+注意: 包含文件:    D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/base.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/opencv_modules.hpp
+注意: 包含文件:     C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\algorithm
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_heap_algorithms.hpp
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xutility
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\yvals.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\crtdbg.h
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime_new_debug.h
+注意: 包含文件:           C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime_new.h
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\crtdefs.h
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\use_ansi.h
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_iter_core.hpp
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\utility
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\initializer_list
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\type_traits
+注意: 包含文件:           C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cstring
+注意: 包含文件:            C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\string.h
+注意: 包含文件:             C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_memory.h
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cstdlib
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\math.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_math.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\stdlib.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_search.h
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_minmax.hpp
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xmemory
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\new
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\exception
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime_exception.h
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\eh.h
+注意: 包含文件:           C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_terminate.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xatomic.h
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/cvstd.hpp
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cctype
+注意: 包含文件:       C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\ctype.h
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\string
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xstring
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_sanitizer_annotate_container.hpp
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_string_view.hpp
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\iosfwd
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xpolymorphic_allocator.h
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\tuple
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cmath
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2\core\cvstd_wrapper.hpp
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\memory
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\typeinfo
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime_typeinfo.h
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/neon_utils.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/vsx_utils.hpp
+注意: 包含文件:      C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\assert.h
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/check.hpp
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/base.hpp
+注意: 包含文件:    D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/traits.hpp
+注意: 包含文件:    D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/matx.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/saturate.hpp
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/fast_math.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/matx.inl.hpp
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/matx.hpp
+注意: 包含文件:    D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/types.hpp
+注意: 包含文件:     C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vector
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_bit_utils.hpp
+注意: 包含文件:    D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/mat.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/bufferpool.hpp
+注意: 包含文件:     C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\array
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/mat.inl.hpp
+注意: 包含文件:    D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/persistence.hpp
+注意: 包含文件:    D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/operations.hpp
+注意: 包含文件:    D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/cvstd.inl.hpp
+注意: 包含文件:     C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\complex
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\sstream
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\istream
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_ostream.hpp
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\ios
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xlocnum
+注意: 包含文件:           C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\iterator
+注意: 包含文件:           C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\streambuf
+注意: 包含文件:            C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xiosbase
+注意: 包含文件:             C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\share.h
+注意: 包含文件:             C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\system_error
+注意: 包含文件:              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_system_error_abi.hpp
+注意: 包含文件:              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cerrno
+注意: 包含文件:              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\stdexcept
+注意: 包含文件:              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xcall_once.h
+注意: 包含文件:              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xerrc.h
+注意: 包含文件:              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\atomic
+注意: 包含文件:               C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xthreads.h
+注意: 包含文件:                C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_threads_core.hpp
+注意: 包含文件:                C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xtimec.h
+注意: 包含文件:                 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\ctime
+注意: 包含文件:                  C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\time.h
+注意: 包含文件:             C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xlocale
+注意: 包含文件:              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xfacet
+注意: 包含文件:              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xlocinfo
+注意: 包含文件:               C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_xlocinfo_types.hpp
+注意: 包含文件:               C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\clocale
+注意: 包含文件:                C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\locale.h
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\ymath.h
+注意: 包含文件:     C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\ostream
+注意: 包含文件:    D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/utility.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core.hpp
+注意: 包含文件:     C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\functional
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\unordered_map
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xhash
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\list
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xbit_ops.h
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xnode_handle.h
+注意: 包含文件:     C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\mutex
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_chrono.hpp
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\ratio
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\thread
+注意: 包含文件:       C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\process.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_startup.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\math.h
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime_startup.h
+注意: 包含文件:    D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/optim.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core.hpp
+注意: 包含文件:    D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/ovx.hpp
+注意: 包含文件:   C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\optional
+注意: 包含文件:    C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xsmf_control.h
+注意: 包含文件:  D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/imgproc.hpp
+注意: 包含文件:   D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2\./imgproc/segmentation.hpp
+注意: 包含文件:    D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/imgproc.hpp
+[3/15] Building CXX object CMakeFiles\trajectory.dir\src\tracking.cpp.obj
+注意: 包含文件:  D:\FPGA competition\_deliveries\main_review_20261010\pingpong-fpga-main\software\pc_pipeline\trajectory\include\trajectory.hpp
+注意: 包含文件:   D:\FPGA competition\_deliveries\main_review_20261010\pingpong-fpga-main\software\pc_pipeline\ball_measurement\include\ball_measurement.hpp
+注意: 包含文件:    D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/cvdef.h
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/version.hpp
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\limits
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\yvals_core.h
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime.h
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\sal.h
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\concurrencysal.h
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vadefs.h
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xkeycheck.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cfloat
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\float.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\climits
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\limits.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cwchar
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cstdio
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\stdio.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wstdio.h
+注意: 包含文件:           C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_stdio_config.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\wchar.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_memcpy_s.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\errno.h
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime_string.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wconio.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wctype.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wdirect.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wio.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_share.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wprocess.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wstdlib.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wstring.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wtime.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\sys/stat.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\sys/types.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xtr1common
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\intrin0.h
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\intrin0.inl.h
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/hal/interface.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cstddef
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\stddef.h
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2\core\cv_cpu_dispatch.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\emmintrin.h
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xmmintrin.h
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\mmintrin.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\malloc.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_malloc.h
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\intrin.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\setjmp.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\immintrin.h
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\wmmintrin.h
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\nmmintrin.h
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\smmintrin.h
+注意: 包含文件:           C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\tmmintrin.h
+注意: 包含文件:            C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\pmmintrin.h
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\zmmintrin.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\ammintrin.h
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cstdint
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\stdint.h
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/base.hpp
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/opencv_modules.hpp
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\algorithm
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_heap_algorithms.hpp
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xutility
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\yvals.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\crtdbg.h
+注意: 包含文件:           C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime_new_debug.h
+注意: 包含文件:            C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime_new.h
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\crtdefs.h
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\use_ansi.h
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_iter_core.hpp
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\utility
+注意: 包含文件:           C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\initializer_list
+注意: 包含文件:           C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\type_traits
+注意: 包含文件:            C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cstring
+注意: 包含文件:             C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\string.h
+注意: 包含文件:              C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_memory.h
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cstdlib
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\math.h
+注意: 包含文件:           C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_math.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\stdlib.h
+注意: 包含文件:           C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_search.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_minmax.hpp
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xmemory
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\new
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\exception
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime_exception.h
+注意: 包含文件:           C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\eh.h
+注意: 包含文件:            C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_terminate.h
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xatomic.h
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/cvstd.hpp
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cctype
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\ctype.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\string
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xstring
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_sanitizer_annotate_container.hpp
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_string_view.hpp
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\iosfwd
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xpolymorphic_allocator.h
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\tuple
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cmath
+注意: 包含文件:       D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2\core\cvstd_wrapper.hpp
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\memory
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\typeinfo
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime_typeinfo.h
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/neon_utils.hpp
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/vsx_utils.hpp
+注意: 包含文件:       C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\assert.h
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/check.hpp
+注意: 包含文件:       D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/base.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/traits.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/matx.hpp
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/saturate.hpp
+注意: 包含文件:       D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/fast_math.hpp
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/matx.inl.hpp
+注意: 包含文件:       D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/matx.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/types.hpp
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vector
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_bit_utils.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/mat.hpp
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/bufferpool.hpp
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\array
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/mat.inl.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/persistence.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/operations.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/cvstd.inl.hpp
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\complex
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\sstream
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\istream
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_ostream.hpp
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\ios
+注意: 包含文件:           C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xlocnum
+注意: 包含文件:            C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\iterator
+注意: 包含文件:            C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\streambuf
+注意: 包含文件:             C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xiosbase
+注意: 包含文件:              C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\share.h
+注意: 包含文件:              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\system_error
+注意: 包含文件:               C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_system_error_abi.hpp
+注意: 包含文件:               C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cerrno
+注意: 包含文件:               C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\stdexcept
+注意: 包含文件:               C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xcall_once.h
+注意: 包含文件:               C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xerrc.h
+注意: 包含文件:               C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\atomic
+注意: 包含文件:                C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xthreads.h
+注意: 包含文件:                 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_threads_core.hpp
+注意: 包含文件:                 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xtimec.h
+注意: 包含文件:                  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\ctime
+注意: 包含文件:                   C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\time.h
+注意: 包含文件:              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xlocale
+注意: 包含文件:               C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xfacet
+注意: 包含文件:               C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xlocinfo
+注意: 包含文件:                C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_xlocinfo_types.hpp
+注意: 包含文件:                C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\clocale
+注意: 包含文件:                 C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\locale.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\ymath.h
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\ostream
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/utility.hpp
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core.hpp
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\functional
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\unordered_map
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xhash
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\list
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xbit_ops.h
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xnode_handle.h
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\mutex
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_chrono.hpp
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\ratio
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\thread
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\process.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_startup.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\math.h
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime_startup.h
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/optim.hpp
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/ovx.hpp
+注意: 包含文件:    C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\optional
+注意: 包含文件:     C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xsmf_control.h
+注意: 包含文件:   D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/calib3d.hpp
+注意: 包含文件:    D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/features2d.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/opencv_modules.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/flann/miniflann.hpp
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/flann/defines.h
+注意: 包含文件:       D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2\flann\config.h
+注意: 包含文件:    D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/affine.hpp
+注意: 包含文件:    D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/utils/logger.hpp
+注意: 包含文件:     C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\iostream
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2\core\utils\logger.defines.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2\core\utils\logtag.hpp
+[4/15] Building CXX object CMakeFiles\trajectory.dir\src\events.cpp.obj
+注意: 包含文件:  D:\FPGA competition\_deliveries\main_review_20261010\pingpong-fpga-main\software\pc_pipeline\trajectory\include\trajectory.hpp
+注意: 包含文件:   D:\FPGA competition\_deliveries\main_review_20261010\pingpong-fpga-main\software\pc_pipeline\ball_measurement\include\ball_measurement.hpp
+注意: 包含文件:    D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/cvdef.h
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/version.hpp
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\limits
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\yvals_core.h
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime.h
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\sal.h
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\concurrencysal.h
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vadefs.h
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xkeycheck.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cfloat
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\float.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\climits
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\limits.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cwchar
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cstdio
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\stdio.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wstdio.h
+注意: 包含文件:           C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_stdio_config.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\wchar.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_memcpy_s.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\errno.h
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime_string.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wconio.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wctype.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wdirect.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wio.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_share.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wprocess.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wstdlib.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wstring.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wtime.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\sys/stat.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\sys/types.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xtr1common
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\intrin0.h
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\intrin0.inl.h
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/hal/interface.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cstddef
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\stddef.h
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2\core\cv_cpu_dispatch.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\emmintrin.h
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xmmintrin.h
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\mmintrin.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\malloc.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_malloc.h
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\intrin.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\setjmp.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\immintrin.h
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\wmmintrin.h
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\nmmintrin.h
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\smmintrin.h
+注意: 包含文件:           C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\tmmintrin.h
+注意: 包含文件:            C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\pmmintrin.h
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\zmmintrin.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\ammintrin.h
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cstdint
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\stdint.h
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/base.hpp
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/opencv_modules.hpp
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\algorithm
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_heap_algorithms.hpp
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xutility
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\yvals.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\crtdbg.h
+注意: 包含文件:           C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime_new_debug.h
+注意: 包含文件:            C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime_new.h
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\crtdefs.h
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\use_ansi.h
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_iter_core.hpp
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\utility
+注意: 包含文件:           C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\initializer_list
+注意: 包含文件:           C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\type_traits
+注意: 包含文件:            C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cstring
+注意: 包含文件:             C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\string.h
+注意: 包含文件:              C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_memory.h
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cstdlib
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\math.h
+注意: 包含文件:           C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_math.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\stdlib.h
+注意: 包含文件:           C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_search.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_minmax.hpp
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xmemory
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\new
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\exception
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime_exception.h
+注意: 包含文件:           C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\eh.h
+注意: 包含文件:            C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_terminate.h
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xatomic.h
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/cvstd.hpp
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cctype
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\ctype.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\string
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xstring
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_sanitizer_annotate_container.hpp
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_string_view.hpp
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\iosfwd
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xpolymorphic_allocator.h
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\tuple
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cmath
+注意: 包含文件:       D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2\core\cvstd_wrapper.hpp
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\memory
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\typeinfo
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime_typeinfo.h
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/neon_utils.hpp
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/vsx_utils.hpp
+注意: 包含文件:       C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\assert.h
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/check.hpp
+注意: 包含文件:       D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/base.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/traits.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/matx.hpp
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/saturate.hpp
+注意: 包含文件:       D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/fast_math.hpp
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/matx.inl.hpp
+注意: 包含文件:       D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/matx.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/types.hpp
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vector
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_bit_utils.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/mat.hpp
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/bufferpool.hpp
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\array
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/mat.inl.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/persistence.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/operations.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/cvstd.inl.hpp
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\complex
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\sstream
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\istream
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_ostream.hpp
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\ios
+注意: 包含文件:           C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xlocnum
+注意: 包含文件:            C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\iterator
+注意: 包含文件:            C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\streambuf
+注意: 包含文件:             C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xiosbase
+注意: 包含文件:              C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\share.h
+注意: 包含文件:              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\system_error
+注意: 包含文件:               C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_system_error_abi.hpp
+注意: 包含文件:               C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cerrno
+注意: 包含文件:               C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\stdexcept
+注意: 包含文件:               C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xcall_once.h
+注意: 包含文件:               C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xerrc.h
+注意: 包含文件:               C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\atomic
+注意: 包含文件:                C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xthreads.h
+注意: 包含文件:                 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_threads_core.hpp
+注意: 包含文件:                 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xtimec.h
+注意: 包含文件:                  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\ctime
+注意: 包含文件:                   C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\time.h
+注意: 包含文件:              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xlocale
+注意: 包含文件:               C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xfacet
+注意: 包含文件:               C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xlocinfo
+注意: 包含文件:                C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_xlocinfo_types.hpp
+注意: 包含文件:                C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\clocale
+注意: 包含文件:                 C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\locale.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\ymath.h
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\ostream
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/utility.hpp
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core.hpp
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\functional
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\unordered_map
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xhash
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\list
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xbit_ops.h
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xnode_handle.h
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\mutex
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_chrono.hpp
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\ratio
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\thread
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\process.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_startup.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\math.h
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime_startup.h
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/optim.hpp
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/ovx.hpp
+注意: 包含文件:    C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\optional
+注意: 包含文件:     C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xsmf_control.h
+注意: 包含文件:   D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/calib3d.hpp
+注意: 包含文件:    D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/features2d.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/opencv_modules.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/flann/miniflann.hpp
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/flann/defines.h
+注意: 包含文件:       D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2\flann\config.h
+注意: 包含文件:    D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/affine.hpp
+注意: 包含文件:    D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/utils/logger.hpp
+注意: 包含文件:     C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\iostream
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2\core\utils\logger.defines.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2\core\utils\logtag.hpp
+注意: 包含文件:  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\map
+注意: 包含文件:   C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xtree
+[5/15] Linking CXX static library ball_measurement_dependency\ball_measurement.lib
+[6/15] Building CXX object CMakeFiles\trajectory.dir\src\online_events.cpp.obj
+注意: 包含文件:  D:\FPGA competition\_deliveries\main_review_20261010\pingpong-fpga-main\software\pc_pipeline\trajectory\include\trajectory.hpp
+注意: 包含文件:   D:\FPGA competition\_deliveries\main_review_20261010\pingpong-fpga-main\software\pc_pipeline\ball_measurement\include\ball_measurement.hpp
+注意: 包含文件:    D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/cvdef.h
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/version.hpp
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\limits
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\yvals_core.h
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime.h
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\sal.h
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\concurrencysal.h
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vadefs.h
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xkeycheck.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cfloat
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\float.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\climits
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\limits.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cwchar
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cstdio
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\stdio.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wstdio.h
+注意: 包含文件:           C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_stdio_config.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\wchar.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_memcpy_s.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\errno.h
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime_string.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wconio.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wctype.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wdirect.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wio.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_share.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wprocess.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wstdlib.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wstring.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wtime.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\sys/stat.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\sys/types.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xtr1common
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\intrin0.h
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\intrin0.inl.h
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/hal/interface.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cstddef
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\stddef.h
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2\core\cv_cpu_dispatch.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\emmintrin.h
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xmmintrin.h
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\mmintrin.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\malloc.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_malloc.h
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\intrin.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\setjmp.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\immintrin.h
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\wmmintrin.h
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\nmmintrin.h
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\smmintrin.h
+注意: 包含文件:           C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\tmmintrin.h
+注意: 包含文件:            C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\pmmintrin.h
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\zmmintrin.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\ammintrin.h
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cstdint
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\stdint.h
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/base.hpp
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/opencv_modules.hpp
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\algorithm
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_heap_algorithms.hpp
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xutility
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\yvals.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\crtdbg.h
+注意: 包含文件:           C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime_new_debug.h
+注意: 包含文件:            C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime_new.h
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\crtdefs.h
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\use_ansi.h
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_iter_core.hpp
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\utility
+注意: 包含文件:           C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\initializer_list
+注意: 包含文件:           C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\type_traits
+注意: 包含文件:            C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cstring
+注意: 包含文件:             C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\string.h
+注意: 包含文件:              C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_memory.h
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cstdlib
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\math.h
+注意: 包含文件:           C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_math.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\stdlib.h
+注意: 包含文件:           C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_search.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_minmax.hpp
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xmemory
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\new
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\exception
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime_exception.h
+注意: 包含文件:           C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\eh.h
+注意: 包含文件:            C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_terminate.h
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xatomic.h
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/cvstd.hpp
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cctype
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\ctype.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\string
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xstring
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_sanitizer_annotate_container.hpp
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_string_view.hpp
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\iosfwd
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xpolymorphic_allocator.h
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\tuple
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cmath
+注意: 包含文件:       D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2\core\cvstd_wrapper.hpp
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\memory
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\typeinfo
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime_typeinfo.h
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/neon_utils.hpp
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/vsx_utils.hpp
+注意: 包含文件:       C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\assert.h
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/check.hpp
+注意: 包含文件:       D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/base.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/traits.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/matx.hpp
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/saturate.hpp
+注意: 包含文件:       D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/fast_math.hpp
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/matx.inl.hpp
+注意: 包含文件:       D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/matx.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/types.hpp
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vector
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_bit_utils.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/mat.hpp
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/bufferpool.hpp
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\array
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/mat.inl.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/persistence.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/operations.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/cvstd.inl.hpp
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\complex
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\sstream
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\istream
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_ostream.hpp
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\ios
+注意: 包含文件:           C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xlocnum
+注意: 包含文件:            C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\iterator
+注意: 包含文件:            C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\streambuf
+注意: 包含文件:             C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xiosbase
+注意: 包含文件:              C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\share.h
+注意: 包含文件:              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\system_error
+注意: 包含文件:               C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_system_error_abi.hpp
+注意: 包含文件:               C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cerrno
+注意: 包含文件:               C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\stdexcept
+注意: 包含文件:               C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xcall_once.h
+注意: 包含文件:               C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xerrc.h
+注意: 包含文件:               C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\atomic
+注意: 包含文件:                C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xthreads.h
+注意: 包含文件:                 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_threads_core.hpp
+注意: 包含文件:                 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xtimec.h
+注意: 包含文件:                  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\ctime
+注意: 包含文件:                   C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\time.h
+注意: 包含文件:              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xlocale
+注意: 包含文件:               C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xfacet
+注意: 包含文件:               C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xlocinfo
+注意: 包含文件:                C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_xlocinfo_types.hpp
+注意: 包含文件:                C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\clocale
+注意: 包含文件:                 C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\locale.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\ymath.h
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\ostream
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/utility.hpp
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core.hpp
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\functional
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\unordered_map
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xhash
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\list
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xbit_ops.h
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xnode_handle.h
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\mutex
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_chrono.hpp
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\ratio
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\thread
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\process.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_startup.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\math.h
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime_startup.h
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/optim.hpp
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/ovx.hpp
+注意: 包含文件:    C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\optional
+注意: 包含文件:     C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xsmf_control.h
+注意: 包含文件:   D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/calib3d.hpp
+注意: 包含文件:    D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/features2d.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/opencv_modules.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/flann/miniflann.hpp
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/flann/defines.h
+注意: 包含文件:       D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2\flann\config.h
+注意: 包含文件:    D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/affine.hpp
+注意: 包含文件:    D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/utils/logger.hpp
+注意: 包含文件:     C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\iostream
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2\core\utils\logger.defines.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2\core\utils\logtag.hpp
+[7/15] Linking CXX static library trajectory.lib
+[8/15] Building CXX object CMakeFiles\test_trajectory.dir\tests\test_trajectory.cpp.obj
+注意: 包含文件:  D:\FPGA competition\_deliveries\main_review_20261010\pingpong-fpga-main\software\pc_pipeline\trajectory\include\trajectory.hpp
+注意: 包含文件:   D:\FPGA competition\_deliveries\main_review_20261010\pingpong-fpga-main\software\pc_pipeline\ball_measurement\include\ball_measurement.hpp
+注意: 包含文件:    D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/cvdef.h
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/version.hpp
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\limits
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\yvals_core.h
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime.h
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\sal.h
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\concurrencysal.h
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vadefs.h
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xkeycheck.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cfloat
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\float.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\climits
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\limits.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cwchar
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cstdio
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\stdio.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wstdio.h
+注意: 包含文件:           C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_stdio_config.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\wchar.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_memcpy_s.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\errno.h
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime_string.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wconio.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wctype.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wdirect.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wio.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_share.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wprocess.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wstdlib.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wstring.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wtime.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\sys/stat.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\sys/types.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xtr1common
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\intrin0.h
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\intrin0.inl.h
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/hal/interface.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cstddef
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\stddef.h
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2\core\cv_cpu_dispatch.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\emmintrin.h
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xmmintrin.h
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\mmintrin.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\malloc.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_malloc.h
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\intrin.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\setjmp.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\immintrin.h
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\wmmintrin.h
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\nmmintrin.h
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\smmintrin.h
+注意: 包含文件:           C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\tmmintrin.h
+注意: 包含文件:            C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\pmmintrin.h
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\zmmintrin.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\ammintrin.h
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cstdint
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\stdint.h
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/base.hpp
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/opencv_modules.hpp
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\algorithm
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_heap_algorithms.hpp
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xutility
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\yvals.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\crtdbg.h
+注意: 包含文件:           C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime_new_debug.h
+注意: 包含文件:            C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime_new.h
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\crtdefs.h
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\use_ansi.h
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_iter_core.hpp
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\utility
+注意: 包含文件:           C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\initializer_list
+注意: 包含文件:           C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\type_traits
+注意: 包含文件:            C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cstring
+注意: 包含文件:             C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\string.h
+注意: 包含文件:              C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_memory.h
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cstdlib
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\math.h
+注意: 包含文件:           C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_math.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\stdlib.h
+注意: 包含文件:           C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_search.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_minmax.hpp
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xmemory
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\new
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\exception
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime_exception.h
+注意: 包含文件:           C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\eh.h
+注意: 包含文件:            C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_terminate.h
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xatomic.h
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/cvstd.hpp
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cctype
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\ctype.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\string
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xstring
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_sanitizer_annotate_container.hpp
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_string_view.hpp
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\iosfwd
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xpolymorphic_allocator.h
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\tuple
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cmath
+注意: 包含文件:       D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2\core\cvstd_wrapper.hpp
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\memory
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\typeinfo
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime_typeinfo.h
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/neon_utils.hpp
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/vsx_utils.hpp
+注意: 包含文件:       C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\assert.h
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/check.hpp
+注意: 包含文件:       D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/base.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/traits.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/matx.hpp
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/saturate.hpp
+注意: 包含文件:       D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/fast_math.hpp
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/matx.inl.hpp
+注意: 包含文件:       D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/matx.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/types.hpp
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vector
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_bit_utils.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/mat.hpp
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/bufferpool.hpp
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\array
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/mat.inl.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/persistence.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/operations.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/cvstd.inl.hpp
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\complex
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\sstream
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\istream
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_ostream.hpp
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\ios
+注意: 包含文件:           C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xlocnum
+注意: 包含文件:            C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\iterator
+注意: 包含文件:            C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\streambuf
+注意: 包含文件:             C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xiosbase
+注意: 包含文件:              C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\share.h
+注意: 包含文件:              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\system_error
+注意: 包含文件:               C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_system_error_abi.hpp
+注意: 包含文件:               C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cerrno
+注意: 包含文件:               C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\stdexcept
+注意: 包含文件:               C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xcall_once.h
+注意: 包含文件:               C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xerrc.h
+注意: 包含文件:               C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\atomic
+注意: 包含文件:                C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xthreads.h
+注意: 包含文件:                 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_threads_core.hpp
+注意: 包含文件:                 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xtimec.h
+注意: 包含文件:                  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\ctime
+注意: 包含文件:                   C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\time.h
+注意: 包含文件:              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xlocale
+注意: 包含文件:               C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xfacet
+注意: 包含文件:               C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xlocinfo
+注意: 包含文件:                C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_xlocinfo_types.hpp
+注意: 包含文件:                C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\clocale
+注意: 包含文件:                 C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\locale.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\ymath.h
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\ostream
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/utility.hpp
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core.hpp
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\functional
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\unordered_map
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xhash
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\list
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xbit_ops.h
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xnode_handle.h
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\mutex
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_chrono.hpp
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\ratio
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\thread
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\process.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_startup.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\math.h
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime_startup.h
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/optim.hpp
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/ovx.hpp
+注意: 包含文件:    C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\optional
+注意: 包含文件:     C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xsmf_control.h
+注意: 包含文件:   D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/calib3d.hpp
+注意: 包含文件:    D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/features2d.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/opencv_modules.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/flann/miniflann.hpp
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/flann/defines.h
+注意: 包含文件:       D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2\flann\config.h
+注意: 包含文件:    D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/affine.hpp
+注意: 包含文件:    D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/utils/logger.hpp
+注意: 包含文件:     C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\iostream
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2\core\utils\logger.defines.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2\core\utils\logtag.hpp
+注意: 包含文件:  D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/imgproc.hpp
+注意: 包含文件:   D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2\./imgproc/segmentation.hpp
+注意: 包含文件:    D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/imgproc.hpp
+注意: 包含文件:  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\filesystem
+注意: 包含文件:   C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\chrono
+注意: 包含文件:    C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xfilesystem_abi.h
+注意: 包含文件:   C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\iomanip
+注意: 包含文件:    C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xlocmon
+注意: 包含文件:    C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xloctime
+注意: 包含文件:   C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\locale
+注意: 包含文件:    C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xlocbuf
+注意: 包含文件:    C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xlocmes
+[9/15] Building CXX object CMakeFiles\trajectory_cli.dir\apps\trajectory_cli.cpp.obj
+注意: 包含文件:  D:\FPGA competition\_deliveries\main_review_20261010\pingpong-fpga-main\software\pc_pipeline\trajectory\include\trajectory.hpp
+注意: 包含文件:   D:\FPGA competition\_deliveries\main_review_20261010\pingpong-fpga-main\software\pc_pipeline\ball_measurement\include\ball_measurement.hpp
+注意: 包含文件:    D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/cvdef.h
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/version.hpp
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\limits
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\yvals_core.h
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime.h
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\sal.h
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\concurrencysal.h
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vadefs.h
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xkeycheck.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cfloat
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\float.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\climits
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\limits.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cwchar
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cstdio
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\stdio.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wstdio.h
+注意: 包含文件:           C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_stdio_config.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\wchar.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_memcpy_s.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\errno.h
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime_string.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wconio.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wctype.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wdirect.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wio.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_share.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wprocess.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wstdlib.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wstring.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wtime.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\sys/stat.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\sys/types.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xtr1common
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\intrin0.h
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\intrin0.inl.h
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/hal/interface.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cstddef
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\stddef.h
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2\core\cv_cpu_dispatch.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\emmintrin.h
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xmmintrin.h
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\mmintrin.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\malloc.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_malloc.h
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\intrin.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\setjmp.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\immintrin.h
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\wmmintrin.h
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\nmmintrin.h
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\smmintrin.h
+注意: 包含文件:           C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\tmmintrin.h
+注意: 包含文件:            C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\pmmintrin.h
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\zmmintrin.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\ammintrin.h
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cstdint
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\stdint.h
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/base.hpp
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/opencv_modules.hpp
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\algorithm
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_heap_algorithms.hpp
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xutility
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\yvals.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\crtdbg.h
+注意: 包含文件:           C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime_new_debug.h
+注意: 包含文件:            C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime_new.h
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\crtdefs.h
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\use_ansi.h
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_iter_core.hpp
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\utility
+注意: 包含文件:           C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\initializer_list
+注意: 包含文件:           C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\type_traits
+注意: 包含文件:            C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cstring
+注意: 包含文件:             C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\string.h
+注意: 包含文件:              C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_memory.h
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cstdlib
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\math.h
+注意: 包含文件:           C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_math.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\stdlib.h
+注意: 包含文件:           C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_search.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_minmax.hpp
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xmemory
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\new
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\exception
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime_exception.h
+注意: 包含文件:           C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\eh.h
+注意: 包含文件:            C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_terminate.h
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xatomic.h
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/cvstd.hpp
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cctype
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\ctype.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\string
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xstring
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_sanitizer_annotate_container.hpp
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_string_view.hpp
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\iosfwd
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xpolymorphic_allocator.h
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\tuple
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cmath
+注意: 包含文件:       D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2\core\cvstd_wrapper.hpp
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\memory
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\typeinfo
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime_typeinfo.h
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/neon_utils.hpp
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/vsx_utils.hpp
+注意: 包含文件:       C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\assert.h
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/check.hpp
+注意: 包含文件:       D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/base.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/traits.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/matx.hpp
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/saturate.hpp
+注意: 包含文件:       D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/fast_math.hpp
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/matx.inl.hpp
+注意: 包含文件:       D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/matx.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/types.hpp
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vector
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_bit_utils.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/mat.hpp
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/bufferpool.hpp
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\array
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/mat.inl.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/persistence.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/operations.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/cvstd.inl.hpp
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\complex
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\sstream
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\istream
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_ostream.hpp
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\ios
+注意: 包含文件:           C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xlocnum
+注意: 包含文件:            C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\iterator
+注意: 包含文件:            C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\streambuf
+注意: 包含文件:             C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xiosbase
+注意: 包含文件:              C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\share.h
+注意: 包含文件:              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\system_error
+注意: 包含文件:               C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_system_error_abi.hpp
+注意: 包含文件:               C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cerrno
+注意: 包含文件:               C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\stdexcept
+注意: 包含文件:               C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xcall_once.h
+注意: 包含文件:               C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xerrc.h
+注意: 包含文件:               C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\atomic
+注意: 包含文件:                C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xthreads.h
+注意: 包含文件:                 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_threads_core.hpp
+注意: 包含文件:                 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xtimec.h
+注意: 包含文件:                  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\ctime
+注意: 包含文件:                   C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\time.h
+注意: 包含文件:              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xlocale
+注意: 包含文件:               C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xfacet
+注意: 包含文件:               C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xlocinfo
+注意: 包含文件:                C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_xlocinfo_types.hpp
+注意: 包含文件:                C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\clocale
+注意: 包含文件:                 C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\locale.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\ymath.h
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\ostream
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/utility.hpp
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core.hpp
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\functional
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\unordered_map
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xhash
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\list
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xbit_ops.h
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xnode_handle.h
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\mutex
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_chrono.hpp
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\ratio
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\thread
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\process.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_startup.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\math.h
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime_startup.h
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/optim.hpp
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/ovx.hpp
+注意: 包含文件:    C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\optional
+注意: 包含文件:     C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xsmf_control.h
+注意: 包含文件:   D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/calib3d.hpp
+注意: 包含文件:    D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/features2d.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/opencv_modules.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/flann/miniflann.hpp
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/flann/defines.h
+注意: 包含文件:       D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2\flann\config.h
+注意: 包含文件:    D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/affine.hpp
+注意: 包含文件:    D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/utils/logger.hpp
+注意: 包含文件:     C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\iostream
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2\core\utils\logger.defines.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2\core\utils\logtag.hpp
+注意: 包含文件:  D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/imgcodecs.hpp
+注意: 包含文件:  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\filesystem
+注意: 包含文件:   C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\chrono
+注意: 包含文件:    C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xfilesystem_abi.h
+注意: 包含文件:   C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\iomanip
+注意: 包含文件:    C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xlocmon
+注意: 包含文件:    C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xloctime
+注意: 包含文件:   C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\locale
+注意: 包含文件:    C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xlocbuf
+注意: 包含文件:    C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xlocmes
+注意: 包含文件:  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\fstream
+注意: 包含文件:   C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_filebuf.hpp
+注意: 包含文件:  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\set
+注意: 包含文件:   C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xtree
+注意: 包含文件:  D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/imgproc.hpp
+注意: 包含文件:   D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2\./imgproc/segmentation.hpp
+注意: 包含文件:    D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/imgproc.hpp
+[10/15] Building CXX object ball_measurement_dependency\CMakeFiles\test_ball_measurement.dir\tests\test_ball_measurement.cpp.obj
+注意: 包含文件:  D:\FPGA competition\_deliveries\main_review_20261010\pingpong-fpga-main\software\pc_pipeline\ball_measurement\include\ball_measurement.hpp
+注意: 包含文件:   D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core.hpp
+注意: 包含文件:    D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/cvdef.h
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/version.hpp
+注意: 包含文件:     C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\limits
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\yvals_core.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime.h
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\sal.h
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\concurrencysal.h
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vadefs.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xkeycheck.h
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cfloat
+注意: 包含文件:       C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\float.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt.h
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\climits
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\limits.h
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cwchar
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cstdio
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\stdio.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wstdio.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_stdio_config.h
+注意: 包含文件:       C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\wchar.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_memcpy_s.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\errno.h
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime_string.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wconio.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wctype.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wdirect.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wio.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_share.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wprocess.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wstdlib.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wstring.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wtime.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\sys/stat.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\sys/types.h
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xtr1common
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\intrin0.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\intrin0.inl.h
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/hal/interface.h
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cstddef
+注意: 包含文件:       C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\stddef.h
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2\core\cv_cpu_dispatch.h
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\emmintrin.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xmmintrin.h
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\mmintrin.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\malloc.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_malloc.h
+注意: 包含文件:     C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\intrin.h
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\setjmp.h
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\immintrin.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\wmmintrin.h
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\nmmintrin.h
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\smmintrin.h
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\tmmintrin.h
+注意: 包含文件:           C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\pmmintrin.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\zmmintrin.h
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\ammintrin.h
+注意: 包含文件:     C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cstdint
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\stdint.h
+注意: 包含文件:    D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/base.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/opencv_modules.hpp
+注意: 包含文件:     C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\algorithm
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_heap_algorithms.hpp
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xutility
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\yvals.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\crtdbg.h
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime_new_debug.h
+注意: 包含文件:           C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime_new.h
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\crtdefs.h
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\use_ansi.h
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_iter_core.hpp
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\utility
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\initializer_list
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\type_traits
+注意: 包含文件:           C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cstring
+注意: 包含文件:            C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\string.h
+注意: 包含文件:             C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_memory.h
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cstdlib
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\math.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_math.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\stdlib.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_search.h
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_minmax.hpp
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xmemory
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\new
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\exception
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime_exception.h
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\eh.h
+注意: 包含文件:           C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_terminate.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xatomic.h
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/cvstd.hpp
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cctype
+注意: 包含文件:       C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\ctype.h
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\string
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xstring
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_sanitizer_annotate_container.hpp
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_string_view.hpp
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\iosfwd
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xpolymorphic_allocator.h
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\tuple
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cmath
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2\core\cvstd_wrapper.hpp
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\memory
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\typeinfo
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime_typeinfo.h
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/neon_utils.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/vsx_utils.hpp
+注意: 包含文件:      C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\assert.h
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/check.hpp
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/base.hpp
+注意: 包含文件:    D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/traits.hpp
+注意: 包含文件:    D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/matx.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/saturate.hpp
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/fast_math.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/matx.inl.hpp
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/matx.hpp
+注意: 包含文件:    D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/types.hpp
+注意: 包含文件:     C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vector
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_bit_utils.hpp
+注意: 包含文件:    D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/mat.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/bufferpool.hpp
+注意: 包含文件:     C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\array
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/mat.inl.hpp
+注意: 包含文件:    D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/persistence.hpp
+注意: 包含文件:    D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/operations.hpp
+注意: 包含文件:    D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/cvstd.inl.hpp
+注意: 包含文件:     C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\complex
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\sstream
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\istream
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_ostream.hpp
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\ios
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xlocnum
+注意: 包含文件:           C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\iterator
+注意: 包含文件:           C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\streambuf
+注意: 包含文件:            C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xiosbase
+注意: 包含文件:             C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\share.h
+注意: 包含文件:             C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\system_error
+注意: 包含文件:              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_system_error_abi.hpp
+注意: 包含文件:              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cerrno
+注意: 包含文件:              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\stdexcept
+注意: 包含文件:              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xcall_once.h
+注意: 包含文件:              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xerrc.h
+注意: 包含文件:              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\atomic
+注意: 包含文件:               C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xthreads.h
+注意: 包含文件:                C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_threads_core.hpp
+注意: 包含文件:                C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xtimec.h
+注意: 包含文件:                 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\ctime
+注意: 包含文件:                  C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\time.h
+注意: 包含文件:             C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xlocale
+注意: 包含文件:              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xfacet
+注意: 包含文件:              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xlocinfo
+注意: 包含文件:               C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_xlocinfo_types.hpp
+注意: 包含文件:               C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\clocale
+注意: 包含文件:                C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\locale.h
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\ymath.h
+注意: 包含文件:     C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\ostream
+注意: 包含文件:    D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/utility.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core.hpp
+注意: 包含文件:     C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\functional
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\unordered_map
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xhash
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\list
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xbit_ops.h
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xnode_handle.h
+注意: 包含文件:     C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\mutex
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_chrono.hpp
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\ratio
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\thread
+注意: 包含文件:       C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\process.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_startup.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\math.h
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime_startup.h
+注意: 包含文件:    D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/optim.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core.hpp
+注意: 包含文件:    D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/ovx.hpp
+注意: 包含文件:   C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\optional
+注意: 包含文件:    C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xsmf_control.h
+注意: 包含文件:  D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/imgproc.hpp
+注意: 包含文件:   D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2\./imgproc/segmentation.hpp
+注意: 包含文件:    D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/imgproc.hpp
+注意: 包含文件:  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\iostream
+[11/15] Linking CXX executable trajectory_cli.exe
+[12/15] Building CXX object ball_measurement_dependency\CMakeFiles\ball_measurement_cli.dir\apps\ball_measurement_cli.cpp.obj
+注意: 包含文件:  D:\FPGA competition\_deliveries\main_review_20261010\pingpong-fpga-main\software\pc_pipeline\ball_measurement\include\ball_measurement.hpp
+注意: 包含文件:   D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core.hpp
+注意: 包含文件:    D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/cvdef.h
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/version.hpp
+注意: 包含文件:     C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\limits
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\yvals_core.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime.h
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\sal.h
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\concurrencysal.h
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vadefs.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xkeycheck.h
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cfloat
+注意: 包含文件:       C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\float.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt.h
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\climits
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\limits.h
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cwchar
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cstdio
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\stdio.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wstdio.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_stdio_config.h
+注意: 包含文件:       C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\wchar.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_memcpy_s.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\errno.h
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime_string.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wconio.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wctype.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wdirect.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wio.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_share.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wprocess.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wstdlib.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wstring.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_wtime.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\sys/stat.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\sys/types.h
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xtr1common
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\intrin0.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\intrin0.inl.h
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/hal/interface.h
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cstddef
+注意: 包含文件:       C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\stddef.h
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2\core\cv_cpu_dispatch.h
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\emmintrin.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xmmintrin.h
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\mmintrin.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\malloc.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_malloc.h
+注意: 包含文件:     C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\intrin.h
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\setjmp.h
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\immintrin.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\wmmintrin.h
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\nmmintrin.h
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\smmintrin.h
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\tmmintrin.h
+注意: 包含文件:           C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\pmmintrin.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\zmmintrin.h
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\ammintrin.h
+注意: 包含文件:     C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cstdint
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\stdint.h
+注意: 包含文件:    D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/base.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/opencv_modules.hpp
+注意: 包含文件:     C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\algorithm
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_heap_algorithms.hpp
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xutility
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\yvals.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\crtdbg.h
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime_new_debug.h
+注意: 包含文件:           C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime_new.h
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\crtdefs.h
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\use_ansi.h
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_iter_core.hpp
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\utility
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\initializer_list
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\type_traits
+注意: 包含文件:           C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cstring
+注意: 包含文件:            C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\string.h
+注意: 包含文件:             C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_memory.h
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cstdlib
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\math.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_math.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\stdlib.h
+注意: 包含文件:          C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_search.h
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_minmax.hpp
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xmemory
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\new
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\exception
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime_exception.h
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\eh.h
+注意: 包含文件:           C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_terminate.h
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xatomic.h
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/cvstd.hpp
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cctype
+注意: 包含文件:       C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\ctype.h
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\string
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xstring
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_sanitizer_annotate_container.hpp
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_string_view.hpp
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\iosfwd
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xpolymorphic_allocator.h
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\tuple
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cmath
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2\core\cvstd_wrapper.hpp
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\memory
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\typeinfo
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime_typeinfo.h
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/neon_utils.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/vsx_utils.hpp
+注意: 包含文件:      C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\assert.h
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/check.hpp
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/base.hpp
+注意: 包含文件:    D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/traits.hpp
+注意: 包含文件:    D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/matx.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/saturate.hpp
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/fast_math.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/matx.inl.hpp
+注意: 包含文件:      D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/matx.hpp
+注意: 包含文件:    D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/types.hpp
+注意: 包含文件:     C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vector
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_bit_utils.hpp
+注意: 包含文件:    D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/mat.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/bufferpool.hpp
+注意: 包含文件:     C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\array
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/mat.inl.hpp
+注意: 包含文件:    D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/persistence.hpp
+注意: 包含文件:    D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/operations.hpp
+注意: 包含文件:    D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/cvstd.inl.hpp
+注意: 包含文件:     C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\complex
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\sstream
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\istream
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_ostream.hpp
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\ios
+注意: 包含文件:          C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xlocnum
+注意: 包含文件:           C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\iterator
+注意: 包含文件:           C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\streambuf
+注意: 包含文件:            C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xiosbase
+注意: 包含文件:             C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\share.h
+注意: 包含文件:             C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\system_error
+注意: 包含文件:              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_system_error_abi.hpp
+注意: 包含文件:              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\cerrno
+注意: 包含文件:              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\stdexcept
+注意: 包含文件:              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xcall_once.h
+注意: 包含文件:              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xerrc.h
+注意: 包含文件:              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\atomic
+注意: 包含文件:               C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xthreads.h
+注意: 包含文件:                C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_threads_core.hpp
+注意: 包含文件:                C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xtimec.h
+注意: 包含文件:                 C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\ctime
+注意: 包含文件:                  C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\time.h
+注意: 包含文件:             C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xlocale
+注意: 包含文件:              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xfacet
+注意: 包含文件:              C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xlocinfo
+注意: 包含文件:               C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_xlocinfo_types.hpp
+注意: 包含文件:               C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\clocale
+注意: 包含文件:                C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\locale.h
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\ymath.h
+注意: 包含文件:     C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\ostream
+注意: 包含文件:    D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/utility.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core.hpp
+注意: 包含文件:     C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\functional
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\unordered_map
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xhash
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\list
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xbit_ops.h
+注意: 包含文件:        C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xnode_handle.h
+注意: 包含文件:     C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\mutex
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\__msvc_chrono.hpp
+注意: 包含文件:       C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\ratio
+注意: 包含文件:      C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\thread
+注意: 包含文件:       C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\process.h
+注意: 包含文件:        C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\corecrt_startup.h
+注意: 包含文件:         C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\math.h
+注意: 包含文件:         C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime_startup.h
+注意: 包含文件:    D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/optim.hpp
+注意: 包含文件:     D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core.hpp
+注意: 包含文件:    D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/core/ovx.hpp
+注意: 包含文件:   C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\optional
+注意: 包含文件:    C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xsmf_control.h
+注意: 包含文件:  D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/imgcodecs.hpp
+注意: 包含文件:  D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/imgproc.hpp
+注意: 包含文件:   D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2\./imgproc/segmentation.hpp
+注意: 包含文件:    D:\FPGA competition\.tools\opencv-4.10.0\opencv\build\include\opencv2/imgproc.hpp
+注意: 包含文件:  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\filesystem
+注意: 包含文件:   C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\chrono
+注意: 包含文件:    C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xfilesystem_abi.h
+注意: 包含文件:   C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\iomanip
+注意: 包含文件:    C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xlocmon
+注意: 包含文件:    C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xloctime
+注意: 包含文件:   C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\locale
+注意: 包含文件:    C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xlocbuf
+注意: 包含文件:    C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\xlocmes
+注意: 包含文件:  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\iostream
+[13/15] Linking CXX executable test_trajectory.exe
+[14/15] Linking CXX executable ball_measurement_dependency\test_ball_measurement.exe
+[15/15] Linking CXX executable ball_measurement_dependency\ball_measurement_cli.exe

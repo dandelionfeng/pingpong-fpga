@@ -1,0 +1,7 @@
+MSVC=19.43.34808.0
+WindowsSDK=10.0.22621.0\
+OpenCVDir=D:/FPGA competition/.tools/opencv-4.10.0/opencv/build/x64/vc16/lib
+Source=D:\FPGA competition\_deliveries\main_review_20261010\pingpong-fpga-main\software\pc_pipeline\trajectory
+Build=D:\FPGA competition\_deliveries\main_review_20261010\pingpong-fpga-main\build\b-trajectory-release
+cmake version 3.30.5-msvc23
+Ninja=1.12.1

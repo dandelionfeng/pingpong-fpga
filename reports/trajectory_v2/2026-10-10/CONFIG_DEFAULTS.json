@@ -1,0 +1,41 @@
+{
+  "schema": "b-trajectory-v2-draft",
+  "geometry": {
+    "epipolar_px": 2,
+    "reprojection_px": 2,
+    "min_disparity_px": 0.5,
+    "min_depth_m": 0.1,
+    "max_depth_m": 15,
+    "max_diameter_ratio": 2,
+    "calibration_position_sigma_m": 0,
+    "world_translation_sigma_m": 0,
+    "world_rotation_sigma_rad": 0,
+    "sync_sigma_s": 0,
+    "sync_speed_bound_m_s": 15
+  },
+  "tracking": {
+    "gravity": 9.80665,
+    "max_gap_s": 0.25,
+    "gate_squared": 16.27,
+    "acceleration_noise": 4,
+    "initial_velocity_variance": 25
+  },
+  "events": {
+    "min_score": 0.25,
+    "near_px": 18,
+    "rise_m_s": 0.25,
+    "contact_velocity_change": 1.2,
+    "max_observation_gap_s": 0.08,
+    "max_detection_latency_s": 0.25
+  },
+  "online": {
+    "max_frames": 256,
+    "max_detections": 2048,
+    "max_pending_detections": 32,
+    "max_event_s": 4,
+    "settle_s": 0.3,
+    "restart_holding_frames": 3,
+    "max_updates": 64
+  },
+  "note": "Defaults describe submitted headers; fixtures explicitly vary parameters, see hashed generated manifests. Parameters remain draft."
+}

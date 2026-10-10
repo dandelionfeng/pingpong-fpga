@@ -1,0 +1,15 @@
+{
+  "varied_serves": 30,
+  "missing_or_cancelled": 10,
+  "async_sequences": 5,
+  "occlusion_frames": [
+    1,
+    3,
+    5
+  ],
+  "continuous_two_serves": 1,
+  "image_cases": 9,
+  "total_cases": 84,
+  "C_frozen": false,
+  "source": "B development/regression cases, not independent C acceptance"
+}

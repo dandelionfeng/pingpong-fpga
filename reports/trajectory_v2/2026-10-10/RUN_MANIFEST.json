@@ -1,0 +1,67 @@
+{
+  "date": "2026-10-10",
+  "base_commit": "fe7af549464b290b2573199a1cf5a00ebf4432a5",
+  "source_origin": "Authenticated GitHub main ZIP; ZIP comment verified equal to base; overlay contains only B3 and indexes",
+  "local_git": "Local snapshot initialized for staged checks; its synthetic commit is not the upstream commit",
+  "branch": "codex/b-trajectory-events-v2-path-fix",
+  "command": "& '.\\software\\pc_pipeline\\trajectory\\run_validation_v2.ps1' -Python 'D:/FPGA competition/.venv/Scripts/python.exe' -OpenCVDir 'D:/FPGA competition/.tools/opencv-4.10.0/opencv/build/x64/vc16/lib' -BuildDirectory '.\\build\\b-trajectory-release' -OutputDirectory '.\\output\\b-trajectory-v2-20261010'",
+  "exit_code": 0,
+  "final_marker": "PART3_V2_VALIDATION_PASS",
+  "cpp_checks": 62,
+  "B2_regression_checks": 42,
+  "ctest_groups_passed": 8,
+  "file_scenarios": 84,
+  "heldout_boards": [
+    4,
+    6
+  ],
+  "event_windows": 88,
+  "plots": 12,
+  "tools": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "opencv_python": "4.10.0",
+    "numpy": "1.26.4",
+    "matplotlib": "3.9.2",
+    "opencv_cpp": "4.10.0",
+    "MSVC": "19.43.34808.0",
+    "SDK": "10.0.22621.0",
+    "cmake": "3.30.5-msvc23",
+    "ninja": "1.12.1"
+  },
+  "log_hashes": {
+    "configure-output.txt": {
+      "original_file": "_deliveries\\main_review_20261010\\pingpong-fpga-main\\build\\b-trajectory-release\\configure.log",
+      "original_sha256": "c94610159937bb9ab070301b7955b92fe89c874c53df8fa8b3100fea56163679",
+      "submitted_utf8_sha256": "3157b8ff0fa2be9d8fd570a3f66547054a840cd827db5b2e02bab51cbc01041f"
+    },
+    "build-output.txt": {
+      "original_file": "_deliveries\\main_review_20261010\\pingpong-fpga-main\\build\\b-trajectory-release\\build.log",
+      "original_sha256": "5519802e1bc7bf57c819130e227b425af9b58b3a9897eafd1e33a40a8ae9f86b",
+      "submitted_utf8_sha256": "71009df31d65db43bc167894aea536d80c9edc1d751eaf1cdd41722a05806f53"
+    },
+    "ctest-output.txt": {
+      "original_file": "_deliveries\\main_review_20261010\\pingpong-fpga-main\\build\\b-trajectory-release\\test.log",
+      "original_sha256": "6e06bcfd2ae6957556cbb0e77348686f8ae705022a20b25ffe7194170ca273fd",
+      "submitted_utf8_sha256": "947490e28ba4d890058ca7f7d83436e2122ae714d3c4bccbcf520d2f13e88fad"
+    },
+    "tool-versions.txt": {
+      "original_file": "_deliveries\\main_review_20261010\\pingpong-fpga-main\\build\\b-trajectory-release\\tool-versions.txt",
+      "original_sha256": "1d517bcbecfc271041a52af3dcd94efb94ab2f2340e7a5dee5ff625d3ac038d6",
+      "submitted_utf8_sha256": "cd20ae09cdc14abf354b4dc5ecd139b9b9b319168dff091b82bc73e9ccd1b25c"
+    },
+    "validation-output.txt": {
+      "original_file": "_deliveries\\part3_clean_validation_20261010.txt",
+      "original_sha256": "984f846b3f6d33d012cdb4c4d4ec20cebd598885f1e894a5956d9327362da7ee",
+      "submitted_utf8_sha256": "9171f579e55e2046590a65467bb339a2660a64e85dad4ea73363de99e521681e"
+    }
+  },
+  "scope": "B development synthetic regression, explicit semantic replay and synthetic Mask; not C independent/real model/hardware evidence",
+  "not_executed": [
+    "A pipeline_b_module and system integration",
+    "C actual model and independent evaluation",
+    "OpenCV public chessboard practice",
+    "physical camera/calibration/sync/accuracy",
+    "Linux/ARM",
+    "RTL/TD/board verification"
+  ]
+}

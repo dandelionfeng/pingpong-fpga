@@ -1,0 +1,96 @@
+FIXTURE_CREATED cases=20 board_pairs=12
+V2_FIXTURE_CREATED cases=84
+CALIBRATION_COMPLETE pairs=12 rms_left=0.188278 rms_right=0.176409 rms_stereo=0.194664 world_valid=1
+{"total": 4, "passed": 4, "source": "additional generated board poses; same camera family and renderer, not real or C independent", "baseline_error_m": 0.0012382835051742425, "world_rotation_error_rad": 0.0015404393481027942, "world_translation_error_m": 0.01433936613550667, "cases": [{"pair": {"left": "boards/board_12_0.png", "right": "boards/board_12_1.png"}, "passed": true, "stereo_reprojection_rms_px": 0.13425332503445758, "max_error_px": 0.2906046865993306}, {"pair": {"left": "boards/board_13_0.png", "right": "boards/board_13_1.png"}, "passed": true, "stereo_reprojection_rms_px": 0.07948185926568839, "max_error_px": 0.14696333865504976}, {"pair": {"left": "boards/board_14_0.png", "right": "boards/board_14_1.png"}, "passed": true, "stereo_reprojection_rms_px": 0.11001905833852763, "max_error_px": 0.1902964851789533}, {"pair": {"left": "boards/board_15_0.png", "right": "boards/board_15_1.png"}, "passed": true, "stereo_reprojection_rms_px": 0.2083950592145102, "max_error_px": 0.4453535825101515}]}
+CALIBRATION_COMPLETE pairs=30 rms_left=0.126927 rms_right=0.123566 rms_stereo=0.129209 world_valid=1
+{"total": 6, "passed": 6, "source": "additional generated board poses; same camera family and renderer, not real or C independent", "baseline_error_m": 0.00010482316709836681, "world_rotation_error_rad": 0.002861207105896276, "world_translation_error_m": 0.008616113565653873, "cases": [{"pair": {"left": "boards_broad/board_30_0.png", "right": "boards_broad/board_30_1.png"}, "passed": true, "stereo_reprojection_rms_px": 0.09539071038893177, "max_error_px": 0.21390301107198273}, {"pair": {"left": "boards_broad/board_31_0.png", "right": "boards_broad/board_31_1.png"}, "passed": true, "stereo_reprojection_rms_px": 0.08499802829267437, "max_error_px": 0.16626876823265482}, {"pair": {"left": "boards_broad/board_32_0.png", "right": "boards_broad/board_32_1.png"}, "passed": true, "stereo_reprojection_rms_px": 0.05390354500846801, "max_error_px": 0.10001110496471291}, {"pair": {"left": "boards_broad/board_33_0.png", "right": "boards_broad/board_33_1.png"}, "passed": true, "stereo_reprojection_rms_px": 0.11545431986142471, "max_error_px": 0.4042418055875389}, {"pair": {"left": "boards_broad/board_34_0.png", "right": "boards_broad/board_34_1.png"}, "passed": true, "stereo_reprojection_rms_px": 0.07605261188325878, "max_error_px": 0.12328758904292357}, {"pair": {"left": "boards_broad/board_35_0.png", "right": "boards_broad/board_35_1.png"}, "passed": true, "stereo_reprojection_rms_px": 0.06029783222368319, "max_error_px": 0.1715314835116875}]}
+clean_serve_0: complete observed_events_and_fit
+clean_serve_1: complete observed_events_and_fit
+clean_serve_2: complete observed_events_and_fit
+clean_serve_3: complete observed_events_and_fit
+clean_serve_4: complete observed_events_and_fit
+no_hand: unknown hand_or_release_evidence_missing
+no_racket: unknown contact_evidence_missing
+no_contact: unknown contact_evidence_missing
+cancelled: cancelled no_release_evidence
+missing_release: unknown hand_or_release_evidence_missing
+occlusion: complete observed_events_and_fit
+outlier: complete observed_events_and_fit
+epipolar: complete observed_events_and_fit
+wrong_pair: complete observed_events_and_fit
+wrong_version: complete observed_events_and_fit
+time_jump: unknown event_time_gap
+delayed: complete observed_events_and_fit
+expired_boxes: unknown hand_or_release_evidence_missing
+noisy_serve: complete observed_events_and_fit
+image_apex_zero_mask: complete observed_events_and_fit
+varied_serve_00: complete observed_events_and_fit
+varied_serve_01: complete observed_events_and_fit
+varied_serve_02: complete observed_events_and_fit
+varied_serve_03: complete observed_events_and_fit
+varied_serve_04: complete observed_events_and_fit
+varied_serve_05: complete observed_events_and_fit
+varied_serve_06: complete observed_events_and_fit
+varied_serve_07: complete observed_events_and_fit
+varied_serve_08: complete observed_events_and_fit
+varied_serve_09: complete observed_events_and_fit
+varied_serve_10: complete observed_events_and_fit
+varied_serve_11: complete observed_events_and_fit
+varied_serve_12: complete observed_events_and_fit
+varied_serve_13: complete observed_events_and_fit
+varied_serve_14: complete observed_events_and_fit
+varied_serve_15: complete observed_events_and_fit
+varied_serve_16: complete observed_events_and_fit
+varied_serve_17: complete observed_events_and_fit
+varied_serve_18: complete observed_events_and_fit
+varied_serve_19: complete observed_events_and_fit
+varied_serve_20: complete observed_events_and_fit
+varied_serve_21: complete observed_events_and_fit
+varied_serve_22: complete observed_events_and_fit
+varied_serve_23: complete observed_events_and_fit
+varied_serve_24: complete observed_events_and_fit
+varied_serve_25: complete observed_events_and_fit
+varied_serve_26: complete observed_events_and_fit
+varied_serve_27: complete observed_events_and_fit
+varied_serve_28: complete observed_events_and_fit
+varied_serve_29: complete observed_events_and_fit
+missing_no_hand: unknown hand_or_release_evidence_missing
+missing_no_racket: unknown contact_evidence_missing
+missing_cancelled: cancelled no_release_evidence
+missing_recatch: cancelled observed_recatch_without_racket_contact
+missing_missing_release: unknown hand_or_release_evidence_missing
+missing_severe_occlusion: unknown hand_or_release_evidence_missing
+missing_no_apex: unknown contact_evidence_missing
+missing_invisible_hand: unknown hand_or_release_evidence_missing
+missing_wrong_model: unknown hand_or_release_evidence_missing
+missing_wrong_source: unknown hand_or_release_evidence_missing
+async_delay20: complete observed_events_and_fit
+async_delay80: complete observed_events_and_fit
+async_delay160: complete observed_events_and_fit
+async_out_of_order: complete observed_events_and_fit
+async_slow160: complete observed_events_and_fit
+occlusion_1: complete observed_events_and_fit
+occlusion_3: complete observed_events_and_fit
+occlusion_5: complete observed_events_and_fit
+sparse_semantics_30hz: complete observed_events_and_fit
+sparse_semantics_20hz: complete observed_events_and_fit
+multi_prediction: complete observed_events_and_fit
+multi_semantic: complete observed_events_and_fit
+multi_ambiguous: unknown hand_or_release_evidence_missing
+budget: complete observed_events_and_fit
+arrival_expired: unknown hand_or_release_evidence_missing
+image_subpixel: complete observed_events_and_fit
+image_blur: complete observed_events_and_fit
+image_noise: complete observed_events_and_fit
+image_multi: complete observed_events_and_fit
+image_multi_geometry: complete observed_events_and_fit
+image_baseline150: complete observed_events_and_fit
+image_baseline200: complete observed_events_and_fit
+image_estimated_calibration: complete observed_events_and_fit
+continuous_two_serves: complete observed_events_and_fit
+TRAJECTORY_FILE_COMPLETE cases=84
+{"total": 84, "passed": 84, "failed": 0, "scope": "B generated synthetic regression, not C frozen/independent review, no real model or hardware evidence"}
+RECTIFICATION_PREVIEW_COMPLETE
+EVENT_EVIDENCE_COMPLETE events=88
+V2_GALLERY_COMPLETE plots=12
+PART3_V2_VALIDATION_PASS

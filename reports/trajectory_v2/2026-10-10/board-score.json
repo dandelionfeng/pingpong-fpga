@@ -1,0 +1,46 @@
+{
+  "total": 4,
+  "passed": 4,
+  "source": "additional generated board poses; same camera family and renderer, not real or C independent",
+  "baseline_error_m": 0.0012382835051742425,
+  "world_rotation_error_rad": 0.0015404393481027942,
+  "world_translation_error_m": 0.01433936613550667,
+  "cases": [
+    {
+      "pair": {
+        "left": "boards/board_12_0.png",
+        "right": "boards/board_12_1.png"
+      },
+      "passed": true,
+      "stereo_reprojection_rms_px": 0.13425332503445758,
+      "max_error_px": 0.2906046865993306
+    },
+    {
+      "pair": {
+        "left": "boards/board_13_0.png",
+        "right": "boards/board_13_1.png"
+      },
+      "passed": true,
+      "stereo_reprojection_rms_px": 0.07948185926568839,
+      "max_error_px": 0.14696333865504976
+    },
+    {
+      "pair": {
+        "left": "boards/board_14_0.png",
+        "right": "boards/board_14_1.png"
+      },
+      "passed": true,
+      "stereo_reprojection_rms_px": 0.11001905833852763,
+      "max_error_px": 0.1902964851789533
+    },
+    {
+      "pair": {
+        "left": "boards/board_15_0.png",
+        "right": "boards/board_15_1.png"
+      },
+      "passed": true,
+      "stereo_reprojection_rms_px": 0.2083950592145102,
+      "max_error_px": 0.4453535825101515
+    }
+  ]
+}
