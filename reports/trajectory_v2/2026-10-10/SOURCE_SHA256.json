@@ -1,6 +1,7 @@
 {
   "base_commit": "fe7af549464b290b2573199a1cf5a00ebf4432a5",
   "date": "2026-10-10",
+  "note": "SHA-256 records uploaded Git bytes. Repository attributes convert three PS1 files to CRLF; validation_input_sha256 records original executed snapshot bytes where only line endings differ. Manifest excludes itself.",
   "files": [
     {
       "path": "handoffs/2026-10-10-b-trajectory-v2-path-fix.md",
@@ -60,11 +61,11 @@
     },
     {
       "path": "reports/trajectory_v2/2026-10-10/repository-checks.txt",
-      "sha256": "727233422d4e0301913c52d4df70a9bafadd8ac45b4f98a34587553e2dfe1c69"
+      "sha256": "0815b3c0d859f336d41f095c9b7468a8cecf56bc4c4c447f1e91093421660808"
     },
     {
       "path": "reports/trajectory_v2/2026-10-10/RUN_MANIFEST.json",
-      "sha256": "3669527627c5390f423f1b05fbb3c8621e315b9794f0b1c94d60d9f2cbc724b6"
+      "sha256": "161d1bc4262986872ebbffedaa700d60e75a251f4720288932eaf73d05854a8d"
     },
     {
       "path": "reports/trajectory_v2/2026-10-10/SCENARIO_MATRIX.json",
@@ -96,7 +97,8 @@
     },
     {
       "path": "software/pc_pipeline/trajectory/build_and_test.ps1",
-      "sha256": "d368ab74c6a81903663ddcd9c7c00323108f2ce60845222572a61fd597db862b"
+      "sha256": "5c190d76e9d4b4fde1cfb4476e51674510b75b2071272c1a4ff9986f8a3fa1d9",
+      "validation_input_sha256": "d368ab74c6a81903663ddcd9c7c00323108f2ce60845222572a61fd597db862b"
     },
     {
       "path": "software/pc_pipeline/trajectory/CMakeLists.txt",
@@ -112,11 +114,13 @@
     },
     {
       "path": "software/pc_pipeline/trajectory/run_validation.ps1",
-      "sha256": "03ae0e86dc8ea115a0c78ccff276ff68444e8fc78fafc5be08fe213e023e039f"
+      "sha256": "4d887148bd11ae1446186091e16ceb60a132bd95329d5d5fc4184a55839d6700",
+      "validation_input_sha256": "03ae0e86dc8ea115a0c78ccff276ff68444e8fc78fafc5be08fe213e023e039f"
     },
     {
       "path": "software/pc_pipeline/trajectory/run_validation_v2.ps1",
-      "sha256": "9fc910852fa94a795ce17f8e99ba0667247081b89f83954a4ed0c7412abea86c"
+      "sha256": "19a99a4d6d617a05d2dac482fa48241c449b1b96bca5ee3f93a6514db4f55a0d",
+      "validation_input_sha256": "9fc910852fa94a795ce17f8e99ba0667247081b89f83954a4ed0c7412abea86c"
     },
     {
       "path": "software/pc_pipeline/trajectory/src/events.cpp",

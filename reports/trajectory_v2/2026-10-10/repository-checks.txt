@@ -1,5 +1,5 @@
 $ D:\FPGA competition\.venv\Scripts\python.exe tools/check_repo.py --staged
-Checked 198 tracked files; 0 problem(s).
+Checked 200 tracked files; 0 problem(s).
 
 EXIT=0
 

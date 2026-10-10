@@ -63,5 +63,14 @@
     "physical camera/calibration/sync/accuracy",
     "Linux/ARM",
     "RTL/TD/board verification"
-  ]
+  ],
+  "uploaded_source_verification": {
+    "head_before_manifest_refresh": "9e30bdf0186f4d912403de315b10fbdd7bab9157",
+    "delivery_files": 45,
+    "missing_paths": [],
+    "unintended_main_changes": [],
+    "BPart2_present": false,
+    "root_SOURCE_SHA256_added": false,
+    "line_endings": "Repository .gitattributes converts PS1 to CRLF; code content matches executed source snapshot."
+  }
 }
