@@ -9,5 +9,6 @@
 | B局部球心、身份校验和质量 | [B球心v2](2026-10-06-b-ball-measurement-v2.md) |
 | B后四级帧缓存参考协议修复 | [B形态学修复](2026-10-06-b-morphology-protocol-fix.md) |
 | B第三部分修订PR接手 | [本轮PR复核](../reports/PR审查_20261008.md)、[PR #18](https://github.com/fengfengkang/pingpong-fpga/pull/18) |
+| B第三部分三维/轨迹/事件修正版 | [B第三部分接手](2026-10-10-b-trajectory-v2-path-fix.md) |
 
 旧路线、文档编辑过程和旧TD交接已转为[本地历史资料](../archive/README.md)。当前Word/技术路线和原算法交付报告保留原版本；新任务使用[TEMPLATE.md](TEMPLATE.md)，按[规则](../AGENTS.md)读取当前方案、个人分工第二部分、接口与实际结果。
