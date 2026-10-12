@@ -12,7 +12,7 @@ VS Code 开发入口为本目录的 `AUsbStereoPipeline-Windows.code-workspace`�
 
 IDE 生成会把所选 Debug/Release 的 OpenCV DLL 复制到输出目录，并为 GUI 部署 Qt 运行文件。Windows 便携包与 IDE 的构建目录各自保留。
 
-便携包在本地 `dist/A-USB-Stereo-Pipeline-1.0.0-Windows/`。双击 `启动回放界面.cmd`；使用“导入截图包”选择包含 `export.json`、`pairs.csv`、`stereo` 的父目录。也可打开 GRAY8/YUY2 输入清单。先播放或拖动进度条，再选择原图、搜索图或七级阶段，点击左/右画面检查同帧 256×256 ROI。
+当前便携包为 `dist/A-USB-Stereo-Pipeline-1.0.1-Windows/`，下载见 [1.0.1 Release](https://github.com/fengfengkang/pingpong-fpga/releases/tag/a-pipeline-pc-20261012)。双击 `启动回放界面.cmd`；使用“导入截图包”选择包含 `export.json`、`pairs.csv` 的父目录。也可打开 GRAY8/YUY2/MJPG 输入清单。先播放或拖动进度条，再选择原图、搜索图或七级阶段，点击左/右画面检查同帧 256×256 ROI。`fixtures-mjpeg/manifest.json` 和 `检查MJPEG样例.cmd` 提供独立人工 JPEG 样例；原人工样例仍在 `fixtures/`。
 
 预览使用 CPU 共用核心；“运行并导出全序列”按所选 CPU/模拟 DMA 后端运行。检测框回放的框属于指定 `source_pair_id`，异步迟到结果归档到用户 AppLocalDataLocation 下 `AUsbStereoPipeline/preview/`，只有与当前画面帧号、采样时间相符的框才叠加。实际 C 模型依赖可选库，界面会报告缺少的模块。
 
@@ -51,6 +51,8 @@ wsl -d Ubuntu-24.04 -- bash -lc '$HOME/.local/share/afh03-a-pipeline/pipeline-bu
 
 ## B/C 接入
 
+1.0.1 只增加输入解码边界：B/C 接收的原眼 GRAY8、搜索图、Mask、ROI 与身份字段保持原样，配置、算法阈值、模型预处理、FPGA 协议和界面设置未变。JPEG 是有损格式，解码后的像素不能作为相机未压缩 Y 的逐像素真值；真实测量精度需另行验证。
+
 各模块用 `pipeline_module_api` 获取头文件、OpenCV 和 JSON 依赖，提供 `pipeline_b_module` / `pipeline_c_module` 库和 `pipeline::register_b_module(Registry&)` / `register_c_module(Registry&)`。通过 `-DPIPELINE_B_MODULE_DIR=绝对目录`、`-DPIPELINE_C_MODULE_DIR=绝对目录` 配置。接口和坐标规则见契约；B 必须把迟到语义归档到来源帧，三维输出用米并区分 observed、predicted、invalid。
 
 `tests/modules/b`、`tests/modules/c` 是接口测试库，返回 `integration-test` 版本与明确无测量的结果，仅在 `--detector module-test` 下使用。它们不会通过 `model` / `--full` 的实际模块门禁。C 的实际后端声明 `actual-model`，提供模型版本，并遵守可中断的停止/超时契约；模型预处理及类别映射由 C 负责。
@@ -58,6 +60,26 @@ wsl -d Ubuntu-24.04 -- bash -lc '$HOME/.local/share/afh03-a-pipeline/pipeline-bu
 ## 像素、缓存和输出
 
 输入支持 2560×720 YUY2 与左右 1280×720 GRAY8，按行 stride 读数据，版本 1 的 stride 上限 65536。逐字节保留 Y 值，未做亮度范围扩展。2×2 平均采用 `(sum+2)>>2`。搜索点中心映射为 `(2u+0.5, 2v+0.5)`；框边界映射为坐标与宽高乘 2。ROI 原点为 `floor(center)-128`，有效区域裁到原图边界，其余补 0。
+
+### MJPEG 输入（1.0.1）
+
+文件清单沿用 `schema_version: 1`，每条帧的 `format` 可为 `MJPG` 或 `MJPEG`，`width: 2560`、`height: 720`、`file` 指向一张完整 JPEG，`sha256` 为压缩文件的哈希；`stride` 可省略或为 0。其余身份和时间字段沿用原规则。左右各占一半，JPEG 直接解码为 GRAY8，不做 EXIF 旋转、RGB 往返或亮度范围扩展。解码前检查 JPEG 标记、尺寸、完整结尾及 16 MiB 长度上限；坏帧归档并保留旧运动参考。此入口按每帧 JPEG 接收，不读取 AVI 容器或一文件拼接的多帧视频。
+
+截图包在 `export.json` 声明 `pixel_format: "MJPG"`（或 `MJPEG`），`pairs.csv` 的 `pair_file` 指向各 JPEG；可保留 `geometry_status` 和 `time_source`，未提供几何状态时标记 `unverified_stereo`。Windows GUI/CLI 均使用文件入口；实时相机入口仍为 Linux V4L2。
+
+Linux 相机默认依次协商 YUYV 2560×720@60 和 MJPG 2560×720@60。旧相机能够提供 YUYV 60 fps 时保持原格式；不满足时尝试 MJPG，均失败则给出具体原因。可在 V4L2 清单额外设置 `pixel_format: "MJPG"` 或 `"YUYV"` 强制格式。尺寸、60 fps 请求、手动曝光、4 个采集缓冲与 500 ms 等待保持原设定；压缩帧按 `bytesused` 读取，沿用内核采样时间与序号，不以解码完成时间替代。仓库原配置文件未修改。
+
+复现人工输入与测试：
+
+```powershell
+python tools/a_pipeline/generate_mjpeg_fixture.py --output output/mjpeg-new --pairs 125
+build/a_pipeline_windows/pipeline_cli.exe --input output/mjpeg-new/manifest.json --output output/mjpeg-run
+ctest --test-dir build/a_pipeline_windows --output-on-failure
+```
+
+生成器依赖 NumPy/Pillow，JPEG 质量 95 仅用于人工样例；不设置相机压缩质量。人工 16 ms 时间戳明确标记 `synthetic_16ms_fixture`，不代表实测 60 fps。验证记录见 [MJPEG 报告](../../reports/MJPEG适配验证_20261012.md)。
+
+发布包可用 `tools/a_pipeline/package_release.py --help` 查看参数：指定当前构建目录、同版本许可证目录、MSVC CRT、原人工样例和 MJPEG 人工样例，输出到全新目录。它只复制 Git 跟踪的源码，避免打包构建目录、设备 SDK 或模型。
 
 Gaussian 是 `[1,2,1]` 外积核，`(sum+8)>>4`；差值严格大于 12 才前景。后四级为腐蚀、膨胀、膨胀、腐蚀，所有阶段复制邻边。首帧 Mask 全零，`reference_valid=false`。软件双眼整对成功才更新前帧；坏帧、注入失败保留旧参考，配置切换/复位/运动超时清空参考。
 

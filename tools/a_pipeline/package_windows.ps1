@@ -1,4 +1,4 @@
-param([string]$Name='A-USB-Stereo-Pipeline-1.0.0-Windows')
+param([string]$Name='A-USB-Stereo-Pipeline-1.0.1-Windows')
 $ErrorActionPreference='Stop'
 $taskRoot=(Resolve-Path (Join-Path $PSScriptRoot '../..')).Path
 $taskBuild=Join-Path $taskRoot 'build/a_pipeline_windows'
@@ -57,7 +57,7 @@ pause
 Plugins=.
 '@ | Set-Content -LiteralPath (Join-Path $taskPackage 'qt.conf') -Encoding ascii
 @'
-# A 双目处理工作台 1.0.0
+# A 双目处理工作台 1.0.1
 
 双击“启动回放界面.cmd”。“导入截图包”选择含 export.json/pairs.csv/stereo 的父目录；原素材留在原位置。也可打开 fixtures/manifest.json 检查独立双眼人工图。播放、拖动寻帧、阶段选择、ROI 点击和导出均可使用。
 

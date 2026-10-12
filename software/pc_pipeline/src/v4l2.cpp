@@ -41,7 +41,7 @@ std::unique_ptr<V4l2Syscalls> nativeV4l2Syscalls() {
 }
 V4l2FrameSource::V4l2FrameSource(std::string device,
                                  std::unique_ptr<V4l2Syscalls> calls,
-                                 int exposure)
+                                 int exposure, std::string pixelFormat)
     : calls_(std::move(calls)) {
   try {
     if (!calls_)
@@ -59,26 +59,49 @@ V4l2FrameSource::V4l2FrameSource(std::string device,
                                                           : cap.capabilities;
     if (!(caps & V4L2_CAP_VIDEO_CAPTURE) || !(caps & V4L2_CAP_STREAMING))
       throw std::runtime_error("V4L2 capture/streaming unsupported");
-    v4l2_format format{};
-    format.type = V4L2_BUF_TYPE_VIDEO_CAPTURE;
-    format.fmt.pix.width = EyeWidth * 2;
-    format.fmt.pix.height = EyeHeight;
-    format.fmt.pix.pixelformat = V4L2_PIX_FMT_YUYV;
-    format.fmt.pix.field = V4L2_FIELD_NONE;
-    ctl(VIDIOC_S_FMT, &format, "V4L2 S_FMT failed");
-    if (format.fmt.pix.width != EyeWidth * 2 ||
-        format.fmt.pix.height != EyeHeight ||
-        format.fmt.pix.pixelformat != V4L2_PIX_FMT_YUYV ||
-        format.fmt.pix.bytesperline < EyeWidth * 4)
-      throw std::runtime_error("V4L2 negotiated format is not 2560x720 YUYV");
-    stride_ = format.fmt.pix.bytesperline;
-    v4l2_streamparm parm{};
-    parm.type = V4L2_BUF_TYPE_VIDEO_CAPTURE;
-    parm.parm.capture.timeperframe = {1, 60};
-    ctl(VIDIOC_S_PARM, &parm, "V4L2 frame interval control failed");
-    if (parm.parm.capture.timeperframe.numerator * 60 !=
-        parm.parm.capture.timeperframe.denominator)
-      throw std::runtime_error("V4L2 device did not negotiate 60 fps");
+    std::vector<uint32_t> formats;
+    if (pixelFormat == "auto")
+      formats = {V4L2_PIX_FMT_YUYV, V4L2_PIX_FMT_MJPEG};
+    else if (pixelFormat == "MJPG" || pixelFormat == "MJPEG")
+      formats = {V4L2_PIX_FMT_MJPEG};
+    else if (pixelFormat == "YUYV" || pixelFormat == "YUY2")
+      formats = {V4L2_PIX_FMT_YUYV};
+    else
+      throw std::runtime_error("V4L2 pixel_format must be auto, YUYV or MJPG");
+    std::string failure;
+    for (const auto requested : formats) {
+      try {
+        v4l2_format format{};
+        format.type = V4L2_BUF_TYPE_VIDEO_CAPTURE;
+        format.fmt.pix.width = EyeWidth * 2;
+        format.fmt.pix.height = EyeHeight;
+        format.fmt.pix.pixelformat = requested;
+        format.fmt.pix.field = V4L2_FIELD_NONE;
+        ctl(VIDIOC_S_FMT, &format, "V4L2 S_FMT failed");
+        const auto actual = format.fmt.pix.pixelformat;
+        if (format.fmt.pix.width != EyeWidth * 2 ||
+            format.fmt.pix.height != EyeHeight ||
+            (actual != V4L2_PIX_FMT_YUYV && actual != V4L2_PIX_FMT_MJPEG) ||
+            (pixelFormat != "auto" && actual != requested) ||
+            (actual == V4L2_PIX_FMT_YUYV && format.fmt.pix.bytesperline < EyeWidth * 4))
+          throw std::runtime_error("V4L2 negotiated format is not 2560x720 YUYV/MJPG");
+        v4l2_streamparm parm{};
+        parm.type = V4L2_BUF_TYPE_VIDEO_CAPTURE;
+        parm.parm.capture.timeperframe = {1, 60};
+        ctl(VIDIOC_S_PARM, &parm, "V4L2 frame interval control failed");
+        const auto interval = parm.parm.capture.timeperframe;
+        if (!interval.numerator || !interval.denominator ||
+            uint64_t(interval.numerator) * 60 != interval.denominator)
+          throw std::runtime_error("V4L2 device did not negotiate 60 fps");
+        pixel_format_ = actual;
+        stride_ = actual == V4L2_PIX_FMT_YUYV ? format.fmt.pix.bytesperline : 0;
+        break;
+      } catch (const std::exception &e) {
+        failure += std::string(requested == V4L2_PIX_FMT_MJPEG ? "MJPG: " : "YUYV: ") + e.what() + "; ";
+      }
+    }
+    if (!pixel_format_)
+      throw std::runtime_error("V4L2 capture negotiation failed: " + failure);
     v4l2_control c{};
     c.id = V4L2_CID_EXPOSURE_AUTO;
     c.value = V4L2_EXPOSURE_MANUAL;
@@ -144,18 +167,24 @@ FrameRead V4l2FrameSource::next() {
     r.meta.timestamp_ns = int64_t(b.timestamp.tv_sec) * 1000000000LL +
                           int64_t(b.timestamp.tv_usec) * 1000;
     r.meta.eye_timestamp_ns = {r.meta.timestamp_ns, r.meta.timestamp_ns};
-    r.meta.source = "uvc-v4l2";
+    const bool mjpeg = pixel_format_ == V4L2_PIX_FMT_MJPEG;
+    r.meta.source = mjpeg ? "uvc-v4l2-mjpg" : "uvc-v4l2";
     r.meta.time_source = (b.flags & V4L2_BUF_FLAG_TIMESTAMP_MASK) ==
                                  V4L2_BUF_FLAG_TIMESTAMP_MONOTONIC
                              ? "v4l2_buffer_monotonic"
                              : "v4l2_buffer_clock_unverified";
     size_t expected = stride_ * EyeHeight;
-    if (b.index >= buffers_.size() || b.bytesused < expected ||
+    r.evidence = {{"capture_format", mjpeg ? "MJPG" : "YUYV"},
+                  {"bytesused", b.bytesused}, {"sequence", b.sequence}};
+    if (b.index >= buffers_.size() || !b.bytesused ||
+        (!mjpeg && b.bytesused < expected) ||
+        (mjpeg && b.bytesused > 16 * 1024 * 1024) ||
         b.bytesused > buffers_[b.index].size || (b.flags & V4L2_BUF_FLAG_ERROR))
       throw std::runtime_error("V4L2 short/error capture buffer");
     auto begin = static_cast<uint8_t *>(buffers_[b.index].data);
-    auto y = extractY(std::vector<uint8_t>(begin, begin + expected),
-                      EyeWidth * 2, EyeHeight, stride_);
+    auto y = mjpeg ? decodeMjpeg(std::vector<uint8_t>(begin, begin + b.bytesused))
+                   : extractY(std::vector<uint8_t>(begin, begin + expected),
+                              EyeWidth * 2, EyeHeight, stride_);
     auto f = std::make_shared<FramePair>();
     f->meta = r.meta;
     for (int e = 0; e < 2; ++e) {
@@ -178,7 +207,7 @@ FrameRead V4l2FrameSource::next() {
 namespace pipeline {
 std::unique_ptr<V4l2Syscalls> nativeV4l2Syscalls() { return {}; }
 V4l2FrameSource::V4l2FrameSource(std::string, std::unique_ptr<V4l2Syscalls>,
-                                 int) {
+                                 int, std::string) {
   throw std::runtime_error("V4L2 is Linux-only; use file input on Windows");
 }
 V4l2FrameSource::~V4l2FrameSource() = default;

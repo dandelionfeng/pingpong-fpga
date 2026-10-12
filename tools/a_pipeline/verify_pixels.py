@@ -48,8 +48,12 @@ def main():
             assert record['motion_valid']
             raw_bytes = Path(entry['file']).read_bytes()
             assert hashlib.sha256(raw_bytes).hexdigest() == entry['sha256']
-            raw = np.frombuffer(raw_bytes, np.uint8).reshape(720, entry['stride'])[:, :5120:2]
-            assert np.array_equal(raw[:, :1280], raw[:, 1280:])
+            if entry['format'] in ('MJPG', 'MJPEG'):
+                raw = np.asarray(Image.open(Path(entry['file'])).convert('L'))
+                assert raw.shape == (720, 2560)
+            else:
+                raw = np.frombuffer(raw_bytes, np.uint8).reshape(720, entry['stride'])[:, :5120:2]
+                assert np.array_equal(raw[:, :1280], raw[:, 1280:])
             for e, eye in enumerate(('left', 'right')):
                 directory = root / 'images' / f"pair_{entry['pair_id']:08d}" / eye
                 original = raw[:, e*1280:(e+1)*1280]
