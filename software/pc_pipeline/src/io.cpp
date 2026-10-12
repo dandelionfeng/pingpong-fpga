@@ -225,13 +225,16 @@ static int64_t decimalNs(std::string text) {
 }
 Json importExportPackage(const Path &folder, const Path &output) {
   auto description = Json::parse(readText(folder / "export.json"));
-  if (description.value("pixel_format", "") != "YUY2")
-    throw std::runtime_error("export package must contain YUY2");
+  const auto format = description.value("pixel_format", "");
+  const bool mjpeg = format == "MJPG" || format == "MJPEG";
+  if (format != "YUY2" && !mjpeg)
+    throw std::runtime_error("export package must contain YUY2 or MJPEG");
   Json result = {
       {"schema_version", 1},
       {"mode", "file"},
       {"provenance", description},
-      {"geometry_status", "duplicated_monocular_not_calibrated_stereo"},
+      {"geometry_status", mjpeg ? description.value("geometry_status", "unverified_stereo")
+                                  : "duplicated_monocular_not_calibrated_stereo"},
       {"frames", Json::array()}};
   std::istringstream csv(readText(folder / "pairs.csv"));
   std::string line;
@@ -259,12 +262,12 @@ Json importExportPackage(const Path &folder, const Path &output) {
     meta.camera_frame_id = {
         std::stoull(row.at("left_index").get<std::string>()),
         std::stoull(row.at("right_index").get<std::string>())};
-    meta.time_source = "video_requested_time_not_device_capture";
+    meta.time_source = description.value("time_source", "video_requested_time_not_device_capture");
     Json entry = metaJson(meta);
-    entry.update({{"format", "YUY2"},
+    entry.update({{"format", mjpeg ? "MJPG" : "YUY2"},
                   {"width", EyeWidth * 2},
                   {"height", EyeHeight},
-                  {"stride", EyeWidth * 4},
+                  {"stride", mjpeg ? 0 : EyeWidth * 4},
                   {"file", pathUtf8(pair)},
                   {"sha256", fileSha256(pair)}});
     result["frames"].push_back(entry);
@@ -328,14 +331,17 @@ FrameRead FileFrameSource::next() {
     f->meta = r.meta;
     std::string format = j.at("format");
     int w = j.at("width"), h = j.at("height");
-    size_t stride = j.at("stride");
+    const bool mjpeg = format == "MJPG" || format == "MJPEG";
+    size_t stride = mjpeg ? 0 : j.at("stride").get<size_t>();
     if (stride > 65536)
       throw std::runtime_error("stride exceeds version-1 input limit (65536)");
     auto load = [&](const char *key, const char *hash) {
       auto p = root_ / utf8Path(j.at(key));
       r.evidence[std::string(key) + "_actual_bytes"] =
           std::filesystem::file_size(p);
-      if (std::filesystem::file_size(p) != stride * static_cast<size_t>(h))
+      if (mjpeg && std::filesystem::file_size(p) > 16 * 1024 * 1024)
+        throw std::runtime_error("MJPEG file exceeds 16 MiB input limit");
+      if (!mjpeg && std::filesystem::file_size(p) != stride * static_cast<size_t>(h))
         throw std::runtime_error("raw file length mismatch: " + pathUtf8(p));
       auto b = readBytes(p);
       r.evidence[std::string(key) + "_actual_bytes"] = b.size();
@@ -346,7 +352,13 @@ FrameRead FileFrameSource::next() {
       }
       return b;
     };
-    if (format == "YUY2") {
+    if (mjpeg) {
+      if (w != 2 * EyeWidth || h != EyeHeight)
+        throw std::runtime_error("expected 2560x720 MJPEG");
+      auto y = decodeMjpeg(load("file", "sha256"));
+      for (int e = 0; e < 2; ++e)
+        f->original[e] = y(cv::Rect(e * EyeWidth, 0, EyeWidth, EyeHeight)).clone();
+    } else if (format == "YUY2") {
       if (w != 2 * EyeWidth || h != EyeHeight)
         throw std::runtime_error("expected 2560x720 YUY2");
       auto y = extractY(load("file", "sha256"), w, h, stride);

@@ -98,6 +98,8 @@ private:
 Json importExportPackage(const Path &folder, const Path &output);
 cv::Mat extractY(const std::vector<uint8_t> &bytes, int width, int height,
                  size_t stride);
+// One complete 2560x720 JPEG capture buffer, decoded directly to GRAY8.
+cv::Mat decodeMjpeg(const std::vector<uint8_t> &bytes);
 cv::Mat average2x2(const cv::Mat &original);
 struct Roi {
   cv::Mat image;
@@ -412,7 +414,7 @@ class V4l2FrameSource final : public FrameSource {
 public:
   V4l2FrameSource(std::string device,
                   std::unique_ptr<V4l2Syscalls> calls = nativeV4l2Syscalls(),
-                  int exposure = 100);
+                  int exposure = 100, std::string pixelFormat = "auto");
   ~V4l2FrameSource();
   FrameRead next() override;
   std::string mode() const override { return "v4l2"; }
@@ -421,6 +423,7 @@ private:
   std::unique_ptr<V4l2Syscalls> calls_;
   int fd_ = -1;
   size_t stride_ = 0;
+  uint32_t pixel_format_ = 0;
   uint64_t pair_ = 0;
   struct Buffer {
     void *data = nullptr;

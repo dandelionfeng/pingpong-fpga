@@ -1,0 +1,464 @@
+{
+  "date": "2026-10-12",
+  "version": "1.0.1",
+  "status": "passed_software_scope",
+  "base_commit": "fe7af549464b290b2573199a1cf5a00ebf4432a5",
+  "branch": "codex/a-mjpeg-input-20261012",
+  "tools": {
+    "opencv_cpp": "4.13.0",
+    "qt": "6.8.3",
+    "msvc": "19.44.35229.0",
+    "gcc": "13.3.0",
+    "cmake_windows": "3.31.6-msvc6",
+    "cmake_linux": "3.28.3",
+    "python": "3.13",
+    "Pillow": "12.3.0",
+    "numpy": "2.5.2"
+  },
+  "input": {
+    "type": "synthetic independent eyes, Pillow JPEG quality95",
+    "pairs": 125,
+    "timestamp_source": "synthetic_16ms_fixture",
+    "manifest_sha256": "d387b0cfaea4d0e5c6d32c09e630b1228136b7669ac7c299e17fd9e5eee3dcaa",
+    "generator_sha256": "58f81e603ed59cef31fa6d155c1619b46403dde4b7384fe11af9b2c27cdedd82"
+  },
+  "configs": [
+    {
+      "file": "software/pc_pipeline/configs/default.json",
+      "sha256": "941187c694f06f73fc4cf98280da8ffc9afd5549093cb060432ef205939f701b",
+      "unchanged_from_base": true
+    },
+    {
+      "file": "software/pc_pipeline/configs/v4l2.json",
+      "sha256": "566566eef6aff289933deca6afdd1f53dbde03f6d6f50392565a7a7b586635ca",
+      "unchanged_from_base": true
+    }
+  ],
+  "windows_ctest": {
+    "passed": 2,
+    "total": 2
+  },
+  "linux_ctest": {
+    "passed": 2,
+    "total": 2
+  },
+  "pixels": {
+    "status": "passed",
+    "pairs": 125,
+    "images_checked": 2750,
+    "pixels_checked": 765184000,
+    "first_difference": null,
+    "oracle": "NumPy direct 9-tap convolution and boolean windows",
+    "manifest_sha256": "d387b0cfaea4d0e5c6d32c09e630b1228136b7669ac7c299e17fd9e5eee3dcaa"
+  },
+  "pixels_with_gui": {
+    "status": "passed",
+    "pairs": 125,
+    "images_checked": 2764,
+    "pixels_checked": 768409600,
+    "first_difference": null,
+    "oracle": "NumPy direct 9-tap convolution and boolean windows",
+    "manifest_sha256": "d387b0cfaea4d0e5c6d32c09e630b1228136b7669ac7c299e17fd9e5eee3dcaa"
+  },
+  "cpu125": {
+    "context_object_peak": 0,
+    "detector_statistics": {
+      "status": "unavailable"
+    },
+    "elapsed_ms": 4898.789,
+    "errors": 0,
+    "frame_cache_size": 8,
+    "frame_object_peak": 17,
+    "hardware_status": "not_executed",
+    "input_queue_peak": 8,
+    "input_replaced": 0,
+    "mask_sequence_sha256": "1995042a7afbcd6c8eab453b8c389c5deb6146bd6f4ce892de27304aaaff5aa2",
+    "measurement_status": "unavailable",
+    "model_status": "unavailable",
+    "per_pair_ms_p50": 38.4968,
+    "per_pair_ms_p95": 40.8326,
+    "processed": 125,
+    "status": "passed"
+  },
+  "linux125": {
+    "context_object_peak": 0,
+    "detector_statistics": {
+      "status": "unavailable"
+    },
+    "elapsed_ms": 609.221818,
+    "errors": 0,
+    "frame_cache_size": 8,
+    "frame_object_peak": 17,
+    "hardware_status": "not_executed",
+    "input_queue_peak": 8,
+    "input_replaced": 0,
+    "mask_sequence_sha256": "1995042a7afbcd6c8eab453b8c389c5deb6146bd6f4ce892de27304aaaff5aa2",
+    "measurement_status": "unavailable",
+    "model_status": "unavailable",
+    "per_pair_ms_p50": 4.715556,
+    "per_pair_ms_p95": 5.121209,
+    "processed": 125,
+    "status": "passed"
+  },
+  "gui125": {
+    "checks": [
+      "load",
+      "next",
+      "seek56",
+      "stage",
+      "ROI click",
+      "snapshot",
+      "play",
+      "pause",
+      "seek0",
+      "export125"
+    ],
+    "export": {
+      "context_object_peak": 0,
+      "detector_statistics": {
+        "status": "unavailable"
+      },
+      "elapsed_ms": 5244.1122,
+      "errors": 0,
+      "frame_cache_size": 8,
+      "frame_object_peak": 18,
+      "hardware_status": "not_executed",
+      "input_queue_peak": 8,
+      "input_replaced": 0,
+      "mask_sequence_sha256": "1995042a7afbcd6c8eab453b8c389c5deb6146bd6f4ce892de27304aaaff5aa2",
+      "measurement_status": "unavailable",
+      "model_status": "unavailable",
+      "per_pair_ms_p50": 40.8984,
+      "per_pair_ms_p95": 44.5671,
+      "processed": 125,
+      "status": "passed"
+    },
+    "status": "passed"
+  },
+  "portable_gui125": {
+    "checks": [
+      "load",
+      "next",
+      "seek56",
+      "stage",
+      "ROI click",
+      "snapshot",
+      "play",
+      "pause",
+      "seek0",
+      "export125"
+    ],
+    "export": {
+      "context_object_peak": 0,
+      "detector_statistics": {
+        "status": "unavailable"
+      },
+      "elapsed_ms": 5061.2962,
+      "errors": 0,
+      "frame_cache_size": 8,
+      "frame_object_peak": 18,
+      "hardware_status": "not_executed",
+      "input_queue_peak": 8,
+      "input_replaced": 0,
+      "mask_sequence_sha256": "1995042a7afbcd6c8eab453b8c389c5deb6146bd6f4ce892de27304aaaff5aa2",
+      "measurement_status": "unavailable",
+      "model_status": "unavailable",
+      "per_pair_ms_p50": 40.0437,
+      "per_pair_ms_p95": 41.838,
+      "processed": 125,
+      "status": "passed"
+    },
+    "status": "passed"
+  },
+  "runtime": {
+    "status": "passed",
+    "checks": [
+      {
+        "name": "cpu",
+        "command": [
+          "build/a_pipeline_windows/pipeline_cli.exe",
+          "--input",
+          "C:\\FPGA competition\\output\\mjpeg-20261012\\fixture125\\manifest.json",
+          "--output",
+          "C:\\FPGA competition\\output\\mjpeg-20261012\\runtime\\cpu",
+          "--no-images"
+        ],
+        "exit_code": 0
+      },
+      {
+        "name": "mock",
+        "command": [
+          "build/a_pipeline_windows/pipeline_cli.exe",
+          "--input",
+          "C:\\FPGA competition\\output\\mjpeg-20261012\\fixture125\\manifest.json",
+          "--output",
+          "C:\\FPGA competition\\output\\mjpeg-20261012\\runtime\\mock",
+          "--no-images",
+          "--motion",
+          "mock-dma"
+        ],
+        "exit_code": 0
+      },
+      {
+        "name": "realtime",
+        "command": [
+          "build/a_pipeline_windows/pipeline_cli.exe",
+          "--input",
+          "C:\\FPGA competition\\output\\mjpeg-20261012\\fixture125\\manifest.json",
+          "--output",
+          "C:\\FPGA competition\\output\\mjpeg-20261012\\runtime\\realtime",
+          "--no-images",
+          "--motion",
+          "mock-dma",
+          "--mock-delay-ms",
+          "80",
+          "--realtime",
+          "--detector",
+          "replay",
+          "--replay",
+          "C:\\FPGA competition\\output\\mjpeg-20261012\\fixture125\\replay.json",
+          "--detector-delay-ms",
+          "160"
+        ],
+        "exit_code": 0
+      },
+      {
+        "name": "missing-pcie",
+        "command": [
+          "build/a_pipeline_windows/pipeline_cli.exe",
+          "--input",
+          "C:\\FPGA competition\\output\\mjpeg-20261012\\fixture125\\manifest.json",
+          "--output",
+          "C:\\FPGA competition\\output\\mjpeg-20261012\\runtime\\missing-pcie",
+          "--no-images",
+          "--motion",
+          "pcie"
+        ],
+        "exit_code": 1
+      },
+      {
+        "name": "missing-model",
+        "command": [
+          "build/a_pipeline_windows/pipeline_cli.exe",
+          "--input",
+          "C:\\FPGA competition\\output\\mjpeg-20261012\\fixture125\\manifest.json",
+          "--output",
+          "C:\\FPGA competition\\output\\mjpeg-20261012\\runtime\\missing-model",
+          "--no-images",
+          "--detector",
+          "model"
+        ],
+        "exit_code": 1
+      },
+      {
+        "name": "missing-full",
+        "command": [
+          "build/a_pipeline_windows/pipeline_cli.exe",
+          "--input",
+          "C:\\FPGA competition\\output\\mjpeg-20261012\\fixture125\\manifest.json",
+          "--output",
+          "C:\\FPGA competition\\output\\mjpeg-20261012\\runtime\\missing-full",
+          "--no-images",
+          "--full"
+        ],
+        "exit_code": 1
+      }
+    ],
+    "realtime_processed": 30,
+    "replaced": 95,
+    "detector_statistics": {
+      "active": 0,
+      "completed_pending": 0,
+      "completion_peak": 1,
+      "done": true,
+      "expired": 0,
+      "pending": 0,
+      "pending_peak": 2,
+      "rate_per_second": 25,
+      "replaced": 12,
+      "submitted": 30
+    },
+    "archived_detections": 18,
+    "mask_sequence_sha256": "1995042a7afbcd6c8eab453b8c389c5deb6146bd6f4ce892de27304aaaff5aa2"
+  },
+  "legacy125": {
+    "context_object_peak": 0,
+    "detector_statistics": {
+      "status": "unavailable"
+    },
+    "elapsed_ms": 2606.0425,
+    "errors": 0,
+    "frame_cache_size": 8,
+    "frame_object_peak": 10,
+    "hardware_status": "not_executed",
+    "input_queue_peak": 1,
+    "input_replaced": 0,
+    "mask_sequence_sha256": "ebd2cfadccabc60753e3563574119a5581158347109db5e46007744039bc19bc",
+    "measurement_status": "unavailable",
+    "model_status": "unavailable",
+    "per_pair_ms_p50": 6.105,
+    "per_pair_ms_p95": 6.4695,
+    "processed": 125,
+    "status": "passed"
+  },
+  "portable_legacy8": {
+    "context_object_peak": 0,
+    "detector_statistics": {
+      "status": "unavailable"
+    },
+    "elapsed_ms": 72.9807,
+    "errors": 0,
+    "frame_cache_size": 8,
+    "frame_object_peak": 8,
+    "hardware_status": "not_executed",
+    "input_queue_peak": 1,
+    "input_replaced": 0,
+    "mask_sequence_sha256": "0106dd58950c374d81ad04827ea06020864c5ed10a2dbcc013cdaff4e2f1b29c",
+    "measurement_status": "unavailable",
+    "model_status": "unavailable",
+    "per_pair_ms_p50": 5.9889,
+    "per_pair_ms_p95": 6.186,
+    "processed": 8,
+    "status": "passed"
+  },
+  "portable_mjpeg8": {
+    "context_object_peak": 0,
+    "detector_statistics": {
+      "status": "unavailable"
+    },
+    "elapsed_ms": 53.0525,
+    "errors": 0,
+    "frame_cache_size": 8,
+    "frame_object_peak": 8,
+    "hardware_status": "not_executed",
+    "input_queue_peak": 4,
+    "input_replaced": 0,
+    "mask_sequence_sha256": "bb9b5c6081f6b2a3d7378f5d05acc24e0f9b19383cf9691baf1e869abf1a2eaa",
+    "measurement_status": "unavailable",
+    "model_status": "unavailable",
+    "per_pair_ms_p50": 5.9495,
+    "per_pair_ms_p95": 6.0576,
+    "processed": 8,
+    "status": "passed"
+  },
+  "linux_portable8": {
+    "context_object_peak": 0,
+    "detector_statistics": {
+      "status": "unavailable"
+    },
+    "elapsed_ms": 85.237876,
+    "errors": 0,
+    "frame_cache_size": 8,
+    "frame_object_peak": 8,
+    "hardware_status": "not_executed",
+    "input_queue_peak": 1,
+    "input_replaced": 0,
+    "mask_sequence_sha256": "bb9b5c6081f6b2a3d7378f5d05acc24e0f9b19383cf9691baf1e869abf1a2eaa",
+    "measurement_status": "unavailable",
+    "model_status": "unavailable",
+    "per_pair_ms_p50": 4.764747,
+    "per_pair_ms_p95": 4.951098,
+    "processed": 8,
+    "status": "passed"
+  },
+  "repository_tests": {
+    "passed": 5,
+    "total": 5
+  },
+  "not_executed": [
+    "physical UVC capture/60fps/synchronization",
+    "real stereo calibration/measurement accuracy",
+    "production B/C integration",
+    "RK/PCIe/DDR3L/board",
+    "RTL/TD rerun",
+    "10000-pair stress rerun",
+    "Linux portable GUI interaction"
+  ],
+  "commands": [
+    "tools/a_pipeline/build_windows.ps1 -DependenciesRoot C:/FPGA competition",
+    "A_PIPELINE_BUILD=$HOME/.local/share/afh03-a-pipeline/mjpeg-build-20261012 bash tools/a_pipeline/build_linux.sh",
+    "python tools/a_pipeline/generate_mjpeg_fixture.py --output FIXTURE --pairs 125",
+    "pipeline_cli --input FIXTURE/manifest.json --output CPU",
+    "python tools/a_pipeline/verify_pixels.py --manifest FIXTURE/manifest.json --run CPU --gui GUI --output pixels-gui125.json",
+    "pipeline_gui --package FIXTURE --self-test --output GUI",
+    "python tools/a_pipeline/verify_runtime.py --executable CLI --manifest FIXTURE/manifest.json --replay FIXTURE/replay.json --output runtime",
+    "python -m unittest discover -s tests -v"
+  ],
+  "logs": [
+    {
+      "path": "build-windows-final.log",
+      "bytes": 1695,
+      "sha256": "9e45ff9d194bd721282750781109528bb1c2b60c33a7089c1b75a376470cab97"
+    },
+    {
+      "path": "build-linux-final.log",
+      "bytes": 1032,
+      "sha256": "60313f4deab19acfb1e4420bf0eb6db31c7848a7cd05f483e1b43e110be614d0"
+    },
+    {
+      "path": "deploy-linux.log",
+      "bytes": 636,
+      "sha256": "4de5772b6c2a93d7ed1fcbd68c208c8f0e16be2035101a8f025c6ee09da0005e"
+    },
+    {
+      "path": "repository-tests.log",
+      "bytes": 702,
+      "sha256": "7d2b05bbb748b2998c6e0c6213485b14e436fa46b04bb80f713c089db8e37945"
+    },
+    {
+      "path": "cpu125.log",
+      "bytes": 557,
+      "sha256": "68fabbb44479d0dfd141e85f6508deb03811a8539edd220ffeb228ab689e4b08"
+    },
+    {
+      "path": "linux125.log",
+      "bytes": 541,
+      "sha256": "90bb6dee4a49b76295e669d5f707f42930f283dcc52aea168dbb104a67b4100a"
+    },
+    {
+      "path": "legacy125.log",
+      "bytes": 555,
+      "sha256": "9a5b996fc66dcccc636da4be14064fd14651b5f9aea1c6fe4f5c396ef15ffbb6"
+    },
+    {
+      "path": "portable-mjpeg8.log",
+      "bytes": 551,
+      "sha256": "e6dc2375238251c32b06f76b9e682fd979e8f02d0c96358425174cfc2161339e"
+    },
+    {
+      "path": "portable-legacy8.log",
+      "bytes": 550,
+      "sha256": "18e0cedba1211beefc1728a712a834ca209e80a94f506a0ff57b01e92c51888e"
+    },
+    {
+      "path": "linux-portable8.log",
+      "bytes": 537,
+      "sha256": "c1c752e68480cff7fac27a0745f70d9d6c818fb180bf954e1c95b54c33f8e8d0"
+    },
+    {
+      "path": "pixels125.json",
+      "bytes": 288,
+      "sha256": "0bfa1440642f0a34dac4aefa845ddd9095990c76dd22fb3fd9bab85d474c41d4"
+    },
+    {
+      "path": "pixels-gui125.json",
+      "bytes": 288,
+      "sha256": "27672cbbb3ad4c5891dd857510ac9130e4c7f43543b14f5aa413c98e19e24fa3"
+    },
+    {
+      "path": "runtime/summary.json",
+      "bytes": 3159,
+      "sha256": "7190f1e8b64cf514fd0afdcb85c8bc50aeadeff8eae069e135d76a6e50a40417"
+    },
+    {
+      "path": "gui125/gui-test.json",
+      "bytes": 770,
+      "sha256": "39509722fbaf3970cc30196d3cda30d397a7270040b987ddee2856cbb5345caf"
+    },
+    {
+      "path": "portable-gui125/gui-test.json",
+      "bytes": 769,
+      "sha256": "7663e15570e22305e719f106fe7f12f35ab52085b04c5fbb1efb8c19102cc0c6"
+    }
+  ]
+}

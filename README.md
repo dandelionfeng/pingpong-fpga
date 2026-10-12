@@ -23,6 +23,6 @@ Qt是长期保留的显示、回放和证据复查层。当前程序已能查看
 
 `plans/current/`和当前三人职责保留现行Markdown、Word/PDF；`software/`、`fpga/`、`tools/`保留现用实现、验证与构建入口；`data/manifests/`记录输入、版本和本地产物；`handoffs/`、`reports/`保留当前接手材料及实际算法证据。
 
-旧路线、旧TD调试实验、旧文档核查和被替代的交接已移出当前文件树。原始文件及Git字节备份保存在本机，入口为[本地历史资料](archive/README.md)和[清单](data/manifests/local-history-20261008.json)。原始视频、模型权重、厂商SDK、授权和生成工程继续按[产物说明](artifacts/README.md)保存在本地；A运行包、固定人工输入与原始证据从[私人Release](https://github.com/fengfengkang/pingpong-fpga/releases/tag/a-pipeline-pc-20261006)取得。
+旧路线、旧TD调试实验、旧文档核查和被替代的交接已移出当前文件树。原始文件及Git字节备份保存在本机，入口为[本地历史资料](archive/README.md)和[清单](data/manifests/local-history-20261008.json)。原始视频、模型权重、厂商SDK、授权和生成工程继续按[产物说明](artifacts/README.md)保存在本地；A 1.0.1 MJPEG兼容运行包及源码从[当前私人Release](https://github.com/fengfengkang/pingpong-fpga/releases/tag/a-pipeline-pc-20261012)取得，原A/B人工输入与历史证据仍在[2026-10-06 Release](https://github.com/fengfengkang/pingpong-fpga/releases/tag/a-pipeline-pc-20261006)。[本轮验证](reports/MJPEG适配验证_20261012.md)单独记录输入适配，原配置、算法和B/C接口保持原样。
 
 协作前阅读[AGENTS.md](AGENTS.md)、[CONTRIBUTING.md](CONTRIBUTING.md)、[协作指南](docs/AI_agent协作指南.md)和[接口契约入口](项目规划/接口与验收契约.md)。新任务基于最新已评审的`origin/main`建立任务分支；性能、准确率、综合与上板各按实际证据记录。

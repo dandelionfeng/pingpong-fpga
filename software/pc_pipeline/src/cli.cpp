@@ -59,7 +59,7 @@ int main(int argc, char **argv) {
       options[key] = args[++i];
     }
     if (flags.count("--help") || args.size() == 1) {
-      std::cout << "A USB stereo pipeline 1.0\n  --import-export DIR "
+      std::cout << "A USB stereo pipeline " << PIPELINE_VERSION << "\n  --import-export DIR "
                    "--manifest OUTPUT.json\n  --input MANIFEST --output "
                    "NEW_DIR [--motion cpu|mock-dma|pcie] [--detector "
                    "none|replay|model|module-test] [--replay JSON] [--full] "
