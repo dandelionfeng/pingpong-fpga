@@ -36,6 +36,12 @@ artifacts/files/
 vendor/
 /archive/local-debug/
 
+# Generated training and inference artifacts (weights, runs, previews, caches).
+# Git keeps the code, the manifests and the SHA256 records instead of the files.
+artifacts/runs/
+artifacts/quick_test/
+tools/deepseek_labeling/_work/
+
 # Historical material is local; Git keeps its locator and manifest.
 /archive/**
 !/archive/README.md
