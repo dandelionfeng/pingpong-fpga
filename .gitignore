@@ -42,7 +42,21 @@ artifacts/runs/
 artifacts/quick_test/
 tools/deepseek_labeling/_work/
 
+# Human manual ground truth: images, JSON, YOLO labels, history and exports stay
+# local. Only the tool source and its coordinate tests are tracked.
+artifacts/files/datasets/BNDSTT_MANUAL_GT_V1/
+
 # Historical material is local; Git keeps its locator and manifest.
 /archive/**
 !/archive/README.md
 /docs/architecture/*.png
+
+# Deprecated routes and heavy generated assets (kept on disk, not published).
+# tools/deepseek_labeling/ is the OLD hand / toss_hand / racket_hand labeling pipeline,
+# permanently deprecated by vision/c_perception_v2/FINAL_ARCHITECTURE.md. Most of its
+# volume is generated PNG/JPG/JSON work products; the code stays local as history.
+tools/deepseek_labeling/
+
+# Same for the auto-labeling work products and preview media under reports/.
+reports/deepseek_mvp80_zip/
+reports/bndstt_video_previews/

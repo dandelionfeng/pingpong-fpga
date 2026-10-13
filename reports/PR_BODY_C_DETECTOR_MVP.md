@@ -1,3 +1,14 @@
+> ## ⚠️ DEPRECATED / INVALIDATED EXPERIMENT
+>
+> **本 PR 描述基于已作废的 29-image run，不得再作为最终 PR 正文使用。**
+>
+> 该 run 的 GT 为 ChatGPT 自动标注，后经复核发现存在**语义错误**；
+> "29/29 PASS" 仅证明流程自洽，不证明标注正确。
+> 类别 `0 ball / 1 hand / 2 racket` 中的 **hand 路线已永久取消**。
+>
+> **请改用** `reports/C_FINAL_HANDOFF_V1.md` 作为 C 端收口说明。
+> 状态：`INVALID FOR FINAL EVALUATION`。原文保留不删。
+
 # C: add BNDSTT YOLOv8n ball/hand/racket MVP pipeline
 
 ## Summary

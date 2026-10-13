@@ -1,0 +1,40 @@
+# RKNN INT8 校准集清单（calibration_manifest.txt）
+#
+# 重要：校准不是训练。校准只用于统计激活分布以确定量化 scale，
+# 不更新任何权重、不产生梯度、不修改任何标签。
+#
+# 生成方式：从下列来源确定性抽取，写入 artifacts/files/reports/RKNN_EXPORT_V1/calibration/。
+
+target_platform: rk3576
+
+sources:
+  - name: public_tabletennis_v2_train
+    role: 主要代表性样本（训练集分布）
+    path: artifacts/files/datasets/tabletennis_ball_racket_v1/images/train
+    count: 64
+    sampling: sorted 后按固定步长等距抽取（确定性）
+  - name: public_tabletennis_v2_val
+    role: 泛化样本
+    path: artifacts/files/datasets/tabletennis_ball_racket_v1/images/val
+    count: 32
+    sampling: sorted 后按固定步长等距抽取（确定性）
+  - name: bndstt_domain_frames
+    role: 部署域样本
+    path: artifacts/files/benchmarks/BNDSTT_TEMPORAL_DIAGNOSTIC_V1/frames
+    count: 32
+    sampling: 每 clip 取前 4 帧（确定性）
+    note: 只读取图像像素；不读取、不使用任何标签
+
+total: 128
+
+for_balltrack:
+  note: BallTrack 输入是 15 通道 (median + 4 帧)，校准需按同样方式组装。
+  action: 先用 DataPreprocess 生成 median 背景，再按官方 seq 组装 512x288 输入。
+  risk: 15 通道 + sigmoid 热图，INT8 量化风险高；建议 BallTrack 只做 FP16。
+
+prohibitions:
+  - 不使用 quick_test
+  - 不修改任何 GT
+  - 不把校准集当作训练数据
+
+status: RKNN_PREPARED_NOT_EXECUTED

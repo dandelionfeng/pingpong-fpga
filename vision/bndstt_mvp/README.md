@@ -1,3 +1,16 @@
+> ## ⚠️ DEPRECATED / LEGACY（2026-10-13）
+>
+> 本目录是**历史工具与旧 MVP 链路**，**不是当前正式 C pipeline**。
+>
+> - 类别 `1 hand` 已**永久取消**（不训练 hand / toss_hand / racket_hand）；
+> - 其中的 29-image ChatGPT curated GT 已被判定**语义有误**，
+>   `29/29 PASS` 只代表流程自洽，**不代表标注正确**；
+> - 其中的手工标注工具仅作为**历史工具**保留；
+>   `artifacts/files/datasets/BNDSTT_MANUAL_GT_V1` 的数据**只允许只读使用**，
+>   **不得用于训练**（当前 `human_verified` 用途仅限于 ball benchmark 的评测集）。
+>
+> 当前正式架构见 `vision/c_perception_v2/FINAL_ARCHITECTURE.md`。
+
 # BNDSTT YOLOv8n MVP v1
 
 `PROTOTYPE / MVP` 检测链路入口。类别固定为：

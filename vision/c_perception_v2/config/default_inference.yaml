@@ -1,0 +1,79 @@
+# C 端感知 V2 正式推理配置
+# 冻结日期 2026-10-13。修改任何阈值前请重跑 operating point 分析。
+
+version: 1
+
+ball:
+  # FINAL BALL = BALLTRACK（依据 BALL_DETECTOR_FINAL_BAKEOFF）
+  backend: balltrack          # balltrack | yolo
+  balltrack:
+    checkpoint: artifacts/files/models/balltrack/balltrack_best.pth
+    checkpoint_sha256: 00d707b9db7a49561c411e4765956e79bcd7c7e20c7a0a535073440b3e972342
+    architecture: TrackNetV3
+    seq_len: 4
+    input_width: 512
+    input_height: 288
+    bg_mode: concat
+    last_only: true
+    heatmap_threshold: 0.5      # 官方 inference.py 默认值，未调优
+    requires_median_background: true
+    median_source: per_source_clip_pixelwise_median
+  yolo:
+    weights: artifacts/files/models/ball_racket_yolov8n_v1/best.pt
+    weights_sha256_prefix: 8d1b65e3d424701b
+    base_conf: 0.02
+    ball_conf: 0.05
+
+racket:
+  backend: yolo
+  weights: artifacts/files/models/ball_racket_yolov8n_v1/best.pt
+  base_conf: 0.02
+  racket_conf: 0.30
+
+detector_common:
+  imgsz: 640
+  iou: 0.70
+  device: 0
+  # base_conf 是推理下限：一次推理缓存全部候选，阈值在 Python 后处理套用
+  base_conf: 0.02
+
+pose:
+  weights: artifacts/files/models/ultralytics/yolov8n-pose.pt
+  pose_conf: 0.25
+  imgsz: 640
+  wrist_conf_min: 0.30
+  left_wrist_index: 9
+  right_wrist_index: 10
+  train_pose: false             # 明确不训练
+  hand_class: deprecated        # hand / toss_hand / racket_hand 已永久取消
+
+temporal:
+  enabled: true
+  causal: true                  # 禁止使用 t+1, t+2
+  max_prediction_gap: 2
+  state_definitions:
+    DETECTED: current frame has a detector candidate with conf >= working threshold, matched to track
+    RECOVERED_LOW_CONF: current frame HAS a detector candidate with base_conf <= conf < working threshold, accepted via motion gate
+    PREDICTED_ONLY: current frame has NO accepted candidate; Kalman prediction only; NOT a detection
+    INVALID: no candidate and no usable track state
+  predicted_only_for_continuity_only: true
+  kalman:
+    state: [x, y, vx, vy]
+    process_noise: 0.5
+    measurement_noise: 4.0
+    gate_norm_ball: 0.06        # center distance / image diagonal
+    gate_norm_racket: 0.05
+
+association:
+  status_values: [HEURISTIC, UNKNOWN]
+  is_ground_truth: false
+
+latency_reference_ms:           # RTX 4060 Laptop, imgsz 640, batch 1
+  yolo_ball_racket_median: 39.2
+  pose_median: 44.7
+  temporal_kalman_per_frame: 0.196
+  combined_serial_median: 83.9
+
+notes:
+  - 该文件是建议配置；加载它不会自动改写任何运行中默认值。
+  - 摄像头曝光策略暂不调整（见 BALL_FAILURE_ANALYSIS 报告第 10 节）。

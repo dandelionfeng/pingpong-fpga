@@ -1,3 +1,23 @@
+> ## ⚠️ DEPRECATED / INVALIDATED EXPERIMENT
+>
+> **本文档描述的 29-image run 已被判定为不可靠，不得用于任何正式结论。**
+>
+> 原因（2026-10-13 复核确认）：
+>
+> 1. 该 run 使用的 GT 来自 **ChatGPT 自动生成标注**，后来发现存在**语义错误**
+>    （hand / racket 的类别语义与人工复核结果不一致）；
+> 2. 因此 "**29/29 PASS**" 只证明了**流程自洽**（坐标未偏移、R=G=B、图标签配对完整），
+>    **不能**证明标注本身正确，更**不能**作为模型质量证据；
+> 3. 类别体系 `0 ball / 1 hand / 2 racket` 中的 **hand 路线已被永久取消**
+>    （见 `vision/c_perception_v2/FINAL_ARCHITECTURE.md`）。
+>
+> **替代方案**：C 端感知已完全迁移到公开数据路线
+> （`tabletennis_ball_racket_v1`，1480 张，类别 `0 ball / 1 racket`）
+> + 官方 RacketVision BallTrack + `yolov8n-pose` 手腕关键点。
+> 正式指标见 `reports/C_FINAL_HANDOFF_V1.md`。
+>
+> **状态**：`INVALID FOR FINAL EVALUATION`。原文一字未改，仅保留作历史记录。
+
 # C-side detector MVP v1 — BNDSTT YOLOv8n ball / hand / racket
 
 **Scope: PROTOTYPE / MVP. This is NOT a competition-final model.**
