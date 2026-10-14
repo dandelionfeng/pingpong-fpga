@@ -1,0 +1,32 @@
+[
+  {
+    "file": "20261014195708.bmp",
+    "left": false,
+    "right": true
+  },
+  {
+    "file": "20261014195931.bmp",
+    "left": true,
+    "right": false
+  },
+  {
+    "file": "20261014200308.bmp",
+    "left": false,
+    "right": false
+  },
+  {
+    "file": "20261014200334.bmp",
+    "left": false,
+    "right": true
+  },
+  {
+    "file": "20261014200602.bmp",
+    "left": false,
+    "right": false
+  },
+  {
+    "file": "20261014200648.bmp",
+    "left": true,
+    "right": false
+  }
+]

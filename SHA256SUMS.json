@@ -1,0 +1,32 @@
+[
+  {
+    "file": "calibration_arrays.npz",
+    "sha256": "32929180be7e4767c8ad8b098a935950e1bae8eeb7fcf539dfa3d1b3735b1f3c",
+    "bytes": 4008
+  },
+  {
+    "file": "calibration_results.json",
+    "sha256": "e0a51683b2907d73436058d668097cf02dac2e72a2a2774262e48c323f45e616",
+    "bytes": 8460
+  },
+  {
+    "file": "corners.npz",
+    "sha256": "5eba24f90d706aa47cc57a6f97ed5533e6180e886ca205cb2e294cd303c4223d",
+    "bytes": 74662
+  },
+  {
+    "file": "failed.json",
+    "sha256": "fddf38d9249c2918e52266b7f9e810cbed401e012db187eba0a28021c998cbed",
+    "bytes": 515
+  },
+  {
+    "file": "REPORT.md",
+    "sha256": "6369cbb556050c88e3a1d479cf3dbc21b7b0aafc64b70b12c3e2a2c5824dd216",
+    "bytes": 1528
+  },
+  {
+    "file": "used.txt",
+    "sha256": "2bd67a01b621b88649f6d97f93ba536d1b778505a27683c65584317f705e68a6",
+    "bytes": 598
+  }
+]
