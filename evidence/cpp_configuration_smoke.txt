@@ -1,0 +1,10 @@
+Temporary copies set world_valid=1 ONLY to test C++ configuration loading; delivered configs remain world_valid=0. No observations, tracking or event validation.
+pipeline_calibration_20261014204558: unknown insufficient_event_frames
+pipeline_calibration_20261014204646: unknown insufficient_event_frames
+pipeline_calibration_20261014204705: unknown insufficient_event_frames
+pipeline_calibration_20261014204733: unknown insufficient_event_frames
+pipeline_calibration_20261014204804: unknown insufficient_event_frames
+TRAJECTORY_FILE_COMPLETE cases=5
+
+exit_code=0
+CLI_SHA256=97cc05c2e4fa0041aacc2c2cd8ac7aa8e8d9c3a787750aade36241479c526f7f

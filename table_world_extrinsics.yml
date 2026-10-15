@@ -1,0 +1,7 @@
+%YAML:1.0
+---
+schema: b-table-world-mapping-index-v1
+active_world_mapping: 0
+unit: m
+placement_confirmed: 0
+reason: "PartV contains different camera poses. Select matching capture only after mount/placement confirmation. Video pose is not established."

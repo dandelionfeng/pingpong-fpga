@@ -1,0 +1,11 @@
+{
+  "pose_capture": "20261014204646.bmp",
+  "unit": "m",
+  "validity": "conditional_on_declared_board_placement",
+  "caution": "Numerical conversion for this capture pose; matching actual camera mount is required.",
+  "world_xyz_m": [
+    0.0,
+    0.0,
+    0.0
+  ]
+}

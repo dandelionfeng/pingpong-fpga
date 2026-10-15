@@ -1,0 +1,25 @@
+{
+  "calibration_sha256": "e0a51683b2907d73436058d668097cf02dac2e72a2a2774262e48c323f45e616",
+  "PartV": [
+    {
+      "file": "20261014204558.bmp",
+      "sha256": "3bd62323ea52689ce1df4bccae781e10cc51775e5f4fa82fa3b1255331d0d75e"
+    },
+    {
+      "file": "20261014204646.bmp",
+      "sha256": "5d7acc05f90a439f069b84fa3fe6e6c7b9443de0127af6843e312b895a433da8"
+    },
+    {
+      "file": "20261014204705.bmp",
+      "sha256": "65788a037a29b7fc6b712115b31a284df2142ee01e9c5c0ac1f9b4e2c8d872d0"
+    },
+    {
+      "file": "20261014204733.bmp",
+      "sha256": "45e6ec905a39180be2b5dfbf3aee820180456739750d63de17c1f42613b85d21"
+    },
+    {
+      "file": "20261014204804.bmp",
+      "sha256": "7dcd2d9c7fd26afd362f370c6c12e9150e91a2408516dc561b1ec0df55cc411d"
+    }
+  ]
+}

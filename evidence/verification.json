@@ -1,0 +1,38 @@
+{
+  "numerical_and_serialization_checks": "PASS",
+  "captures": [
+    {
+      "capture": "20261014204558.bmp",
+      "checks": "PASS",
+      "left_reprojection_rms_px": 0.10513076685296577,
+      "stereo_control_rms_m": 0.043401780533274974
+    },
+    {
+      "capture": "20261014204646.bmp",
+      "checks": "PASS",
+      "left_reprojection_rms_px": 0.2071256506265132,
+      "stereo_control_rms_m": 0.038578754773610516
+    },
+    {
+      "capture": "20261014204705.bmp",
+      "checks": "PASS",
+      "left_reprojection_rms_px": 0.27033113433310346,
+      "stereo_control_rms_m": 0.007934659766474422
+    },
+    {
+      "capture": "20261014204733.bmp",
+      "checks": "PASS",
+      "left_reprojection_rms_px": 0.11015432547474305,
+      "stereo_control_rms_m": 0.06993733919712639
+    },
+    {
+      "capture": "20261014204804.bmp",
+      "checks": "PASS",
+      "left_reprojection_rms_px": 0.10579272813399267,
+      "stereo_control_rms_m": 0.020056974397457596
+    }
+  ],
+  "independent_real_world_accuracy": "NOT_CERTIFIED",
+  "active_video_mapping": "NOT_ESTABLISHED",
+  "board_placement_confirmed": false
+}
