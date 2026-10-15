@@ -1,0 +1,25 @@
+{
+  "schema": "b-auto-measure-track-summary-v0.1",
+  "algorithm_version": "b-auto-measure-track-v0.1",
+  "input_manifest": "D:\\FPGA competition\\_work\\btrack_package\\output\\full-serve-20261015\\manifest.json",
+  "input_frame_count": 329,
+  "calibration_version": "ov9281-20261014",
+  "calibration_sha256": "e0a51683b2907d73436058d668097cf02dac2e72a2a2774262e48c323f45e616",
+  "coordinate_frame": "left_camera",
+  "unit": "m",
+  "counts": {
+    "total": 329,
+    "observed_2d_pair": 29,
+    "observed_3d": 29,
+    "predicted": 41,
+    "invalid": 26,
+    "ambiguous": 0,
+    "no_candidate": 274
+  },
+  "limitations": [
+    "C detection cache is candidate input, not truth",
+    "no motion-mask files were present in the handoff package",
+    "world/table transform and event judgement are out of scope",
+    "sensor synchronization was not independently measured"
+  ]
+}

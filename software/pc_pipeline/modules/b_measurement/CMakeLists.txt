@@ -1,0 +1,4 @@
+add_library(pipeline_b_module STATIC src/module.cpp)
+target_link_libraries(pipeline_b_module PRIVATE pipeline_module_api)
+target_include_directories(pipeline_b_module PRIVATE ${OpenCV_INCLUDE_DIRS})
+
