@@ -1,0 +1,123 @@
+// Shared ONNX Runtime plumbing + the YOLO detector and the temporal BallTrack
+// wrapper. Internal headers; not part of the captain-facing API.
+
+#ifndef C_ACTUAL_INTERNAL_ONNX_HPP
+#define C_ACTUAL_INTERNAL_ONNX_HPP
+
+#include <onnxruntime_cxx_api.h>
+
+#include <cstdint>
+#include <deque>
+#include <string>
+#include <vector>
+
+#include <opencv2/core.hpp>
+
+#include "c_perception_engine.hpp"
+
+namespace c_actual {
+
+// ------------------------------------------------------------------ session
+class OrtSession {
+ public:
+  OrtSession() = default;
+
+  bool load(const std::string &path, bool use_cuda, int intra_op_threads,
+            std::string *error);
+
+  bool ok() const { return session_ != nullptr; }
+
+  // Destroy the session explicitly. Relying on the destructor order of the
+  // member Ort::Env during static teardown has proven fragile on Windows.
+  void release() { session_.reset(); }
+
+  // Input/output metadata helpers.
+  std::vector<int64_t> inputShape() const;
+  std::vector<int64_t> outputShape() const;
+  const std::string &inputName() const { return input_name_; }
+  const std::string &outputName() const { return output_name_; }
+
+  // Runs a single-precision NCHW tensor; returns the first output as a flat
+  // float vector plus its shape.
+  bool run(const std::vector<float> &input, const std::vector<int64_t> &input_shape,
+           std::vector<float> *output, std::vector<int64_t> *output_shape,
+           std::string *error);
+
+  Ort::Env &env() { return env_; }
+
+ private:
+  Ort::Env env_{ORT_LOGGING_LEVEL_WARNING, "c_actual"};
+  Ort::SessionOptions options_;
+  std::unique_ptr<Ort::Session> session_;
+  std::string input_name_, output_name_;
+  std::vector<std::string> input_names_, output_names_;
+};
+
+// NCHW float tensor from a BGR (or gray3) image, RGB order, 0..1 range.
+std::vector<float> imageToNchw(const cv::Mat &bgr, int size);
+
+// ------------------------------------------------------------- YOLO detector
+class YoloDetector {
+ public:
+  // `class_names` maps class index -> name (e.g. {0: "hand"} or {0:"ball",1:"racket"}).
+  bool load(const std::string &path, const std::vector<std::string> &class_names,
+            const Config &config, bool use_cuda, std::string *error);
+
+  bool ok() const { return session_.ok(); }
+
+  // Runs on the provided gray3 image and returns accepted boxes in ORIGINAL
+  // coordinates. `conf_threshold` filters after the single inference pass.
+  std::vector<Box> detect(const cv::Mat &gray3, float conf_threshold, int out_w, int out_h);
+
+  const std::vector<std::string> &classNames() const { return class_names_; }
+
+  void release() { session_.release(); }
+
+ private:
+  OrtSession session_;
+  std::vector<std::string> class_names_;
+  Config config_;
+};
+
+// ---------------------------------------------------------------- BallTrack
+// Official TrackNetV3 contract (verified against the official repo):
+//   seq_len = 4, input 512x288, bg_mode = concat,
+//   channels = [median(3), f(i-4)(3), f(i-3)(3), f(i-2)(3), f(i-1)(3)] = 15,
+//   last_only = true -> a single output heatmap,
+//   decode: threshold -> connected components -> largest bounds -> mean inside.
+class BallTrack {
+ public:
+  bool load(const std::string &path, const Config &config, bool use_cuda,
+            std::string *error);
+
+  bool ok() const { return session_.ok(); }
+
+  // Pushes one gray8 frame and returns the ball result for THAT frame.
+  // Frames are buffered; before the window is full the result is kWarmup and no
+  // inference is attempted (no frame is ever duplicated to fake history).
+  BallResult push(const cv::Mat &gray8);
+
+  // Median background of the buffered clip, in gray8. Cached incrementally.
+  void reset();
+
+  size_t buffered() const { return history_.size(); }
+
+  void release() { session_.release(); }
+
+ private:
+  std::vector<float> buildInput() const;
+  // Folds one frame into the streaming per-pixel histogram and recomputes the
+  // median background. Exact, bounded memory, no per-frame sort.
+  void updateMedian(const cv::Mat &gray8);
+
+  OrtSession session_;
+  Config config_;
+  std::deque<cv::Mat> history_;   // gray8 frames, most recent last
+  cv::Mat median_gray_;           // background frame (see updateMedian comment)
+  int64_t frames_seen_ = 0;
+  size_t max_history_ = 0;
+};
+
+}  // namespace c_actual
+
+#endif  // C_ACTUAL_INTERNAL_ONNX_HPP

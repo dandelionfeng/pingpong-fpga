@@ -1,0 +1,199 @@
+// c_actual tests: geometry, gray3 contract, and optional end-to-end checks.
+//
+// The geometry/gray3 tests need no model files, so they run anywhere. The
+// end-to-end tests are skipped unless C_ACTUAL_MODELS_DIR is set to a directory
+// holding balltrack_tracknetv3.onnx, hand_yolov8n_gray.onnx and
+// racket_yolov8n.onnx.
+
+#include <c_perception_engine.hpp>
+
+#include <opencv2/imgproc.hpp>
+
+#include <cmath>
+#include <cstdlib>
+#include <iostream>
+#include <string>
+#include <vector>
+
+namespace {
+
+int failures = 0;
+int checks = 0;
+
+void check(bool condition, const std::string &name) {
+  ++checks;
+  if (condition) {
+    std::cout << "  [PASS] " << name << "\n";
+  } else {
+    ++failures;
+    std::cout << "  [FAIL] " << name << "\n";
+  }
+}
+
+void expectThrows(const std::function<void()> &fn, const std::string &name) {
+  ++checks;
+  try {
+    fn();
+    ++failures;
+    std::cout << "  [FAIL] " << name << " (no exception thrown)\n";
+  } catch (const std::exception &) {
+    std::cout << "  [PASS] " << name << "\n";
+  }
+}
+
+void testGray3() {
+  std::cout << "gray3 contract\n";
+  cv::Mat gray(4, 4, CV_8UC1, cv::Scalar(77));
+  cv::Mat three = c_actual::preprocess::grayToGray3(gray);
+  check(three.type() == CV_8UC3, "gray3 has 3 channels");
+  bool identical = true;
+  for (int y = 0; y < three.rows; ++y) {
+    for (int x = 0; x < three.cols; ++x) {
+      const cv::Vec3b px = three.at<cv::Vec3b>(y, x);
+      if (px[0] != 77 || px[1] != 77 || px[2] != 77) identical = false;
+    }
+  }
+  check(identical, "all three channels equal the grayscale value");
+
+  cv::Mat colour(4, 4, CV_8UC3, cv::Scalar(1, 2, 3));
+  expectThrows([&] { c_actual::preprocess::grayToGray3(colour); },
+               "grayToGray3 rejects CV_8UC3 input");
+
+  c_actual::CPerceptionEngine engine;
+  cv::Mat gray_frame(8, 8, CV_8UC1, cv::Scalar(10));
+  expectThrows(
+      [&] {
+        c_actual::FrameMeta meta;
+        engine.inferGray(colour, meta);
+      },
+      "inferGray rejects a non-GRAY8 frame");
+}
+
+void testLetterbox() {
+  std::cout << "letterbox geometry\n";
+  // 1920x1080 into 640: scale = 640/1920 = 0.3333, height 360, pad_y = 140.
+  cv::Mat wide(1080, 1920, CV_8UC3, cv::Scalar(0, 0, 0));
+  float scale = 0.f;
+  int pad_x = 0, pad_y = 0;
+  cv::Mat out = c_actual::preprocess::letterbox(wide, 640, &scale, &pad_x, &pad_y);
+  check(out.cols == 640 && out.rows == 640, "letterbox output is 640x640");
+  check(std::fabs(scale - (640.0f / 1920.0f)) < 1e-6f, "scale is 640/1920");
+  check(pad_x == 0, "no horizontal padding for a wide frame");
+  check(pad_y == 140, "vertical padding is 140");
+
+  // Square frame: no padding at all.
+  cv::Mat square(500, 500, CV_8UC3, cv::Scalar(0, 0, 0));
+  cv::Mat out2 = c_actual::preprocess::letterbox(square, 640, &scale, &pad_x, &pad_y);
+  check(scale == 1.28f && pad_x == 0 && pad_y == 0, "square frame scales with no padding");
+}
+
+void testUnletterbox() {
+  std::cout << "coordinate mapping back to the original image\n";
+  // Detection at the exact centre of a 1920x1080 letterboxed into 640.
+  const float scale = 640.0f / 1920.0f;
+  const int pad_x = 0, pad_y = 140;
+  const float cx = 320.f, cy = 140.f + 180.f;  // centre of the content band
+  c_actual::Box box = c_actual::postprocess::unletterbox(cx, cy, 40.f, 40.f, 0.9f, 0, scale,
+                                                         pad_x, pad_y, 1920, 1080);
+  const float expected_cx = 960.f, expected_cy = 540.f;
+  const float got_cx = box.x + box.w * 0.5f, got_cy = box.y + box.h * 0.5f;
+  check(std::fabs(got_cx - expected_cx) < 1.5f, "centre x maps back to 960");
+  check(std::fabs(got_cy - expected_cy) < 1.5f, "centre y maps back to 540");
+  check(box.w > 0.f && box.h > 0.f, "box keeps a positive size");
+
+  // Clamping: a detection far outside the letterbox must clamp into the image.
+  c_actual::Box clamped = c_actual::postprocess::unletterbox(-500.f, -500.f, 40.f, 40.f, 0.5f, 0,
+                                                             scale, pad_x, pad_y, 1920, 1080);
+  check(clamped.x >= 0.f && clamped.y >= 0.f, "out-of-frame box clamps to the image origin");
+}
+
+void testNms() {
+  std::cout << "NMS\n";
+  c_actual::Box a{0.f, 0.f, 100.f, 100.f, 0.9f, 0, "hand"};
+  c_actual::Box b{5.f, 5.f, 100.f, 100.f, 0.8f, 0, "hand"};   // heavy overlap
+  c_actual::Box c{500.f, 500.f, 100.f, 100.f, 0.7f, 0, "hand"};  // disjoint
+  auto kept = c_actual::postprocess::nms({a, b, c}, 0.5f, 100);
+  check(kept.size() == 2, "overlapping duplicate suppressed");
+  check(kept[0].confidence >= kept[1].confidence, "kept boxes are sorted by confidence");
+
+  auto limited = c_actual::postprocess::nms({a, b, c}, 0.5f, 1);
+  check(limited.size() == 1, "max_det is honoured");
+
+  // Different classes never suppress each other.
+  c_actual::Box hand{0.f, 0.f, 100.f, 100.f, 0.9f, 0, "hand"};
+  c_actual::Box racket{5.f, 5.f, 100.f, 100.f, 0.8f, 1, "racket"};
+  auto cross = c_actual::postprocess::nms({hand, racket}, 0.5f, 100);
+  check(cross.size() == 2, "class-aware NMS keeps different classes");
+}
+
+void testIou() {
+  std::cout << "IoU\n";
+  c_actual::Box a{0.f, 0.f, 10.f, 10.f, 1.f, 0, ""};
+  c_actual::Box b{0.f, 0.f, 10.f, 10.f, 1.f, 0, ""};
+  check(std::fabs(c_actual::postprocess::iou(a, b) - 1.0f) < 1e-6f, "identical boxes give IoU 1");
+  c_actual::Box c{20.f, 20.f, 10.f, 10.f, 1.f, 0, ""};
+  check(c_actual::postprocess::iou(a, c) == 0.f, "disjoint boxes give IoU 0");
+  c_actual::Box d{0.f, 0.f, 0.f, 0.f, 1.f, 0, ""};
+  check(c_actual::postprocess::iou(d, d) == 0.f, "degenerate zero-area boxes give IoU 0");
+}
+
+void testEndToEnd() {
+  std::cout << "end-to-end (needs models)\n";
+  const char *dir = std::getenv("C_ACTUAL_MODELS_DIR");
+  if (!dir) {
+    std::cout << "  [SKIP] C_ACTUAL_MODELS_DIR not set\n";
+    return;
+  }
+  const std::string root(dir);
+  c_actual::ModelPaths paths;
+  paths.ball_track = root + "/balltrack_tracknetv3.onnx";
+  paths.hand = root + "/hand_yolov8n_gray.onnx";
+  paths.racket = root + "/racket_yolov8n.onnx";
+
+  c_actual::Config config;
+  c_actual::CPerceptionEngine engine;
+  std::string error;
+  if (!engine.load(paths, config, &error)) {
+    std::cout << "  [SKIP] models not loadable: " << error << "\n";
+    return;
+  }
+  check(true, "all three models load");
+
+  // A synthetic gray8 frame. The ball must report WARMUP for the first frames
+  // and the engine must never duplicate frames to fake history.
+  cv::Mat gray(720, 1280, CV_8UC1);
+  cv::randu(gray, cv::Scalar(0), cv::Scalar(255));
+  c_actual::FrameMeta meta;
+  int warmups = 0;
+  for (int i = 0; i <= config.ball_seq_len; ++i) {
+    meta.frame_id = static_cast<uint64_t>(i);
+    const auto result = engine.inferGray(gray, meta);
+    if (result.ball.state == c_actual::BallState::kWarmup) ++warmups;
+  }
+  check(warmups == config.ball_seq_len, "ball reports WARMUP until real history exists");
+
+  meta.frame_id = 100;
+  const auto after = engine.inferGray(gray, meta);
+  check(after.ball.state != c_actual::BallState::kWarmup,
+        "ball leaves WARMUP once the official window is full");
+  check(after.width == 1280 && after.height == 720, "result carries the original size");
+}
+
+}  // namespace
+
+int main() {
+  std::cout << "c_actual tests\n";
+  testGray3();
+  testLetterbox();
+  testUnletterbox();
+  testNms();
+  testIou();
+  testEndToEnd();
+  std::cout << "\n" << (checks - failures) << "/" << checks << " checks passed\n";
+  if (failures) {
+    std::cout << failures << " FAILED\n";
+    return 1;
+  }
+  std::cout << "ALL PASS\n";
+  return 0;
+}

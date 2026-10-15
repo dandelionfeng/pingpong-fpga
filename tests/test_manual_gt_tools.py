@@ -133,15 +133,39 @@ class ServerGuardTests(unittest.TestCase):
         self.assertEqual(server.CLASSES, {0: "ball", 1: "hand", 2: "racket"})
 
     def test_manifest_covers_the_expected_280_images(self):
-        self.assertEqual(len(server.FRAMES_ROWS), 280)
-        splits = [r["split"] for r in server.FRAMES_ROWS]
+        if not server.FRAMES.is_file():
+            self.skipTest("BNDSTT_MVP_v1 frames_manifest.csv not present (fresh clone has no artifacts)")
+        rows = server.frames_rows()
+        self.assertEqual(len(rows), 280)
+        splits = [r["split"] for r in rows]
         self.assertEqual(splits.count("train"), 224)
         self.assertEqual(splits.count("val"), 56)
 
     def test_manifest_has_no_session_leak_between_splits(self):
-        train = {r["session_id"] for r in server.FRAMES_ROWS if r["split"] == "train"}
-        val = {r["session_id"] for r in server.FRAMES_ROWS if r["split"] == "val"}
+        if not server.FRAMES.is_file():
+            self.skipTest("BNDSTT_MVP_v1 frames_manifest.csv not present (fresh clone has no artifacts)")
+        rows = server.frames_rows()
+        train = {r["session_id"] for r in rows if r["split"] == "train"}
+        val = {r["session_id"] for r in rows if r["split"] == "val"}
         self.assertEqual(train & val, set())
+
+    def test_frames_loading_is_lazy_so_a_fresh_clone_can_import(self):
+        """Importing the server must not read the dataset.
+
+        A fresh `git clone` has no `artifacts/`, so any import-time read makes the
+        module unimportable and turns CI red. Loading is done by `frames_rows()`
+        on first use instead.
+        """
+        source = (Path(server.__file__)).read_text(encoding="utf-8")
+        for line in source.splitlines():
+            stripped = line.strip()
+            if stripped.startswith(("FRAMES_ROWS =", "FRAME_BY_ID =")):
+                self.fail(
+                    "manual_annotation_server.py must not build the frame index at import time: "
+                    + stripped
+                )
+        self.assertTrue(callable(getattr(server, "frames_rows", None)))
+        self.assertTrue(callable(getattr(server, "frame_by_id", None)))
 
     def test_manual_gt_history_is_preserved_not_required_empty(self):
         """BNDSTT_MANUAL_GT_V1 里的人工标注是历史资产：允许存在，禁止被清空。

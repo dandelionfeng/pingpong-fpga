@@ -17,5 +17,13 @@ jobs:
       - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
         with:
           python-version: '3.12'
+      # Test dependencies only. pytest is needed because
+      # tests/test_c_perception_v2.py is pytest-style; pyyaml and Pillow are real
+      # pipeline dependencies (data.yaml parsing, image read/write), not optional.
+      # Everything heavy (torch, ultralytics, cv2, numpy, onnxruntime) is imported
+      # lazily, so a fresh clone with no artifacts and no model binaries still
+      # imports every module and runs the whole suite.
+      - run: python -m pip install --disable-pip-version-check pytest pyyaml Pillow
       - run: python tools/check_repo.py
+      - run: python -m pytest -q
       - run: python -m unittest discover -s tests -v

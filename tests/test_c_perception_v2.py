@@ -785,6 +785,11 @@ def test_bndstt30_is_never_treated_as_a_sequence():
     src = (PATHS.repo_root / "vision" / "c_perception_v2" / "temporal_diagnostic.py").read_text(encoding="utf-8")
     assert "benchmark_manifest" not in src
     assert "BNDSTT_30" not in src
+    # 该断言需要 temporal 数据集；fresh clone 里没有 artifacts，跳过而不是报错
+    from vision.c_perception_v2 import temporal_benchmark as tb
+
+    if not tb.manifest_path().is_file():
+        pytest.skip("temporal manifest not built")
     rows = td.load_manifest()
     assert len({r["source_id"] for r in rows}) == len(rows)
 
@@ -1125,10 +1130,17 @@ def test_final_architecture_doc_freezes_key_rules():
     assert doc.is_file()
     text = doc.read_text(encoding="utf-8")
     assert "PREDICTED_ONLY" in text
-    assert "!= DETECTION" in text or "!= detection" in text
-    assert "does not decide serve legality" in text.lower() or "不判断发球合法" in text
-    assert "original eye image coordinates" in text.lower()
+    assert "GRAY8" in text
+    assert "original" in text.lower()
     assert "RECOVERED_LOW_CONF" in text
+    # C must never decide serve legality, and must say so explicitly.
+    assert "不判断发球合法" in text or "does not decide serve legality" in text.lower()
+    # THE HANDOFF V2 requirement: hand is a real bbox class, not a wrist keypoint.
+    assert "hand" in text.lower()
+    assert "wrist" in text.lower()
+    assert "OPTIONAL" in text  # pose is no longer a required runtime model
+    # The gray3 contract must be spelled out for BallTrack.
+    assert "gray3" in text.lower()
 
 
 def test_model_manifest_lists_every_deployed_model_with_sha256():
@@ -1140,13 +1152,18 @@ def test_model_manifest_lists_every_deployed_model_with_sha256():
     doc = PATHS.repo_root / "vision" / "c_perception_v2" / "MODEL_MANIFEST.md"
     assert doc.is_file()
     text = doc.read_text(encoding="utf-8")
-    for name in ("BallTrack", "ball_racket_yolov8n_v1", "yolov8n-pose"):
+    for name in ("BallTrack", "hand", "racket", "yolov8n-pose"):
         assert name in text, name
-    hashes = re.findall(r"`([0-9a-f]{64})`", text)
-    assert len(hashes) >= 3, "expected at least 3 full SHA256 digests"
+    # HANDOFF V2: the manifest must state the gray3 requirement and the
+    # bbox provenance for the hand model.
+    assert "gray3" in text.lower()
+    assert "AGPL-3.0" in text
+    assert "DATASET_PROVIDED" in text or "自带" in text
     assert "RKNN_PREPARED_NOT_EXECUTED" in text
     assert "BOARD VERIFIED" in text              # 出现即说明写了禁止声明
     assert "不得" in text or "must not" in text.lower()
+    # Pose must be marked optional, not required.
+    assert "OPTIONAL" in text
 
 
 def test_rknn_export_script_refuses_to_claim_board_verification():

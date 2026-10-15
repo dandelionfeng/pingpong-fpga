@@ -115,8 +115,29 @@ def load_frames() -> list[dict]:
     return rows
 
 
-FRAMES_ROWS = load_frames()
-FRAME_BY_ID = {row["image_id"]: row for row in FRAMES_ROWS}
+_FRAMES_CACHE: dict[str, object] = {"rows": None, "by_id": None}
+
+
+def frames_rows() -> list[dict]:
+    """Return the frames manifest rows, loading them on first use.
+
+    Loading is deliberately LAZY: importing this module must not touch the local
+    dataset. A fresh `git clone` has no `artifacts/`, so an import-time read
+    raises FileNotFoundError and breaks unit tests and CI. The server calls this
+    from its request handlers and from `main()` instead.
+    """
+    if _FRAMES_CACHE["rows"] is None:
+        rows = load_frames()
+        _FRAMES_CACHE["rows"] = rows
+        _FRAMES_CACHE["by_id"] = {row["image_id"]: row for row in rows}
+    return _FRAMES_CACHE["rows"]
+
+
+def frame_by_id() -> dict:
+    """Mapping image_id -> manifest row (see `frames_rows` for the lazy contract)."""
+    if _FRAMES_CACHE["by_id"] is None:
+        frames_rows()
+    return _FRAMES_CACHE["by_id"]
 
 
 # ------------------------------------------------------------------ annotations
@@ -212,7 +233,7 @@ def round_trip_error(record: dict) -> float:
 
 def save_annotation(image_id: str, objects: list[dict], review_state: str) -> dict:
     """Validate, archive the previous version, write atomically, write YOLO."""
-    row = FRAME_BY_ID.get(image_id)
+    row = frame_by_id().get(image_id)
     if row is None:
         raise KeyError(f"unknown image_id {image_id}")
     if review_state not in STATES or review_state == "UNLABELED":
@@ -243,7 +264,7 @@ def save_annotation(image_id: str, objects: list[dict], review_state: str) -> di
 
 def mark_in_progress(image_id: str) -> None:
     with _lock:
-        row = FRAME_BY_ID[image_id]
+        row = frame_by_id()[image_id]
         state = status_of(image_id)
         if state == "UNLABELED":
             rewrite_manifest({image_id: "MANUAL_IN_PROGRESS"})
@@ -260,7 +281,7 @@ def status_of(image_id: str) -> str:
 def manifest_rows(overrides: dict[str, str] | None = None) -> list[dict]:
     overrides = overrides or {}
     rows = []
-    for row in FRAMES_ROWS:
+    for row in frames_rows():
         image_id = row["image_id"]
         record = load_annotation(image_id)
         state = overrides.get(image_id)
@@ -432,13 +453,13 @@ class Handler(BaseHTTPRequestHandler):
                                 "review_state": status_of(r["image_id"]),
                                 "auto_proposals_disabled": AUTO_PROPOSALS_DISABLED,
                             }
-                            for r in FRAMES_ROWS
+                            for r in frames_rows()
                         ],
                     }
                 )
             if route == "/api/annotation":
                 image_id = parse_qs(parsed.query).get("image_id", [""])[0]
-                if image_id not in FRAME_BY_ID:
+                if image_id not in frame_by_id():
                     return self._error("unknown image_id", 404)
                 return self._json({"ok": True, "record": load_annotation(image_id)})
             if route.startswith("/media/"):
@@ -469,7 +490,7 @@ class Handler(BaseHTTPRequestHandler):
             if parsed.path == "/api/in_progress":
                 payload = self._read_json()
                 image_id = payload.get("image_id", "")
-                if image_id not in FRAME_BY_ID:
+                if image_id not in frame_by_id():
                     return self._error("unknown image_id", 404)
                 mark_in_progress(image_id)
                 return self._json({"ok": True, "stats": stats()})
@@ -477,7 +498,7 @@ class Handler(BaseHTTPRequestHandler):
                 payload = self._read_json()
                 image_id = payload.get("image_id", "")
                 flag = payload.get("flag", "PASS")
-                if image_id not in FRAME_BY_ID:
+                if image_id not in frame_by_id():
                     return self._error("unknown image_id", 404)
                 QA.mkdir(parents=True, exist_ok=True)
                 log = QA / "qa_review.csv"

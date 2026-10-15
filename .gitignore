@@ -60,3 +60,7 @@ tools/deepseek_labeling/
 # Same for the auto-labeling work products and preview media under reports/.
 reports/deepseek_mvp80_zip/
 reports/bndstt_video_previews/
+
+third_party/
+
+artifacts/handoff/
