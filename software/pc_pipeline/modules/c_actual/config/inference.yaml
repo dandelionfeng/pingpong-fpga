@@ -1,96 +1,77 @@
-# C 端感知 V2 正式推理配置（HANDOFF V2）
+# C 端感知 —— 正式推理配置（C_ACTUAL_INTERFACE_V2_1）
 #
-# 冻结日期 2026-10-15。修改任何阈值前请重跑 operating point / gray3 分析。
-# 该文件是 C++ 引擎与 Python 侧共享的唯一阈值来源。
+# 本文件是 C++ 引擎与 Python 侧共享的唯一阈值来源。
+# 接口已冻结：修改阈值不影响接口，但换模型权重时必须保持字段含义不变。
 
-version: 2
+version: C_ACTUAL_INTERFACE_V2_1
+
+input:
+  # 唯一允许的输入格式
+  format: GRAY8                 # OpenCV CV_8UC1，单通道 8 位
+  gray3_conversion: internal    # 调用方不需要自己做 gray3 / resize / normalize
+  coordinates: original_image   # 所有输出坐标均为原图坐标
+  size: dynamic                 # 尺寸动态读取，不写死；实际目标 1280x720 per eye
 
 ball:
-  # FINAL BALL = BALLTRACK（依据 GRAY3_FINAL_VALIDATION 重测）
-  backend: balltrack
-  balltrack:
-    onnx: models/balltrack_tracknetv3.onnx
-    architecture: TrackNetV3
-    seq_len: 4
-    input_width: 512
-    input_height: 288
-    bg_mode: concat
-    last_only: true
-    heatmap_threshold: 0.5      # 官方 inference.py 默认值，未调优
-    requires_median_background: true
-    # 在线运行时使用"已见帧"中位数；官方参考实现用整段中位数（已知偏差）
-    median_source: running_pixelwise_median
+  backend: balltrack            # balltrack | yolo
+  heatmap_threshold: 0.5        # 官方 inference.py 默认值，未调优
+  seq_len: 4                    # 官方时序窗口：用 i-4..i-1 预测第 i 帧
+  background_mode: first_frame  # ONLINE APPROXIMATION（官方参考实现是整段视频中位数）
+  requires_median_background: true
+  model: models/balltrack_tracknetv3.onnx
   # 回退后端（BallTrack 不可用时）
   yolo_fallback:
-    weights: ball_racket_yolov8n_v1/best.pt
     base_conf: 0.02
     ball_conf: 0.05
 
 hand:
-  onnx: models/hand_yolov8n_gray.onnx
+  backend: yolo
+  model: models/hand_yolov8n_gray_interface_v1.onnx
   classes:
     0: hand
   # 1 类 hand bbox detector。不区分 toss/racket/left/right —— 角色判断属于 B。
-  base_conf: 0.02               # 推理下限
-  hand_conf: 0.25               # 接受阈值
+  conf: 0.25
+  base_conf: 0.02               # 推理下限：一次推理缓存全部候选
   imgsz: 640
-  input: gray3
 
 racket:
-  onnx: models/racket_yolov8n.onnx
+  backend: yolo
+  model: models/racket_yolov8n_gray.onnx
   classes:
     0: ball
     1: racket
-  # 本模型是多类 ONNX，C++ 引擎只取 racket 类
-  class_to_use: 1
+  class_to_use: 1               # 本 ONNX 是多类，C++ 只取 racket 类
+  conf: 0.30
   base_conf: 0.02
-  racket_conf: 0.30
   imgsz: 640
-  input: gray3
 
 detector_common:
   imgsz: 640
   iou: 0.70
   max_det: 100
-  # base_conf 是推理下限：一次推理缓存全部候选，阈值在后处理套用
-  base_conf: 0.02
-  device: cpu                  # cpu | cuda
+  device: cpu                   # cpu | cuda
 
 pose:
-  # OPTIONAL / LEGACY DIAGNOSTIC —— 不再是必需运行时模型
+  # OPTIONAL / LEGACY DIAGNOSTIC —— 不是正式 runtime 必需文件
   required: false
-  weights: yolov8n-pose.pt
-  pose_conf: 0.25
-  wrist_conf_min: 0.30
-  left_wrist_index: 9
-  right_wrist_index: 10
   note: >
     正式 ball/hand/racket 输出必须在完全不运行 Pose 的情况下成立。
-    Pose 只作为可选诊断，供 B 在需要 wrist 时额外使用。
+    Pose 仅作为可选诊断，供 B 在需要 wrist 时额外使用。
 
 temporal:
-  enabled: true
-  causal: true                 # 禁止使用 t+1, t+2
-  max_prediction_gap: 2
-  kalman:
-    state: [x, y, vx, vy]
-    process_noise: 0.5
-    measurement_noise: 4.0
-    gate_norm_ball: 0.06       # center distance / image diagonal
-
-input:
-  # 唯一允许的输入格式
-  format: GRAY8                # OpenCV CV_8UC1
-  gray3_conversion: internal   # 调用方不需要自己做 gray3 / resize / normalize
-  coordinates: original_image  # 所有输出坐标均为原图坐标
-  camera_target: 1280x720      # per eye；代码不写死尺寸
+  # 正式 Captain-facing DetectorBackend 只输出当前帧 observation。
+  # PREDICTED_ONLY 永远不会作为 detector detection 进入 boxes。
+  ball_state_values: [DETECTED, WARMUP, DROPOUT, INVALID]
+  predicted_only_emitted_as_detection: false
 
 association:
   status_values: [HEURISTIC, UNKNOWN]
   is_ground_truth: false
-  note: hand 角色（持拍手/抛球手）由 B 在连续帧上判断，C 不判断
+  note: >
+    hand 角色（持拍手 / 抛球手）、离手判定、trajectory / Kalman / 合法性
+    全部由 B 负责。C 不做 hand role association，也不做 Kalman。
 
 notes:
-  - 该文件是建议配置；加载它不会自动改写任何运行中默认值。
+  - 接口已冻结，见 INTERFACE_CONTRACT.md。
   - YOLO 输出前 4 通道是像素坐标，做 RKNN INT8 时不要量化这 4 个通道。
   - 摄像头曝光策略暂不调整。

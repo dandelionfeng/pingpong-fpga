@@ -101,6 +101,18 @@ class BallTrack {
   void reset();
 
   size_t buffered() const { return history_.size(); }
+  size_t maxHistory() const { return max_history_; }
+  int64_t framesSeen() const { return frames_seen_; }
+  const cv::Mat &background() const { return median_gray_; }
+
+  // Test/validation hook: the exact tensor the next inference would send.
+  // Used by the synthetic 15-channel test and by the C++/Python input parity
+  // check. Building it has no side effects on the temporal state.
+  std::vector<float> buildInputForTest() const { return buildInput(); }
+  // Window contents in order (oldest first) as the model would see them.
+  std::vector<cv::Mat> historyForTest() const {
+    return std::vector<cv::Mat>(history_.begin(), history_.end());
+  }
 
   void release() { session_.release(); }
 

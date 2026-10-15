@@ -32,7 +32,51 @@ bool BallTrack::load(const std::string &path, const Config &config, bool use_cud
                      std::string *error) {
   config_ = config;
   max_history_ = static_cast<size_t>(std::max(1, config.ball_seq_len));
-  return session_.load(path, use_cuda, config.intra_op_threads, error);
+  if (!session_.load(path, use_cuda, config.intra_op_threads, error)) {
+    return false;
+  }
+
+  // ---- hard input-contract check -----------------------------------------
+  // The exported TrackNetV3 graph must take [1, 3*(seq_len+1), H, W]. If it does
+  // not, every inference would fail silently, so refuse to load instead.
+  const std::vector<int64_t> shape = session_.inputShape();
+  const int64_t expected_channels = 3 * (static_cast<int64_t>(max_history_) + 1);
+  std::string describe = "[";
+  for (size_t i = 0; i < shape.size(); ++i) {
+    describe += (i ? "," : "") + std::to_string(shape[i]);
+  }
+  describe += "]";
+
+  if (shape.size() != 4) {
+    if (error) {
+      *error = "BALLTRACK_INPUT_CONTRACT_MISMATCH: expected a 4-D input "
+               "[batch, channels, height, width], got " + describe;
+    }
+    session_.release();
+    return false;
+  }
+  // Batch may be dynamic (-1); channels, height and width must match.
+  if (shape[1] != expected_channels) {
+    if (error) {
+      *error = "BALLTRACK_INPUT_CONTRACT_MISMATCH: model expects " +
+               std::to_string(shape[1]) + " channels but the official contract for seq_len=" +
+               std::to_string(max_history_) + " is " + std::to_string(expected_channels) +
+               " (3 * (seq_len + 1)); input shape was " + describe;
+    }
+    session_.release();
+    return false;
+  }
+  if (shape[2] != config.ball_height || shape[3] != config.ball_width) {
+    if (error) {
+      *error = "BALLTRACK_INPUT_CONTRACT_MISMATCH: model expects spatial " +
+               std::to_string(shape[2]) + "x" + std::to_string(shape[3]) +
+               " but config says " + std::to_string(config.ball_height) + "x" +
+               std::to_string(config.ball_width) + "; input shape was " + describe;
+    }
+    session_.release();
+    return false;
+  }
+  return true;
 }
 
 void BallTrack::reset() {
@@ -42,64 +86,109 @@ void BallTrack::reset() {
 }
 
 void BallTrack::updateMedian(const cv::Mat &gray8) {
-  // Online background model.
+  // ONLINE APPROXIMATION of the official background model.
   //
-  // The Python reference computes the pixel-wise median over the whole clip.
-  // Online we cannot see the future. Two options were considered:
+  // Official reference (RacketVision inference.py): the background fed to
+  // TrackNetV3 is the PIXEL-WISE MEDIAN OVER THE WHOLE CLIP. That is exact but
+  // not causal: it needs every frame of the clip up front.
   //
-  //   (a) a bounded reservoir + per-pixel median sort, which costs about a
-  //       second per refresh at 1920x1080 - far more than the model itself,
-  //       which is unacceptable for the captain's real-time caller; and
-  //   (b) freeze the first frame as the background.
+  // Captain-facing online C++: freeze the FIRST VALID FRAME as the background
+  // for the clip. This is an approximation, not an equivalent implementation.
   //
-  // We use (b). On the target hardware the camera is on a tripod and the only
-  // motion is the players, the ball and the racket, so the static background is
-  // captured by frame 0 and the official TrackNetV3 input (sequence + one
-  // background frame) is satisfied. This trades background fidelity for a
-  // constant, near-zero cost. It IS a documented deviation from the reference
-  // implementation and must be re-visited if the camera ever moves.
+  //   Reason: interface integration first; zero additional per-frame background
+  //   cost. A bounded-reservoir median was implemented and measured at roughly
+  //   one second per refresh at 1920x1080, which dwarfs the model itself.
+  //   Limitation: must be re-evaluated on the real OV9281 and on any moving
+  //   camera. If the camera moves, the frozen background is wrong and BallTrack
+  //   input degrades.
   if (median_gray_.empty() || median_gray_.rows != gray8.rows ||
       median_gray_.cols != gray8.cols) {
     gray8.copyTo(median_gray_);
   }
 }
 
+namespace {
+// GRAY8 -> 3 identical channels. The three values are equal, so BGR vs RGB
+// ordering is numerically irrelevant; what matters is that all three channels
+// really exist in the tensor.
+cv::Mat grayTo3(const cv::Mat &gray8) {
+  cv::Mat three;
+  cv::cvtColor(gray8, three, cv::COLOR_GRAY2BGR);
+  return three;
+}
+}  // namespace
+
 std::vector<float> BallTrack::buildInput() const {
   const int W = config_.ball_width;
   const int H = config_.ball_height;
 
-  cv::Mat median = median_gray_;
-  if (median.empty()) {
-    median = cv::Mat(H, W, CV_8UC1, cv::Scalar(0));
-  }
-  cv::Mat median_resized;
-  cv::resize(median, median_resized, cv::Size(W, H), 0, 0, cv::INTER_LINEAR);
+  // ---------------------------------------------------------------------
+  // Official channel layout (verified against the official sources):
+  //
+  //   configs/tracknetv3_base.py : seq_len = 4, bg_mode = 'concat',
+  //                                in_dim = 3 * (seq_len + 1)  -> 15
+  //   inference.py               : data = np.concatenate(
+  //                                    [median, np.moveaxis(seq, -1, 1)], 0)
+  //                                fids = range(i - seq_len, i)
+  //
+  // So 15 channels = 3 channels for the background PLUS 3 channels for each of
+  // the seq_len frames, and the frames are the seq_len frames BEFORE frame i:
+  //
+  //   ch  0, 1, 2 = background  R, G, B
+  //   ch  3, 4, 5 = f(i-4)      R, G, B
+  //   ch  6, 7, 8 = f(i-3)      R, G, B
+  //   ch  9,10,11 = f(i-2)      R, G, B
+  //   ch 12,13,14 = f(i-1)      R, G, B
+  //
+  // The input is GRAY8, so R = G = B for every item, but the three channels
+  // must really exist. The earlier implementation emitted five single-channel
+  // planes ([1,5,288,512]) and never matched the model.
+  // ---------------------------------------------------------------------
+  const int expected_channels = 3 * (static_cast<int>(max_history_) + 1);
 
-  // Channels: median first, then the seq_len most recent frames (oldest first),
-  // each resized and scaled to 0..1.
-  std::vector<cv::Mat> planes;
-  planes.reserve(1 + max_history_);
-  planes.push_back(median_resized);
+  // Each entry is one RGB item: {B, G, R} copies of the same resized gray frame.
+  std::vector<cv::Mat> items;
+  items.reserve(static_cast<size_t>(max_history_) + 1);
+
+  cv::Mat bg = median_gray_;
+  if (bg.empty()) {
+    bg = cv::Mat(H, W, CV_8UC1, cv::Scalar(0));
+  }
+  cv::Mat bg_resized;
+  cv::resize(bg, bg_resized, cv::Size(W, H), 0, 0, cv::INTER_LINEAR);
+  items.push_back(grayTo3(bg_resized));
+
   for (const auto &frame : history_) {
     cv::Mat resized;
     cv::resize(frame, resized, cv::Size(W, H), 0, 0, cv::INTER_LINEAR);
-    planes.push_back(resized);
+    items.push_back(grayTo3(resized));
   }
-  // Pad at the front (repeat the oldest) if history is shorter than seq_len.
-  while (planes.size() < 1 + max_history_) {
-    planes.insert(planes.begin() + 1, planes[1]);
+  // Pad at the front (repeat the oldest real frame) if history is short. This
+  // only happens before the first scored frame, and push() reports WARMUP in
+  // that case, so the tensor is never used for a scored frame without real
+  // history. It exists so the buffer shape is always well defined.
+  while (static_cast<int>(items.size()) < static_cast<int>(max_history_) + 1) {
+    items.insert(items.begin() + 1, items[1]);
   }
 
-  const int channels = static_cast<int>(planes.size());
-  std::vector<float> tensor(static_cast<size_t>(channels) * H * W);
+  const int channels = static_cast<int>(items.size()) * 3;
+  if (channels != expected_channels) {
+    // Defensive: a mismatch here means the window bookkeeping is wrong.
+    return std::vector<float>(static_cast<size_t>(expected_channels) * H * W, 0.0f);
+  }
+
   const int plane = H * W;
-  for (int c = 0; c < channels; ++c) {
+  std::vector<float> tensor(static_cast<size_t>(channels) * plane);
+  for (size_t item = 0; item < items.size(); ++item) {
     cv::Mat converted;
-    planes[c].convertTo(converted, CV_32FC1, 1.0 / 255.0);
-    for (int y = 0; y < H; ++y) {
-      const float *row = converted.ptr<float>(y);
-      for (int x = 0; x < W; ++x) {
-        tensor[static_cast<size_t>(c) * plane + y * W + x] = row[x];
+    items[item].convertTo(converted, CV_32FC3, 1.0 / 255.0);
+    for (int c = 0; c < 3; ++c) {
+      const size_t channel_index = item * 3 + static_cast<size_t>(c);
+      for (int y = 0; y < H; ++y) {
+        const cv::Vec3f *row = converted.ptr<cv::Vec3f>(y);
+        for (int x = 0; x < W; ++x) {
+          tensor[channel_index * plane + static_cast<size_t>(y) * W + x] = row[x][c];
+        }
       }
     }
   }
@@ -117,39 +206,59 @@ BallResult BallTrack::push(const cv::Mat &gray8) {
     return result;
   }
 
-  // ---- 1) update the streaming median background with THIS frame ----------
+  // ---- 1) freeze the background on the first valid frame ------------------
+  // Online approximation; see updateMedian() for the deviation note.
   updateMedian(gray8);
   frames_seen_ += 1;
   const int64_t seen = frames_seen_;
 
-  // ---- 2) history holds the frames the official window looks back at -------
-  // The official contract uses range(i-seq_len, i), i.e. the seq_len frames
-  // BEFORE frame i, so we keep exactly that many and use them for the next call.
-  if (history_.size() >= max_history_) {
-    history_.pop_front();
-  }
-  history_.push_back(gray8.clone());
-
-  // Warmup: the first scored frame needs seq_len real predecessors. We never
-  // duplicate a frame to fake history.
-  if (seen <= static_cast<int64_t>(max_history_)) {
+  // ---- 2) warmup ----------------------------------------------------------
+  // The official window for the scored frame i is range(i - seq_len, i): the
+  // seq_len frames BEFORE frame i, never frame i itself. So the first frame we
+  // can score is the one with seq_len real predecessors. We never duplicate a
+  // frame to fake history and we never report WARMUP as a detection.
+  if (static_cast<size_t>(seen) <= max_history_) {
+    history_.push_back(gray8.clone());
     result.state = BallState::kWarmup;
     result.bbox_semantics = "none";
     return result;
   }
 
-  if (config_.verbose) { std::fprintf(stderr, "[balltrack] building input tensor\n"); }
+  // ---- 3) build the input from the history window (frames i-4 .. i-1) ------
+  // history_ currently holds exactly the seq_len frames preceding this one,
+  // because the current frame is appended only after the window is consumed.
   std::vector<float> input = buildInput();
-  if (config_.verbose) { std::fprintf(stderr, "[balltrack] input tensor ready (%zu floats)\n", input.size()); }
+  const int H = config_.ball_height;
+  const int W = config_.ball_width;
+  const size_t expected_floats =
+      static_cast<size_t>(3 * (max_history_ + 1)) * static_cast<size_t>(H) * W;
+  if (input.size() != expected_floats) {
+    // BALLTRACK_TENSOR_SIZE_MISMATCH: never run with a malformed tensor.
+    result.state = BallState::kInvalid;
+    history_.push_back(gray8.clone());
+    if (history_.size() > max_history_) history_.pop_front();
+    return result;
+  }
+
+  // ---- 4) inference -------------------------------------------------------
   std::vector<float> output;
   std::vector<int64_t> shape;
   std::string error;
-  const int H = config_.ball_height;
-  const int W = config_.ball_width;
-  if (!session_.run(input, {1, static_cast<int64_t>(input.size()) / (H * W), H, W}, &output,
-                    &shape, &error)) {
+  const int64_t channels = static_cast<int64_t>(3 * (max_history_ + 1));
+  if (!session_.run(input, {1, channels, H, W}, &output, &shape, &error)) {
     result.state = BallState::kInvalid;
+    history_.push_back(gray8.clone());
+    if (history_.size() > max_history_) history_.pop_front();
     return result;
+  }
+
+
+  // ---- 5) slide the window: drop the oldest, append the current frame ------
+  // This happens AFTER inference so the frame being scored can never appear in
+  // its own input window.
+  history_.push_back(gray8.clone());
+  if (history_.size() > max_history_) {
+    history_.pop_front();
   }
 
   // Heatmap decode: threshold -> connected components -> largest bounds ->

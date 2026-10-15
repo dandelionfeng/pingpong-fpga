@@ -179,6 +179,125 @@ void testEndToEnd() {
   check(after.width == 1280 && after.height == 720, "result carries the original size");
 }
 
+void testBallTrackWindowBookkeeping() {
+  std::cout << "BallTrack window bookkeeping (engine-level, no model needed)" << std::endl;
+  // Without models the engine cannot load, so this exercises the standalone
+  // engine only when models are available; the pure window arithmetic is
+  // asserted by testBallTrackChannelLayoutWithModels below.
+  const char *dir = std::getenv("C_ACTUAL_MODELS_DIR");
+  if (!dir) {
+    std::cout << "  [SKIP] C_ACTUAL_MODELS_DIR not set" << std::endl;
+    return;
+  }
+  const std::string root(dir);
+  c_actual::ModelPaths paths;
+  paths.ball_track = root + "/balltrack_tracknetv3.onnx";
+  paths.hand = root + "/hand_yolov8n_gray_interface_v1.onnx";
+  paths.racket = root + "/racket_yolov8n_gray.onnx";
+  c_actual::Config config;
+  c_actual::CPerceptionEngine engine;
+  std::string error;
+  if (!engine.load(paths, config, &error)) {
+    std::cout << "  [SKIP] models not loadable: " << error << std::endl;
+    return;
+  }
+
+  cv::Mat gray(720, 1280, CV_8UC1, cv::Scalar(10));
+  c_actual::FrameMeta meta;
+  int warmups = 0;
+  for (int i = 0; i < 4; ++i) {
+    meta.frame_id = static_cast<uint64_t>(i);
+    const auto r = engine.inferGray(gray, meta);
+    if (r.ball.state == c_actual::BallState::kWarmup) ++warmups;
+  }
+  check(warmups == 4, "frames 1..4 report WARMUP (need seq_len real predecessors)");
+
+  meta.frame_id = 4;
+  const auto fifth = engine.inferGray(gray, meta);
+  check(fifth.ball.state != c_actual::BallState::kWarmup,
+        "frame 5 leaves WARMUP and runs the model");
+  // A uniform frame carries no ball, so the model must not invent one.
+  check(fifth.ball.state == c_actual::BallState::kDropout ||
+            fifth.ball.state == c_actual::BallState::kDetected,
+        "frame 5 reports a real model outcome (DROPOUT or DETECTED), not INVALID");
+
+  engine.reset();
+  meta.frame_id = 0;
+  const auto after_reset = engine.inferGray(gray, meta);
+  check(after_reset.ball.state == c_actual::BallState::kWarmup,
+        "reset() clears history and background so the next clip starts in WARMUP");
+}
+
+void testBallTrackChannelLayoutWithModels() {
+  std::cout << "BallTrack 15-channel layout and temporal window" << std::endl;
+  const char *dir = std::getenv("C_ACTUAL_MODELS_DIR");
+  if (!dir) {
+    std::cout << "  [SKIP] C_ACTUAL_MODELS_DIR not set" << std::endl;
+    return;
+  }
+  const std::string root(dir);
+  c_actual::ModelPaths paths;
+  paths.ball_track = root + "/balltrack_tracknetv3.onnx";
+  paths.hand = root + "/hand_yolov8n_gray_interface_v1.onnx";
+  paths.racket = root + "/racket_yolov8n_gray.onnx";
+  c_actual::Config config;
+  c_actual::CPerceptionEngine engine;
+  std::string error;
+  if (!engine.load(paths, config, &error)) {
+    std::cout << "  [SKIP] models not loadable: " << error << std::endl;
+    return;
+  }
+
+  // Constant-valued frames so resize and /255 cannot blur channel identity.
+  // We feed frames 1..5 and then read the tensor the engine would use for the
+  // NEXT frame: debugBallInput() is defined as "the window for the upcoming
+  // inference", so it must be read at the point in time we want to inspect.
+  const int values[5] = {10, 20, 30, 40, 50};
+  cv::Mat gray(720, 1280, CV_8UC1);
+  c_actual::FrameMeta meta;
+  for (int i = 0; i < 5; ++i) {
+    gray.setTo(cv::Scalar(values[i]));
+    meta.frame_id = static_cast<uint64_t>(i);
+    engine.inferGray(gray, meta);
+  }
+
+  // Frame 5 was just SCORED from window [1,2,3,4] = [10,20,30,40]. The window
+  // has since slid to [2,3,4,5] = [20,30,40,50] for the NEXT frame (6), and
+  // frame 6 itself has not been seen yet, so 60 must be absent.
+  const std::vector<float> tensor = engine.debugBallInput();
+  const int W = config.ball_width, H = config.ball_height;
+  const int plane = H * W;
+  check(tensor.size() == static_cast<size_t>(15) * plane,
+        "tensor has exactly 15 * H * W floats");
+
+  // Expected: background(frame1=10) then frames 2..5 -> 20,30,40,50.
+  // Frame 6 (60) must NOT appear: that would be current-frame leakage.
+  const int expected[5] = {10, 20, 30, 40, 50};
+  bool layout_ok = true;
+  for (int item = 0; item < 5; ++item) {
+    for (int c = 0; c < 3; ++c) {
+      const int channel = item * 3 + c;
+      const float v = tensor[static_cast<size_t>(channel) * plane + 5];
+      const float want = expected[item] / 255.0f;
+      if (std::fabs(v - want) > 1e-4f) layout_ok = false;
+    }
+  }
+  if (!layout_ok) {
+    std::cout << "  [diag] per-channel value at pixel 5 (expected x/255):" << std::endl;
+    for (int channel = 0; channel < 15; ++channel) {
+      const float v = tensor[static_cast<size_t>(channel) * plane + 5];
+      std::cout << "    ch" << channel << " = " << v << "  (= " << (v * 255.0f) << " in 0..255)"
+                << std::endl;
+    }
+  }
+  check(layout_ok, "channels = [bg(10)|20|30|40|50] x RGB, gray copied 3x each");
+
+  bool has_60 = false;
+  for (float v : tensor) {
+    if (std::fabs(v - 60.0f / 255.0f) < 1e-5f) has_60 = true;
+  }
+  check(!has_60, "the yet-unseen frame 6 (60) is not in the upcoming window");
+}
 }  // namespace
 
 int main() {
@@ -189,6 +308,10 @@ int main() {
   testNms();
   testIou();
   testEndToEnd();
+  testBallTrackWindowBookkeeping();
+  testBallTrackChannelLayoutWithModels();
+
+
   std::cout << "\n" << (checks - failures) << "/" << checks << " checks passed\n";
   if (failures) {
     std::cout << failures << " FAILED\n";

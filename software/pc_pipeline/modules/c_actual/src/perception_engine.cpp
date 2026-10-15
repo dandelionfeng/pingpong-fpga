@@ -90,11 +90,20 @@ bool CPerceptionEngine::load(const ModelPaths &paths, const Config &config, std:
   return true;
 }
 
-void CPerceptionEngine::reset() { impl_->ball.reset(); }
+void CPerceptionEngine::reset() {
+  // Clears temporal history, the frozen background and the frame counter so the
+  // next clip starts clean. The left and right engines are separate objects, so
+  // histories never mix between eyes.
+  impl_->ball.reset();
+}
+
+std::vector<float> CPerceptionEngine::debugBallInput() const {
+  return impl_->ball.buildInputForTest();
+}
 
 std::string CPerceptionEngine::versionString() const {
-  return std::string("c_actual v2 | ball=BallTrack(TrackNetV3, gray3 temporal)") +
-         " | hand=YOLOv8n-1class(gray3) | racket=YOLOv8n(gray3)";
+  return "c_actual-v2.1-interface | ball=balltrack-gray3 | hand=yolov8n-hand-gray3 | "
+         "racket=yolov8n-racket-gray3";
 }
 
 PerceptionResult CPerceptionEngine::inferGray(const cv::Mat &gray, const FrameMeta &meta) {

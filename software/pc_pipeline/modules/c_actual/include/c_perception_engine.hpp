@@ -123,8 +123,14 @@ class CPerceptionEngine {
   // CV_8UC1. Internally derived gray3 is used for every model.
   PerceptionResult inferGray(const cv::Mat &gray, const FrameMeta &meta);
 
-  // Clears the BallTrack history (call between unrelated video clips).
+  // Clears the BallTrack history AND the frozen background (call between
+  // unrelated video clips, or after a camera restart).
   void reset();
+
+  // Validation hook: the BallTrack input tensor for the current window, laid out
+  // as [1, 3*(seq_len+1), H, W] flattened. Lets tests assert the 15-channel
+  // contract and compare against the Python reference without running a model.
+  std::vector<float> debugBallInput() const;
 
   const Config &config() const;
   const ModelPaths &paths() const;
