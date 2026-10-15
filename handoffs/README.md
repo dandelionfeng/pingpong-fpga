@@ -1,6 +1,6 @@
 # 当前任务交接
 
-最新：[2026-10-08 仓库精简与PR复核](2026-10-08-repository-cleanup-and-pr-review.md)。完成状态见[PC交付状态](../docs/当前PC阶段交付状态.md)，模块关系见[架构与接口](../docs/architecture/README.md)。
+最新：[2026-10-12 A MJPEG适配与发布](2026-10-12-a-mjpeg-input.md)；上轮[仓库精简与PR复核](2026-10-08-repository-cleanup-and-pr-review.md)。完成状态见[PC交付状态](../docs/当前PC阶段交付状态.md)，模块关系见[架构与接口](../docs/architecture/README.md)。
 
 | 接手内容 | 材料 |
 | --- | --- |

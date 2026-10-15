@@ -265,7 +265,8 @@ Json runPipeline(const Path &manifest, const Path &output, const RunConfig &cfg,
         if (live)
           source = std::make_unique<V4l2FrameSource>(
               input.at("device"), nativeV4l2Syscalls(),
-              input.value("exposure_absolute", 10));
+              input.value("exposure_absolute", 10),
+              input.value("pixel_format", "auto"));
         else
           source = std::make_unique<FileFrameSource>(manifest);
         uint64_t maxId = 0;

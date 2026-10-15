@@ -1,21 +1,23 @@
 # B 接入 A 的交付材料
 
-2026-10-08更新入口；Release仍是2026-10-06原交付。A软件接口 `a-motion-v1-draft`，旧B PR #12/#13/#14已关闭，修订#16/#17已合入，#18待修改；复核见[本轮报告](../reports/PR审查_20261008.md)。本页提供共用核心、输入、整数参考与接入入口；B 的实际测量、三维、事件与后四级 RTL 仍由其模块完成。本次发布在团队私人仓库中。
+2026-10-12更新A输入与下载入口；A 1.0.1增加MJPEG，B/C接口保持原样。以下B模块审查状态沿用2026-10-08记录。A软件接口 `a-motion-v1-draft`，旧B PR #12/#13/#14已关闭，修订#16/#17已合入，#18待修改；复核见[本轮报告](../reports/PR审查_20261008.md)。本页提供共用核心、输入、整数参考与接入入口；B 的实际测量、三维、事件与后四级 RTL 仍由其模块完成。本次发布在团队私人仓库中。
 
 ## 下载与运行
 
-发布入口：<https://github.com/fengfengkang/pingpong-fpga/releases/tag/a-pipeline-pc-20261006>。
+当前软件发布入口：<https://github.com/fengfengkang/pingpong-fpga/releases/tag/a-pipeline-pc-20261012>。A/B人工输入及旧审查证据仍在[原Release](https://github.com/fengfengkang/pingpong-fpga/releases/tag/a-pipeline-pc-20261006)。
 
 A的PR #15已合入`main`，B球心及形态学参考也已合入。从干净checkout执行`git fetch origin`，基于最新`origin/main`建立自己的适配分支；保留已有B分支与未提交修改。旧A任务分支已在合并后删除，不再作为接手入口。
 
 | 附件 | 用途 | 打开方式 |
 | --- | --- | --- |
-| `A-USB-Stereo-Pipeline-1.0.0-Windows.zip` | 已验证的 Windows x64 GUI/CLI、运行库、许可证及原交付证据 | 解压后双击 `启动回放界面.cmd`；检查样例用 `检查固定样例.cmd` |
-| `A-USB-Stereo-Pipeline-source-20261006.zip` | 仓库源码、最新 VS Code/CMake 修复、接口、脚本及交接 | 解压后打开 `software/pc_pipeline/AUsbStereoPipeline-Windows.code-workspace` |
+| `A-USB-Stereo-Pipeline-1.0.1-Windows.zip` | MJPEG兼容 Windows x64 GUI/CLI、运行库、许可证及本轮证据 | 解压后双击 `启动回放界面.cmd`；检查样例用 `检查固定样例.cmd` |
+| `A-USB-Stereo-Pipeline-1.0.1-source.zip` | 仓库源码、最新 VS Code/CMake 修复、接口、脚本及交接 | 解压后打开 `software/pc_pipeline/AUsbStereoPipeline-Windows.code-workspace` |
 | `A-B-Integration-20261006.zip` | 8 对人工双眼输入、七级图、阈值与 Mask 位流、参考身份和文件哈希 | 解压后读取 `sample-index.json`；`inputs/manifest.json` 可导入 A GUI/CLI |
 | `PR-Review-Evidence-20261006.zip` | 本次 PR 的构建、测试、失败复现日志和原始测试程序 | 从包内 `README.md` 开始 |
 
-逐附件 SHA-256、字节数和源码版本见 [发布清单附件](https://github.com/fengfengkang/pingpong-fpga/releases/download/a-pipeline-pc-20261006/a-pipeline-release-20261006.json)，仓库副本保存在 `data/manifests/`。便携包中的内嵌源码对应首次交付，开发时使用独立源码附件复现原交付，集成新B模块使用最新`origin/main`。源码附件不含 OpenCV/Qt 开发库；便携包 DLL 用于运行。
+当前软件 SHA-256、字节数和源码版本见新版 Release 的 `release-manifest-20261012.json` 与 `SHA256SUMS-20261012.txt`。原发布清单保留其历史日期。旧1.0.0软件附件已由1.0.1替代，原人工输入和审查附件保留。便携包包含当前A源码；完整仓库源码另有独立source ZIP。源码附件不含OpenCV/Qt开发库，便携包DLL用于运行。
+
+MJPEG在A输入边界解码，B继续获取同尺寸GRAY8原眼、搜索图与Mask，无需解析JPEG。后续实拍需单独评估压缩对球心质量的影响，算法阈值与标定接口没有随本次适配调整。
 
 新电脑先安装 Visual Studio 2022 的桌面 C++ 工具与 Windows SDK、CMake，以及 Python + NumPy/Pillow。仓库根执行：
 
