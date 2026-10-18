@@ -3,7 +3,7 @@
 # 本文件是 C++ 引擎与 Python 侧共享的唯一阈值来源。
 # 接口已冻结：修改阈值不影响接口，但换模型权重时必须保持字段含义不变。
 
-version: C_ACTUAL_INTERFACE_V2_2
+version: C_ACTUAL_INTERFACE_V2_3
 
 input:
   # 唯一允许的输入格式
@@ -26,7 +26,7 @@ ball:
 
 hand:
   backend: yolo
-  model: models/hand_yolov8n_gray_final_v2_960.onnx
+  model: models/hand_yolov8n_gray_final_v3_960.onnx
   classes:
     0: hand
   # 1 类 hand bbox detector。不区分 toss/racket/left/right —— 角色判断属于 B。

@@ -1,0 +1,96 @@
+{
+  "artifact": "HAND_DOMAIN_V3",
+  "date": "2026-10-18",
+  "purpose": "BodyHands real annotations as the main body, plus high-precision table-tennis pseudo-positives and hard negatives, to raise hand Precision without losing Recall.",
+  "leak_sessions_excluded_in_full": [
+    "20240428_145028_Output_Group1",
+    "20240503_163810_Output_Group1",
+    "20240503_164411_Output_Group1",
+    "20240524_183430_Output_Group1",
+    "20240524_183648_Output_Group1"
+  ],
+  "leak_policy": "BNDSTT_MANUAL_GT_V1 is test-only. Its five source sessions are removed entirely from every mining/labelling/fine-tune pool, not just the 41 annotated frames.",
+  "non_leak_source": {
+    "sessions_available": 28,
+    "videos_available": 707,
+    "videos_used": 150,
+    "frames_per_video": 12,
+    "frames_scanned": 1800
+  },
+  "pseudo_positive": {
+    "images": 1549,
+    "boxes": 1886,
+    "rules_frozen_before_gt": {
+      "hand_confidence_min": 0.45,
+      "bbox_size_px_range": [18, 220],
+      "wrist_conf_min": 0.3,
+      "wrist_gate": "inside bbox expanded by 0.6*max_side, or centre distance <= 1.2*diagonal",
+      "temporal": "matched in at least one of the previous two frames (IoU>=0.30 or centre distance <= 0.6*diagonal)"
+    },
+    "bbox_provenance": "YOLO hand detector only; wrists never create a box"
+  },
+  "hard_negative": {
+    "images": 232,
+    "candidates": 376,
+    "reason_counts": {
+      "isolated_single_frame": 213,
+      "size_anomaly": 128,
+      "no_wrist": 35
+    },
+    "label_form": "image with an empty YOLO label file"
+  },
+  "composition": {
+    "bodyhands_train": 5000,
+    "pseudo_positive_images": 1549,
+    "hard_negative_images": 232,
+    "train_total": 6781,
+    "pseudo_domain_share_pct": 26.3,
+    "val_images": 1258,
+    "val_source": "BodyHands val only - checkpoint selection never touches BNDSTT GT"
+  },
+  "format": {
+    "classes": { "0": "hand" },
+    "input": "RGB frame -> GRAY -> replicate 3 channels (gray3)",
+    "imgsz": 960
+  },
+  "fine_tune": {
+    "start_checkpoint": "bodyhands_hand_960/weights/best.pt",
+    "epochs_requested": 15,
+    "epochs_ran": 7,
+    "early_stopping_patience": 5,
+    "lr0": 0.001,
+    "batch": 8,
+    "bodyhands_val_best": { "mAP50": 0.803, "mAP50-95": 0.417 }
+  },
+  "results_bndstt_manual_gt_v1": {
+    "note": "single evaluation, conf 0.25, 41 images / 54 hand GT",
+    "v2_2_raw": { "P": 0.3626, "R": 0.6111, "F1": 0.4552, "AP50": 0.3789, "TP": 33, "FP": 58, "FN": 21 },
+    "v3_raw": { "P": 0.4023, "R": 0.6481, "F1": 0.4965, "AP50": 0.4670, "TP": 35, "FP": 52, "FN": 19 },
+    "v3_temporal": {
+      "P": 0.4035, "R": 0.4259, "F1": 0.4144,
+      "validity": "TEMPORAL_METRIC_LIMITED",
+      "why": "only 4 of 36 adjacent GT frame pairs are consecutive (gap==1); the rest are 4-6 frames apart, so a temporal filter cannot be fairly measured here"
+    }
+  },
+  "temporal_helper": {
+    "path": "software/pc_pipeline/modules/c_actual/python/temporal_hand_filter.py",
+    "status": "delivered as an optional B-side helper; the C DetectionResult contract is unchanged",
+    "frozen_defaults": {
+      "iou_match": 0.3, "center_match_k": 0.6, "max_size_ratio": 2.0,
+      "max_gap": 1, "min_track_len": 2, "min_span": 2
+    },
+    "unsupervised_evidence": {
+      "clip": "sample_clip.mp4", "frames": 40,
+      "raw_boxes": 66, "confirmed_boxes": 64, "suppression_pct": 3.03
+    },
+    "verdict": "not effective as a false-positive reduction mechanism"
+  },
+  "deployment": {
+    "decision": "UPGRADE TO V3",
+    "onnx": "hand_yolov8n_gray_final_v3_960.onnx",
+    "onnx_bytes": 12159554,
+    "onnx_sha256": "959ed6c4014fe62ac09f4ef62670f992edf115ce517780d5cca9e3abf157eed4",
+    "cpp_parity": "PASS (66 vs 66 boxes, max coordinate difference 0.000893 px)"
+  },
+  "known_issue_fixed": "The previous hand_domain_v3 directory was reused and left 6416 old copy-paste images behind, inflating train to 13197. The builder now wipes the output directory before every build."
+}

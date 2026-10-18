@@ -107,7 +107,7 @@ std::vector<float> CPerceptionEngine::debugBallInput() const {
 }
 
 std::string CPerceptionEngine::versionString() const {
-  return "c_actual-v2.2-interface | ball=balltrack-gray3 | "
+  return "c_actual-v2.3-interface | ball=balltrack-gray3 | "
          "hand=yolov8n-hand-gray3@960 | racket=yolov8n-racket-gray3@640";
 }
 
