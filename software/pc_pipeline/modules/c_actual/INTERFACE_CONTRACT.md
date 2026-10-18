@@ -1,6 +1,6 @@
 # C 端感知 —— INTERFACE CONTRACT（冻结）
 
-版本：**C_ACTUAL_INTERFACE_V2_1**
+版本：**C_ACTUAL_INTERFACE_V2_2**
 
 本文件是 C 与 A / B 的唯一正式接口约定。**换模型权重不得改变本文件描述的任何内容。**
 
@@ -139,3 +139,15 @@
 - 坐标空间（original eye pixels）
 - C++ API 签名（`load` / `inferGray` / `reset`）
 - `DetectorBackend::infer(context, stop, timeoutMs)` 与 `mode()`
+
+## 8. 各检测器的输入尺寸（V2.2）
+
+hand 与 racket 使用**不同的**输入分辨率，各自从**自己的 ONNX input shape** 读取：
+
+| 检测器 | 输入尺寸 |
+| --- | --- |
+| hand | **960 × 960** |
+| racket | **640 × 640** |
+| ball (BallTrack) | 512 × 288（官方 TrackNetV3 契约，固定） |
+
+调用方**不需要**关心这些数字，也不需要在配置里指定。若某个 ONNX 的输入形状与引擎构造的张量不一致，结果会在 `warnings` 中出现 `YOLO_INPUT_CONTRACT_MISMATCH` / `YOLO_TENSOR_SIZE_MISMATCH` / `YOLO_INFERENCE_FAILED` 等明确错误，**绝不会静默返回空检测**。

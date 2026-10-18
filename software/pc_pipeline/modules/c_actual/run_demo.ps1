@@ -16,11 +16,11 @@ Set-Location $root
 
 $cli     = '.\bin\c_perception_cli.exe'
 $ball    = '.\models\balltrack_tracknetv3.onnx'
-$hand    = '.\models\hand_yolov8n_gray_interface_v1.onnx'
+$hand    = '.\models\hand_yolov8n_gray_final_v2_960.onnx'
 $racket  = '.\models\racket_yolov8n_gray.onnx'
 $config  = '.\config\inference.yaml'
 
-Write-Host "C perception - CAPTAIN INTEGRATION V2.1"
+Write-Host "C perception - CAPTAIN INTEGRATION V2.2"
 Write-Host "  root: $root"
 Write-Host ""
 

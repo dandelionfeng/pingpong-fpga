@@ -164,36 +164,160 @@ std::vector<float> imageToNchw(const cv::Mat &bgr, int size) {
 }
 
 // ------------------------------------------------------------- YOLO detector
+namespace {
+std::string shapeText(const std::vector<int64_t> &shape) {
+  std::string out = "[";
+  for (size_t i = 0; i < shape.size(); ++i) {
+    out += (i ? "," : "") + std::to_string(shape[i]);
+  }
+  return out + "]";
+}
+}  // namespace
+
 bool YoloDetector::load(const std::string &path, const std::vector<std::string> &class_names,
                         const Config &config, bool use_cuda, std::string *error) {
   config_ = config;
   class_names_ = class_names;
-  return session_.load(path, use_cuda, config.intra_op_threads, error);
+  imgsz_ = config.imgsz;  // fallback; overwritten when the graph declares a size
+  if (!session_.load(path, use_cuda, config.intra_op_threads, error)) {
+    return false;
+  }
+
+  // ---- derive the square input size from THIS model ----------------------
+  // Hand and racket are separate ONNX graphs that may use different
+  // resolutions (960 vs 640). A single global imgsz cannot serve both, so the
+  // value comes from the graph itself.
+  const std::vector<int64_t> shape = session_.inputShape();
+  if (shape.size() != 4) {
+    if (error) {
+      *error = "YOLO_INPUT_CONTRACT_MISMATCH: expected a 4-D input "
+               "[batch, 3, height, width], got " + shapeText(shape);
+    }
+    session_.release();
+    return false;
+  }
+  // Batch may be dynamic (-1); it must otherwise be 1.
+  if (shape[0] > 0 && shape[0] != 1) {
+    if (error) {
+      *error = "YOLO_INPUT_CONTRACT_MISMATCH: batch must be 1 (or dynamic), got " +
+               shapeText(shape);
+    }
+    session_.release();
+    return false;
+  }
+  if (shape[1] != 3) {
+    if (error) {
+      *error = "YOLO_INPUT_CONTRACT_MISMATCH: expected 3 input channels, got " +
+               std::to_string(shape[1]) + " (" + shapeText(shape) + ")";
+    }
+    session_.release();
+    return false;
+  }
+
+  const int64_t h = shape[2];
+  const int64_t w = shape[3];
+  if (h > 0 && w > 0) {
+    if (h != w) {
+      if (error) {
+        *error = "YOLO_INPUT_CONTRACT_MISMATCH: non-square input " + std::to_string(h) + "x" +
+                 std::to_string(w) + " is not supported (" + shapeText(shape) + "); the "
+                 "letterbox preprocessor is square-only";
+      }
+      session_.release();
+      return false;
+    }
+    imgsz_ = static_cast<int>(h);
+  }
+  if (imgsz_ <= 0) {
+    if (error) *error = "YOLO_INPUT_CONTRACT_MISMATCH: could not resolve an input size from " +
+                        shapeText(shape);
+    session_.release();
+    return false;
+  }
+  return true;
+}
+
+bool YoloDetector::validateInputAgainstModel(size_t tensor_elems, std::string *error) const {
+  // Re-read the declared shape every call: it is cheap and it keeps a wrong
+  // tensor from ever reaching the graph (which would otherwise fail deep inside
+  // ONNX Runtime and look like "no detections in this frame").
+  const std::vector<int64_t> shape = session_.inputShape();
+  if (shape.size() != 4) {
+    if (error) *error = "YOLO_INPUT_CONTRACT_MISMATCH: model input is not 4-D, got " +
+                        shapeText(shape);
+    return false;
+  }
+  if (shape[2] > 0 && shape[3] > 0 &&
+      (shape[2] != imgsz_ || shape[3] != imgsz_)) {
+    if (error) {
+      *error = "YOLO_INPUT_CONTRACT_MISMATCH: model expects " + std::to_string(shape[2]) + "x" +
+               std::to_string(shape[3]) + " but this detector is configured for " +
+               std::to_string(imgsz_) + "x" + std::to_string(imgsz_);
+    }
+    return false;
+  }
+  const size_t expected =
+      static_cast<size_t>(3) * static_cast<size_t>(imgsz_) * static_cast<size_t>(imgsz_);
+  if (tensor_elems != expected) {
+    if (error) {
+      *error = "YOLO_TENSOR_SIZE_MISMATCH: built " + std::to_string(tensor_elems) +
+               " floats but " + std::to_string(imgsz_) + "x" + std::to_string(imgsz_) +
+               " RGB needs " + std::to_string(expected);
+    }
+    return false;
+  }
+  return true;
 }
 
 std::vector<Box> YoloDetector::detect(const cv::Mat &gray3, float conf_threshold, int out_w,
-                                      int out_h) {
+                                      int out_h, std::string *error) {
   std::vector<Box> result;
-  if (!session_.ok() || gray3.empty()) return result;
+  if (error) error->clear();
+  if (!session_.ok()) {
+    if (error) *error = "YOLO_INVALID: session is not loaded";
+    return result;
+  }
+  if (gray3.empty()) {
+    if (error) *error = "YOLO_INVALID: empty input image";
+    return result;
+  }
 
+  const int size = imgsz_ > 0 ? imgsz_ : config_.imgsz;
   float scale = 1.f;
   int pad_x = 0, pad_y = 0;
-  cv::Mat letterboxed = preprocess::letterbox(gray3, config_.imgsz, &scale, &pad_x, &pad_y);
-  std::vector<float> input = imageToNchw(letterboxed, config_.imgsz);
+  cv::Mat letterboxed = preprocess::letterbox(gray3, size, &scale, &pad_x, &pad_y);
+  std::vector<float> input = imageToNchw(letterboxed, size);
+
+  if (!validateInputAgainstModel(input.size(), error)) {
+    return result;
+  }
 
   std::vector<float> output;
   std::vector<int64_t> shape;
-  std::string error;
+  std::string run_error;
   // `run` is non-const (it owns the Ort::Env used to create tensors).
-  if (!session_.run(input, {1, 3, config_.imgsz, config_.imgsz}, &output, &shape, &error)) {
+  if (!session_.run(input, {1, 3, size, size}, &output, &shape, &run_error)) {
+    if (error) *error = "YOLO_INFERENCE_FAILED: " + run_error;
     return result;
   }
   // Expected: (1, 4 + num_classes, num_anchors)
-  if (shape.size() != 3 || shape[0] != 1) return result;
+  if (shape.size() != 3 || shape[0] != 1) {
+    if (error) {
+      *error = "YOLO_OUTPUT_CONTRACT_MISMATCH: expected [1, 4+classes, anchors], got " +
+               shapeText(shape);
+    }
+    return result;
+  }
   const int channels = static_cast<int>(shape[1]);
   const int anchors = static_cast<int>(shape[2]);
   const int num_classes = channels - 4;
-  if (num_classes <= 0) return result;
+  if (num_classes <= 0) {
+    if (error) {
+      *error = "YOLO_OUTPUT_CONTRACT_MISMATCH: " + std::to_string(channels) +
+               " output channels cannot hold 4 box values plus classes";
+    }
+    return result;
+  }
 
   std::vector<Box> candidates;
   for (int a = 0; a < anchors; ++a) {

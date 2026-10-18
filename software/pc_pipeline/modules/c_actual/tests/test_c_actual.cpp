@@ -298,6 +298,47 @@ void testBallTrackChannelLayoutWithModels() {
   }
   check(!has_60, "the yet-unseen frame 6 (60) is not in the upcoming window");
 }
+void testPerDetectorInputSize() {
+  std::cout << "per-detector ONNX input size (hand 960 vs racket 640)" << std::endl;
+  const char *dir = std::getenv("C_ACTUAL_MODELS_960_DIR");
+  if (!dir) {
+    std::cout << "  [SKIP] C_ACTUAL_MODELS_960_DIR not set" << std::endl;
+    return;
+  }
+  const std::string root(dir);
+  c_actual::ModelPaths paths;
+  paths.ball_track = root + "/ball.onnx";
+  paths.hand = root + "/hand960.onnx";
+  paths.racket = root + "/racket640.onnx";
+  c_actual::Config config;
+  c_actual::CPerceptionEngine engine;
+  std::string error;
+  if (!engine.load(paths, config, &error)) {
+    check(false, std::string("engine should load mixed 960/640 models: ") + error);
+    return;
+  }
+  // Each detector must take its size from its own graph, not from Config::imgsz.
+  check(engine.debugHandInputSize() == 960, "hand input size is 960 (from its ONNX shape)");
+  check(engine.debugRacketInputSize() == 640,
+        "racket input size is 640 (from its ONNX shape)");
+  check(engine.debugHandInputSize() != engine.debugRacketInputSize(),
+        "the two detectors use independent resolutions");
+
+  // A real inference must not surface an input-shape error. If the engine still
+  // fed a 640 tensor to the 960 graph, this is the regression that would show up.
+  cv::Mat gray(720, 1280, CV_8UC1, cv::Scalar(114));
+  c_actual::FrameMeta meta;
+  const auto result = engine.inferGray(gray, meta);
+  bool reported_error = false;
+  for (const auto &w : result.warnings) {
+    if (w.find("MISMATCH") != std::string::npos ||
+        w.find("YOLO_INFERENCE_FAILED") != std::string::npos ||
+        w.find("INVALID") != std::string::npos) {
+      reported_error = true;
+    }
+  }
+  check(!reported_error, "no input-shape/inference error for the 960 hand model");
+}
 }  // namespace
 
 int main() {
@@ -310,6 +351,7 @@ int main() {
   testEndToEnd();
   testBallTrackWindowBookkeeping();
   testBallTrackChannelLayoutWithModels();
+  testPerDetectorInputSize();
 
 
   std::cout << "\n" << (checks - failures) << "/" << checks << " checks passed\n";

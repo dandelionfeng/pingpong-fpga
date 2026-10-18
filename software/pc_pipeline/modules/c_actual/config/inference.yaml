@@ -3,7 +3,7 @@
 # 本文件是 C++ 引擎与 Python 侧共享的唯一阈值来源。
 # 接口已冻结：修改阈值不影响接口，但换模型权重时必须保持字段含义不变。
 
-version: C_ACTUAL_INTERFACE_V2_1
+version: C_ACTUAL_INTERFACE_V2_2
 
 input:
   # 唯一允许的输入格式
@@ -26,13 +26,14 @@ ball:
 
 hand:
   backend: yolo
-  model: models/hand_yolov8n_gray_interface_v1.onnx
+  model: models/hand_yolov8n_gray_final_v2_960.onnx
   classes:
     0: hand
   # 1 类 hand bbox detector。不区分 toss/racket/left/right —— 角色判断属于 B。
   conf: 0.25
   base_conf: 0.02               # 推理下限：一次推理缓存全部候选
-  imgsz: 640
+  # 输入尺寸由该 ONNX 自己的 input shape 自动读取（当前=960），
+  # 不需要也不应该在配置里指定；hand 与 racket 各自独立。
 
 racket:
   backend: yolo
@@ -43,10 +44,11 @@ racket:
   class_to_use: 1               # 本 ONNX 是多类，C++ 只取 racket 类
   conf: 0.30
   base_conf: 0.02
-  imgsz: 640
+  # 同上：racket 使用它自己 ONNX 的输入尺寸（当前=640）
 
 detector_common:
-  imgsz: 640
+  # imgsz 已移除：每个检测器从自己的 ONNX input shape 读取，
+  # 禁止用单一全局值同时控制 hand(960) 和 racket(640)。
   iou: 0.70
   max_det: 100
   device: cpu                   # cpu | cuda

@@ -132,6 +132,12 @@ class CPerceptionEngine {
   // contract and compare against the Python reference without running a model.
   std::vector<float> debugBallInput() const;
 
+  // Diagnostic: the square input resolution each detector derived from its OWN
+  // ONNX graph. Proves hand and racket are independent (e.g. 960 vs 640) and
+  // that no single global imgsz is applied to both.
+  int debugHandInputSize() const;
+  int debugRacketInputSize() const;
+
   const Config &config() const;
   const ModelPaths &paths() const;
   // "model_version" strings for the handoff reports.

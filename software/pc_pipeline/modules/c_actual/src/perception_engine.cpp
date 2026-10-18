@@ -1,6 +1,7 @@
 #include "c_perception_engine.hpp"
 
 #include <chrono>
+#include <cstdio>
 #include <stdexcept>
 
 #include "internal_onnx.hpp"
@@ -97,13 +98,17 @@ void CPerceptionEngine::reset() {
   impl_->ball.reset();
 }
 
+int CPerceptionEngine::debugHandInputSize() const { return impl_->hand.imgsz(); }
+
+int CPerceptionEngine::debugRacketInputSize() const { return impl_->racket.imgsz(); }
+
 std::vector<float> CPerceptionEngine::debugBallInput() const {
   return impl_->ball.buildInputForTest();
 }
 
 std::string CPerceptionEngine::versionString() const {
-  return "c_actual-v2.1-interface | ball=balltrack-gray3 | hand=yolov8n-hand-gray3 | "
-         "racket=yolov8n-racket-gray3";
+  return "c_actual-v2.2-interface | ball=balltrack-gray3 | "
+         "hand=yolov8n-hand-gray3@960 | racket=yolov8n-racket-gray3@640";
 }
 
 PerceptionResult CPerceptionEngine::inferGray(const cv::Mat &gray, const FrameMeta &meta) {
@@ -139,7 +144,14 @@ PerceptionResult CPerceptionEngine::inferGray(const cv::Mat &gray, const FrameMe
 
   // ---- hand (single inference pass at base_conf, threshold applied after) ----
   if (impl_->hand_loaded) {
-    std::vector<Box> raw = impl_->hand.detect(gray3, impl_->config.base_conf, gray.cols, gray.rows);
+    std::string hand_error;
+    std::vector<Box> raw =
+        impl_->hand.detect(gray3, impl_->config.base_conf, gray.cols, gray.rows, &hand_error);
+    if (!hand_error.empty()) {
+      // Never let a detector failure look like "no hands in this frame".
+      result.warnings.push_back("hand " + hand_error);
+      std::fprintf(stderr, "[c_actual] hand detector error: %s\n", hand_error.c_str());
+    }
     for (Box &box : raw) {
       if (box.confidence >= impl_->config.hand_conf) {
         box.class_name = "hand";
@@ -152,8 +164,13 @@ PerceptionResult CPerceptionEngine::inferGray(const cv::Mat &gray, const FrameMe
 
   // ---- racket ----
   if (impl_->racket_loaded) {
+    std::string racket_error;
     std::vector<Box> raw =
-        impl_->racket.detect(gray3, impl_->config.base_conf, gray.cols, gray.rows);
+        impl_->racket.detect(gray3, impl_->config.base_conf, gray.cols, gray.rows, &racket_error);
+    if (!racket_error.empty()) {
+      result.warnings.push_back("racket " + racket_error);
+      std::fprintf(stderr, "[c_actual] racket detector error: %s\n", racket_error.c_str());
+    }
     for (Box &box : raw) {
       const bool is_racket = (box.class_name == "racket") ||
                              (box.class_id == 1 && impl_->racket.classNames().size() > 1);

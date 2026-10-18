@@ -1,4 +1,4 @@
-# C 端感知 —— 队长联调包（C_ACTUAL_INTERFACE_V2_1）
+# C 端感知 —— 队长联调包（C_ACTUAL_INTERFACE_V2_2）
 
 ## 1. 先跑起来（30 秒）
 
@@ -24,7 +24,7 @@ powershell -ExecutionPolicy Bypass -File run_demo.ps1
 .\bin\c_perception_cli.exe `
   --video 你的视频.mp4 `
   --ball-model   models\balltrack_tracknetv3.onnx `
-  --hand-model   models\hand_yolov8n_gray_interface_v1.onnx `
+  --hand-model   models\hand_yolov8n_gray_final_v2_960.onnx `
   --racket-model models\racket_yolov8n_gray.onnx `
   --config config\inference.yaml `
   --output out\result.jsonl `
@@ -36,7 +36,7 @@ powershell -ExecutionPolicy Bypass -File run_demo.ps1
 ```powershell
 .\bin\c_perception_cli.exe --image 你的图.png `
   --ball-model   models\balltrack_tracknetv3.onnx `
-  --hand-model   models\hand_yolov8n_gray_interface_v1.onnx `
+  --hand-model   models\hand_yolov8n_gray_final_v2_960.onnx `
   --racket-model models\racket_yolov8n_gray.onnx
 ```
 
@@ -45,7 +45,7 @@ powershell -ExecutionPolicy Bypass -File run_demo.ps1
 ```powershell
 .\bin\c_perception_cli.exe --self-test --image examples\sample_frame.png `
   --ball-model   models\balltrack_tracknetv3.onnx `
-  --hand-model   models\hand_yolov8n_gray_interface_v1.onnx `
+  --hand-model   models\hand_yolov8n_gray_final_v2_960.onnx `
   --racket-model models\racket_yolov8n_gray.onnx
 ```
 
@@ -128,7 +128,7 @@ PC 端 CPU 三模型串行约 **660 ms/帧**（1920×1080）。
 ## 9. 已知限制（如实说明）
 
 1. **hand 模型是 INTERFACE_V1 冻结版**，训练未跑满全部 epoch。
-   精度不是本次目标；换更好的权重只需替换 `hand_yolov8n_gray_interface_v1.onnx`，
+   精度不是本次目标；换更好的权重只需替换 `hand_yolov8n_gray_final_v2_960.onnx`，
    **接口不变**。
 2. **BallTrack 背景帧用首帧**（online approximation）。官方参考实现用整段视频
    逐像素中位数，两者**不等价**。固定机位下可用；**相机移动时必须重新评估**。
@@ -161,7 +161,7 @@ PC 端 CPU 三模型串行约 **660 ms/帧**（1920×1080）。
   违反「不得伪造 hand bbox」的要求；
 - ✅ hand 训练仍在继续（冻结时约 epoch 23，在它**自己的域**上 best mAP50 0.979）；
 - ✅ **换权重不需要改接口**：训练完成后只替换
-  `models/hand_yolov8n_gray_interface_v1.onnx`，输入/输出/类别/C++ API 全部不变；
+  `models/hand_yolov8n_gray_final_v2_960.onnx`，输入/输出/类别/C++ API 全部不变；
 - ⚠️ 用域内数据改善 hand 属于**非阻塞的下一阶段**，不影响现在把接口交给 B 联调。
 
 **这对联调意味着**：ball 与 racket 已有真实输出（样例视频 40 帧里 ball 检出 **29** 帧、
@@ -170,3 +170,16 @@ B 可以先接上接口打通链路；hand 的域内可用性需要后续训练/
 
 > 本节的量化证据也记录在
 > `artifacts/files/reports/HAND_DOMAIN_GAP_FINDING.json`。
+
+## 11. V2.2 变更（相对 V2.1）
+
+| 项 | V2.1 | **V2.2** |
+| --- | --- | --- |
+| hand 模型 | `hand_yolov8n_gray_interface_v1.onnx`（640） | **`hand_yolov8n_gray_final_v2_960.onnx`（960）** |
+| hand 域内 Recall | 0.0000 | **0.6111** |
+| hand 域内 AP50 | 0.0000 | **0.3789** |
+| ball / racket | 不变 | **不变** |
+| C++ 输入尺寸 | 单一全局 640 | **每个模型从自己的 ONNX input shape 自动读取** |
+| 接口 | —— | **完全不变**（GRAY8 进，ball/hand/racket 原图坐标出） |
+
+**重要（实现说明）**：hand 是 960、racket 是 640，两者**各自独立**。引擎在 load 时读取每个 ONNX 的 input shape，据此决定各自的 letterbox 尺寸；任何形状不一致都会在 `warnings` 里明确报错（如 `YOLO_INPUT_CONTRACT_MISMATCH`），**不会静默返回空检测**。

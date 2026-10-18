@@ -60,23 +60,38 @@ std::vector<float> imageToNchw(const cv::Mat &bgr, int size);
 class YoloDetector {
  public:
   // `class_names` maps class index -> name (e.g. {0: "hand"} or {0:"ball",1:"racket"}).
+  //
+  // The square input resolution is read from THIS model's own input shape, so a
+  // 960 hand model and a 640 racket model can coexist without a global setting.
   bool load(const std::string &path, const std::vector<std::string> &class_names,
             const Config &config, bool use_cuda, std::string *error);
 
   bool ok() const { return session_.ok(); }
 
+  // Square input resolution actually used, derived from the ONNX input shape.
+  int imgsz() const { return imgsz_; }
+
   // Runs on the provided gray3 image and returns accepted boxes in ORIGINAL
   // coordinates. `conf_threshold` filters after the single inference pass.
-  std::vector<Box> detect(const cv::Mat &gray3, float conf_threshold, int out_w, int out_h);
+  //
+  // `error` is filled whenever the call cannot produce a trustworthy result
+  // (input-shape mismatch, tensor-size mismatch, failed inference). Callers MUST
+  // surface it: a silent empty vector would look like "no hands in this frame".
+  std::vector<Box> detect(const cv::Mat &gray3, float conf_threshold, int out_w, int out_h,
+                          std::string *error = nullptr);
 
   const std::vector<std::string> &classNames() const { return class_names_; }
 
   void release() { session_.release(); }
 
  private:
+  // Verifies the tensor we are about to build matches the graph's declared input.
+  bool validateInputAgainstModel(size_t tensor_elems, std::string *error) const;
+
   OrtSession session_;
   std::vector<std::string> class_names_;
   Config config_;
+  int imgsz_ = 0;  // derived per model at load time
 };
 
 // ---------------------------------------------------------------- BallTrack
