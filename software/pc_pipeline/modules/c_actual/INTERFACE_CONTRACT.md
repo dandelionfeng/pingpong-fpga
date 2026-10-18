@@ -1,6 +1,6 @@
 # C 端感知 —— INTERFACE CONTRACT（冻结）
 
-版本：**C_ACTUAL_INTERFACE_V2_2**
+版本：**C_ACTUAL_INTERFACE_V2_3**
 
 本文件是 C 与 A / B 的唯一正式接口约定。**换模型权重不得改变本文件描述的任何内容。**
 
@@ -140,7 +140,7 @@
 - C++ API 签名（`load` / `inferGray` / `reset`）
 - `DetectorBackend::infer(context, stop, timeoutMs)` 与 `mode()`
 
-## 8. 各检测器的输入尺寸（V2.2）
+## 8. 各检测器的输入尺寸（V2.3）
 
 hand 与 racket 使用**不同的**输入分辨率，各自从**自己的 ONNX input shape** 读取：
 

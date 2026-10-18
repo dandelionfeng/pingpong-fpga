@@ -11,6 +11,7 @@
 
 #include <cmath>
 #include <cstdlib>
+#include <fstream>
 #include <iostream>
 #include <string>
 #include <vector>
@@ -192,7 +193,7 @@ void testBallTrackWindowBookkeeping() {
   const std::string root(dir);
   c_actual::ModelPaths paths;
   paths.ball_track = root + "/balltrack_tracknetv3.onnx";
-  paths.hand = root + "/hand_yolov8n_gray_interface_v1.onnx";
+  paths.hand = root + "/hand_yolov8n_gray_final_v3_960.onnx";
   paths.racket = root + "/racket_yolov8n_gray.onnx";
   c_actual::Config config;
   c_actual::CPerceptionEngine engine;
@@ -238,7 +239,7 @@ void testBallTrackChannelLayoutWithModels() {
   const std::string root(dir);
   c_actual::ModelPaths paths;
   paths.ball_track = root + "/balltrack_tracknetv3.onnx";
-  paths.hand = root + "/hand_yolov8n_gray_interface_v1.onnx";
+  paths.hand = root + "/hand_yolov8n_gray_final_v3_960.onnx";
   paths.racket = root + "/racket_yolov8n_gray.onnx";
   c_actual::Config config;
   c_actual::CPerceptionEngine engine;
@@ -306,10 +307,20 @@ void testPerDetectorInputSize() {
     return;
   }
   const std::string root(dir);
+  // Accept either the shipped package names or the short names used by earlier
+  // scratch directories, so the test can run against a delivered ZIP as-is.
+  const auto pick = [&root](const std::vector<std::string> &candidates) {
+    for (const auto &name : candidates) {
+      const std::string full = root + "/" + name;
+      if (std::ifstream(full).good()) return full;
+    }
+    return root + "/" + candidates.front();
+  };
   c_actual::ModelPaths paths;
-  paths.ball_track = root + "/ball.onnx";
-  paths.hand = root + "/hand960.onnx";
-  paths.racket = root + "/racket640.onnx";
+  paths.ball_track = pick({"balltrack_tracknetv3.onnx", "ball.onnx"});
+  paths.hand = pick({"hand_yolov8n_gray_final_v3_960.onnx",
+                     "hand_yolov8n_gray_final_v2_960.onnx", "hand960.onnx"});
+  paths.racket = pick({"racket_yolov8n_gray.onnx", "racket640.onnx"});
   c_actual::Config config;
   c_actual::CPerceptionEngine engine;
   std::string error;
