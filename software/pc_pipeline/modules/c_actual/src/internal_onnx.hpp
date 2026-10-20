@@ -71,6 +71,12 @@ class YoloDetector {
   // Square input resolution actually used, derived from the ONNX input shape.
   int imgsz() const { return imgsz_; }
 
+  // Number of classes declared by the output channel count (shape[1] - 4).
+  // Returns 0 when the graph declares a dynamic anchor/class dimension, i.e.
+  // "cannot be known before running". Used to reject a graph whose class count
+  // contradicts the fixed class order a caller relies on.
+  int numClasses() const { return num_classes_; }
+
   // Runs on the provided gray3 image and returns accepted boxes in ORIGINAL
   // coordinates. `conf_threshold` filters after the single inference pass.
   //
@@ -92,6 +98,7 @@ class YoloDetector {
   std::vector<std::string> class_names_;
   Config config_;
   int imgsz_ = 0;  // derived per model at load time
+  int num_classes_ = 0;  // derived from the output shape, 0 when dynamic
 };
 
 // ---------------------------------------------------------------- BallTrack

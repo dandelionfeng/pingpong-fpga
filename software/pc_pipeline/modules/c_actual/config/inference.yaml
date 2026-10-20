@@ -1,9 +1,9 @@
-# C 端感知 —— 正式推理配置（C_ACTUAL_INTERFACE_V2_1）
+# C 端感知 —— 正式推理配置（C_ACTUAL_INTERFACE_V2_4）
 #
 # 本文件是 C++ 引擎与 Python 侧共享的唯一阈值来源。
 # 接口已冻结：修改阈值不影响接口，但换模型权重时必须保持字段含义不变。
 
-version: C_ACTUAL_INTERFACE_V2_3
+version: C_ACTUAL_INTERFACE_V2_4
 
 input:
   # 唯一允许的输入格式
@@ -11,6 +11,22 @@ input:
   gray3_conversion: internal    # 调用方不需要自己做 gray3 / resize / normalize
   coordinates: original_image   # 所有输出坐标均为原图坐标
   size: dynamic                 # 尺寸动态读取，不写死；实际目标 1280x720 per eye
+
+unified:
+  # V2.4 可选路径：一个 3 类 ONNX 同时给出 hand 与 racket，每帧只跑一次 YOLO。
+  # 一旦设置，下面的 hand.model / racket.model 会被忽略（不必提供）。
+  # 类别顺序是模型契约的一部分：0=ball, 1=hand, 2=racket，加载时校验，不符即报
+  # UNIFIED_MODEL_CLASS_MISMATCH，绝不把 racket 当 hand 输出。
+  enabled: false                # CLI 以 --unified-model 打开；此处仅作文档
+  model: models/pingpong_yolov8n_gray_3cls_960.onnx
+  classes:
+    0: ball                     # 保留但不输出：ball 唯一来源仍是 BallTrack
+    1: hand
+    2: racket
+  input_size: 960               # 由该 ONNX 自己的 input shape 读取，此处仅记录
+  hand_conf: 0.25               # 与下面的 hand.conf 同一语义
+  racket_conf: 0.30             # 与下面的 racket.conf 同一语义
+  ball_class_emitted: false     # 冻结接口里 ball 只有一个来源
 
 ball:
   backend: balltrack            # balltrack | yolo
@@ -26,6 +42,8 @@ ball:
 
 hand:
   backend: yolo
+  # V2.4：默认交付统一三类模型；此段保留为分离模型（legacy）模式，
+  # 未给 --unified-model 时仍然完全按 V2.3 行为工作。
   model: models/hand_yolov8n_gray_final_v3_960.onnx
   classes:
     0: hand

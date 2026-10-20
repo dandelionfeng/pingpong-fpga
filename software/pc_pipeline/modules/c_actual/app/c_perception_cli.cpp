@@ -39,6 +39,7 @@ struct Options {
   std::string ball_model;
   std::string hand_model;
   std::string racket_model;
+  std::string unified_model;
   std::string config;
   std::string output;
   std::string overlay;
@@ -57,18 +58,24 @@ void usage() {
   std::cout <<
       "c_perception_cli - C module gray3 perception demo (ball / hand / racket)\n"
       "\n"
-      "Usage:\n"
+      "Usage (unified 3-class model - recommended, ONE YOLO pass for hand+racket):\n"
       "  c_perception_cli --video serve.mp4 --ball-model models\\balltrack_tracknetv3.onnx \\\n"
-      "      --hand-model models\\hand_yolov8n_gray.onnx \\\n"
-      "      --racket-model models\\racket_yolov8n.onnx --output result.jsonl\n"
+      "      --unified-model models\\pingpong_yolov8n_gray_3cls_960.onnx --output result.jsonl\n"
+      "\n"
+      "Usage (legacy two-detector mode - unchanged V2.3 behaviour):\n"
+      "  c_perception_cli --video serve.mp4 --ball-model models\\balltrack_tracknetv3.onnx \\\n"
+      "      --hand-model models\\hand_yolov8n_gray_final_v3_960.onnx \\\n"
+      "      --racket-model models\\racket_yolov8n_gray.onnx --output result.jsonl\n"
       "  c_perception_cli --image frame.png --ball-model ... --hand-model ... --racket-model ...\n"
       "\n"
       "Options:\n"
       "  --image <path>        Run a single image (colour or gray; converted to GRAY8 first)\n"
       "  --video <path>        Run a video frame by frame\n"
       "  --ball-model <path>   BallTrack TrackNetV3 ONNX (required)\n"
-      "  --hand-model <path>   Hand YOLOv8n ONNX, 1 class (required)\n"
-      "  --racket-model <path> Racket YOLO ONNX (required)\n"
+      "  --unified-model <path> One 3-class ONNX (0=ball,1=hand,2=racket); when set it replaces\n"
+      "                        --hand-model/--racket-model and runs a single inference pass\n"
+      "  --hand-model <path>   Hand YOLOv8n ONNX, 1 class (required without --unified-model)\n"
+      "  --racket-model <path> Racket YOLO ONNX (required without --unified-model)\n"
       "  --config <path>       inference.yaml (optional; defaults are used if omitted)\n"
       "  --output <path>       Write one JSON object per line (.jsonl)\n"
       "  --overlay <path>      Write an annotated .mp4 (video mode)\n"
@@ -147,7 +154,11 @@ std::string resultJson(const c_actual::PerceptionResult &r) {
   os << "],\"infer_ms\":" << r.infer_ms
      << ",\"model_versions\":{\"ball\":\"" << jsonEscape(r.ball_model)
      << "\",\"hand\":\"" << jsonEscape(r.hand_model)
-     << "\",\"racket\":\"" << jsonEscape(r.racket_model) << "\"}";
+     << "\",\"racket\":\"" << jsonEscape(r.racket_model) << "\"";
+  if (!r.unified_model.empty()) {
+    os << ",\"unified\":\"" << jsonEscape(r.unified_model) << "\"";
+  }
+  os << "}";
   if (!r.warnings.empty()) {
     os << ",\"warnings\":[";
     for (size_t i = 0; i < r.warnings.size(); ++i) {
@@ -219,6 +230,8 @@ bool parseArgs(int argc, char **argv, Options *opt, std::string *error) {
       if (!next(&opt->video)) return false;
     } else if (arg == "--ball-model") {
       if (!next(&opt->ball_model)) return false;
+    } else if (arg == "--unified-model") {
+      if (!next(&opt->unified_model)) return false;
     } else if (arg == "--hand-model") {
       if (!next(&opt->hand_model)) return false;
     } else if (arg == "--racket-model") {
@@ -262,8 +275,12 @@ bool parseArgs(int argc, char **argv, Options *opt, std::string *error) {
     *error = "either --image or --video is required";
     return false;
   }
-  if (opt->ball_model.empty() || opt->hand_model.empty() || opt->racket_model.empty()) {
-    *error = "MISSING_MODEL: --ball-model, --hand-model and --racket-model are all required";
+  if (opt->ball_model.empty()) {
+    *error = "MISSING_MODEL: --ball-model is required";
+    return false;
+  }
+  if (opt->unified_model.empty() && (opt->hand_model.empty() || opt->racket_model.empty())) {
+    *error = "MISSING_MODEL: pass --unified-model, or both --hand-model and --racket-model";
     return false;
   }
   return true;
@@ -352,6 +369,19 @@ std::vector<std::string> utf8Args() {
 }  // namespace
 #endif
 
+namespace {
+// std::ifstream's narrow constructor interprets the path with the ANSI code page
+// on Windows, so a UTF-8 path containing non-ASCII characters silently fails to
+// open. cv::imread has the same limitation; this is the byte-decoding fallback.
+void openInput(std::ifstream &stream, const std::string &utf8_path) {
+#ifdef _WIN32
+  stream.open(std::filesystem::path(utf8Path(utf8_path)), std::ios::binary);
+#else
+  stream.open(utf8_path, std::ios::binary);
+#endif
+}
+}  // namespace
+
 int main(int argc, char **argv) {
 #ifdef _WIN32
   // Render non-ASCII output correctly in the console too.
@@ -398,6 +428,7 @@ int main(int argc, char **argv) {
   paths.ball_track = opt.ball_model;
   paths.hand = opt.hand_model;
   paths.racket = opt.racket_model;
+  paths.unified = opt.unified_model;
 
   c_actual::Config config;
   config.base_conf = opt.base_conf;
@@ -409,21 +440,34 @@ int main(int argc, char **argv) {
   c_actual::CPerceptionEngine engine;
   if (!engine.load(paths, config, &error)) {
     std::cerr << "ERROR: " << error << "\n";
-    std::cerr << "Hint: pass --ball-model / --hand-model / --racket-model with existing .onnx files.\n";
+    std::cerr << "Hint: pass --ball-model plus either --unified-model, or both "
+                 "--hand-model and --racket-model, with existing .onnx files.\n";
     return 3;
   }
 
   std::cout << "C perception engine ready\n";
   std::cout << "  " << engine.versionString() << "\n";
   std::cout << "  ball   : " << paths.ball_track << "\n";
-  std::cout << "  hand   : " << paths.hand << "\n";
-  std::cout << "  racket : " << paths.racket << "\n";
+  if (engine.usingUnifiedDetector()) {
+    std::cout << "  unified: " << paths.unified << "  (ONE pass -> hand + racket; 960 class order "
+                 "ball=0 hand=1 racket=2)\n";
+    std::cout << "  note   : the unified model's ball class is NOT emitted; "
+                 "BallTrack stays the only ball source\n";
+    if (!paths.hand.empty() || !paths.racket.empty()) {
+      std::cout << "  ignored: " << paths.hand << " / " << paths.racket << "\n";
+    }
+  } else {
+    std::cout << "  hand   : " << paths.hand << "\n";
+    std::cout << "  racket : " << paths.racket << "\n";
+  }
   std::cout << "  base_conf=" << opt.base_conf << " hand_conf=" << opt.hand_conf
             << " racket_conf=" << opt.racket_conf << "\n";
   std::cout << "  input  : GRAY8 (CV_8UC1); gray3 conversion and all preprocessing are internal\n";
 
   if (opt.self_test) {
-    std::cout << "\nSELF-TEST OK: all three models loaded.\n";
+    std::cout << "\nSELF-TEST OK: all required models loaded"
+              << (engine.usingUnifiedDetector() ? " (unified 3-class)" : " (hand + racket)")
+              << ".\n";
     return 0;
   }
 
@@ -452,8 +496,10 @@ int main(int argc, char **argv) {
   if (!opt.image.empty()) {
     cv::Mat loaded = cv::imread(opt.image, cv::IMREAD_UNCHANGED);
     if (loaded.empty()) {
-      // Windows non-ASCII paths: fall back to byte decoding.
-      std::ifstream in(opt.image, std::ios::binary);
+      // Windows non-ASCII paths: OpenCV's imread goes through the ANSI code page,
+      // so fall back to opening the bytes ourselves with a wide path.
+      std::ifstream in;
+      openInput(in, opt.image);
       if (!in) {
         std::cerr << "ERROR: cannot read image " << opt.image << "\n";
         return 5;

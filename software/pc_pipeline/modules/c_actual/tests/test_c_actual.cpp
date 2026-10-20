@@ -146,10 +146,20 @@ void testEndToEnd() {
     return;
   }
   const std::string root(dir);
+  // Accept the shipped package names as well as the short names earlier scratch
+  // directories used, so this test runs against a delivered ZIP unmodified.
+  const auto pick = [&root](const std::vector<std::string> &candidates) {
+    for (const auto &name : candidates) {
+      if (std::ifstream(root + "/" + name).good()) return root + "/" + name;
+    }
+    return root + "/" + candidates.front();
+  };
   c_actual::ModelPaths paths;
-  paths.ball_track = root + "/balltrack_tracknetv3.onnx";
-  paths.hand = root + "/hand_yolov8n_gray.onnx";
-  paths.racket = root + "/racket_yolov8n.onnx";
+  paths.ball_track = pick({"balltrack_tracknetv3.onnx", "ball.onnx"});
+  paths.hand = pick({"hand_yolov8n_gray_final_v3_960.onnx",
+                     "hand_yolov8n_gray_final_v2_960.onnx", "hand_yolov8n_gray.onnx",
+                     "hand960.onnx"});
+  paths.racket = pick({"racket_yolov8n_gray.onnx", "racket640.onnx"});
 
   c_actual::Config config;
   c_actual::CPerceptionEngine engine;
@@ -350,6 +360,95 @@ void testPerDetectorInputSize() {
   }
   check(!reported_error, "no input-shape/inference error for the 960 hand model");
 }
+void testUnifiedDetector() {
+  std::cout << "unified 3-class detector (one graph serves hand + racket)" << std::endl;
+  const char *dir = std::getenv("C_ACTUAL_MODELS_UNIFIED_DIR");
+  if (!dir) {
+    std::cout << "  [SKIP] C_ACTUAL_MODELS_UNIFIED_DIR not set" << std::endl;
+    return;
+  }
+  const std::string root(dir);
+  const auto pick = [&root](const std::vector<std::string> &candidates) {
+    for (const auto &name : candidates) {
+      const std::string full = root + "/" + name;
+      if (std::ifstream(full).good()) return full;
+    }
+    return root + "/" + candidates.front();
+  };
+
+  c_actual::ModelPaths paths;
+  paths.ball_track = pick({"balltrack_tracknetv3.onnx", "ball.onnx"});
+  paths.unified = pick({"pingpong_yolov8n_gray_3cls_960.onnx", "unified_3cls.onnx",
+                        "unified.onnx"});
+  // hand/racket are deliberately left empty: the unified graph must replace them.
+  c_actual::Config config;
+  c_actual::CPerceptionEngine engine;
+  std::string error;
+  if (!engine.load(paths, config, &error)) {
+    check(false, std::string("unified model should load without hand/racket paths: ") + error);
+    return;
+  }
+  check(true, "loads with only ball_track + unified (hand/racket paths empty)");
+  check(engine.usingUnifiedDetector(), "engine reports unified mode");
+  check(engine.debugHandInputSize() == 960 && engine.debugRacketInputSize() == 960,
+        "hand and racket both read the SAME 960 input from the unified graph");
+  check(engine.versionString().find("unified") != std::string::npos,
+        "version string names the unified model");
+
+  cv::Mat gray(720, 1280, CV_8UC1, cv::Scalar(114));
+  c_actual::FrameMeta meta;
+  bool any_error = false;
+  for (int i = 0; i < 6; ++i) {
+    meta.frame_id = static_cast<uint64_t>(i);
+    const auto r = engine.inferGray(gray, meta);
+    for (const auto &w : r.warnings) {
+      if (w.find("MISMATCH") != std::string::npos ||
+          w.find("YOLO_INFERENCE_FAILED") != std::string::npos ||
+          w.find("INVALID") != std::string::npos) {
+        any_error = true;
+        std::cout << "  [diag] warning: " << w << std::endl;
+      }
+    }
+    if (i == 5) {
+      check(!r.unified_model.empty(), "result reports which graph served hand+racket");
+      check(r.hand_model == r.unified_model && r.racket_model == r.unified_model,
+            "hand_model and racket_model both point at the unified graph");
+      // The invariant that matters: nothing but hand/racket may be emitted. A
+      // leaked ball-class box would show up as a third class name.
+      bool class_ok = true;
+      for (const auto &b : r.hands) class_ok = class_ok && b.class_name == "hand";
+      for (const auto &b : r.rackets) class_ok = class_ok && b.class_name == "racket";
+      check(class_ok, "only hand/racket boxes are emitted (the graph's ball class is dropped)");
+      check(r.ball.state != c_actual::BallState::kInvalid,
+            "ball still comes from BallTrack in unified mode");
+    }
+  }
+  check(!any_error, "no input-shape/inference error from the unified graph");
+}
+
+void testUnifiedClassCountGuard() {
+  std::cout << "unified class-count guard (a wrong graph must be rejected)" << std::endl;
+  const char *dir = std::getenv("C_ACTUAL_MODELS_UNIFIED_DIR");
+  const char *mixed = std::getenv("C_ACTUAL_MODELS_960_DIR");
+  if (!dir || !mixed) {
+    std::cout << "  [SKIP] needs C_ACTUAL_MODELS_UNIFIED_DIR + C_ACTUAL_MODELS_960_DIR"
+              << std::endl;
+    return;
+  }
+  const std::string root(dir), root2(mixed);
+  c_actual::ModelPaths paths;
+  paths.ball_track = root + "/balltrack_tracknetv3.onnx";
+  // A 1-class hand graph handed in as the "3-class" model: class ids 1 and 2 do
+  // not exist, so this must fail loudly instead of emitting racket as hand.
+  paths.unified = root2 + "/hand_yolov8n_gray_final_v3_960.onnx";
+  c_actual::Config config;
+  c_actual::CPerceptionEngine engine;
+  std::string error;
+  const bool ok = engine.load(paths, config, &error);
+  check(!ok, "a 1-class graph is rejected as the unified 3-class model");
+  check(!ok && error.find("UNIFIED_MODEL_CLASS_MISMATCH") != std::string::npos,
+        "rejection names UNIFIED_MODEL_CLASS_MISMATCH");
+}
 }  // namespace
 
 int main() {
@@ -363,6 +462,8 @@ int main() {
   testBallTrackWindowBookkeeping();
   testBallTrackChannelLayoutWithModels();
   testPerDetectorInputSize();
+  testUnifiedDetector();
+  testUnifiedClassCountGuard();
 
 
   std::cout << "\n" << (checks - failures) << "/" << checks << " checks passed\n";

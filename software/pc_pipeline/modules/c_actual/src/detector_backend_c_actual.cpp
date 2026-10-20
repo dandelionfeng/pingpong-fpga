@@ -25,6 +25,11 @@
 //   * BallTrack is temporal, so this backend keeps one engine per eye. Results
 //     are still produced per frame; the engine returns WARMUP until its window
 //     is full and never duplicates a frame.
+//
+//   * UNIFIED MODE (V2.4): when CActualConfig::unified_model is set, hand and
+//     racket come from ONE 3-class inference pass. The class ids of that graph
+//     are fixed (0=ball, 1=hand, 2=racket); its ball class is dropped because the
+//     frozen output contract has exactly one ball source, BallTrack.
 
 #include "pipeline/pipeline.hpp"
 
@@ -81,6 +86,9 @@ struct CActualConfig {
   std::string ball_model;
   std::string hand_model;
   std::string racket_model;
+  // Optional single 3-class ONNX. When set, hand+racket come from ONE pass and
+  // hand_model/racket_model are ignored. Empty keeps the V2.3 two-detector path.
+  std::string unified_model;
   float base_conf = 0.02f;
   float hand_conf = 0.25f;
   float racket_conf = 0.30f;
@@ -88,7 +96,9 @@ struct CActualConfig {
   bool verbose = false;
 
   bool complete() const {
-    return !ball_model.empty() && !hand_model.empty() && !racket_model.empty();
+    if (ball_model.empty()) return false;
+    if (!unified_model.empty()) return true;
+    return !hand_model.empty() && !racket_model.empty();
   }
 };
 
@@ -110,6 +120,7 @@ class CPerceptionDetector final : public DetectorBackend {
     paths.ball_track = config_.ball_model;
     paths.hand = config_.hand_model;
     paths.racket = config_.racket_model;
+    paths.unified = config_.unified_model;
 
     c_actual::Config config;
     config.base_conf = config_.base_conf;
@@ -125,6 +136,7 @@ class CPerceptionDetector final : public DetectorBackend {
         return false;
       }
     }
+    unified_ = left_.usingUnifiedDetector();
     loaded_ = true;
     return true;
   }
@@ -216,11 +228,14 @@ class CPerceptionDetector final : public DetectorBackend {
 
     result.boxes = boxes;
     result.meta.model_version =
-        "c_actual-v2|balltrack-gray3|hand-yolov8n-gray3|racket-yolov8n-gray3";
+        unified_ ? "c_actual-v2.4|balltrack-gray3|unified-3class-gray3@960"
+                 : "c_actual-v2|balltrack-gray3|hand-yolov8n-gray3|racket-yolov8n-gray3";
     return result;
   }
 
-  std::string mode() const override { return "actual-model-c-actual-v2"; }
+  std::string mode() const override {
+    return unified_ ? "actual-model-c-actual-v2.4-unified" : "actual-model-c-actual-v2";
+  }
 
  private:
   CActualConfig config_;
@@ -230,6 +245,7 @@ class CPerceptionDetector final : public DetectorBackend {
   c_actual::CPerceptionEngine right_;
   std::mutex mutex_;
   bool loaded_ = false;
+  bool unified_ = false;
 };
 
 // ---------------------------------------------------------------------------

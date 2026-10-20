@@ -28,9 +28,11 @@ struct CPerceptionEngine::Impl {
   BallTrack ball;
   YoloDetector hand;
   YoloDetector racket;
+  YoloDetector unified;   // optional single 3-class detector
   bool ball_loaded = false;
   bool hand_loaded = false;
   bool racket_loaded = false;
+  bool unified_loaded = false;
 };
 
 CPerceptionEngine::CPerceptionEngine() : impl_(new Impl()) {}
@@ -40,6 +42,7 @@ CPerceptionEngine::~CPerceptionEngine() {
     impl_->ball.release();
     impl_->hand.release();
     impl_->racket.release();
+    impl_->unified.release();
   }
 }
 
@@ -60,6 +63,39 @@ bool CPerceptionEngine::load(const ModelPaths &paths, const Config &config, std:
     if (error) *error = "MISSING_MODEL or invalid ball model '" + paths.ball_track +
                         "': " + local_error;
     return false;
+  }
+
+  // ---- optional unified 3-class detector --------------------------------
+  // Loaded INSTEAD OF the two separate detectors. The class order of the graph
+  // is part of the model contract (0=ball, 1=hand, 2=racket) and is checked here
+  // so a wrong graph cannot silently deliver racket boxes as hands.
+  if (!paths.unified.empty()) {
+    impl_->unified_loaded = impl_->unified.load(
+        paths.unified, {"ball", "hand", "racket"}, config, config.use_cuda, &local_error);
+    if (!impl_->unified_loaded) {
+      if (error) *error = "MISSING_MODEL or invalid unified model '" + paths.unified +
+                          "': " + local_error;
+      return false;
+    }
+    const int declared = impl_->unified.numClasses();
+    if (declared != 0 && declared != 3) {
+      impl_->unified.release();
+      impl_->unified_loaded = false;
+      if (error) {
+        *error = "UNIFIED_MODEL_CLASS_MISMATCH: expected 3 classes "
+                 "(0=ball, 1=hand, 2=racket) but the graph declares " +
+                 std::to_string(declared);
+      }
+      return false;
+    }
+    // The separate paths are ignored on purpose; make that visible rather than
+    // silently mixing three models into one frame.
+    if (!paths.hand.empty() || !paths.racket.empty()) {
+      std::fprintf(stderr,
+                   "[c_actual] unified model is set: the --hand-model/--racket-model "
+                   "paths are ignored\n");
+    }
+    return true;
   }
 
   if (paths.hand.empty()) {
@@ -98,15 +134,25 @@ void CPerceptionEngine::reset() {
   impl_->ball.reset();
 }
 
-int CPerceptionEngine::debugHandInputSize() const { return impl_->hand.imgsz(); }
+int CPerceptionEngine::debugHandInputSize() const {
+  return impl_->unified_loaded ? impl_->unified.imgsz() : impl_->hand.imgsz();
+}
 
-int CPerceptionEngine::debugRacketInputSize() const { return impl_->racket.imgsz(); }
+int CPerceptionEngine::debugRacketInputSize() const {
+  return impl_->unified_loaded ? impl_->unified.imgsz() : impl_->racket.imgsz();
+}
+
+bool CPerceptionEngine::usingUnifiedDetector() const { return impl_->unified_loaded; }
 
 std::vector<float> CPerceptionEngine::debugBallInput() const {
   return impl_->ball.buildInputForTest();
 }
 
 std::string CPerceptionEngine::versionString() const {
+  if (impl_->unified_loaded) {
+    return "c_actual-v2.4-unified | ball=balltrack-gray3 | "
+           "hand+racket=unified-3class-gray3@" + std::to_string(impl_->unified.imgsz());
+  }
   return "c_actual-v2.3-interface | ball=balltrack-gray3 | "
          "hand=yolov8n-hand-gray3@960 | racket=yolov8n-racket-gray3@640";
 }
@@ -128,8 +174,16 @@ PerceptionResult CPerceptionEngine::inferGray(const cv::Mat &gray, const FrameMe
   result.width = gray.cols;
   result.height = gray.rows;
   result.ball_model = impl_->paths.ball_track;
-  result.hand_model = impl_->paths.hand;
-  result.racket_model = impl_->paths.racket;
+  if (impl_->unified_loaded) {
+    // One graph serves both classes; reporting it in both fields keeps the
+    // model_version output truthful.
+    result.unified_model = impl_->paths.unified;
+    result.hand_model = impl_->paths.unified;
+    result.racket_model = impl_->paths.unified;
+  } else {
+    result.hand_model = impl_->paths.hand;
+    result.racket_model = impl_->paths.racket;
+  }
 
   // One gray3 derivation per frame; every model consumes it.
   const cv::Mat gray3 = preprocess::grayToGray3(gray);
@@ -140,6 +194,40 @@ PerceptionResult CPerceptionEngine::inferGray(const cv::Mat &gray, const FrameMe
     result.warnings.push_back(
         "ball WARMUP: BallTrack needs " + std::to_string(impl_->config.ball_seq_len) +
         " frames of real history; no prediction was made and no frame was duplicated");
+  }
+
+  if (impl_->unified_loaded) {
+    // ---- hand + racket from ONE inference pass ----
+    std::string unified_error;
+    std::vector<Box> raw =
+        impl_->unified.detect(gray3, impl_->config.base_conf, gray.cols, gray.rows,
+                              &unified_error);
+    if (!unified_error.empty()) {
+      result.warnings.push_back("unified " + unified_error);
+      std::fprintf(stderr, "[c_actual] unified detector error: %s\n", unified_error.c_str());
+    }
+    for (Box &box : raw) {
+      if (box.class_name == "hand") {
+        if (box.confidence >= impl_->config.hand_conf) {
+          box.class_name = "hand";
+          result.hands.push_back(box);
+        }
+      } else if (box.class_name == "racket") {
+        if (box.confidence >= impl_->config.racket_conf) {
+          box.class_name = "racket";
+          result.rackets.push_back(box);
+        }
+      }
+      // "ball" is intentionally dropped: the frozen interface has exactly one
+      // ball source (BallTrack). Emitting a second, differently-defined ball box
+      // would silently compete with it in module B.
+    }
+    const auto finished = std::chrono::steady_clock::now();
+    result.infer_ms =
+        std::chrono::duration_cast<std::chrono::duration<double, std::milli>>(finished -
+                                                                             started)
+            .count();
+    return result;
   }
 
   // ---- hand (single inference pass at base_conf, threshold applied after) ----

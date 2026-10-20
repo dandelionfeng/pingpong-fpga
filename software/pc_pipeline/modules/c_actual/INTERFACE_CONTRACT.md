@@ -1,8 +1,12 @@
 # C 端感知 —— INTERFACE CONTRACT（冻结）
 
-版本：**C_ACTUAL_INTERFACE_V2_3**
+版本：**C_ACTUAL_INTERFACE_V2_4**
 
 本文件是 C 与 A / B 的唯一正式接口约定。**换模型权重不得改变本文件描述的任何内容。**
+
+V2.4 相对 V2.3 **只增加一条可选模型路径**（见第 9 节：一个 3 类 ONNX 同时给 hand 与
+racket）。不传该模型时，引擎行为与 V2.3 完全一致；输入的 GRAY8、输出类别、JSON 字段、
+坐标空间、C++ API 签名全部未变。
 
 ---
 
@@ -140,14 +144,57 @@
 - C++ API 签名（`load` / `inferGray` / `reset`）
 - `DetectorBackend::infer(context, stop, timeoutMs)` 与 `mode()`
 
-## 8. 各检测器的输入尺寸（V2.3）
+## 8. 各检测器的输入尺寸（V2.4）
 
-hand 与 racket 使用**不同的**输入分辨率，各自从**自己的 ONNX input shape** 读取：
+默认交付走**统一三类模型**：hand 与 racket 来自同一个 960×960 图，每帧只跑一次 YOLO。
+分离模型路径（V2.3 legacy）仍保留，两者使用**不同的**输入分辨率，各自从**自己的 ONNX
+input shape** 读取：
 
-| 检测器 | 输入尺寸 |
-| --- | --- |
-| hand | **960 × 960** |
-| racket | **640 × 640** |
-| ball (BallTrack) | 512 × 288（官方 TrackNetV3 契约，固定） |
+| 模式 | 检测器 | 输入尺寸 |
+| --- | --- | --- |
+| 统一（默认） | unified（hand + racket 一次前向） | **960 × 960** |
+| 统一（默认） | ball (BallTrack) | 512 × 288（官方 TrackNetV3 契约，固定） |
+| 分离（legacy） | hand | **960 × 960** |
+| 分离（legacy） | racket | **640 × 640** |
+| 两种模式 | ball (BallTrack) | 512 × 288（官方 TrackNetV3 契约，固定） |
 
 调用方**不需要**关心这些数字，也不需要在配置里指定。若某个 ONNX 的输入形状与引擎构造的张量不一致，结果会在 `warnings` 中出现 `YOLO_INPUT_CONTRACT_MISMATCH` / `YOLO_TENSOR_SIZE_MISMATCH` / `YOLO_INFERENCE_FAILED` 等明确错误，**绝不会静默返回空检测**。
+
+---
+
+## 9. 统一三类模型（V2.4 新增，可选）
+
+一个 ONNX 同时输出 hand 与 racket，每帧只做 **一次** YOLO 前向。用途：板端 NPU 只需
+一个检测模型，部署与量化都少一半。
+
+### 9.1 类别顺序是契约
+
+```
+0 = ball     1 = hand     2 = racket
+```
+
+加载时用 ONNX 的输出通道数（`4 + classes`）校验。若不是 3 类，`load()` 直接失败并返回
+`UNIFIED_MODEL_CLASS_MISMATCH`。**绝不会把 racket 类当 hand 输出。**
+
+### 9.2 输出仍然是 `ball` / `hand` / `racket`
+
+- `hands` 只放 `hand` 类的框（阈值 `hand_conf`，默认 0.25）
+- `rackets` 只放 `racket` 类的框（阈值 `racket_conf`，默认 0.30）
+- **`ball` 类被丢弃，不进 `boxes`**：冻结接口里 ball 的唯一来源是 BallTrack。
+  一个 YOLO ball 框与 BallTrack 的热图球心定义不同，同时输出会让 B 拿到两个互相竞争的
+  球位置。这是有意为之，不是漏实现。
+
+### 9.3 兼容性影响（供 A / B 技术复核）
+
+| 项 | 影响 |
+| --- | --- |
+| 输入 `CV_8UC1` GRAY8 | 不变 |
+| 输出类别与 JSON schema | 不变（`model_versions` 增加一个可选 `unified` 字段） |
+| 坐标空间 | 不变（original eye pixels） |
+| `CPerceptionEngine::load/inferGray/reset` | 签名不变；`ModelPaths` 新增 `unified` 字段（默认空） |
+| `PerceptionResult` | 新增 `unified_model` 字段（默认空）；`hand_model`/`racket_model` 在统一模式下都指向同一图 |
+| 每帧 YOLO 前向次数 | 2 → 1（只影响耗时，不影响语义） |
+| `DetectorBackend::mode()` | 统一模式返回 `actual-model-c-actual-v2.4-unified`；分离模式仍是 `actual-model-c-actual-v2` |
+
+**如果 A/B 的代码按 `mode()` 字符串精确匹配 `actual-model-c-actual-v2`，需要改成前缀匹配
+或同时接受两个值。** 这一点请在评审时确认。

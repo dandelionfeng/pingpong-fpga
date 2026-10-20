@@ -29,6 +29,18 @@ struct ModelPaths {
   std::string ball_track;    // balltrack_tracknetv3.onnx (temporal, gray3)
   std::string hand;          // hand_yolov8n_gray.onnx     (1 class: hand)
   std::string racket;        // racket model onnx          (class: racket)
+  // OPTIONAL single 3-class detector (ball=0 / hand=1 / racket=2).
+  //
+  // When this path is non-empty the engine runs ONE YOLO inference per frame and
+  // serves BOTH hand and racket from it; `hand` and `racket` above are then
+  // ignored (they may stay empty). The class ids of this graph are fixed and are
+  // validated at load time: 0=ball, 1=hand, 2=racket.
+  //
+  // The ball class of this graph is NOT used: BallTrack remains the only ball
+  // source in the frozen interface (see INTERFACE_CONTRACT.md). A YOLO ball box
+  // would be a second, differently-defined ball observation and would silently
+  // compete with BallTrack.
+  std::string unified;
   // Optional: if empty, the ball/racket classes are read from the model itself.
   std::string ball_class_name = "ball";
   std::string racket_class_name = "racket";
@@ -103,6 +115,10 @@ struct PerceptionResult {
   std::vector<std::string> warnings;
   double infer_ms = 0.0;
   std::string ball_model, hand_model, racket_model;
+  // Non-empty only when a unified 3-class model served hand+racket. In that case
+  // hand_model and racket_model both point at this same graph, and exactly one
+  // YOLO inference ran for the frame.
+  std::string unified_model;
 };
 
 // ------------------------------------------------------------------- engine
@@ -134,9 +150,12 @@ class CPerceptionEngine {
 
   // Diagnostic: the square input resolution each detector derived from its OWN
   // ONNX graph. Proves hand and racket are independent (e.g. 960 vs 640) and
-  // that no single global imgsz is applied to both.
+  // that no single global imgsz is applied to both. When a unified model is
+  // loaded, both report the unified graph's size (one graph serves both classes).
   int debugHandInputSize() const;
   int debugRacketInputSize() const;
+  // True when hand+racket come from ONE 3-class graph instead of two detectors.
+  bool usingUnifiedDetector() const;
 
   const Config &config() const;
   const ModelPaths &paths() const;

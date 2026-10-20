@@ -234,6 +234,16 @@ bool YoloDetector::load(const std::string &path, const std::vector<std::string> 
     session_.release();
     return false;
   }
+
+  // ---- derive the class count from THIS model's output shape --------------
+  // Fixed exports declare [1, 4+classes, anchors]. A dynamic dimension leaves
+  // num_classes_ at 0 and callers must not rely on it.
+  num_classes_ = 0;
+  const std::vector<int64_t> out_shape = session_.outputShape();
+  if (out_shape.size() == 3 && out_shape[1] > 0) {
+    num_classes_ = static_cast<int>(out_shape[1]) - 4;
+    if (num_classes_ < 0) num_classes_ = 0;
+  }
   return true;
 }
 
