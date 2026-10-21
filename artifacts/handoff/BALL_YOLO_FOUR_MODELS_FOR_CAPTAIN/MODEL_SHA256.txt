@@ -1,0 +1,5 @@
+# sha256  bytes  delivered_file  original_source_path
+185a337ec9ed6c52e867c3748e889ef8fac56c855ce5cceb478a7213a1f4a17b  12218920  models/ball_yolo_v1_1280.onnx  artifacts/files/models/ball_yolo_v1/ball_yolov8n_gray_1280.onnx
+7d2da4eb27b07a515551e141fafaa7c3e34253a4498812d2e3da5138e85e3e36  12159554  models/ball_roboflow_960.onnx  artifacts/files/models/ball_rf_v1/ball_rf_v1_960.onnx
+f5ec1e7a19deada33486ab65bee2f7e251c1594cb9d777eae0d55b2971802d9d  12218920  models/ball_roboflow_1280.onnx  artifacts/files/models/ball_rf_v1/ball_rf_v1_1280.onnx
+d32b98d6a5a986b527654a7a34656a96d6d79a2702440bfffb36cf49dd685383  12159554  models/ball_v6_round2.onnx  artifacts/files/models/ball_fast_v2_scratch/ball_fast_v2_scratch_960.onnx

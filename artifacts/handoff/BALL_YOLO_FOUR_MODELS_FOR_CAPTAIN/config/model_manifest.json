@@ -1,0 +1,209 @@
+{
+  "package": "BALL_YOLO_FOUR_MODELS",
+  "generated_by": "codex/c-pc-detector",
+  "task": "hand four ball YOLO models to the captain; no accuracy ranking is included",
+  "preprocessing": {
+    "input": "BGR frame -> gray -> 3 identical channels -> letterbox to square -> /255 -> NCHW float32",
+    "colour": "gray3 (models were trained on gray three-channel input)"
+  },
+  "postprocessing": {
+    "head": "YOLOv8 detect head, raw xywh in input pixels",
+    "decode": "score = max over classes; class = argmax",
+    "nms": "class-aware, IoU 0.50 default, max_det 30",
+    "coordinates": "mapped back through the letterbox into ORIGINAL image pixels"
+  },
+  "models": [
+    {
+      "id": "ball_yolo_v1_1280",
+      "original_name": "ball_yolov8n_gray_1280.onnx",
+      "source_path": "artifacts/files/models/ball_yolo_v1/ball_yolov8n_gray_1280.onnx",
+      "delivered_file": "models/ball_yolo_v1_1280.onnx",
+      "bytes": 12218920,
+      "sha256": "185a337ec9ed6c52e867c3748e889ef8fac56c855ce5cceb478a7213a1f4a17b",
+      "input": {
+        "name": "images",
+        "shape": [
+          1,
+          3,
+          1280,
+          1280
+        ],
+        "dtype": "tensor(float)",
+        "layout": "NCHW",
+        "channels": 3,
+        "size": [
+          1280,
+          1280
+        ]
+      },
+      "output": {
+        "name": "output0",
+        "shape": [
+          1,
+          5,
+          33600
+        ],
+        "dtype": "tensor(float)",
+        "layout": "N x (4+nc) x anchors"
+      },
+      "num_classes": 1,
+      "class_names": [
+        "ball"
+      ],
+      "source_report": "reports/BALL_YOLO_V1_REPORT.md",
+      "pt_weights": "UNKNOWN",
+      "pt_onnx_consistency": "NOT_RECORDED",
+      "known_limitations": [
+        "single class ball only; no hand / racket / table output",
+        "trained to run on gray3 input; feeding colour RGB will change the scores",
+        "scores on the hall footage are low in absolute terms (often < 0.3), which is why the project keeps BallTrack as the production ball backend",
+        "V1 baseline. Its .pt and ONNX paths were later observed to disagree on the same weights (see reports/BALL_YOLO_V5_ROBOFLOW_REPORT.md section 4.2); the ONNX numbers (15/36) are the ones quoted everywhere in the project."
+      ],
+      "license": "model weights: project-internal, derived from Ultralytics YOLOv8n (AGPL-3.0); see THIRD_PARTY_NOTICES.md"
+    },
+    {
+      "id": "ball_roboflow_960",
+      "original_name": "ball_rf_v1_960.onnx",
+      "source_path": "artifacts/files/models/ball_rf_v1/ball_rf_v1_960.onnx",
+      "delivered_file": "models/ball_roboflow_960.onnx",
+      "bytes": 12159554,
+      "sha256": "7d2da4eb27b07a515551e141fafaa7c3e34253a4498812d2e3da5138e85e3e36",
+      "input": {
+        "name": "images",
+        "shape": [
+          1,
+          3,
+          960,
+          960
+        ],
+        "dtype": "tensor(float)",
+        "layout": "NCHW",
+        "channels": 3,
+        "size": [
+          960,
+          960
+        ]
+      },
+      "output": {
+        "name": "output0",
+        "shape": [
+          1,
+          5,
+          18900
+        ],
+        "dtype": "tensor(float)",
+        "layout": "N x (4+nc) x anchors"
+      },
+      "num_classes": 1,
+      "class_names": [
+        "ball"
+      ],
+      "source_report": "reports/BALL_YOLO_V5_ROBOFLOW_REPORT.md",
+      "pt_weights": "artifacts/runs/ball_rf_v1/weights/best.pt",
+      "pt_onnx_consistency": "PASS (decision-level: max |sigmoid(pt)-sigmoid(onnx)| = 5.96e-08, max box diff 0.00 px, identical top-1 anchor)",
+      "known_limitations": [
+        "single class ball only; no hand / racket / table output",
+        "trained to run on gray3 input; feeding colour RGB will change the scores",
+        "scores on the hall footage are low in absolute terms (often < 0.3), which is why the project keeps BallTrack as the production ball backend",
+        "Roboflow v3 mixed training arm, exported at its training size 960."
+      ],
+      "license": "model weights: project-internal, derived from Ultralytics YOLOv8n (AGPL-3.0); see THIRD_PARTY_NOTICES.md"
+    },
+    {
+      "id": "ball_roboflow_1280",
+      "original_name": "ball_rf_v1_1280.onnx",
+      "source_path": "artifacts/files/models/ball_rf_v1/ball_rf_v1_1280.onnx",
+      "delivered_file": "models/ball_roboflow_1280.onnx",
+      "bytes": 12218920,
+      "sha256": "f5ec1e7a19deada33486ab65bee2f7e251c1594cb9d777eae0d55b2971802d9d",
+      "input": {
+        "name": "images",
+        "shape": [
+          1,
+          3,
+          1280,
+          1280
+        ],
+        "dtype": "tensor(float)",
+        "layout": "NCHW",
+        "channels": 3,
+        "size": [
+          1280,
+          1280
+        ]
+      },
+      "output": {
+        "name": "output0",
+        "shape": [
+          1,
+          5,
+          33600
+        ],
+        "dtype": "tensor(float)",
+        "layout": "N x (4+nc) x anchors"
+      },
+      "num_classes": 1,
+      "class_names": [
+        "ball"
+      ],
+      "source_report": "reports/BALL_YOLO_V5_ROBOFLOW_REPORT.md",
+      "pt_weights": "artifacts/runs/ball_rf_v1/weights/best.pt",
+      "pt_onnx_consistency": "PASS (decision-level: max |sigmoid(pt)-sigmoid(onnx)| = 5.96e-08, max box diff 0.00 px, identical top-1 anchor)",
+      "known_limitations": [
+        "single class ball only; no hand / racket / table output",
+        "trained to run on gray3 input; feeding colour RGB will change the scores",
+        "scores on the hall footage are low in absolute terms (often < 0.3), which is why the project keeps BallTrack as the production ball backend",
+        "Same weights as ball_roboflow_960, exported with a 1280 input."
+      ],
+      "license": "model weights: project-internal, derived from Ultralytics YOLOv8n (AGPL-3.0); see THIRD_PARTY_NOTICES.md"
+    },
+    {
+      "id": "ball_v6_round2",
+      "original_name": "ball_fast_v2_scratch_960.onnx",
+      "source_path": "artifacts/files/models/ball_fast_v2_scratch/ball_fast_v2_scratch_960.onnx",
+      "delivered_file": "models/ball_v6_round2.onnx",
+      "bytes": 12159554,
+      "sha256": "d32b98d6a5a986b527654a7a34656a96d6d79a2702440bfffb36cf49dd685383",
+      "input": {
+        "name": "images",
+        "shape": [
+          1,
+          3,
+          960,
+          960
+        ],
+        "dtype": "tensor(float)",
+        "layout": "NCHW",
+        "channels": 3,
+        "size": [
+          960,
+          960
+        ]
+      },
+      "output": {
+        "name": "output0",
+        "shape": [
+          1,
+          5,
+          18900
+        ],
+        "dtype": "tensor(float)",
+        "layout": "N x (4+nc) x anchors"
+      },
+      "num_classes": 1,
+      "class_names": [
+        "ball"
+      ],
+      "source_report": "reports/BALL_YOLO_V6_FAST_REPORT.md",
+      "pt_weights": "artifacts/runs/ball_fast_v2_scratch/weights/best.pt",
+      "pt_onnx_consistency": "PASS (decision-level: max |sigmoid(pt)-sigmoid(onnx)| = 5.96e-08, max box diff 0.00 px, identical top-1 anchor)",
+      "known_limitations": [
+        "single class ball only; no hand / racket / table output",
+        "trained to run on gray3 input; feeding colour RGB will change the scores",
+        "scores on the hall footage are low in absolute terms (often < 0.3), which is why the project keeps BallTrack as the production ball backend",
+        "Round-6 second attempt (COCO init, down-scaled Roboflow aux)."
+      ],
+      "license": "model weights: project-internal, derived from Ultralytics YOLOv8n (AGPL-3.0); see THIRD_PARTY_NOTICES.md"
+    }
+  ]
+}
