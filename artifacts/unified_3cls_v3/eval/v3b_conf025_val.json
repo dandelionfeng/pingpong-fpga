@@ -1,0 +1,44 @@
+{
+  "tag": "v3b",
+  "onnx": "artifacts\\files\\models\\unified_3cls_v3b\\pingpong_yolov8n_gray_3cls_v3_960_960.onnx",
+  "split": "val",
+  "images": 509,
+  "imgsz": 960,
+  "conf": 0.25,
+  "mean_ms_onnx_run": 796.9,
+  "classes": {
+    "ball": {
+      "gt_boxes": 100,
+      "images_with_class": 100,
+      "tp": 47,
+      "fp": 5,
+      "fn": 53,
+      "precision": 0.9038,
+      "recall": 0.47,
+      "f1": 0.6184,
+      "ap50": 0.5555
+    },
+    "hand": {
+      "gt_boxes": 1172,
+      "images_with_class": 400,
+      "tp": 654,
+      "fp": 292,
+      "fn": 518,
+      "precision": 0.6913,
+      "recall": 0.558,
+      "f1": 0.6176,
+      "ap50": 0.6089
+    },
+    "racket": {
+      "gt_boxes": 176,
+      "images_with_class": 106,
+      "tp": 133,
+      "fp": 42,
+      "fn": 43,
+      "precision": 0.76,
+      "recall": 0.7557,
+      "f1": 0.7578,
+      "ap50": 0.7469
+    }
+  }
+}
