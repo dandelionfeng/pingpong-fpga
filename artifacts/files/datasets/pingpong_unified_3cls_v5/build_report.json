@@ -1,0 +1,3156 @@
+{
+  "generated_utc": "2026-10-25T13:04:06Z",
+  "base": "artifacts\\files\\datasets\\pingpong_unified_3cls_v4",
+  "racket_gap_fix": {
+    "frames_scanned": 521,
+    "add_racket_candidates": 104,
+    "racket_boxes_added": 105,
+    "kept_no_racket_evidence": 210,
+    "quarantined": 207,
+    "thresholds": {
+      "confirm": 0.4,
+      "review": 0.2
+    },
+    "status": "AUTO_ASSISTED_RACKET_CANDIDATE - spot-checked visuals, not human labels"
+  },
+  "images": {
+    "train": 4224,
+    "val": 509
+  },
+  "boxes": {
+    "train_0": 2292,
+    "train_1": 3459,
+    "train_2": 4895,
+    "val_0": 100,
+    "val_1": 1172,
+    "val_2": 176
+  },
+  "manifest": [
+    {
+      "file": "ps_ps_ps_00_00_0006",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_00_00_0007",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.028,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_00_00_0008",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.011,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_00_00_0009",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_00_00_0010",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_00_00_0011",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_00_00_0012",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.012,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_00_00_0013",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.021,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_00_00_0014",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.01,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_00_00_0015",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.017,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_00_00_0016",
+      "action": "QUARANTINE",
+      "top_racket": 0.196,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_00_00_0023",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.025,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_00_00_0028",
+      "action": "QUARANTINE",
+      "top_racket": 0.061,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_00_00_0029",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.036,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_00_00_0030",
+      "action": "QUARANTINE",
+      "top_racket": 0.112,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_00_00_0031",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.025,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_00_00_0032",
+      "action": "QUARANTINE",
+      "top_racket": 0.094,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_00_00_0033",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.013,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_00_00_0034",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.496,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_00_00_0035",
+      "action": "QUARANTINE",
+      "top_racket": 0.079,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_00_00_0036",
+      "action": "QUARANTINE",
+      "top_racket": 0.071,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_00_00_0037",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.042,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_00_00_0038",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.038,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_00_01_0007",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.017,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_00_01_0008",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.013,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_00_01_0010",
+      "action": "QUARANTINE",
+      "top_racket": 0.097,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_00_01_0011",
+      "action": "QUARANTINE",
+      "top_racket": 0.09,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_00_01_0012",
+      "action": "QUARANTINE",
+      "top_racket": 0.091,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_00_01_0013",
+      "action": "QUARANTINE",
+      "top_racket": 0.106,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_00_01_0015",
+      "action": "QUARANTINE",
+      "top_racket": 0.127,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_00_01_0016",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.029,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_00_01_0017",
+      "action": "QUARANTINE",
+      "top_racket": 0.387,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_00_01_0027",
+      "action": "QUARANTINE",
+      "top_racket": 0.189,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_00_01_0028",
+      "action": "QUARANTINE",
+      "top_racket": 0.238,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_00_01_0030",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.05,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_00_01_0031",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.03,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_00_01_0032",
+      "action": "QUARANTINE",
+      "top_racket": 0.052,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_00_02_0007",
+      "action": "QUARANTINE",
+      "top_racket": 0.143,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_00_02_0008",
+      "action": "QUARANTINE",
+      "top_racket": 0.13,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_00_02_0009",
+      "action": "QUARANTINE",
+      "top_racket": 0.098,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_00_02_0011",
+      "action": "QUARANTINE",
+      "top_racket": 0.119,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_00_02_0012",
+      "action": "QUARANTINE",
+      "top_racket": 0.13,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_00_02_0013",
+      "action": "QUARANTINE",
+      "top_racket": 0.153,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_00_02_0014",
+      "action": "QUARANTINE",
+      "top_racket": 0.197,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_00_02_0015",
+      "action": "QUARANTINE",
+      "top_racket": 0.226,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_00_02_0016",
+      "action": "QUARANTINE",
+      "top_racket": 0.181,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_00_02_0017",
+      "action": "QUARANTINE",
+      "top_racket": 0.157,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_00_02_0019",
+      "action": "QUARANTINE",
+      "top_racket": 0.081,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_00_02_0030",
+      "action": "QUARANTINE",
+      "top_racket": 0.192,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_00_02_0031",
+      "action": "QUARANTINE",
+      "top_racket": 0.067,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_00_02_0033",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.03,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_00_02_0034",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.033,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_00_02_0035",
+      "action": "QUARANTINE",
+      "top_racket": 0.129,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_00_02_0037",
+      "action": "QUARANTINE",
+      "top_racket": 0.069,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_00_02_0038",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.045,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_01_00_0022",
+      "action": "QUARANTINE",
+      "top_racket": 0.274,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_01_00_0026",
+      "action": "QUARANTINE",
+      "top_racket": 0.061,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_01_00_0027",
+      "action": "QUARANTINE",
+      "top_racket": 0.24,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_01_00_0028",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.038,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_01_00_0029",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.023,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_01_00_0030",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.013,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_01_00_0035",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.023,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_01_00_0036",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.024,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_01_01_0006",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_01_01_0007",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_01_01_0008",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_01_01_0010",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_01_01_0011",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_01_01_0030",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.022,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_01_01_0031",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_01_01_0032",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.027,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_01_01_0033",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_01_01_0034",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_01_01_0035",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_01_01_0036",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_01_01_0037",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_01_01_0038",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_01_01_0039",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_01_01_0040",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.011,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_01_01_0041",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.032,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_01_01_0042",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_01_01_0043",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_01_02_0006",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_01_02_0007",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_01_02_0028",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.012,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_01_02_0029",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_01_02_0030",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_01_02_0031",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.02,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_01_02_0032",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_01_02_0034",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.018,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_01_02_0036",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.011,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_02_00_0009",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.539,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_02_00_0023",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.566,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_02_00_0024",
+      "action": "QUARANTINE",
+      "top_racket": 0.255,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_02_00_0025",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.449,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_02_00_0026",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.708,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_02_00_0027",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.699,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_02_00_0028",
+      "action": "QUARANTINE",
+      "top_racket": 0.385,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_02_00_0029",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.419,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_02_00_0030",
+      "action": "QUARANTINE",
+      "top_racket": 0.28,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_02_00_0031",
+      "action": "QUARANTINE",
+      "top_racket": 0.162,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_02_00_0032",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.045,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_02_00_0033",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.038,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_02_00_0034",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.024,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_02_00_0035",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.017,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_02_00_0036",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_02_01_0006",
+      "action": "QUARANTINE",
+      "top_racket": 0.073,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_02_01_0007",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.024,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_02_01_0024",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.6,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_02_01_0025",
+      "action": "QUARANTINE",
+      "top_racket": 0.237,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_02_01_0026",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.747,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_02_01_0027",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.676,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_02_01_0028",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.691,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_02_01_0029",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.748,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_02_01_0030",
+      "action": "QUARANTINE",
+      "top_racket": 0.197,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_02_01_0031",
+      "action": "QUARANTINE",
+      "top_racket": 0.146,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_02_01_0032",
+      "action": "QUARANTINE",
+      "top_racket": 0.12,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_02_01_0033",
+      "action": "QUARANTINE",
+      "top_racket": 0.192,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_02_01_0034",
+      "action": "QUARANTINE",
+      "top_racket": 0.122,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_02_01_0035",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.047,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_02_01_0036",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.428,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_02_02_0008",
+      "action": "QUARANTINE",
+      "top_racket": 0.32,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_02_02_0009",
+      "action": "QUARANTINE",
+      "top_racket": 0.237,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_02_02_0024",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.669,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_02_02_0025",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.743,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_02_02_0026",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.779,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_02_02_0027",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.599,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_02_02_0028",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.673,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_02_02_0029",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.625,
+      "racket_boxes_added": 2
+    },
+    {
+      "file": "ps_ps_ps_02_02_0030",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.477,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_02_02_0031",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.693,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_02_02_0032",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.403,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_02_02_0033",
+      "action": "QUARANTINE",
+      "top_racket": 0.341,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_02_02_0034",
+      "action": "QUARANTINE",
+      "top_racket": 0.115,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_02_02_0035",
+      "action": "QUARANTINE",
+      "top_racket": 0.267,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_02_02_0038",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.411,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_03_00_0008",
+      "action": "QUARANTINE",
+      "top_racket": 0.259,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_03_00_0011",
+      "action": "QUARANTINE",
+      "top_racket": 0.392,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_03_00_0024",
+      "action": "QUARANTINE",
+      "top_racket": 0.2,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_03_00_0025",
+      "action": "QUARANTINE",
+      "top_racket": 0.296,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_03_00_0026",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.501,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_03_00_0027",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.682,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_03_00_0028",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.719,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_03_00_0029",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.418,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_03_00_0030",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.015,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_03_00_0031",
+      "action": "QUARANTINE",
+      "top_racket": 0.156,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_03_00_0032",
+      "action": "QUARANTINE",
+      "top_racket": 0.397,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_03_01_0006",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.568,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_03_01_0007",
+      "action": "QUARANTINE",
+      "top_racket": 0.33,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_03_01_0013",
+      "action": "QUARANTINE",
+      "top_racket": 0.349,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_03_01_0014",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.5,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_03_01_0023",
+      "action": "QUARANTINE",
+      "top_racket": 0.226,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_03_01_0024",
+      "action": "QUARANTINE",
+      "top_racket": 0.212,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_03_01_0025",
+      "action": "QUARANTINE",
+      "top_racket": 0.204,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_03_01_0026",
+      "action": "QUARANTINE",
+      "top_racket": 0.215,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_03_01_0027",
+      "action": "QUARANTINE",
+      "top_racket": 0.222,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_03_01_0028",
+      "action": "QUARANTINE",
+      "top_racket": 0.229,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_03_01_0029",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.406,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_03_01_0030",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.421,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_03_01_0031",
+      "action": "QUARANTINE",
+      "top_racket": 0.224,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_03_01_0032",
+      "action": "QUARANTINE",
+      "top_racket": 0.213,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_03_02_0006",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.686,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_03_02_0009",
+      "action": "QUARANTINE",
+      "top_racket": 0.379,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_03_02_0010",
+      "action": "QUARANTINE",
+      "top_racket": 0.394,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_03_02_0012",
+      "action": "QUARANTINE",
+      "top_racket": 0.377,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_03_02_0013",
+      "action": "QUARANTINE",
+      "top_racket": 0.074,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_03_02_0018",
+      "action": "QUARANTINE",
+      "top_racket": 0.053,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_03_02_0019",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.025,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_03_02_0020",
+      "action": "QUARANTINE",
+      "top_racket": 0.056,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_03_02_0021",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.045,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_03_02_0025",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.016,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_03_02_0031",
+      "action": "QUARANTINE",
+      "top_racket": 0.098,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_03_02_0032",
+      "action": "QUARANTINE",
+      "top_racket": 0.239,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_03_02_0033",
+      "action": "QUARANTINE",
+      "top_racket": 0.115,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_03_02_0034",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.037,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_03_02_0035",
+      "action": "QUARANTINE",
+      "top_racket": 0.063,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_03_02_0036",
+      "action": "QUARANTINE",
+      "top_racket": 0.103,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_03_02_0037",
+      "action": "QUARANTINE",
+      "top_racket": 0.144,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_03_02_0038",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.043,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_03_02_0039",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.03,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_03_02_0040",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.038,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_03_02_0041",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.033,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_03_02_0042",
+      "action": "QUARANTINE",
+      "top_racket": 0.065,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_03_02_0043",
+      "action": "QUARANTINE",
+      "top_racket": 0.062,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_03_02_0044",
+      "action": "QUARANTINE",
+      "top_racket": 0.08,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_03_02_0045",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.038,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_03_02_0046",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.012,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_04_00_0006",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_04_00_0007",
+      "action": "QUARANTINE",
+      "top_racket": 0.149,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_04_00_0008",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.034,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_04_00_0009",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.014,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_04_00_0010",
+      "action": "QUARANTINE",
+      "top_racket": 0.079,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_04_00_0011",
+      "action": "QUARANTINE",
+      "top_racket": 0.196,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_04_00_0012",
+      "action": "QUARANTINE",
+      "top_racket": 0.261,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_04_00_0014",
+      "action": "QUARANTINE",
+      "top_racket": 0.199,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_04_00_0015",
+      "action": "QUARANTINE",
+      "top_racket": 0.19,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_04_00_0016",
+      "action": "QUARANTINE",
+      "top_racket": 0.292,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_04_00_0019",
+      "action": "QUARANTINE",
+      "top_racket": 0.336,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_04_00_0026",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.015,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_04_00_0027",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.027,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_04_00_0028",
+      "action": "QUARANTINE",
+      "top_racket": 0.067,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_04_00_0029",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_04_00_0030",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_04_00_0031",
+      "action": "QUARANTINE",
+      "top_racket": 0.23,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_04_00_0032",
+      "action": "QUARANTINE",
+      "top_racket": 0.115,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_04_00_0033",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_04_00_0034",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.036,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_04_00_0035",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.011,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_04_00_0036",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.015,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_04_00_0037",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.032,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_04_00_0038",
+      "action": "QUARANTINE",
+      "top_racket": 0.131,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_04_00_0039",
+      "action": "QUARANTINE",
+      "top_racket": 0.269,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_04_00_0040",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.023,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_04_00_0041",
+      "action": "QUARANTINE",
+      "top_racket": 0.26,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_04_01_0006",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.534,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_04_01_0007",
+      "action": "QUARANTINE",
+      "top_racket": 0.335,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_04_01_0008",
+      "action": "QUARANTINE",
+      "top_racket": 0.152,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_04_01_0010",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.034,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_04_01_0011",
+      "action": "QUARANTINE",
+      "top_racket": 0.212,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_04_01_0013",
+      "action": "QUARANTINE",
+      "top_racket": 0.362,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_04_01_0029",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_04_01_0030",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_04_01_0031",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_04_01_0032",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.017,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_04_01_0033",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_04_01_0034",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_04_01_0035",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_04_01_0036",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_04_01_0037",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_04_01_0038",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_04_01_0039",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_04_01_0040",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_04_01_0041",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.023,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_04_02_0006",
+      "action": "QUARANTINE",
+      "top_racket": 0.388,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_04_02_0007",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.476,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_04_02_0008",
+      "action": "QUARANTINE",
+      "top_racket": 0.305,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_04_02_0011",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.515,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_04_02_0012",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.608,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_04_02_0013",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.517,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_04_02_0014",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.528,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_04_02_0032",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_04_02_0033",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_04_02_0034",
+      "action": "QUARANTINE",
+      "top_racket": 0.086,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_04_02_0035",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_04_02_0036",
+      "action": "QUARANTINE",
+      "top_racket": 0.06,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_04_02_0037",
+      "action": "QUARANTINE",
+      "top_racket": 0.083,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_04_02_0038",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_04_02_0039",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_04_02_0040",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_04_02_0041",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.02,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_04_02_0042",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.026,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_05_00_0006",
+      "action": "QUARANTINE",
+      "top_racket": 0.177,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_05_00_0007",
+      "action": "QUARANTINE",
+      "top_racket": 0.09,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_05_00_0008",
+      "action": "QUARANTINE",
+      "top_racket": 0.067,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_05_00_0009",
+      "action": "QUARANTINE",
+      "top_racket": 0.084,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_05_00_0010",
+      "action": "QUARANTINE",
+      "top_racket": 0.267,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_05_00_0011",
+      "action": "QUARANTINE",
+      "top_racket": 0.259,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_05_00_0012",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.032,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_05_00_0013",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.572,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_05_00_0015",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.667,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_05_00_0016",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.454,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_05_00_0027",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_05_00_0028",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_05_00_0030",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_05_00_0031",
+      "action": "QUARANTINE",
+      "top_racket": 0.317,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_05_01_0006",
+      "action": "QUARANTINE",
+      "top_racket": 0.248,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_05_01_0007",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.041,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_05_01_0008",
+      "action": "QUARANTINE",
+      "top_racket": 0.051,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_05_01_0009",
+      "action": "QUARANTINE",
+      "top_racket": 0.164,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_05_01_0011",
+      "action": "QUARANTINE",
+      "top_racket": 0.284,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_05_01_0012",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.578,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_05_01_0013",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.565,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_05_01_0015",
+      "action": "QUARANTINE",
+      "top_racket": 0.166,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_05_01_0017",
+      "action": "QUARANTINE",
+      "top_racket": 0.056,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_05_01_0028",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_05_01_0032",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.739,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_05_01_0033",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.754,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_05_01_0034",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.677,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_05_01_0035",
+      "action": "QUARANTINE",
+      "top_racket": 0.339,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_05_01_0036",
+      "action": "QUARANTINE",
+      "top_racket": 0.124,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_05_01_0037",
+      "action": "QUARANTINE",
+      "top_racket": 0.093,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_05_02_0006",
+      "action": "QUARANTINE",
+      "top_racket": 0.066,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_05_02_0007",
+      "action": "QUARANTINE",
+      "top_racket": 0.106,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_05_02_0008",
+      "action": "QUARANTINE",
+      "top_racket": 0.058,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_05_02_0009",
+      "action": "QUARANTINE",
+      "top_racket": 0.142,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_05_02_0010",
+      "action": "QUARANTINE",
+      "top_racket": 0.324,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_05_02_0011",
+      "action": "QUARANTINE",
+      "top_racket": 0.319,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_05_02_0014",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.523,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_05_02_0028",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_05_02_0029",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_05_02_0030",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.036,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_05_02_0031",
+      "action": "QUARANTINE",
+      "top_racket": 0.135,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_05_02_0032",
+      "action": "QUARANTINE",
+      "top_racket": 0.068,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_05_02_0033",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.036,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_05_02_0034",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.707,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_06_00_0006",
+      "action": "QUARANTINE",
+      "top_racket": 0.333,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_06_00_0007",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.036,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_06_00_0008",
+      "action": "QUARANTINE",
+      "top_racket": 0.133,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_06_00_0009",
+      "action": "QUARANTINE",
+      "top_racket": 0.055,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_06_00_0010",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.445,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_06_00_0011",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.574,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_06_00_0012",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.734,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_06_00_0013",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.732,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_06_00_0015",
+      "action": "QUARANTINE",
+      "top_racket": 0.194,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_06_00_0016",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.045,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_06_00_0027",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.64,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_06_00_0028",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.722,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_06_00_0029",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.429,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_06_00_0030",
+      "action": "QUARANTINE",
+      "top_racket": 0.051,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_06_00_0031",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.017,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_06_00_0032",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_06_00_0033",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_06_00_0034",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_06_00_0035",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_06_00_0036",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.018,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_06_00_0037",
+      "action": "QUARANTINE",
+      "top_racket": 0.137,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_06_01_0006",
+      "action": "QUARANTINE",
+      "top_racket": 0.136,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_06_01_0007",
+      "action": "QUARANTINE",
+      "top_racket": 0.347,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_06_01_0008",
+      "action": "QUARANTINE",
+      "top_racket": 0.262,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_06_01_0010",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.723,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_06_01_0011",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.672,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_06_01_0012",
+      "action": "QUARANTINE",
+      "top_racket": 0.31,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_06_01_0013",
+      "action": "QUARANTINE",
+      "top_racket": 0.092,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_06_01_0026",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.526,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_06_01_0027",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.639,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_06_01_0028",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_06_01_0029",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_06_01_0030",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_06_01_0031",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.02,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_06_01_0032",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.021,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_06_01_0033",
+      "action": "QUARANTINE",
+      "top_racket": 0.054,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_06_01_0034",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.014,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_06_01_0035",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_06_01_0036",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_06_02_0006",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.049,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_06_02_0007",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.038,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_06_02_0008",
+      "action": "QUARANTINE",
+      "top_racket": 0.123,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_06_02_0010",
+      "action": "QUARANTINE",
+      "top_racket": 0.271,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_06_02_0011",
+      "action": "QUARANTINE",
+      "top_racket": 0.22,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_06_02_0012",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.68,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_06_02_0013",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.661,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_06_02_0017",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.017,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_06_02_0028",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.417,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_06_02_0029",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_06_02_0030",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.404,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_06_02_0031",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_06_02_0032",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_06_02_0033",
+      "action": "QUARANTINE",
+      "top_racket": 0.067,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_06_02_0034",
+      "action": "QUARANTINE",
+      "top_racket": 0.269,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_06_02_0035",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.578,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_07_00_0006",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.539,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_07_00_0007",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.669,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_07_00_0009",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.669,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_07_00_0010",
+      "action": "QUARANTINE",
+      "top_racket": 0.24,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_07_00_0011",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.043,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_07_00_0013",
+      "action": "QUARANTINE",
+      "top_racket": 0.303,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_07_00_0014",
+      "action": "QUARANTINE",
+      "top_racket": 0.336,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_07_00_0015",
+      "action": "QUARANTINE",
+      "top_racket": 0.287,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_07_00_0027",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_07_00_0028",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.017,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_07_00_0029",
+      "action": "QUARANTINE",
+      "top_racket": 0.346,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_07_00_0030",
+      "action": "QUARANTINE",
+      "top_racket": 0.077,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_07_00_0031",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.406,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_07_00_0032",
+      "action": "QUARANTINE",
+      "top_racket": 0.218,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_07_00_0033",
+      "action": "QUARANTINE",
+      "top_racket": 0.141,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_07_00_0034",
+      "action": "QUARANTINE",
+      "top_racket": 0.093,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_07_00_0035",
+      "action": "QUARANTINE",
+      "top_racket": 0.136,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_07_00_0036",
+      "action": "QUARANTINE",
+      "top_racket": 0.217,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_07_00_0037",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.573,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_07_00_0038",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.045,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_07_00_0039",
+      "action": "QUARANTINE",
+      "top_racket": 0.06,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_07_00_0040",
+      "action": "QUARANTINE",
+      "top_racket": 0.391,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_07_00_0041",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.483,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_07_00_0042",
+      "action": "QUARANTINE",
+      "top_racket": 0.35,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_07_00_0043",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.036,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_07_01_0006",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_07_01_0007",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_07_01_0008",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_07_01_0010",
+      "action": "QUARANTINE",
+      "top_racket": 0.082,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_07_01_0011",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.584,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_07_01_0012",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.563,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_07_01_0013",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.498,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_07_01_0028",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_07_01_0029",
+      "action": "QUARANTINE",
+      "top_racket": 0.056,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_07_01_0030",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.025,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_07_01_0031",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_07_01_0032",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_07_01_0033",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_07_01_0034",
+      "action": "QUARANTINE",
+      "top_racket": 0.103,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_07_01_0036",
+      "action": "QUARANTINE",
+      "top_racket": 0.054,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_07_01_0037",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_07_01_0038",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.01,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_07_02_0006",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.016,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_07_02_0008",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_07_02_0009",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.039,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_07_02_0010",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.652,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_07_02_0011",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.723,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_07_02_0012",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.679,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_07_02_0028",
+      "action": "QUARANTINE",
+      "top_racket": 0.084,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_07_02_0029",
+      "action": "QUARANTINE",
+      "top_racket": 0.364,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_07_02_0030",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.666,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_07_02_0031",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.769,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_07_02_0032",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.745,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_07_02_0033",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.73,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_07_02_0034",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.661,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_07_02_0035",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.421,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_08_00_0006",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.761,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_08_00_0007",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.741,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_08_00_0023",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.049,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_08_00_0024",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.015,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_08_00_0025",
+      "action": "QUARANTINE",
+      "top_racket": 0.112,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_08_00_0026",
+      "action": "QUARANTINE",
+      "top_racket": 0.123,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_08_00_0027",
+      "action": "QUARANTINE",
+      "top_racket": 0.274,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_08_00_0028",
+      "action": "QUARANTINE",
+      "top_racket": 0.276,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_08_00_0029",
+      "action": "QUARANTINE",
+      "top_racket": 0.289,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_08_00_0030",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.532,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_08_00_0031",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.449,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_08_00_0032",
+      "action": "QUARANTINE",
+      "top_racket": 0.238,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_08_00_0033",
+      "action": "QUARANTINE",
+      "top_racket": 0.368,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_08_00_0034",
+      "action": "QUARANTINE",
+      "top_racket": 0.234,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_08_00_0035",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.028,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_08_00_0036",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_08_00_0037",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.032,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_08_01_0006",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.481,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_08_01_0025",
+      "action": "QUARANTINE",
+      "top_racket": 0.052,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_08_01_0026",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.021,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_08_01_0027",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.045,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_08_01_0028",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.044,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_08_01_0029",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.022,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_08_01_0030",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_08_01_0031",
+      "action": "QUARANTINE",
+      "top_racket": 0.14,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_08_01_0032",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.045,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_08_01_0033",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.046,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_08_01_0034",
+      "action": "QUARANTINE",
+      "top_racket": 0.076,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_08_02_0015",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.71,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_08_02_0025",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_08_02_0026",
+      "action": "QUARANTINE",
+      "top_racket": 0.106,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_08_02_0027",
+      "action": "QUARANTINE",
+      "top_racket": 0.107,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_08_02_0028",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.049,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_08_02_0029",
+      "action": "QUARANTINE",
+      "top_racket": 0.051,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_08_02_0030",
+      "action": "QUARANTINE",
+      "top_racket": 0.13,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_08_02_0031",
+      "action": "QUARANTINE",
+      "top_racket": 0.123,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_08_02_0032",
+      "action": "QUARANTINE",
+      "top_racket": 0.055,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_08_02_0033",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_08_02_0034",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_08_02_0035",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.011,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_08_02_0036",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_08_02_0037",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_09_00_0007",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.757,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_09_00_0008",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.767,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_09_00_0026",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_09_00_0027",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_09_00_0028",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_09_00_0029",
+      "action": "QUARANTINE",
+      "top_racket": 0.066,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_09_00_0030",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.015,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_09_00_0031",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_09_00_0032",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.042,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_09_00_0033",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.048,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_09_00_0034",
+      "action": "QUARANTINE",
+      "top_racket": 0.228,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_09_00_0035",
+      "action": "QUARANTINE",
+      "top_racket": 0.156,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_09_00_0036",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.015,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_09_00_0037",
+      "action": "QUARANTINE",
+      "top_racket": 0.055,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_09_00_0038",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.037,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_09_00_0039",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.017,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_09_00_0040",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.026,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_09_00_0041",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.044,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_09_00_0042",
+      "action": "QUARANTINE",
+      "top_racket": 0.086,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_09_00_0043",
+      "action": "QUARANTINE",
+      "top_racket": 0.371,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_09_01_0007",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.452,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_09_01_0020",
+      "action": "QUARANTINE",
+      "top_racket": 0.176,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_09_01_0026",
+      "action": "QUARANTINE",
+      "top_racket": 0.069,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_09_01_0027",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.017,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_09_01_0028",
+      "action": "QUARANTINE",
+      "top_racket": 0.139,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_09_01_0029",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.02,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_09_01_0030",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.024,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_09_01_0031",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_09_01_0032",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.036,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_09_01_0033",
+      "action": "QUARANTINE",
+      "top_racket": 0.129,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_09_01_0034",
+      "action": "QUARANTINE",
+      "top_racket": 0.121,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_09_01_0035",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.566,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_09_02_0007",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.441,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_09_02_0024",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_09_02_0025",
+      "action": "QUARANTINE",
+      "top_racket": 0.304,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_09_02_0026",
+      "action": "QUARANTINE",
+      "top_racket": 0.056,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_09_02_0027",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.014,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_09_02_0028",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.023,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_09_02_0029",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_09_02_0030",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.017,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_09_02_0031",
+      "action": "QUARANTINE",
+      "top_racket": 0.1,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_09_02_0032",
+      "action": "QUARANTINE",
+      "top_racket": 0.386,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_09_02_0033",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.636,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_09_02_0034",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.474,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_09_02_0035",
+      "action": "QUARANTINE",
+      "top_racket": 0.362,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_09_02_0036",
+      "action": "QUARANTINE",
+      "top_racket": 0.301,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_10_00_0006",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.031,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_10_00_0007",
+      "action": "QUARANTINE",
+      "top_racket": 0.112,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_10_00_0008",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.013,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_10_00_0009",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.025,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_10_00_0028",
+      "action": "QUARANTINE",
+      "top_racket": 0.112,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_10_00_0029",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.481,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_10_00_0030",
+      "action": "QUARANTINE",
+      "top_racket": 0.185,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_10_01_0006",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.019,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_10_01_0007",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.014,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_10_01_0008",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.017,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_10_01_0009",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.0,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_10_01_0010",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.012,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_10_01_0011",
+      "action": "KEEP_NO_RACKET_EVIDENCE",
+      "top_racket": 0.022,
+      "racket_boxes_added": 0
+    },
+    {
+      "file": "ps_ps_ps_10_01_0012",
+      "action": "QUARANTINE",
+      "top_racket": 0.141,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_10_01_0013",
+      "action": "QUARANTINE",
+      "top_racket": 0.114,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_10_01_0014",
+      "action": "QUARANTINE",
+      "top_racket": 0.051,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_10_01_0015",
+      "action": "QUARANTINE",
+      "top_racket": 0.385,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_10_01_0016",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.631,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_10_01_0019",
+      "action": "QUARANTINE",
+      "top_racket": 0.119,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_10_01_0020",
+      "action": "QUARANTINE",
+      "top_racket": 0.209,
+      "reason": "racket evidence present but unconfirmed"
+    },
+    {
+      "file": "ps_ps_ps_10_01_0021",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.469,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_10_01_0022",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.408,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_10_01_0033",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.404,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_10_01_0034",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.721,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_10_01_0035",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.716,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_10_01_0036",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.741,
+      "racket_boxes_added": 1
+    },
+    {
+      "file": "ps_ps_ps_10_01_0037",
+      "action": "ADD_RACKET_CANDIDATES",
+      "top_racket": 0.804,
+      "racket_boxes_added": 1
+    }
+  ]
+}
