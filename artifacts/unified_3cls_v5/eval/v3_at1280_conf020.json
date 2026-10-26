@@ -1,0 +1,44 @@
+{
+  "tag": "v3_at1280",
+  "onnx": "artifacts\\files\\models\\unified_3cls_v3_eval1280\\v3_at1280.onnx",
+  "split": "val",
+  "images": 509,
+  "imgsz": 1280,
+  "conf": 0.2,
+  "mean_ms_onnx_run": 68901.5,
+  "classes": {
+    "ball": {
+      "gt_boxes": 100,
+      "images_with_class": 100,
+      "tp": 50,
+      "fp": 28,
+      "fn": 50,
+      "precision": 0.641,
+      "recall": 0.5,
+      "f1": 0.5618,
+      "ap50": 0.5157
+    },
+    "hand": {
+      "gt_boxes": 1172,
+      "images_with_class": 400,
+      "tp": 679,
+      "fp": 453,
+      "fn": 493,
+      "precision": 0.5998,
+      "recall": 0.5794,
+      "f1": 0.5894,
+      "ap50": 0.595
+    },
+    "racket": {
+      "gt_boxes": 176,
+      "images_with_class": 106,
+      "tp": 127,
+      "fp": 49,
+      "fn": 49,
+      "precision": 0.7216,
+      "recall": 0.7216,
+      "f1": 0.7216,
+      "ap50": 0.7493
+    }
+  }
+}

@@ -1,0 +1,3 @@
+image,score,width_px,best_iou_gt,type
+vtt_Match5_004_jpg.rf.11444bb9e762a214ccd6d7ddb6d2bbf3.jpg,0.437,29.2,0.0,UNMATCHED_BALL_DETECTION
+vtt_Match5_016_jpg.rf.6e6629ac3fa6163ad8804292f6c0217c.jpg,0.398,28.0,0.0,UNMATCHED_BALL_DETECTION
