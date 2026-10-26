@@ -1,0 +1,42 @@
+{
+  "bins": {
+    "small_10_16": {
+      "boxes": 1641,
+      "images": 1641,
+      "sources": {
+        "ps": 475,
+        "tt2": 583,
+        "tt": 583
+      }
+    },
+    "tiny_lt10": {
+      "boxes": 275,
+      "images": 275,
+      "sources": {
+        "ps": 43,
+        "tt2": 116,
+        "tt": 116
+      }
+    },
+    "medium_16_24": {
+      "boxes": 427,
+      "images": 427,
+      "sources": {
+        "ps": 3,
+        "tt2": 212,
+        "tt": 212
+      }
+    },
+    "large_ge24": {
+      "boxes": 156,
+      "images": 156,
+      "sources": {
+        "tt2": 78,
+        "tt": 78
+      }
+    }
+  },
+  "p10": 9.41,
+  "p50": 13.57,
+  "p90": 21.55
+}
