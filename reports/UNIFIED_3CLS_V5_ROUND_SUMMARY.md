@@ -54,7 +54,8 @@ ball_fast / ball_rf / ball_mix / tabletennis）都是同一批帧或其再加工
 | 初始化 | `pingpong_3cls_v1/best.pt` |
 | 数据 | `pingpong_unified_3cls_v4`（与 V3 完全相同的 4,431 图，隔离分辨率这个变量） |
 | 实际轮数 | **10 / 10**（跑满） |
-| 最佳 epoch | **1**（mAP50 0.5358 / mAP50-95 0.2397）→ 末轮 0.6010 / 0.2605 |
+| 最佳 epoch | **9**（Ultralytics fitness = 0.1·mAP50 + 0.9·mAP50-95 = 0.2947；mAP50 0.6002 / mAP50-95 0.2608） |
+| 末轮 | epoch 10：mAP50 0.6010 / mAP50-95 0.2605（fitness 0.2945，几乎并列） |
 | 耗时 | **0.620 h ≈ 37 分钟**，RTX 4060 Laptop 8.6 GB |
 | 权重 | `artifacts/runs/unified_3cls_v5_1280/weights/best.pt`，6,332,963 B，`edb5ac555a336ae7ccf1fcfd9e5ca5c559b1f053a5eb7fbad91ba42c86ef1fe2` |
 
