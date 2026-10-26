@@ -1,0 +1,45 @@
+{
+  "tag": "V7_full",
+  "mode": "full",
+  "onnx": "artifacts\\files\\models\\v7_tiles\\pingpong_yolov8n_3cls_v7_960_960.onnx",
+  "images": 509,
+  "conf": 0.2,
+  "latency_ms": {
+    "preprocess": 103.1,
+    "inference": 700.3,
+    "postprocess_nms": 9.1,
+    "total": 812.6
+  },
+  "classes": {
+    "ball": {
+      "gt": 100,
+      "tp": 22,
+      "fp": 25,
+      "fn": 78,
+      "precision": 0.4681,
+      "recall": 0.22,
+      "f1": 0.2993,
+      "ap50": 0.1549
+    },
+    "hand": {
+      "gt": 1172,
+      "tp": 567,
+      "fp": 419,
+      "fn": 605,
+      "precision": 0.5751,
+      "recall": 0.4838,
+      "f1": 0.5255,
+      "ap50": 0.4124
+    },
+    "racket": {
+      "gt": 176,
+      "tp": 89,
+      "fp": 26,
+      "fn": 87,
+      "precision": 0.7739,
+      "recall": 0.5057,
+      "f1": 0.6117,
+      "ap50": 0.4681
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "tag": "V7b_slide",
+  "mode": "slide",
+  "onnx": "D:\\电脑管家迁移文件\\xwechat_files\\wxid_ttrefx9qt9o722_32d9\\msg\\file\\2026-10\\方案及分工\\方案及分工\\pingpong-fpga\\artifacts\\files\\models\\v7b_tiles_tileval\\pingpong_yolov8n_3cls_v7b_960_960.onnx",
+  "images": 509,
+  "conf": 0.2,
+  "latency_ms": {
+    "preprocess": 220.3,
+    "inference": 1506.6,
+    "postprocess_nms": 16.5,
+    "total": 1743.5
+  },
+  "classes": {
+    "ball": {
+      "gt": 100,
+      "tp": 43,
+      "fp": 31,
+      "fn": 57,
+      "precision": 0.5811,
+      "recall": 0.43,
+      "f1": 0.4943,
+      "ap50": 0.3792
+    },
+    "hand": {
+      "gt": 1172,
+      "tp": 626,
+      "fp": 697,
+      "fn": 546,
+      "precision": 0.4732,
+      "recall": 0.5341,
+      "f1": 0.5018,
+      "ap50": 0.4206
+    },
+    "racket": {
+      "gt": 176,
+      "tp": 120,
+      "fp": 61,
+      "fn": 56,
+      "precision": 0.663,
+      "recall": 0.6818,
+      "f1": 0.6723,
+      "ap50": 0.6403
+    }
+  }
+}
