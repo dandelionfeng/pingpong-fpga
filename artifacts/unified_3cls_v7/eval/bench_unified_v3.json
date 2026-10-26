@@ -1,0 +1,19 @@
+{
+  "backend": "unified_v3",
+  "frames": 150,
+  "threads": 4,
+  "providers": [
+    "AzureExecutionProvider",
+    "CPUExecutionProvider"
+  ],
+  "mean_ms": 301.98,
+  "median_ms": 302.43,
+  "p95_ms": 312.38,
+  "min_ms": 284.31,
+  "max_ms": 320.99,
+  "fps": 3.31,
+  "stage_approx_ms": {
+    "preprocess_plus_forward": 298.11,
+    "decode_and_nms": 3.87
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "backend": "dual_yolo",
+  "images": 509,
+  "conf": {
+    "ball": 0.2,
+    "hand": 0.25,
+    "racket": 0.25
+  },
+  "classes": {
+    "ball": {
+      "gt": 100,
+      "tp": 6,
+      "fp": 367,
+      "fn": 94,
+      "precision": 0.0161,
+      "recall": 0.06,
+      "f1": 0.0254,
+      "ap50": 0.0046
+    },
+    "hand": {
+      "gt": 1172,
+      "tp": 654,
+      "fp": 292,
+      "fn": 518,
+      "precision": 0.6913,
+      "recall": 0.558,
+      "f1": 0.6176,
+      "ap50": 0.5042
+    },
+    "racket": {
+      "gt": 176,
+      "tp": 133,
+      "fp": 42,
+      "fn": 43,
+      "precision": 0.76,
+      "recall": 0.7557,
+      "f1": 0.7578,
+      "ap50": 0.689
+    }
+  },
+  "ball_fp_on_ball_free_frames": {
+    "frames": 409,
+    "frames_fired": 180,
+    "rate": 0.4401
+  }
+}

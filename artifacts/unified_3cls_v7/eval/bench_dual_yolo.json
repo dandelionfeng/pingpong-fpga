@@ -1,0 +1,19 @@
+{
+  "backend": "dual_yolo",
+  "frames": 150,
+  "threads": 4,
+  "providers": [
+    "AzureExecutionProvider",
+    "CPUExecutionProvider"
+  ],
+  "mean_ms": 646.51,
+  "median_ms": 635.78,
+  "p95_ms": 706.48,
+  "min_ms": 597.36,
+  "max_ms": 1583.4,
+  "fps": 1.55,
+  "stage_approx_ms": {
+    "preprocess_plus_forward": 642.85,
+    "decode_and_nms": 3.66
+  }
+}
