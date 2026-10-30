@@ -1,0 +1,18 @@
+{
+  "version": "stereo-serve-v1.2.0-20261030",
+  "software_version": "1.2.0",
+  "name": "发球测量系统",
+  "ui_revision": "20261030.04",
+  "runtime_profile": "FPGA-quick-field-3092-20261030",
+  "backend_version": "FPGA-field-final-20261030-r2",
+  "entry": "发球测量系统.exe",
+  "sealed": true,
+  "data": "data",
+  "default_camera": "/dev/video73",
+  "configuration": "app/version.json",
+  "manifest": "manifests/runtime-sha256.json",
+  "model_manifest": "manifests/model-sha256.json",
+  "publication": "source, UI, configuration, documentation and launcher; local submission package includes offline dependencies and selected recordings",
+  "validation": "docs/验证记录.md",
+  "official_code_format": "RAR, <=200 MB"
+}

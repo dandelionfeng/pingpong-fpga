@@ -1,0 +1,17 @@
+{
+  "scope": "Routed timing and binary/source integrity only; not a board result.",
+  "bit_file": "afh03_sgdma_motion7.bit",
+  "bit_sha256": "a4b1f0948fb26bc41936f932dd4933be8ce0bf6f63f019e58b3bd00f5890787b",
+  "bit_bytes": 4850323,
+  "setup_wns_ns": 0.062,
+  "hold_wns_ns": 0.02,
+  "device": "PH1A90SEG324-2",
+  "tool": "TD 2026.1 SP2",
+  "user_clock_mhz": 125,
+  "source_sha256": {
+    "fpga/rtl/a_motion/gaussian_stream.v": "c20e2ef6a1512535f1e3050d373665aedea5f8b1ad32e6acb40539b952232603",
+    "fpga/rtl/board_motion7/binary_morph_stream.v": "a89b161101d5f7d6fa993080112771a33b36a80a7abcbc20233a05d23f2e5e2d",
+    "fpga/rtl/board_motion7/motion7_axis.v": "d5f32913951a5921b86194dbaea6972679a881d3c547de452ae489c6578ee613"
+  },
+  "protocol": "ABM7/AMR7 v1 private SRAM test"
+}

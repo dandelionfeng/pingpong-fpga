@@ -1,0 +1,62 @@
+{
+  "version": "FPGA-quick-field-3092-20261030",
+  "source_version": "FPGA-field-640-kinematic-handstop-20261030-experimental",
+  "frozen_base": "FPGA-field-20261029-validated",
+  "board_root": "/userdata/pingpong-quick-field-3092-20261030",
+  "result_root": "/root/pingpong-quick-field-3092-results",
+  "adb_serial": "2342f1aa3c720c76",
+  "historical_serve10_main_s": 30.920175338,
+  "model_names": [
+    "V6 Round2 ball",
+    "Unified V2 hand/racket"
+  ],
+  "speed_changes": [
+    "640x640 INT8 from original weights and original64 calibration images",
+    "native INT8 and zero-copy input; quantized outputs",
+    "left/right eyes parallel on NPU0/1",
+    "hand/racket stops after causal kinematic candidate; ball continues"
+  ],
+  "settings": {
+    "model_input_shape": [
+      1,
+      3,
+      640,
+      640
+    ],
+    "original_eye_size": [
+      1280,
+      720
+    ],
+    "source_weights_same_initializers": true,
+    "network_nodes_same": true,
+    "int8_recalibrated_same64_samples": true,
+    "serve10_used_for_calibration": false,
+    "same_executable_as960": false,
+    "same_thresholds_calibration_world_pose": true,
+    "both_models_on_every_eye": false,
+    "hand_stride": 1,
+    "hand_stop_on_mask": false,
+    "pace_fps": 0,
+    "teso_stride": 30,
+    "fpga_mode": 0,
+    "inline_preprocess": "none",
+    "parallel_eyes": true,
+    "core_assignment": "left NPU0/right NPU1, CPU4/5",
+    "hand_stop_on_kinematic_candidate": true,
+    "ball_model_on_every_eye": true,
+    "models_reused_without_reconversion": true,
+    "kinematic_trigger": "first online valid flight fit plus mask-gray seeds, unchanged tracker/profile on processed prefix",
+    "helper_attempts": 1,
+    "helper_failure_policy": "keep hand/racket model running",
+    "hand_stop_starts": "following stereo pair",
+    "hand_stop_latched_until_new_process": true,
+    "online_kinematic_compute_in_main_elapsed": true
+  },
+  "capture_flow": "record original MJPEG first, then synchronous full-pair analysis, same as frozen run_capture.sh",
+  "console_policy": "dmesg -n4 on entry, serial connection, camera setup and jobs; remains4 until reboot or explicit user change; ring buffer retained",
+  "pc_python": "../runtime/python/python.exe",
+  "default_record_seconds": 30,
+  "default_exposure": "auto",
+  "git_branch": "codex/quick-field-3092-package-20261030",
+  "published": false
+}

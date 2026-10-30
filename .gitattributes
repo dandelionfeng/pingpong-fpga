@@ -1,8 +1,2 @@
-* text=auto eol=lf
-*.ps1 text eol=crlf
-*.pdf binary
-*.docx binary
-*.png binary
-*.jpg binary
-*.zip binary
-archive/** -text -whitespace
+* -text
+*.exe binary

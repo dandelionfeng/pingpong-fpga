@@ -1,0 +1,77 @@
+{
+  "capture_date": "2026-10-30",
+  "recordings": [
+    {
+      "case": "serve_01",
+      "original": "serve_03",
+      "pairs": 381,
+      "height_cm": 38.10001614490929,
+      "angle_deg": 27.621267107536156,
+      "measurement_estimated": false,
+      "fit_valid": true,
+      "release_valid": true,
+      "main_s": 21.958029999999997,
+      "raw_results_unchanged": true
+    },
+    {
+      "case": "serve_02",
+      "original": "serve_05",
+      "pairs": 261,
+      "height_cm": 42.7784886199602,
+      "angle_deg": 27.969268931924386,
+      "measurement_estimated": false,
+      "fit_valid": true,
+      "release_valid": true,
+      "main_s": 16.588557946,
+      "raw_results_unchanged": true
+    },
+    {
+      "case": "serve_03",
+      "original": "serve_06",
+      "pairs": 261,
+      "height_cm": 53.50165518332632,
+      "angle_deg": 24.725987922400403,
+      "measurement_estimated": false,
+      "fit_valid": true,
+      "release_valid": true,
+      "main_s": 17.916722766,
+      "raw_results_unchanged": true
+    },
+    {
+      "case": "serve_04",
+      "original": "serve_07",
+      "pairs": 261,
+      "height_cm": 56.63659221519748,
+      "angle_deg": 38.85720825272472,
+      "measurement_estimated": false,
+      "fit_valid": true,
+      "release_valid": true,
+      "main_s": 17.375944311999998,
+      "raw_results_unchanged": true
+    },
+    {
+      "case": "serve_05",
+      "original": "serve_10",
+      "pairs": 261,
+      "height_cm": 37.837401068422906,
+      "angle_deg": 47.98328296616283,
+      "measurement_estimated": false,
+      "fit_valid": true,
+      "release_valid": true,
+      "main_s": 17.415933828,
+      "raw_results_unchanged": true
+    },
+    {
+      "case": "serve_06",
+      "original": "serve_15",
+      "pairs": 252,
+      "height_cm": 62.856208559153224,
+      "angle_deg": 23.226893949761656,
+      "measurement_estimated": true,
+      "fit_valid": true,
+      "release_valid": true,
+      "main_s": 18.612572531,
+      "raw_results_unchanged": true
+    }
+  ]
+}

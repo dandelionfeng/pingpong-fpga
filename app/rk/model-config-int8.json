@@ -1,0 +1,23 @@
+{
+  "interface_version": "C_ACTUAL_INTERFACE_V2_4_UNIFIED_ALL_1",
+  "detector_mode": "v6_ball_unified_hand_racket",
+  "intra_op_threads": 1,
+  "models": {
+    "unified": {
+      "path": "models/unified_640_int8.rknn",
+      "sha256": "020ac622be55c6ce64816e86bc87e64ae827878906cae03c7ce7bd3ff9b16e69"
+    },
+    "v6_ball": {
+      "path": "models/ball_640_int8.rknn",
+      "sha256": "3b01b325a9e3db893e12acedba21d1dae1653e93e2ba2d077d893ebd5afa5403"
+    }
+  },
+  "diagnostic_thresholds": {
+    "base_conf": 0.005,
+    "ball": 0.02,
+    "hand": 0.1,
+    "racket": 0.1
+  },
+  "v6_ball_conf": 0.1,
+  "experimental_quantization": "same trained raw-head graph, static640, INT8 recalibrated with original64 source images"
+}
