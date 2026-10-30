@@ -1,0 +1,43 @@
+{
+  "tag": "fp16_sim",
+  "platform": "rk3588",
+  "int8": false,
+  "images": 300,
+  "conf": {
+    "0": 0.2,
+    "1": 0.25,
+    "2": 0.25
+  },
+  "classes": {
+    "ball": {
+      "gt": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "ap50": 0.0
+    },
+    "hand": {
+      "gt": 813,
+      "tp": 444,
+      "fp": 208,
+      "fn": 369,
+      "precision": 0.681,
+      "recall": 0.5461,
+      "f1": 0.6061,
+      "ap50": 0.4958
+    },
+    "racket": {
+      "gt": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "ap50": 0.0
+    }
+  }
+}

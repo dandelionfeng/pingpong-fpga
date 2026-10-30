@@ -1,0 +1,17 @@
+﻿# 方案 A：FP16，960×960（无校准，最稳，先跑通）
+# 用法： python3 convert_v3_to_rknn.py --config configs/fp16_960.yaml
+onnx: pingpong_yolov8n_gray_3cls_v3_960_single_out.onnx
+out: out/v3_960_fp16.rknn
+target_platform: rk3576
+quantized: false            # FP16
+dataset: null               # FP16 不需要校准
+mean_values: [[0, 0, 0]]    # 预处理里已除 255，这里给 mean=0 scale=255
+std_values:  [[255, 255, 255]]
+optimization_level: 3
+core_mask: null             # 转换期不定，运行时用 --core-mask 选
+eval_dir: null
+notes: |
+  FP16 路线用途：
+  1) 先验证 ONNX 图在 RKNN 上能否成功转换与运行；
+  2) 作为 INT8 的精度上界参照（FP16 通常与 FP32 基本一致）。
+  预期：文件比 INT8 大 ~2 倍，NPU 略慢，但精度几乎无损。

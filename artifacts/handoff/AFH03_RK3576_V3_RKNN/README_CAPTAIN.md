@@ -55,10 +55,26 @@ cd cpp && ./build.sh      # 需要 /usr/include/rknn_api.h 和 /usr/lib/librknnr
 
 ## 4. 关键实测结论（先看这个，避免踩坑）
 
-### 4.1 原 V3 ONNX 有 6 个输出，必须用单输出版转换
+### 4.1 ⚠ 转换要用**原始 6 输出** ONNX，不是单输出版（上一轮结论已更正）
 
-原文件除 `output0` 外还有 4 个 DFL/中间张量。用单输出重导后节点从 397 降到 234，
-且**精度完全相同**（ball P/R/F1/AP50 = 0.823/0.510/0.630/0.492）。
+原文件除 `output0` 外还有 4 个 DFL/中间张量。**实测**：
+- **单输出版（`…_single_out.onnx`）在 rknn-toolkit2 2.5.0 里转换失败**：
+  `rknn/api/rules/conv.py:4860 _p_seperate_conv_rs_split → IndexError`（`optimization_level` 0/1/3 都一样）；
+- **原始 6 输出 ONNX 转换成功**（FP16 已产出 `rknn/v3_960_fp16_rk3576.rknn`）。
+
+单输出版保留用于 PC 侧评测（精度与原模型逐位一致），**但不要拿它去转 RKNN**。
+
+### 4.1b INT8 已尝试：能出文件但输出被量化破坏，暂不可用
+
+`output0 = concat(box 0~960, score 0~1)` 单张量被单尺度量化 → 分数被坐标量程压平：
+
+| 模型 | output0 范围（模拟器同一帧） |
+| --- | --- |
+| FP16 | 正常（分数 0~1） |
+| INT8 | min −15.3 / max **956** / mean 162（≈坐标量程） |
+
+结果 INT8 在 300 张 val 上**检出为 0**。修复路径（见 `rknn/CONVERSION_RESULTS.md`）：
+导出时**去掉末尾 Concat**，输出分离的 score/DFL 张量，在 C++ 里自己跑 DFL 解码。
 
 ### 4.2 640 分辨率**不可用**
 

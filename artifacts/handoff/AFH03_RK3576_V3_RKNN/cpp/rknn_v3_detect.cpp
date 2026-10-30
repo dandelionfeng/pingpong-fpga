@@ -255,13 +255,19 @@ int main(int argc, char **argv) {
   const int in_w = static_cast<int>(in_attr.dims[2]);
   std::printf("input %dx%d fmt=%d type=%d\n", in_w, in_h, in_attr.fmt, in_attr.type);
 
-  // dual-core scheduling (RK3576 exposes CORE_0 / CORE_1 / CORE_0_1 on recent runtimes)
+  // Dual-core scheduling. rknn_set_core_mask + RKNN_NPU_CORE_* exist in rknpu2 >= 1.6 (RK3576/RK3588).
+  // If your SDK's rknn_api.h predates that, build with -DNO_CORE_MASK=1 and only AUTO is used.
+#ifndef NO_CORE_MASK
   rknn_core_mask mask = RKNN_NPU_CORE_AUTO;
   if (core_mask == "0") mask = RKNN_NPU_CORE_0;
   else if (core_mask == "1") mask = RKNN_NPU_CORE_1;
   else if (core_mask == "0_1" || core_mask == "all") mask = RKNN_NPU_CORE_0_1;
   ret = rknn_set_core_mask(ctx, mask);
-  std::printf("core_mask=%s -> %d\n", core_mask.c_str(), ret);
+  std::printf("core_mask=%s -> ret=%d (0 means ok)\n", core_mask.c_str(), ret);
+#else
+  std::printf("core_mask: compiled out (-DNO_CORE_MASK); runtime uses AUTO. requested=%s\n",
+              core_mask.c_str());
+#endif
 
   // ---- load one frame ----
   Image img;

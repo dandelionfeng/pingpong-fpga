@@ -114,14 +114,41 @@ def build(onnx_path: str, out_path: str, calib_list: str | None, int8: bool, tar
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--onnx", required=True)
-    ap.add_argument("--out", default="out")
+    ap.add_argument("--onnx", help="path to the single-output ONNX")
+    ap.add_argument("--out", default="out", help="output dir")
     ap.add_argument("--calib", default=None)
     ap.add_argument("--fp16-only", action="store_true")
     ap.add_argument("--target", default="rk3576")
     ap.add_argument("--core-mask", default=None, help="auto|0|1|0_1|all (runtime also settable)")
     ap.add_argument("--eval-dir", default=None, help="YOLO split dir with images/val + labels/val")
+    ap.add_argument("--config", default=None, help="YAML: configs/fp16_960.yaml or configs/int8_960.yaml")
     args = ap.parse_args()
+
+    if args.config:
+        import yaml
+        cfg_path = pathlib.Path(args.config).resolve()
+        cfg = yaml.safe_load(cfg_path.read_text(encoding="utf-8"))
+        root = cfg_path.parent.parent            # configs/ -> package root
+        def _p(v):
+            if not v:
+                return None
+            q = pathlib.Path(str(v))
+            return str(q if q.is_absolute() else root / q)
+        if cfg.get("onnx"):
+            args.onnx = _p(cfg["onnx"])
+        if cfg.get("out"):
+            args.out = str(pathlib.Path(_p(cfg["out"])).parent)
+        if cfg.get("dataset"):
+            args.calib = _p(cfg["dataset"])
+        if cfg.get("eval_dir"):
+            args.eval_dir = str(cfg["eval_dir"])
+        if cfg.get("target_platform"):
+            args.target = cfg["target_platform"]
+        args.fp16_only = not bool(cfg.get("quantized", False))
+        log("config: quantized=%s  onnx=%s  out=%s  calib=%s"
+            % (not args.fp16_only, args.onnx, args.out, args.calib))
+    if not args.onnx:
+        raise SystemExit("--onnx or --config is required")
 
     import onnx
     m = onnx.load(args.onnx)
