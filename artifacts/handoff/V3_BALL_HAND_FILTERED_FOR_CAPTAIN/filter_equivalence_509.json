@@ -1,0 +1,78 @@
+{
+  "onnx": "artifacts\\handoff\\V3_BALL_HAND_FILTERED_FOR_CAPTAIN\\pingpong_yolov8n_gray_3cls_v3_960_960.onnx",
+  "images": 509,
+  "unfiltered": {
+    "ball": {
+      "gt": 100,
+      "tp": 51,
+      "fp": 11,
+      "fn": 49,
+      "precision": 0.8226,
+      "recall": 0.51,
+      "f1": 0.6296,
+      "ap50": 0.4921
+    },
+    "hand": {
+      "gt": 1172,
+      "tp": 654,
+      "fp": 292,
+      "fn": 518,
+      "precision": 0.6913,
+      "recall": 0.558,
+      "f1": 0.6176,
+      "ap50": 0.5042
+    },
+    "racket": {
+      "gt": 176,
+      "tp": 133,
+      "fp": 42,
+      "fn": 43,
+      "precision": 0.76,
+      "recall": 0.7557,
+      "f1": 0.7578,
+      "ap50": 0.689
+    }
+  },
+  "filtered": {
+    "ball": {
+      "gt": 100,
+      "tp": 51,
+      "fp": 11,
+      "fn": 49,
+      "precision": 0.8226,
+      "recall": 0.51,
+      "f1": 0.6296,
+      "ap50": 0.4921
+    },
+    "hand": {
+      "gt": 1172,
+      "tp": 654,
+      "fp": 292,
+      "fn": 518,
+      "precision": 0.6913,
+      "recall": 0.558,
+      "f1": 0.6176,
+      "ap50": 0.5042
+    },
+    "racket": {
+      "gt": 176,
+      "tp": 0,
+      "fp": 0,
+      "fn": 176,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "ap50": 0.0
+    }
+  },
+  "racket_detections": {
+    "unfiltered": 175,
+    "filtered": 0
+  },
+  "frames_with_identical_kept_detections": 509,
+  "postprocess_ms": {
+    "decode_nms_all3": 1.747,
+    "filter_pass": 0.0042,
+    "median_decode_nms_all3": 1.706
+  }
+}

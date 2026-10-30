@@ -1,0 +1,41 @@
+﻿# V3 类别过滤配置（ball + hand only）
+#
+# 模型的网络结构、权重、输出维度都不变（仍是 3 类）。这里只声明后处理要保留哪些类别。
+# 过滤发生在「解码 + NMS 之后、结果交给下游模块之前」。
+
+model:
+  rknn: v3_960_fp16_dfl_layout.rknn
+  onnx_for_pc_check: pingpong_yolov8n_gray_3cls_v3_960_960.onnx
+  input_size: 960
+  input_format: GRAY8          # 内部复制成 3 通道，letterbox 填充 114
+  layout: dfl                  # dfl [1,64,18900] + scores_logits [1,3,18900]
+
+classes:
+  0: ball
+  1: hand
+  2: racket
+
+filter:
+  keep: [0, 1]                 # 只输出 ball 与 hand
+  drop: [2]                    # racket 被过滤
+  stage: after_decode_and_nms  # 明确：解码与 NMS 之后才过滤
+
+thresholds:                    # 与 V3 交付一致，未改动
+  ball: 0.20
+  hand: 0.25
+  racket: 0.25                 # 仍然解码，只是结果被丢弃
+
+nms:
+  iou: 0.50
+  max_det_per_class: 60
+
+output_contract:               # 与 C 模块 DetectionResult 对齐
+  fields: [class_id, confidence, bbox_xyxy, bbox_xywh, image_width, image_height]
+  bbox_units: original_image_pixels
+  xywh_convention: top_left_corner_and_size
+
+notes: |
+  1. 过滤不改变任何 ball/hand 检测：509 张验证图上 TP/FP/FN 完全一致（见 EVALUATION_REPORT.md）。
+  2. 过滤不会让 NPU 前向变快——模型仍然算完 3 类。省下的只是「racket 那部分后处理与
+     下游传递」，实测过滤本身 0.0042 ms。
+  3. 不要把它当成"双分类模型"：模型内部仍是 3 类，只是出口被裁掉一类。
