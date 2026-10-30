@@ -1,0 +1,23 @@
+﻿# 方案 B：INT8，960×960（用现有 300 张校准清单，精度需验收）
+# 用法： python3 convert_v3_to_rknn.py --config configs/int8_960.yaml
+onnx: pingpong_yolov8n_gray_3cls_v3_960_single_out.onnx
+out: out/v3_960_int8.rknn
+target_platform: rk3576
+quantized: true             # INT8
+dataset: calib/list.txt     # 300 张，五类场景各 60，已核验 0 张来自 val
+mean_values: [[0, 0, 0]]
+std_values:  [[255, 255, 255]]
+optimization_level: 3
+core_mask: null
+eval_dir: null              # 填 val 数据集目录即可自动打印逐类 P/R/F1
+notes: |
+  INT8 验收线（不达标不许上板交付）：
+    Ball   Recall >= 0.49   (FP32 基线 0.510)
+    Hand   F1     >= 0.60   (FP32 基线 0.618)
+    Racket Recall >= 0.73   (FP32 基线 0.756)
+  不达标的处理顺序：
+    1) 提高校准集密度（make_calib_list.py --per-bucket 150~200，仍只用 train）
+    2) 混合精度：把首层 Conv 与 DFL 相关层保留 FP16（rknn.config 的
+       quantized_dtype / 自定义 hybrid 配置，按你手头 toolkit 版本的 API 调整）
+    3) 最后才考虑 QAT（需要重新训练，本轮明确不做）
+  注意：校准清单里是 Windows 绝对路径，Linux 上用 make_calib_list.py 重新生成。

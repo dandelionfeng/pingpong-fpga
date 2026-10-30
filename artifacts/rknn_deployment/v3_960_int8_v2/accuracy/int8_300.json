@@ -1,0 +1,47 @@
+{
+  "tag": "dfl_int8",
+  "int8": true,
+  "images": 300,
+  "value_ranges": {
+    "dfl": [
+      -26.948,
+      28.026
+    ],
+    "logits": [
+      -40.701,
+      2.291
+    ]
+  },
+  "classes": {
+    "ball": {
+      "gt": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "ap50": 0.0
+    },
+    "hand": {
+      "gt": 813,
+      "tp": 435,
+      "fp": 225,
+      "fn": 378,
+      "precision": 0.6591,
+      "recall": 0.5351,
+      "f1": 0.5906,
+      "ap50": 0.4768
+    },
+    "racket": {
+      "gt": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "ap50": 0.0
+    }
+  }
+}

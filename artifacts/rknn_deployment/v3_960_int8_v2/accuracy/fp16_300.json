@@ -1,0 +1,47 @@
+{
+  "tag": "dfl_fp16",
+  "int8": false,
+  "images": 300,
+  "value_ranges": {
+    "dfl": [
+      -32.062,
+      32.031
+    ],
+    "logits": [
+      -38.875,
+      2.514
+    ]
+  },
+  "classes": {
+    "ball": {
+      "gt": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "ap50": 0.0
+    },
+    "hand": {
+      "gt": 813,
+      "tp": 445,
+      "fp": 207,
+      "fn": 368,
+      "precision": 0.6825,
+      "recall": 0.5474,
+      "f1": 0.6075,
+      "ap50": 0.4976
+    },
+    "racket": {
+      "gt": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "ap50": 0.0
+    }
+  }
+}
