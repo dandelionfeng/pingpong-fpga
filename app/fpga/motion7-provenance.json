@@ -1,0 +1,9 @@
+{
+  "base": "C:\\temp\\afh03-sgdma-diagnostic-20261017-v7",
+  "source_sha256": {
+    "fpga/rtl/a_motion/gaussian_stream.v": "c20e2ef6a1512535f1e3050d373665aedea5f8b1ad32e6acb40539b952232603",
+    "fpga/rtl/board_motion7/binary_morph_stream.v": "a89b161101d5f7d6fa993080112771a33b36a80a7abcbc20233a05d23f2e5e2d",
+    "fpga/rtl/board_motion7/motion7_axis.v": "d5f32913951a5921b86194dbaea6972679a881d3c547de452ae489c6578ee613"
+  },
+  "scope": "ABM7 SRAM board test. Two same-eye Gaussian references in densely packed ERAM; no external DDR. Not AM01."
+}

@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "capture_date": "2026-10-30",
+  "renumbering": [
+    {
+      "original_case": "serve_03",
+      "case": "serve_01",
+      "capture_date": "2026-10-30",
+      "original_pair_ids_and_timestamps_retained": true,
+      "raw_sha256": {
+        "summary.json": "c2c1fad387fe1325a8dbb396079d44884b16c63d6ef74b4e49d7d0b665e8c9f3",
+        "frames.jsonl": "b76c33458b264046f1251ae6dd23571a4ee8a6585d4d60f1052dad5df7e802ec",
+        "detections.jsonl": "d8fefd5084382c7b8e84089c0d33cf70d25af6f37482093d57f64546eaffc619",
+        "input/manifest.json": "099acd8c8c2d2671830b8411c35e51d161b39e5de81f9a56c5891c16fbd1cbcd",
+        "motion-current/latest-release.json": "be48bdedd6df17ba4cb1c5f814030847f273bfa6627e960365aa7a50b3423e92",
+        "measurement-complete.json": "3d644038abb340e8654c2aedc8f5ce35d7ae6fe31bfb9bd118cd704f2464e509"
+      }
+    },
+    {
+      "original_case": "serve_05",
+      "case": "serve_02",
+      "capture_date": "2026-10-30",
+      "original_pair_ids_and_timestamps_retained": true,
+      "raw_sha256": {
+        "summary.json": "de202f05a48189f538b56118417ef1e48e195db29dc709951276e6b3345054bb",
+        "frames.jsonl": "f530e73fc57f4f341e933bf9d01b86d339cf222b0d01c94cc9b49ab09bd0fccc",
+        "detections.jsonl": "c7e0c7e59d460ced351bd450887b22ee9813c622546746a609953faeb402259f",
+        "input/manifest.json": "8047da2745c9a50658a24d4328826559ac09b7825d0135ebe403782d28284667",
+        "motion-current/latest-release.json": "c763c6f340e428dcdb691e12e7df753d51bfccfa2cfcad54a74008139ba4cef3",
+        "measurement-complete.json": "8de6eff650ca8922a416b5ee15aedfdecbdd4fd82aebf2db97fa61ebf633b5c3"
+      }
+    },
+    {
+      "original_case": "serve_06",
+      "case": "serve_03",
+      "capture_date": "2026-10-30",
+      "original_pair_ids_and_timestamps_retained": true,
+      "raw_sha256": {
+        "summary.json": "24541f072c127019fe71692ee7e33c5037beb279b9a1ba349c665709a1184ee9",
+        "frames.jsonl": "92e358f7d48e4423158e9efc270805481dd36ec4f82d66b1bbd190d245c541d9",
+        "detections.jsonl": "da206c4721502507fee1e7af3a9cbfc4c44ad46f6cc19cb6f8052eb121b72472",
+        "input/manifest.json": "4cb8309b90608d2af921a8634438802f5f6a4998a34362cc69e5d44fc025a37f",
+        "motion-current/latest-release.json": "49ece21dddf8b6c62b52812f742ad343144c3494c92a4aac511c69b95ce56c5c",
+        "measurement-complete.json": "18208896cb34e858dbc6877446e231f6e7abb264e3cea2fc96f4a6ef08831a64"
+      }
+    },
+    {
+      "original_case": "serve_07",
+      "case": "serve_04",
+      "capture_date": "2026-10-30",
+      "original_pair_ids_and_timestamps_retained": true,
+      "raw_sha256": {
+        "summary.json": "2bc598df9008630b54578385f28256d2a46c898d35bd6a469725e8ec184f9780",
+        "frames.jsonl": "188ff44d31bb4c205d9718a5a6af29f58e5ea4b0b1daa03b801eeae871e40ce1",
+        "detections.jsonl": "f3f46eb8d5c270c5e4c5149e36d74bb7a014f079a1fab45c1d10919c60f83467",
+        "input/manifest.json": "87e49442b016507c6ec060bab28719aab28f8e5a9ac14c7bceb518c81a45845b",
+        "motion-current/latest-release.json": "a15d7d5d0e98ed85da2a8306d0b2245f03f85ef8c5d5c990dee5b62101edda02",
+        "measurement-complete.json": "32e7a8fcdea1003778564932f20fa47ba7ca32ab46f84979a40b25287dc9ea06"
+      }
+    },
+    {
+      "original_case": "serve_10",
+      "case": "serve_05",
+      "capture_date": "2026-10-30",
+      "original_pair_ids_and_timestamps_retained": true,
+      "raw_sha256": {
+        "summary.json": "7cc3dfc93a9547454efc15dc864774305e1a8f0c22196df56e1b4ea1d17e7edc",
+        "frames.jsonl": "248a3e7a6f50042c504724821e17dc1e1d10dd55bf17f2e1373c35a42fd6b5b4",
+        "detections.jsonl": "7fbb92c182e1543c7a11e7d173eb8ac1a53a48bc1e09f0aadfb8ab1c4e6fe9c1",
+        "input/manifest.json": "baa598d8c0e42943b2563caa238831c3043aac7d1c3fd26b49e153ca4c1044fb",
+        "motion-current/latest-release.json": "933e042f0d73f27a4c11562afb7425c30fd9e3eb1911a6a8856c3066ad434745",
+        "measurement-complete.json": "5803f9bbee876df46fdf282a4f450c75494b210372753adc4c097236edd58773"
+      }
+    },
+    {
+      "original_case": "serve_15",
+      "case": "serve_06",
+      "capture_date": "2026-10-30",
+      "original_pair_ids_and_timestamps_retained": true,
+      "raw_sha256": {
+        "summary.json": "d18dc472b313c6690dc4fdb1df6dd35bf6f635906b6c0c9ed607fc27253def56",
+        "frames.jsonl": "8e225d552454b2ef74afd28c4c9f4013ca7f8d30dd194e4df63ba0a3f276ac1f",
+        "detections.jsonl": "418cbcb052f7e1715d7518888a8ca5ed8fdb893dbb97f6a86cc9b1770ac42496",
+        "input/manifest.json": "7aef08021dde38a0a8ca535d31197019b245f12bcd7a9cdaecd24ece8e4553a8",
+        "motion-current/latest-release.json": "787bc7d00feccc543a2f97a8e844a00701a669b5e6f11f74d3896cd3bc656d01",
+        "measurement-complete.json": "1d79ec23b2a08d21c37d1fb9078ac8053c17b2071b7886dc086541abc2314b48"
+      }
+    }
+  ]
+}

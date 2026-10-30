@@ -1,0 +1,245 @@
+{
+  "schema": "b-calibration-v1-draft",
+  "image_size_px": [
+    1280,
+    720
+  ],
+  "pattern_inner_corners": "11x8",
+  "square_size_m": 0.03,
+  "left_right_order": "stitched_left=physical_left_camera, stitched_right=physical_right_camera",
+  "K_left": [
+    [
+      1378.8388982859567,
+      0.0,
+      648.1091984690765
+    ],
+    [
+      0.0,
+      1379.09683191309,
+      416.0653864074831
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "D_left": [
+    -0.45060071969576637,
+    0.46378961568125915,
+    -0.0012657912634869311,
+    0.001174903215585706,
+    -1.1489246955995112
+  ],
+  "K_right": [
+    [
+      1379.8248371601405,
+      0.0,
+      646.8350369111974
+    ],
+    [
+      0.0,
+      1381.5791873221779,
+      358.9851776170574
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "D_right": [
+    -0.2982329918411849,
+    -1.2575994273869935,
+    0.003598830315918876,
+    0.0017972609677015582,
+    4.004740508989156
+  ],
+  "R_left_to_right": [
+    [
+      0.999884314857912,
+      0.00818767967741607,
+      0.012818689582950845
+    ],
+    [
+      -0.008189002309261407,
+      0.999966468273451,
+      5.069418222814821e-05
+    ],
+    [
+      -0.01281784468243144,
+      -0.00015566059626094487,
+      0.9999178359382714
+    ]
+  ],
+  "T_m": [
+    -0.1759561728037429,
+    0.005888813261844548,
+    0.0038096551345394272
+  ],
+  "R1": [
+    [
+      0.9996420778871956,
+      -0.02525527273304444,
+      -0.008825379116468478
+    ],
+    [
+      0.025256282856339365,
+      0.9996810092060551,
+      3.0073125995958873e-06
+    ],
+    [
+      0.008822487951277356,
+      -0.00022590250749588298,
+      0.9999610555788694
+    ]
+  ],
+  "R2": [
+    [
+      0.999206522272728,
+      -0.0334409445597787,
+      -0.021633979629047714
+    ],
+    [
+      0.0334384675124536,
+      0.9994406645696374,
+      -0.00047633498736551056
+    ],
+    [
+      0.02163780806964582,
+      -0.00024745009882868777,
+      0.9997658446008194
+    ]
+  ],
+  "P1": [
+    [
+      1585.5203404792767,
+      0.0,
+      695.5192718505859,
+      0.0
+    ],
+    [
+      0.0,
+      1585.5203404792767,
+      420.35388946533203,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ]
+  ],
+  "P2": [
+    [
+      1585.5203404792767,
+      0.0,
+      695.5192718505859,
+      -279.2036328772824
+    ],
+    [
+      0.0,
+      1585.5203404792767,
+      420.35388946533203,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ]
+  ],
+  "Q": [
+    [
+      1.0,
+      0.0,
+      0.0,
+      -695.5192718505859
+    ],
+    [
+      0.0,
+      1.0,
+      0.0,
+      -420.35388946533203
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1585.5203404792767
+    ],
+    [
+      0.0,
+      0.0,
+      5.678723891018122,
+      -0.0
+    ]
+  ],
+  "stereo_rms_px": 1.0086528860170085,
+  "estimated_baseline_m": 0.17609590097903366,
+  "calibration_pairs_used": 67,
+  "world_pose": null,
+  "world_transform": null,
+  "world_calibration": null,
+  "world_transform_available": true,
+  "provenance": {
+    "kind": "joint_two_batch_fit_only_cv",
+    "old_pairs": 27,
+    "new_pairs": 40,
+    "selected_model": "fixed_principal_joint",
+    "selection_sha256": "32518b1ae8f7ad2270c24cc145ec2e9deb603350c5da167d91afe45537bff2fa",
+    "plan_sha256": "f007b6fc55a434f758482f0756caea3526bb7d0344c5c5697d22f93279c39bc5",
+    "fit_corners_sha256": "dc52daedc281c89a42685abbfb80e17db29473a0af4ebdf15fa4f97ca8f8b018",
+    "seed_sha256": "e0a51683b2907d73436058d668097cf02dac2e72a2a2774262e48c323f45e616",
+    "flags": 131077,
+    "world_points_used": false,
+    "original_holdout_used_for_fit_or_model_selection": false,
+    "solver_opencv": "5.0.0",
+    "fit_seconds": 2.4051622999977553,
+    "output_frame": "left_camera",
+    "source_stereo_sha256": "e2226efeee5458cd99cab92160fff2d834e02f35273c24a4bd628a42281690d6"
+  },
+  "diagnostic_world_pose": {
+    "Rcw": [
+      [
+        0.9986843270953644,
+        0.0029391493457842192,
+        -0.051195470651244135
+      ],
+      [
+        -0.05123213765128114,
+        0.014166662729364373,
+        -0.9985862875779903
+      ],
+      [
+        -0.0022097252678566943,
+        0.9998953280560099,
+        0.014298602938923127
+      ]
+    ],
+    "tcw": [
+      -1.3206162100699343,
+      0.3540525783723965,
+      1.3462848997024932
+    ],
+    "world_frame": {
+      "id": "opposite-sideline-net-upright-20261022",
+      "origin": "intersection of net plane and sketch-right long table edge, on tabletop",
+      "X": "from sketch-right long edge toward the board, across table width",
+      "Y": "from net toward board, along table length",
+      "Z": "up; X cross Y = Z",
+      "net_plane": "Y=0",
+      "table_plane": "Z=0",
+      "board_plane": "Y=+0.080",
+      "note": "diagnostic frame differs from old board-side-sideline frame; no runtime changes"
+    },
+    "source_capture": "20261022193849.bmp",
+    "source_capture_sha256": "8916886be06aa53e8d97cb24f698df00540af81b5c1dd35ad0b5a7b0e0f43fdf",
+    "audit_sha256": "3b6a65f7be0b63fcf0c4c1ff321cec0f84b43153a2b817e32d0186f905569205",
+    "selection": "joint stereo best board scale; smallest heldout left reprojection upright pose",
+    "known_repeat_orientation_difference_deg": 1.8262,
+    "binding": "user-authorized diagnostic application to existing video; metric acceptance not required"
+  }
+}

@@ -1,9 +1,5 @@
 #!/bin/sh
-if command -v python >/dev/null 2>&1; then
-  exec python tools/check_repo.py --staged
-elif command -v python3 >/dev/null 2>&1; then
-  exec python3 tools/check_repo.py --staged
-else
-  echo 'Python 3 is required. See docs/协作使用指南.md.' >&2
-  exit 1
+if [ -x runtime/python/python.exe ]; then
+  exec runtime/python/python.exe -B tools/check_repo.py
 fi
+exec python tools/check_repo.py

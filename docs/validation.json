@@ -1,0 +1,32 @@
+{
+  "version": "1.2.0",
+  "windows_exe": {
+    "onefile": true,
+    "normal_launch_passed": true,
+    "self_test": true,
+    "unicode_and_other_cwd": true,
+    "recordings": 6,
+    "pairs": 1677
+  },
+  "data": {
+    "renumbering": [
+      "3 -> 1",
+      "5 -> 2",
+      "6 -> 3",
+      "7 -> 4",
+      "10 -> 5",
+      "15 -> 6"
+    ],
+    "raw_frame_hashes_and_measurements_unchanged": true
+  },
+  "hardware_baseline": {
+    "binary": "f33387986614e0a2b2c6a24e608ab5718087c21500fdb210dbd70421246e7735",
+    "source": "FPGA-field-final-20261030-r2",
+    "actual_serve10_prior_run_pairs": 559,
+    "actual_serve10_prior_main_s": 31.416994906,
+    "video73_prior_short_capture_pairs": 81
+  },
+  "this_packaging_round": "PC executable, path portability, recording rename and replay checks; no new FPGA/NPU inference or independent physical accuracy test",
+  "model_and_calibration_changes": false,
+  "source_tests": 5
+}

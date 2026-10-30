@@ -1,0 +1,25 @@
+{
+  "runtime_profile": "FPGA-quick-field-3092-20261030",
+  "files": [
+    {
+      "path": "app/rk/build/motion7_chain_kinematic",
+      "sha256": "f33387986614e0a2b2c6a24e608ab5718087c21500fdb210dbd70421246e7735"
+    },
+    {
+      "path": "app/rk/models/ball_640_int8.rknn",
+      "sha256": "3b01b325a9e3db893e12acedba21d1dae1653e93e2ba2d077d893ebd5afa5403"
+    },
+    {
+      "path": "app/rk/models/unified_640_int8.rknn",
+      "sha256": "020ac622be55c6ce64816e86bc87e64ae827878906cae03c7ce7bd3ff9b16e69"
+    },
+    {
+      "path": "app/rk/calibration.json",
+      "sha256": "3eb86f0c061a71c7f365d8668ab70ebac3c922a291a1ef2e511c7e679fdfdc51"
+    },
+    {
+      "path": "app/rk/model-config-int8.json",
+      "sha256": "5e06525f12c32ae21bdd8a72754727f5fda92eeec3bfc0db0bce9a66826c8d8a"
+    }
+  ]
+}

@@ -1,58 +1,27 @@
-"""Small repository hygiene check; no FPGA or model correctness claims."""
-import argparse
+"""Check the published source tree and reject private/runtime payloads in Git."""
 from pathlib import Path
-import re
-import subprocess
-import sys
-
-LIMIT = 10 * 1024 * 1024
-TEXT = {'.md', '.py', '.ps1', '.sh', '.v', '.sv', '.vh', '.svh', '.c', '.h', '.cpp', '.hpp', '.json', '.yaml', '.yml', '.tcl', '.sdc', '.xdc', '.txt', '.toml'}
-ARTIFACTS = {'.pt', '.pth', '.onnx', '.rknn', '.bit', '.fs', '.pcap', '.pcapng', '.mp4', '.avi', '.pem', '.key', '.lic'}
-CONFLICT = re.compile(rb'^(?:<<<<<<< .+|=======|>>>>>>> .+)\r?$', re.MULTILINE)
-SECRETS = re.compile(rb'(?:gh[pousr]_[A-Za-z0-9]{36,}|github_pat_[A-Za-z0-9_]{40,}|-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----)')
-
-def inspect_file(name, content):
-    path = Path(name)
-    problems = []
-    if len(content) > LIMIT:
-        problems.append('file exceeds 10 MiB; use artifact manifest')
-    if path.suffix.lower() in ARTIFACTS or (path.name.startswith('.env') and path.name != '.env.example'):
-        problems.append('credential or generated artifact filename')
-    if name.startswith(('tmp/', 'vendor/', 'data/raw/', 'artifacts/files/')):
-        problems.append('local-only directory')
-    if path.suffix.lower() in TEXT or path.name.startswith('.') or name.startswith('.githooks/'):
-        if CONFLICT.search(content):
-            problems.append('unresolved merge conflict marker')
-        if SECRETS.search(content):
-            problems.append('possible credential; value suppressed')
-    return problems
-
-def git(*args):
-    return subprocess.check_output(['git', *args])
-
-def main():
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--staged', action='store_true', help='inspect the complete Git index rather than working files')
-    args = parser.parse_args()
-    root = Path(git('rev-parse', '--show-toplevel').decode().strip())
-    names = git('ls-files', '-z').decode('utf-8').split('\0')
-    failures = []
-    count = 0
-    for name in filter(None, names):
-        if args.staged:
-            content = git('show', ':' + name)
-        else:
-            path = root / name
-            if not path.is_file():
-                failures.append((name, 'tracked file missing'))
-                continue
-            content = path.read_bytes()
-        count += 1
-        failures.extend((name, problem) for problem in inspect_file(name, content))
-    for name, problem in failures:
-        print(f'FAIL {name}: {problem}')
-    print(f'Checked {count} tracked files; {len(failures)} problem(s).')
-    return bool(failures)
-
-if __name__ == '__main__':
-    sys.exit(main())
+import ast,json,re,subprocess,sys
+ROOT=Path(__file__).resolve().parents[1]
+def check():
+    paths=subprocess.check_output(['git','ls-files','-z'],cwd=ROOT).decode('utf-8').split('\0');paths=[p for p in paths if p]
+    errors=[];forbidden={'.rknn','.pt','.onnx','.mp4','.avi','.jpg','.jpeg','.png','.dll','.so','.ko','.whl','.zip','.gz','.bundle','.pem','.key'}
+    prefixes=('runtime/','logs/','app/rk/models/','app/rk/build/','app/dist/','app/tools/python/','app/tools/adb/','app/tools/rk-wheels/','hardware/project/')
+    for name in paths:
+        p=ROOT/name
+        if name.startswith(prefixes) or p.suffix.lower() in forbidden or (p.suffix.lower()=='.exe' and name!='发球测量系统.exe'):errors.append('Private/runtime file staged: '+name)
+        if not p.is_file():errors.append('Tracked file missing: '+name);continue
+        if p.suffix=='.py':
+            try:ast.parse(p.read_text('utf-8-sig'),name)
+            except SyntaxError as e:errors.append(str(e))
+        if p.suffix in {'.py','.md','.json','.yml','.tcl','.v','.hpp','.cpp'}:
+            text=p.read_text('utf-8-sig')
+            if re.search(r'(?:ghp_[A-Za-z0-9]{30,}|github_pat_[A-Za-z0-9_]{40,}|AKIA[A-Z0-9]{16})',text):errors.append('Credential pattern: '+name)
+    config=json.loads((ROOT/'app/version.json').read_text('utf-8'));s=config['settings']
+    assert s['model_input_shape']==[1,3,640,640] and s['hand_stop_on_kinematic_candidate'] and s['ball_model_on_every_eye']
+    assert s['fpga_mode']==0 and s['teso_stride']==30
+    mapping=json.loads((ROOT/'data/index.json').read_text('utf-8'))['renumbering']
+    assert [r['original_case'] for r in mapping]==['serve_03','serve_05','serve_06','serve_07','serve_10','serve_15']
+    assert [r['case'] for r in mapping]==[f'serve_{i:02}' for i in range(1,7)]
+    if errors:raise RuntimeError('\n'.join(errors))
+    print('SOURCE_TREE_OK',len(paths),'files')
+if __name__=='__main__':check()

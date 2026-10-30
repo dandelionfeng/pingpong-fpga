@@ -1,9 +1,0 @@
-{
-  "schema_version":1,
-  "protocol":"a-motion-v1-draft-lsb0",
-  "width":16,
-  "height":2,
-  "pixels_row_major_01":[1,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0],
-  "bytes_hex":["81","02","04","40"],
-  "status":"software_contract_draft_not_vendor_dma_protocol"
-}

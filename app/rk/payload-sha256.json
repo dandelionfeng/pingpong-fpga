@@ -1,0 +1,231 @@
+{
+  "version": "FPGA-quick-field-3092-20261030",
+  "release": "stereo-serve-v1.2.0-20261030",
+  "files": [
+    {
+      "path": "algorithms/best_effort.py",
+      "bytes": 7534,
+      "sha256": "1af900048480176bc3d032a4c279519c249bab0ea3fdd245c67c26b5a3296dd1"
+    },
+    {
+      "path": "algorithms/motion_recovery.py",
+      "bytes": 8953,
+      "sha256": "d67edc8c998480b031468ce184a443cb94d0bb85979432125d9ebb97457e0499"
+    },
+    {
+      "path": "algorithms/observed_flight.py",
+      "bytes": 4781,
+      "sha256": "83f242e67e530c78ca866a46b95ecba3dede93d5900b4939fd390ef90dba905a"
+    },
+    {
+      "path": "algorithms/plot_trajectory.py",
+      "bytes": 6697,
+      "sha256": "23d00fdd737203836984ebfd6e6a46b81760f77b8ec1375bb64a04ba953b80c2"
+    },
+    {
+      "path": "algorithms/release_motion.py",
+      "bytes": 7585,
+      "sha256": "63c5fb77d52c198bbebf3507e4044f9c5e95db75f1cd27b133d8f2345aac2181"
+    },
+    {
+      "path": "board_case.py",
+      "bytes": 5706,
+      "sha256": "a645c8ee8015eb3c5943965a8a5217e3cba1c2f137aaa72103da10f0db93fd8c"
+    },
+    {
+      "path": "build/motion7_chain_kinematic",
+      "bytes": 1629832,
+      "sha256": "f33387986614e0a2b2c6a24e608ab5718087c21500fdb210dbd70421246e7735"
+    },
+    {
+      "path": "calibration.json",
+      "bytes": 5544,
+      "sha256": "3eb86f0c061a71c7f365d8668ab70ebac3c922a291a1ef2e511c7e679fdfdc51"
+    },
+    {
+      "path": "camera.sh",
+      "bytes": 2067,
+      "sha256": "a566d1c22c2b3fc6e31aafec5928bdf4e6d2f4aaf097010eb7ca98015808ab50"
+    },
+    {
+      "path": "capture_session.py",
+      "bytes": 2966,
+      "sha256": "1e45a5836949c7d74d3f319e7f3aabd7c7523646829f3a3ff92b1070c322e8cb"
+    },
+    {
+      "path": "dependencies/anlogic_pci.ko",
+      "bytes": 739080,
+      "sha256": "2d6a2cc3ff1a96080fe4a5115a0bc1fc44ee8ee3ad7e8ec7678f8d664a17ad30"
+    },
+    {
+      "path": "diagnostic_recorded.sh",
+      "bytes": 300,
+      "sha256": "0b25a51235f52071fa7270ecfaf9bbe37cd069da242fbaaf499d95ebe7cb69cf"
+    },
+    {
+      "path": "field_logging.sh",
+      "bytes": 565,
+      "sha256": "1b19a17f6bb057864d8850ee72e2f1f6f8cb6c384645c236b532aa969a3c4614"
+    },
+    {
+      "path": "field_parameters.sh",
+      "bytes": 1918,
+      "sha256": "dbc3c6023cb85211d59b0e52f67d7988ab5be6d7fc9daae5bc5b499022bd73e9"
+    },
+    {
+      "path": "field_workflow.py",
+      "bytes": 8116,
+      "sha256": "6ef4f8d265ad5255577555f969f38c6f9536abbdc96e89b3795b70b3e35401c7"
+    },
+    {
+      "path": "finish_measurement.py",
+      "bytes": 3942,
+      "sha256": "4bf3caa2b1af4a8541903964ef7ffa605118e773d76e1777fd9113d2a18c5701"
+    },
+    {
+      "path": "model-config-int8.json",
+      "bytes": 740,
+      "sha256": "5e06525f12c32ae21bdd8a72754727f5fda92eeec3bfc0db0bce9a66826c8d8a"
+    },
+    {
+      "path": "models/ball_640_int8.rknn",
+      "bytes": 6153360,
+      "sha256": "3b01b325a9e3db893e12acedba21d1dae1653e93e2ba2d077d893ebd5afa5403"
+    },
+    {
+      "path": "models/unified_640_int8.rknn",
+      "bytes": 6152592,
+      "sha256": "020ac622be55c6ce64816e86bc87e64ae827878906cae03c7ce7bd3ff9b16e69"
+    },
+    {
+      "path": "online_kinematics.py",
+      "bytes": 4179,
+      "sha256": "9f8ea5d266fe3511b30bae1fcdf860df7187dc3fd4c1e5e9b573a7339d36cce5"
+    },
+    {
+      "path": "pc/case_io.py",
+      "bytes": 3179,
+      "sha256": "8b71ecb01db434233b28281838c4f507d08ff56d0451d5d0f1e83004b4888a61"
+    },
+    {
+      "path": "pc/command_log.py",
+      "bytes": 1085,
+      "sha256": "53d76d1402a5556f5576152c5ecae7e0461d5dc8d74f705f78e40dd133000fde"
+    },
+    {
+      "path": "pc/deploy.py",
+      "bytes": 1919,
+      "sha256": "2d3ba1196ff28d4c146b65a7217e98b40a7d01ba8498887a8c16889b2e9135a6"
+    },
+    {
+      "path": "pc/encode_mpp.py",
+      "bytes": 3543,
+      "sha256": "cd78c138413c15dc759b69a556280b04b852ac249794d2ab011b69902545a7c1"
+    },
+    {
+      "path": "pc/entry.py",
+      "bytes": 2951,
+      "sha256": "d08ee3fb8e45c36485c45255b95d92a6a1fa3b23ac08a4142a2ea133afde0bc6"
+    },
+    {
+      "path": "pc/latest_release.py",
+      "bytes": 10571,
+      "sha256": "74b7296b702650238a3279248d44402d3c2a4570702f28af1cd5c3602977050a"
+    },
+    {
+      "path": "pc/player.html",
+      "bytes": 30192,
+      "sha256": "90102da500f78539dca7553e5e0195c1bcf1bfc9082eb2b2d1db54619a23e2dd"
+    },
+    {
+      "path": "pc/pull_recording.py",
+      "bytes": 2961,
+      "sha256": "44f7bc847d814baea1bdea6318b4c657e87438e17e48b713e9eac3776d630e2e"
+    },
+    {
+      "path": "pc/replay.py",
+      "bytes": 13612,
+      "sha256": "7964306bffdfbbcff2aaeb3a5942eb195078eeb56453e2c30af039eda339dfb4"
+    },
+    {
+      "path": "pc/requirements.txt",
+      "bytes": 82,
+      "sha256": "3d4603107bedd4b96c1ff65a3fc40393ce75a6b38fb2f084797124d72efd3e3a"
+    },
+    {
+      "path": "pc/run_board_video.py",
+      "bytes": 2964,
+      "sha256": "2b8d4b742df5a6fb0fe55fc2b27c996fb1fe90d92031c4ac7678b888abec16dd"
+    },
+    {
+      "path": "pc/serial_terminal.py",
+      "bytes": 8310,
+      "sha256": "6485dc2e3d53c9bd13c8fb79f2b3cfadc82ca2382d413b88143b8c645ebd9201"
+    },
+    {
+      "path": "pc/V6ThrowTest.cs",
+      "bytes": 30523,
+      "sha256": "43f86e18a5ac17cd445357c4cf3d40c079c2a9a84d410defca8c202a676e3654"
+    },
+    {
+      "path": "preflight.py",
+      "bytes": 3554,
+      "sha256": "9d79aea237e76f2883d6379c73e2b40a33be0d52b23e01ffdac6b3dac671a1ef"
+    },
+    {
+      "path": "provision.py",
+      "bytes": 1461,
+      "sha256": "35c46c4e215dce0cf6a88b48b2994d2738f53d5da9db1411c59d7e7cc9c75825"
+    },
+    {
+      "path": "rebind_pcie.sh",
+      "bytes": 1081,
+      "sha256": "790caa66ae089cafe93d058eb4361b814fa7c40b04860452b983f2bf2f13ac93"
+    },
+    {
+      "path": "run_capture.sh",
+      "bytes": 681,
+      "sha256": "2c02c035d8d2b09ad60ab46ad4be7a2f4ef9e2fed32d084ad5e901cfc2b0eb05"
+    },
+    {
+      "path": "run_recorded.sh",
+      "bytes": 258,
+      "sha256": "f5acf26363290cbf90e89f2c7960e814e90d3a5aebe06dffd4e997b9d6e5785b"
+    },
+    {
+      "path": "save_case_input.py",
+      "bytes": 1827,
+      "sha256": "e636b522e995de6fd244bc17773778649c596425d93cbb1cb0c65131a9faab70"
+    },
+    {
+      "path": "stop_capture.py",
+      "bytes": 792,
+      "sha256": "46dff4ed03bfb23cf0d30a5b2bfa0b89dd0dde8b2afa89cd98dc8c5965c8b43f"
+    },
+    {
+      "path": "update_runtime.py",
+      "bytes": 3373,
+      "sha256": "5d3672a97869d9a287b28f3bfd1f9056a76d9a4da029d0c8f1644129c28dc271"
+    },
+    {
+      "path": "version.json",
+      "bytes": 2440,
+      "sha256": "6e30416238a80dc7392d37aaad221ea88fb973a92d4b10c26685ae0fdb58e317"
+    },
+    {
+      "path": "wheels/imageio_ffmpeg-0.6.0-py3-none-manylinux2014_aarch64.whl",
+      "bytes": 25632706,
+      "sha256": "1d47bebd83d2c5fc770720d211855f208af8a596c82d17730aa51e815cdee6dc"
+    },
+    {
+      "path": "wheels/numpy-2.2.6-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl",
+      "bytes": 14312005,
+      "sha256": "b64d8d4d17135e00c8e346e0a738deb17e754230d7e0810ac5012750bbd85a5a"
+    },
+    {
+      "path": "wheels/opencv_python_headless-4.13.0.92-cp37-abi3-manylinux2014_aarch64.manylinux_2_17_aarch64.whl",
+      "bytes": 33703709,
+      "sha256": "5c8cfc8e87ed452b5cecb9419473ee5560a989859fe1d10d1ce11ae87b09a2cb"
+    }
+  ]
+}
