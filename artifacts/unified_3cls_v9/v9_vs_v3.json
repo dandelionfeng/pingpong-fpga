@@ -1,0 +1,146 @@
+{
+  "v9_2cls": {
+    "model": "v9_2cls",
+    "onnx": "artifacts\\files\\models\\v9_ball_hand\\pingpong_yolov8n_2cls_v9_960.onnx",
+    "params": 0,
+    "latency_ms_median": 295.34,
+    "classes": {
+      "ball": {
+        "gt": 100,
+        "tp": 37,
+        "fp": 12,
+        "fn": 63,
+        "precision": 0.7551,
+        "recall": 0.37,
+        "f1": 0.4966,
+        "ap50": 0.3541,
+        "recall_by_size": {
+          "lt19": {
+            "gt": 7,
+            "tp": 2,
+            "recall": 0.286
+          },
+          "19_24": {
+            "gt": 52,
+            "tp": 22,
+            "recall": 0.423
+          },
+          "25_34": {
+            "gt": 32,
+            "tp": 9,
+            "recall": 0.281
+          },
+          "ge35": {
+            "gt": 9,
+            "tp": 4,
+            "recall": 0.444
+          }
+        }
+      },
+      "hand": {
+        "gt": 1172,
+        "tp": 640,
+        "fp": 288,
+        "fn": 532,
+        "precision": 0.6897,
+        "recall": 0.5461,
+        "f1": 0.6095,
+        "ap50": 0.4974,
+        "recall_by_size": {
+          "lt19": {
+            "gt": 171,
+            "tp": 66,
+            "recall": 0.386
+          },
+          "19_24": {
+            "gt": 154,
+            "tp": 80,
+            "recall": 0.519
+          },
+          "25_34": {
+            "gt": 246,
+            "tp": 113,
+            "recall": 0.459
+          },
+          "ge35": {
+            "gt": 601,
+            "tp": 381,
+            "recall": 0.634
+          }
+        }
+      }
+    }
+  },
+  "v3_3cls": {
+    "model": "v3_3cls",
+    "onnx": "artifacts\\files\\models\\unified_3cls_v3b\\pingpong_yolov8n_gray_3cls_v3_960_960.onnx",
+    "params": 0,
+    "latency_ms_median": 294.71,
+    "classes": {
+      "ball": {
+        "gt": 100,
+        "tp": 51,
+        "fp": 11,
+        "fn": 49,
+        "precision": 0.8226,
+        "recall": 0.51,
+        "f1": 0.6296,
+        "ap50": 0.4921,
+        "recall_by_size": {
+          "lt19": {
+            "gt": 7,
+            "tp": 2,
+            "recall": 0.286
+          },
+          "19_24": {
+            "gt": 52,
+            "tp": 30,
+            "recall": 0.577
+          },
+          "25_34": {
+            "gt": 32,
+            "tp": 13,
+            "recall": 0.406
+          },
+          "ge35": {
+            "gt": 9,
+            "tp": 6,
+            "recall": 0.667
+          }
+        }
+      },
+      "hand": {
+        "gt": 1172,
+        "tp": 654,
+        "fp": 292,
+        "fn": 518,
+        "precision": 0.6913,
+        "recall": 0.558,
+        "f1": 0.6176,
+        "ap50": 0.5042,
+        "recall_by_size": {
+          "lt19": {
+            "gt": 171,
+            "tp": 71,
+            "recall": 0.415
+          },
+          "19_24": {
+            "gt": 154,
+            "tp": 83,
+            "recall": 0.539
+          },
+          "25_34": {
+            "gt": 246,
+            "tp": 121,
+            "recall": 0.492
+          },
+          "ge35": {
+            "gt": 601,
+            "tp": 379,
+            "recall": 0.631
+          }
+        }
+      }
+    }
+  }
+}
