@@ -6,11 +6,6 @@
 
 完整提交包解压后，双击 **发球测量系统.exe**。保留同目录的 `app`、`runtime` 和 `data` 文件夹。软件自动启动本地服务并打开图形工作台。
 
-- 现场采集：J3 串口连接 PC，相机连接 RK，节点 `/dev/video73`，自动曝光，默认录制 30 秒。
-- 部署和结果取回：J4 连接 PC。录制与分析完成并显示 `RECORDING_SAVED` 后取回。
-- 本地回放：在“测试记录”中选择记录。首页静态图标出高度 H 与角度 θ。
-- 安装检查：运行 `发球测量系统.exe --self-test --report 检查结果.json`。
-
 详细步骤见 [操作说明](docs/操作说明.md)，系统组成见 [系统说明](docs/系统说明.md)，编号对应关系见 [实测记录](docs/实测记录.md)。
 
 ## 目录
@@ -32,7 +27,7 @@
 
 仓库保存本版源代码、配置、说明、校验值及 EXE 入口。权重、原视频、私有 SDK、厂商 IP、离线依赖和生成工程由完整本地提交包提供。对应文件可按 `manifests/model-sha256.json` 和运行清单核验。
 
-仓库：[fengfengkang/pingpong-fpga](https://github.com/fengfengkang/pingpong-fpga)。开发基于 `codex/` 分支，通过 PR 合入 `main`。
+仓库：[dandelionfeng/pingpong-fpga](https://github.com/dandelionfeng/pingpong-fpga)。开发基于 `codex/` 分支，通过 PR 合入 `main`。
 
 ## 构建 EXE
 
