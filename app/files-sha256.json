@@ -1,5 +1,5 @@
 {
-  "version": "stereo-serve-v1.2.0",
+  "version": "stereo-serve-v1.2.1",
   "files": [
     {
       "path": "algorithms/best_effort.py",
@@ -128,8 +128,8 @@
     },
     {
       "path": "pc/gui_server.py",
-      "bytes": 9955,
-      "sha256": "321b09e012f860f6cd060649adf410c49cf833c352056bdef1b5a7c30c2b0097"
+      "bytes": 10015,
+      "sha256": "5d5237f09e13e58ccf79d9120a5c3ba82e9d4719f27138f6dfc6f3d7c132d2e6"
     },
     {
       "path": "pc/latest_release.py",
@@ -138,8 +138,8 @@
     },
     {
       "path": "pc/player.html",
-      "bytes": 31061,
-      "sha256": "21b2010f53bd3481e793c105f047c89d68ae640b7decbc842a00e7feb39f7db1"
+      "bytes": 31234,
+      "sha256": "69d07c0ad23adb735fef0f5f822a2997112123cac2213f8c8ccede0782cb9ca4"
     },
     {
       "path": "pc/pull_recording.py",
@@ -153,8 +153,8 @@
     },
     {
       "path": "pc/replay.py",
-      "bytes": 14712,
-      "sha256": "4aef80fa167e3c692f85dd4003b8d7b5c9c46e34092f3f76b32112e08a96adc1"
+      "bytes": 14917,
+      "sha256": "9aeebb0c3bd6b8eb0610a877b7c322bd98a33bdfc032ed95deaf98adc61d53cc"
     },
     {
       "path": "pc/requirements.txt",
@@ -693,33 +693,38 @@
     },
     {
       "path": "ui/app.js",
-      "bytes": 10609,
-      "sha256": "97b50a476d6bfea40fde4b5ce73d9021ab00271aaf574b5d29cb0006f2f64278"
+      "bytes": 10641,
+      "sha256": "89b4db81bf2d54700116e33d022c9b4d3e159426b494a47051acbc00c45817d0"
+    },
+    {
+      "path": "ui/application.ico",
+      "bytes": 20725,
+      "sha256": "d13f0f1034ffd5a7e5386fd9b2b039d45d91e317a2d2499c5dc3de9156e48cc5"
     },
     {
       "path": "ui/index.html",
-      "bytes": 11884,
-      "sha256": "caf325cba77ad30d965423b0069c4872c6f956fb84a98701968bcaa781c9f943"
+      "bytes": 12161,
+      "sha256": "03f26f0465d71dde2988ca4f941969c071084541c1b29b1873d65ca6718cff51"
     },
     {
       "path": "ui/player.html",
-      "bytes": 31061,
-      "sha256": "21b2010f53bd3481e793c105f047c89d68ae640b7decbc842a00e7feb39f7db1"
+      "bytes": 31234,
+      "sha256": "69d07c0ad23adb735fef0f5f822a2997112123cac2213f8c8ccede0782cb9ca4"
     },
     {
       "path": "ui/style.css",
-      "bytes": 22356,
-      "sha256": "df50b52bfe8d9792a60df334d31f1bb5e7353c9d67083088d03c692980a6dd0a"
+      "bytes": 22617,
+      "sha256": "1868623ada053d40a691f76f821d67969a90f4eaf53f3327dec940422b16a005"
     },
     {
       "path": "ui/trajectory.svg",
-      "bytes": 2238,
-      "sha256": "25f0d94ed72112db32d1af5da37bcacc67d4e8f34b6c8b272e8554cfe6afdf89"
+      "bytes": 3126,
+      "sha256": "e81091c8100b69040f4fede75ca7cf54973080c6d924f2022fed41e19b192aa9"
     },
     {
       "path": "ui/操作说明.html",
-      "bytes": 1673,
-      "sha256": "a48b53ca23603cc765a8b69ad5feedd4ab9777ed672dc1115163e1ea04c46200"
+      "bytes": 1757,
+      "sha256": "3fa2d66e80c65de4e31833b9953d9f079611021be1ef269b0357ee016f18ffc2"
     },
     {
       "path": "version.json",

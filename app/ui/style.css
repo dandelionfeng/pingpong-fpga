@@ -8,3 +8,5 @@
 
 .trajectory-static{display:block;width:100%;height:258px;object-fit:contain}.trajectory-art .art-bottom{justify-content:flex-start}.trajectory-art .art-bottom>span:last-child{margin-left:0;font-size:9px;letter-spacing:0}
 @media(min-width:1650px){.trajectory-static{height:286px}}@media(max-width:900px){.trajectory-static{height:240px}}@media(max-width:650px){.trajectory-static{height:238px}}
+
+.trajectory-notes{padding:0 20px 12px;color:#8192aa;font-size:10px;line-height:1.8}.trajectory-notes p{margin:0}.trajectory-notes b{font-weight:600;color:#5e7394;margin-right:9px}.release-mini b{font-size:10px;line-height:1.8}.metric small{letter-spacing:0}
