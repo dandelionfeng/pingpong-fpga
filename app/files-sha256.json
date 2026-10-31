@@ -698,8 +698,8 @@
     },
     {
       "path": "ui/index.html",
-      "bytes": 12163,
-      "sha256": "57f5f3ebe74d0f1635fae2c2e7291d079ffc550daa79ae57dde2a6074d484df4"
+      "bytes": 11884,
+      "sha256": "caf325cba77ad30d965423b0069c4872c6f956fb84a98701968bcaa781c9f943"
     },
     {
       "path": "ui/player.html",
@@ -708,18 +708,18 @@
     },
     {
       "path": "ui/style.css",
-      "bytes": 23917,
-      "sha256": "108b4c10e3d0e20d028ab1afcb76bc7140f0c3513fceebe878c2d185d4ac2db9"
+      "bytes": 22356,
+      "sha256": "df50b52bfe8d9792a60df334d31f1bb5e7353c9d67083088d03c692980a6dd0a"
     },
     {
-      "path": "ui/trajectory3d.js",
-      "bytes": 8555,
-      "sha256": "6b7abd35761ad03d76b373f6b65209e22a510ee8184914dca4731fdbf0658fb9"
+      "path": "ui/trajectory.svg",
+      "bytes": 2238,
+      "sha256": "25f0d94ed72112db32d1af5da37bcacc67d4e8f34b6c8b272e8554cfe6afdf89"
     },
     {
       "path": "ui/操作说明.html",
-      "bytes": 1818,
-      "sha256": "98577aa05074e52175cccd5fa40c673bde1cdf32ce292bda5f34334a1524fa72"
+      "bytes": 1673,
+      "sha256": "a48b53ca23603cc765a8b69ad5feedd4ab9777ed672dc1115163e1ea04c46200"
     },
     {
       "path": "version.json",
