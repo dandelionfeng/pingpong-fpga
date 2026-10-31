@@ -9,6 +9,8 @@ from quick_common import CASE_ROOT
 
 def write_pages(out,data):
     out=Path(out);template=(BASE/'pc/player.html').read_text(encoding='utf-8')
+    icon='data:image/x-icon;base64,'+base64.b64encode((BASE/'ui/application.ico').read_bytes()).decode('ascii')
+    template=template.replace('href="/application.ico?rev=20261031.02"','href="'+icon+'"')
     serialized=lambda d:json.dumps(d,ensure_ascii=False,separators=(',',':')).replace('</','<\\/')
     (out/'index.html').write_text(template,encoding='utf-8')
     (out/'data.js').write_text('window.REPLAY_DATA='+serialized(data)+';',encoding='utf-8')

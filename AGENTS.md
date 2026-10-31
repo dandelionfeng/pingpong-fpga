@@ -1,7 +1,7 @@
 # 协作规则
 
 - 称用户为蒲公英。未经用户要求不启动其他 agent。
-- 当前提交版为发球测量系统 1.2.0，入口为发球测量系统.exe。先读 release.json、README.md 和 manifests。
+- 当前提交版为发球测量系统 1.2.1，入口为发球测量系统.exe。先读 release.json、README.md 和 manifests。
 - 模型、标定、世界坐标、检测及运动学阈值由冻结配置 app/version.json 管理；变更需蒲公英审批并建立新版本。
 - 保留 pair_id、眼别、采样时间、reference_id、版本及 observed/predicted/invalid 区分。
 - 一项任务一条 codex/ 分支；通过 PR 合并，不强推，不丢弃用户修改。

@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>发球测量 · 轨迹回放</title>
+<title>发球测量 · 轨迹回放</title><link rel="icon" type="image/x-icon" href="/application.ico?rev=20261031.02">
 <style>
 .metrics>.subtitle{grid-column:1/-1}#height{color:#176b51}
 :root{--paper:#f4f6f5;--white:#fff;--ink:#182b32;--muted:#72817f;--line:#dfe7e3;--green:#147d6b;--mint:#68dfb4;--amber:#f2c777}
@@ -44,8 +44,8 @@
 </section>
 <aside class="metrics"><h3>测量结果</h3>
 <div class="subtitle" id="measurementStatus" style="margin:-12px 0 16px"></div>
-<div class="metric"><div class="metriclabel" id="heightLabel">抛球高度</div><div class="numberline"><span class="number" id="height">—</span><span class="unit">cm</span></div><small>TOSS HEIGHT</small></div>
-<div class="metric"><div class="metriclabel" id="angleLabel">抛球角度</div><div class="numberline"><span class="number" id="angle">—</span><span class="unit">°</span></div><small>TOSS ANGLE</small></div>
+<div class="metric"><div class="metriclabel" id="heightLabel">抛球高度</div><div class="numberline"><span class="number" id="height">—</span><span class="unit">cm</span></div><small>H · 离手点至最高点的竖直高度差</small></div>
+<div class="metric"><div class="metriclabel" id="angleLabel">抛球角度</div><div class="numberline"><span class="number" id="angle">—</span><span class="unit">°</span></div><small>θ · 两点连线相对竖直方向的偏角</small></div>
 <div class="miniinfo"><div><div class="label">回放时长</div><div class="value" id="duration">—</div></div><div><div class="label">采样帧率</div><div class="value" id="fps">—</div></div><div><div class="label">双目帧数</div><div class="value" id="pairs">—</div></div><div><div class="label">当前视角</div><div class="value" id="eyeName">左目</div></div></div>
 <a class="export" href="measurement.json" download>保存测量数据 ↓</a>
 </aside></div>
@@ -101,14 +101,14 @@ g.fillStyle='#8a754f';g.fillText('θ '+metrics.angle_deg.toFixed(2)+'°',Math.mi
 g.fillStyle='#879d8d';g.fillText('0',r[0]-3,h-6);g.textAlign='right';g.fillText('水平位移 '+(G.apex[0]*100).toFixed(1),w-16,h-6)}
 const P=D.performance||{},S=P.summary||{},T=S.timings||{},latencySummary=S.mode==='batch'?T.load_to_measurement_latency:(T.input_to_measurement_update||T.input_to_semantic_measurement||T.load_to_measurement_latency);
 function numeric(x,d=1){return Number.isFinite(x)?x.toFixed(d):'—'}
-$('runtimeScope').textContent=(P.host||'本地')+(S.mode==='batch'?' · 球 V6 / 手拍 V2':' · 本次运行实测');
+$('runtimeScope').textContent=(P.host||'本地')+(S.mode==='batch'?' · YOLO-Ball / YOLO-HandRacket':' · 本次运行实测');
 if(S.mode==='batch')$('mainHint').textContent='FPGA + 双 INT8 + CPU + TESO';
 $('mainRate').textContent=numeric(S.main_pairs_per_second);$('modelRate').textContent=numeric(S.eye_tasks_per_second,2);$('cpuLoad').textContent=numeric(P.cpu_percent);
 const whole=P.timing_report||{};$('analysisSeconds').textContent=numeric(whole.analysis_main_s??((S.main_elapsed_ms||0)/1000),2);$('boardSeconds').textContent=numeric(whole.board_total_s,2);if(!Number.isFinite(whole.board_total_s))$('boardTimeHint').textContent='未记录RK任务耗时';
 $('chainLatency').textContent=numeric(latencySummary?.mean_ms);$('chainHint').textContent=latencySummary?'输入 → 结果发布 · 平均 / P95 '+numeric(latencySummary.p95_ms)+' ms':'未记录单对图像延迟';
 const graphKey=part=>Object.keys(T).find(k=>k.startsWith('graph/')&&k.includes(part)&&k.endsWith('/rknn_run_ms'))||'';
-const handSchedule=S.hand_schedule||{};if(handSchedule.stride>1){$('modelHint').textContent='V6 每眼 · 手拍每 '+handSchedule.stride+' 组调用一次';$('modelRate').parentElement.previousElementSibling.textContent='V6 完成速率'};
-const moduleDefs=[['input_decode_hash_resize','解码与缩图'],['fpga_mask_dma','FPGA 与 DMA'],['b_measure','球心与几何'],['c_infer','模型合计 每眼'],[graphKey('ball_v6'),'V6 NPU 执行'],[graphKey('unified_v2'),'手拍 NPU 执行'],['inline_preprocess','主链 Mask 精修'],['mask_hand_stop_gate','Mask 离手门控'],['b_async_completion_apply',S.mode==='batch'?'检测结果合入':'异步测量更新'],['teso_submit_apply','TESO 提交与切换']];
+const handSchedule=S.hand_schedule||{};if(handSchedule.stride>1){$('modelHint').textContent='球模型每眼 · 手拍每 '+handSchedule.stride+' 组调用一次';$('modelRate').parentElement.previousElementSibling.textContent='球检测完成速率'};
+const moduleDefs=[['input_decode_hash_resize','解码与缩图'],['fpga_mask_dma','FPGA 与 DMA'],['b_measure','球心与几何'],['c_infer','模型合计 每眼'],[graphKey('ball_v6'),'球模型 NPU 执行'],[graphKey('unified_v2'),'手拍 NPU 执行'],['inline_preprocess','主链 Mask 精修'],['mask_hand_stop_gate','Mask 离手门控'],['b_async_completion_apply',S.mode==='batch'?'检测结果合入':'异步测量更新'],['teso_submit_apply','TESO 提交与切换']];
 const maxModule=Math.max(1,...moduleDefs.map(([key])=>T[key]?.mean_ms||0));
 for(const [key,title] of moduleDefs){const item=document.createElement('div'),top=document.createElement('div'),name=document.createElement('span'),value=document.createElement('b'),bar=document.createElement('div'),fill=document.createElement('i');top.className='moduletop';bar.className='modulebar';name.textContent=title;value.textContent=numeric(T[key]?.mean_ms)+' ms';value.id='module-'+key;fill.style.width=((T[key]?.mean_ms||0)/maxModule*100)+'%';bar.appendChild(fill);top.append(name,value);item.append(top,bar);$('moduleTimes').appendChild(item)}
 const teso=S.online_teso||{},tesoRuntime=S.teso_runtime||{};$('tesoStatus').textContent=tesoRuntime.disabled_reason?'TESO 已暂停 · 沿用已有标定':tesoRuntime.requested===false?'TESO 关闭 · 沿用已有标定':'TESO 后台 '+numeric(teso.worker_mean_ms)+' ms/次 · 完成 '+(teso.processed??'—')+' 次 · '+(tesoRuntime.applied?'已应用 '+tesoRuntime.applied+' 次更新':'沿用已有标定');

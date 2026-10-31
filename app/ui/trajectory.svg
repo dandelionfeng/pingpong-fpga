@@ -1,22 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="520" height="280" viewBox="0 0 520 280" role="img" aria-labelledby="title desc">
-  <title id="title">抛球轨迹示意</title>
-  <desc id="desc">近竖直抛球的上升、最高点和回落轨迹。</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="310" viewBox="0 0 560 310" role="img" aria-labelledby="title desc">
+  <title id="title">抛球高度 H 与抛球角度 θ</title>
+  <desc id="desc">蓝色为上升轨迹，绿色为回落轨迹。H 是离手点至最高点的竖直高度差；θ 是两点连线与竖直方向的夹角。</desc>
   <defs>
     <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse"><path d="M30 0H0V30" fill="none" stroke="#cddced" stroke-opacity=".36"/></pattern>
     <linearGradient id="ball" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#b2caff"/></linearGradient>
+    <marker id="measure" markerWidth="7" markerHeight="7" refX="3.5" refY="3.5" orient="auto-start-reverse"><path d="M1 1L6 3.5L1 6" fill="none" stroke="#8b9bb0" stroke-width="1.2"/></marker>
     <marker id="rise" markerWidth="7" markerHeight="7" refX="4" refY="3" orient="auto"><path d="M0 0L5 3L0 6" fill="none" stroke="#356be8" stroke-width="1.5"/></marker>
     <marker id="fall" markerWidth="7" markerHeight="7" refX="4" refY="3" orient="auto"><path d="M0 0L5 3L0 6" fill="none" stroke="#55afa4" stroke-width="1.5"/></marker>
   </defs>
-  <path d="M60 30H465V244H60Z" fill="url(#grid)"/>
-  <g fill="none" stroke="#bfcee2" stroke-width="1.2"><path d="M84 239V39M79 46L84 39L89 46M84 239H454M447 234L454 239L447 244"/></g>
-  <g font-family="Segoe UI,Microsoft YaHei,sans-serif" font-size="11" fill="#889bb6"><text x="65" y="31">高度</text><text x="403" y="264">水平位移</text></g>
-  <path d="M226 223L250 61" stroke="#bfd0eb" stroke-width="1" stroke-dasharray="4 5" fill="none"/>
-  <path d="M226 223Q235 61 250 61" stroke="#356be8" stroke-width="3.5" stroke-linecap="round" fill="none"/>
-  <path d="M250 61Q265 61 274 223" stroke="#55afa4" stroke-width="3.5" stroke-linecap="round" fill="none"/>
-  <path d="M233 160L236 135" stroke="#356be8" stroke-width="1.5" fill="none" marker-end="url(#rise)"/>
-  <path d="M265 133L268 158" stroke="#55afa4" stroke-width="1.5" fill="none" marker-end="url(#fall)"/>
-  <circle cx="226" cy="223" r="5" fill="#356be8" stroke="#fff" stroke-width="2"/>
-  <circle cx="250" cy="61" r="11" fill="url(#ball)" stroke="#fff" stroke-width="2.5"/>
-  <circle cx="274" cy="223" r="5" fill="#55afa4" stroke="#fff" stroke-width="2"/>
-  <g font-family="Segoe UI,Microsoft YaHei,sans-serif" font-size="12" fill="#748aa8"><text x="174" y="225">离手点</text><text x="272" y="58">最高点</text><text x="288" y="225">回落</text></g>
+  <path d="M55 35H525V267H55Z" fill="url(#grid)"/>
+  <g fill="none" stroke="#bfcee2" stroke-width="1.2"><path d="M75 260V39M70 46L75 39L80 46M75 260H525M518 255L525 260L518 265"/></g>
+  <g font-family="Segoe UI,Microsoft YaHei,sans-serif" font-size="12" fill="#889bb6"><text x="56" y="28">高度</text><text x="464" y="288">水平位移</text></g>
+  <g fill="none" stroke-width="1.1" stroke-dasharray="4 5"><path d="M170 235V58" stroke="#9cacc2"/><path d="M290 65H468M170 235H468" stroke="#bfd0df"/></g>
+  <path d="M170 235L290 65" stroke="#bc985d" stroke-width="1.4" stroke-dasharray="5 5" fill="none"/>
+  <path d="M170 235Q230 65 290 65" stroke="#356be8" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+  <path d="M290 65Q350 65 410 235" stroke="#55afa4" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+  <path d="M192 179L201 160" stroke="#356be8" stroke-width="1.5" fill="none" marker-end="url(#rise)"/>
+  <path d="M379 160L388 179" stroke="#55afa4" stroke-width="1.5" fill="none" marker-end="url(#fall)"/>
+  <path d="M170 195A40 40 0 0 1 193.1 202.3" stroke="#bc985d" stroke-width="2" fill="none"/>
+  <path d="M468 65V235" stroke="#8b9bb0" stroke-width="1.2" marker-start="url(#measure)" marker-end="url(#measure)"/>
+  <path d="M132 182H153L176 199" stroke="#bc985d" stroke-width="1" fill="none"/>
+  <circle cx="170" cy="235" r="5" fill="#356be8" stroke="#fff" stroke-width="2"/>
+  <circle cx="290" cy="65" r="10" fill="url(#ball)" stroke="#fff" stroke-width="2.5"/>
+  <circle cx="410" cy="235" r="5" fill="#55afa4" stroke="#fff" stroke-width="2"/>
+  <g font-family="Segoe UI,Microsoft YaHei,sans-serif" font-size="13" fill="#748aa8"><text x="119" y="250">离手点</text><text x="308" y="60">最高点</text><text x="421" y="250">回落</text><text x="480" y="145">高度 H</text><text x="101" y="175" fill="#a1804c">角度 θ</text><text x="132" y="49" font-size="11">竖直方向</text></g>
 </svg>

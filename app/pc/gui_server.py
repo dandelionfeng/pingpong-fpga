@@ -87,6 +87,7 @@ class Handler(BaseHTTPRequestHandler):
             if not target.is_relative_to(root):self.send_error(403);return
             if target.name=='index.html' and target.is_file():target=UI/'player.html'
         else:
+            if path=='/favicon.ico':path='/application.ico'
             target=(UI/path.lstrip('/')).resolve()
             if not target.is_relative_to(UI.resolve()):self.send_error(403);return
         if not target.is_file():self.send_error(404);return

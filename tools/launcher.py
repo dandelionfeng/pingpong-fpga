@@ -40,11 +40,15 @@ def stop_server(url):
     return read_response(request)
 def read_response(request):
     with urllib.request.urlopen(request,timeout=10) as f:return json.load(f)
-def open_window(url):
+def open_window(root,url):
     candidates=[Path(os.environ.get('ProgramFiles(x86)','C:/Program Files (x86)'))/'Microsoft/Edge/Application/msedge.exe',
                 Path(os.environ.get('ProgramFiles','C:/Program Files'))/'Microsoft/Edge/Application/msedge.exe']
     edge=next((p for p in candidates if p.is_file()),None)
-    if edge:subprocess.Popen([str(edge),'--app='+url,'--window-size=1440,1040'])
+    if edge:
+        from window_icon import owned_windows,retain_window_icon
+        previous=owned_windows(edge)
+        subprocess.Popen([str(edge),'--app='+url,'--window-size=1440,1040'])
+        retain_window_icon(root,edge,previous)
     else:webbrowser.open(url)
 def main():
     parser=argparse.ArgumentParser();parser.add_argument('--self-test',action='store_true');parser.add_argument('--report',type=Path);parser.add_argument('--no-open',action='store_true');args=parser.parse_args()
@@ -58,7 +62,7 @@ def main():
         if args.self_test:
             try:
                 state=read_response(url+'/api/state');expected=set(installation['reference_case_names']);assert expected.issubset({c['name'] for c in state['cases']})
-                assert state['release']['software_version']=='1.2.0'
+                assert state['release']['software_version']==read(root/'release.json')['software_version']
                 for case in state['cases']:
                     if case['name'] not in expected:continue
                     request=urllib.request.Request(url+'/replay/'+case['name']+'/recording.mp4',headers={'Range':'bytes=0-63'})
@@ -67,7 +71,7 @@ def main():
                 report.write_text(json.dumps({'passed':True,'root':str(root),'entry':sys.executable,'cases':6,'video_ranges':6,'installation':installation},ensure_ascii=False,indent=2),encoding='utf-8')
             finally:
                 if process:stop_server(url);process.wait(timeout=8)
-        elif not args.no_open:open_window(url)
+        elif not args.no_open:open_window(root,url)
         return 0
     except Exception as e:
         report.parent.mkdir(parents=True,exist_ok=True);report.write_text(json.dumps({'passed':False,'error':str(e)},ensure_ascii=False,indent=2),encoding='utf-8')
