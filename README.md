@@ -6,13 +6,19 @@
 
 完整提交包解压后，双击 **发球测量系统.exe**。保留同目录的 `app`、`runtime` 和 `data` 文件夹。软件自动启动本地服务并打开图形工作台。
 
+竞赛源码包中的同名 EXE 带有源码审核运行时，不依赖 `runtime/python` 即可打开工作台、读取版本与冻结配置。源码包不含权重、原视频、ADB、板端离线依赖和六组完整回放；硬件操作、模型推理与实测回放应使用完整运行包。
+
+- 源码包自检：`发球测量系统.exe --self-test --report 源码包检查.json`
+- 完整包自检：`发球测量系统.exe --self-test --report 完整包检查.json`
+- 自检报告中的 `mode` 分别为 `source-embedded` 与 `complete`，两者不互相替代。
+
 详细步骤见 [操作说明](docs/操作说明.md)，系统组成见 [系统说明](docs/系统说明.md)，编号对应关系见 [实测记录](docs/实测记录.md)。
 
 ## 目录
 
 | 目录或文件 | 内容 |
 | --- | --- |
-| 发球测量系统.exe | Windows 图形工作台入口 |
+| 发球测量系统.exe | Windows 图形工作台入口；完整包优先使用外部运行时，源码包回退到内嵌审核运行时 |
 | app/pc、app/algorithms、app/ui | PC 程序、运动学代码和界面 |
 | app/rk | RK 程序、固定运行配置及两份 INT8 RKNN 模型 |
 | app/fpga | 已验证 bit 流及其来源记录 |
@@ -37,4 +43,4 @@
 python tools/build_windows.py
 ```
 
-EXE 使用自身所在目录定位运行环境，启动过程直接调用 Python 服务。运行模型及测量阈值见 `app/version.json`。
+EXE 使用自身所在目录定位运行环境：存在 `runtime/python/python.exe` 时调用完整运行时；否则使用 EXE 内嵌解释器执行源码包中的 `app/pc/gui_server.py`。运行模型及测量阈值见 `app/version.json`，构建过程不改写该冻结配置。
