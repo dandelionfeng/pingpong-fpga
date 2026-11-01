@@ -1,4 +1,4 @@
-"""Build the windowed one-file EXE entry. Run with the build Python environment."""
+"""Build the windowed one-file entry with an embedded source-review runtime."""
 from pathlib import Path
 import argparse,subprocess,sys,tempfile
 def main():
@@ -8,7 +8,9 @@ def main():
     icon=Image.new('RGBA',(256,256),'#edf2ff');d=ImageDraw.Draw(icon)
     d.ellipse((45,45,211,211),outline='#2862e8',width=12);d.arc((55,12,174,243),-80,80,fill='#2862e8',width=8);d.arc((8,80,243,203),190,345,fill='#2862e8',width=8)
     ico=root/'app/ui/application.ico';icon.save(ico,sizes=[(16,16),(24,24),(32,32),(48,48),(64,64),(128,128),(256,256)])
-    subprocess.run([sys.executable,'-m','PyInstaller','--noconfirm','--clean','--onefile','--windowed',
+    hidden=['http.server','mimetypes','secrets','threading','traceback','urllib.parse','shlex','hashlib','tarfile','serial','serial.tools.list_ports']
+    hidden_args=[value for name in hidden for value in ('--hidden-import',name)]
+    subprocess.run([sys.executable,'-m','PyInstaller','--noconfirm','--clean','--onefile','--windowed',*hidden_args,'--collect-submodules','serial',
         '--name','发球测量系统','--icon',str(ico),'--distpath',str(root),'--workpath',str(work/'objects'),
         '--specpath',str(work),str(root/'tools/launcher.py')],check=True)
 if __name__=='__main__':main()

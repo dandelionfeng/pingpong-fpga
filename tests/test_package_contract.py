@@ -15,6 +15,12 @@ class PackageContract(TestCase):
             with self.assertRaises(ValueError):field_actions.resolve_recording_name(name)
     def test_launcher_source_resolves_its_own_installation(self):
         self.assertEqual(launcher.installation_root(),ROOT)
+    def test_source_package_has_embedded_runtime_contract(self):
+        self.assertEqual(launcher.runtime_mode(ROOT),'source-embedded')
+        result=launcher.source_installation(ROOT)
+        self.assertEqual(result['mode'],'source-embedded');self.assertFalse(result['full_runtime_present'])
+        self.assertEqual(result['reference_case_names'],[f'serve_{i:02}' for i in range(1,7)])
+        self.assertEqual(result['recordings_included'],0)
     def test_selected_record_quality_flags_are_preserved(self):
         rows=json.loads((ROOT/'docs/test-results.json').read_text('utf-8'))['recordings']
         self.assertEqual(len(rows),6);self.assertEqual(rows[-1]['original'],'serve_15');self.assertTrue(rows[-1]['measurement_estimated'])
