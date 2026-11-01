@@ -38,10 +38,12 @@ class OrtSession {
   const std::string &outputName() const { return output_name_; }
 
   // Runs a single-precision NCHW tensor; returns the first output as a flat
-  // float vector plus its shape.
+  // float vector plus its shape. `base_conf` is the detector candidate floor;
+  // ONNX Runtime applies it after inference, while RKNN may use it to skip rows
+  // during DFL decoding. -1 means no early filtering.
   bool run(const std::vector<float> &input, const std::vector<int64_t> &input_shape,
            std::vector<float> *output, std::vector<int64_t> *output_shape,
-           std::string *error);
+           std::string *error, float base_conf = -1.0f);
 
   Ort::Env &env() { return env_; }
 

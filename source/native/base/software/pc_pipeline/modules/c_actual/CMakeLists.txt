@@ -23,7 +23,9 @@ endif()
 # is opt-in. Point C_ACTUAL_PIPELINE_INCLUDE at software/pc_pipeline/include to
 # build it.
 option(C_ACTUAL_BUILD_PIPELINE_BRIDGE "Build the DetectorBackend bridge" OFF)
-set(C_ACTUAL_PIPELINE_INCLUDE "" CACHE PATH "software/pc_pipeline/include")
+set(C_ACTUAL_PIPELINE_INCLUDE "${CMAKE_CURRENT_SOURCE_DIR}/../../include"
+    CACHE PATH "software/pc_pipeline/include")
+set(C_ACTUAL_JSON_INCLUDE "" CACHE PATH "Optional nlohmann/json include directory for standalone bridge builds")
 
 # ---------------------------------------------------------------- dependencies
 # ONNX Runtime
@@ -85,6 +87,13 @@ function(c_actual_find_opencv)
   if(OpenCV_FOUND)
     message(STATUS "c_actual: using installed OpenCV ${OpenCV_VERSION} (${OpenCV_DIR})")
     set(C_ACTUAL_OPENCV_MODE "package" PARENT_SCOPE)
+    # find_package() ran inside this function, so its variables are local.
+    # Propagate the actual package results instead of leaving the parent with
+    # empty OpenCV_INCLUDE_DIRS/OpenCV_LIBS (which caused C1083).
+    set(OpenCV_INCLUDE_DIRS "${OpenCV_INCLUDE_DIRS}" PARENT_SCOPE)
+    set(OpenCV_LIBS "${OpenCV_LIBS}" PARENT_SCOPE)
+    set(OpenCV_BIN_DIR "${OpenCV_BIN_DIR}" PARENT_SCOPE)
+    set(OpenCV_VERSION "${OpenCV_VERSION}" PARENT_SCOPE)
     return()
   endif()
 
@@ -161,7 +170,15 @@ if(C_ACTUAL_BUILD_PIPELINE_BRIDGE OR TARGET pipeline_module_api)
   endif()
   add_library(c_actual_pipeline_bridge STATIC src/detector_backend_c_actual.cpp)
   target_link_libraries(c_actual_pipeline_bridge PUBLIC c_actual)
-  target_include_directories(c_actual_pipeline_bridge PUBLIC "${C_ACTUAL_PIPELINE_INCLUDE}")
+  target_include_directories(c_actual_pipeline_bridge
+    PUBLIC "${C_ACTUAL_PIPELINE_INCLUDE}"
+    PRIVATE "${C_ACTUAL_ONNXRUNTIME_ROOT}/include")
+  if(C_ACTUAL_JSON_INCLUDE)
+    target_include_directories(c_actual_pipeline_bridge PRIVATE "${C_ACTUAL_JSON_INCLUDE}")
+  endif()
+  if(MSVC)
+    target_compile_options(c_actual_pipeline_bridge PRIVATE /utf-8)
+  endif()
   if(TARGET pipeline_module_api)
     target_link_libraries(c_actual_pipeline_bridge PUBLIC pipeline_module_api)
     add_library(pipeline_c_module ALIAS c_actual_pipeline_bridge)
@@ -170,4 +187,3 @@ endif()
 if(MSVC)
   target_compile_options(c_actual PUBLIC /utf-8)
 endif()
-target_include_directories(c_actual_pipeline_bridge PRIVATE "${C_ACTUAL_ONNXRUNTIME_ROOT}/include")

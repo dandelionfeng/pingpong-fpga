@@ -22,13 +22,15 @@ public:
   const std::string &inputName() const { return input_name_; }
   const std::string &outputName() const { return output_name_; }
   bool run(const std::vector<float> &input, const std::vector<int64_t> &input_shape,
-           std::vector<float> *output, std::vector<int64_t> *output_shape, std::string *error);
+           std::vector<float> *output, std::vector<int64_t> *output_shape, std::string *error,
+           float base_conf = -1.0f);
   bool runImage(const uint8_t *bgr, size_t bytes, const std::vector<int64_t>& shape,
                 std::vector<float>* output, std::vector<int64_t>* output_shape, std::string* error);
 private:
   bool runImpl(const std::vector<float>& input, const std::vector<int64_t>& shape,
                const uint8_t* image, size_t image_bytes,
-               std::vector<float>* output, std::vector<int64_t>* output_shape, std::string* error);
+               std::vector<float>* output, std::vector<int64_t>* output_shape, std::string* error,
+               float base_conf);
   std::shared_ptr<RknnSharedContext> session_;
   std::string input_name_, output_name_;
 };

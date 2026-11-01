@@ -105,7 +105,8 @@ std::vector<int64_t> OrtSession::outputShape() const {
 
 bool OrtSession::run(const std::vector<float> &input, const std::vector<int64_t> &input_shape,
                      std::vector<float> *output, std::vector<int64_t> *output_shape,
-                     std::string *error) {
+                     std::string *error, float base_conf) {
+  (void)base_conf;  // ONNX Runtime has no raw-head early-skip path; detect() filters later.
   if (!session_) {
     if (error) *error = "session not loaded";
     return false;
@@ -306,7 +307,7 @@ std::vector<Box> YoloDetector::detect(const cv::Mat &gray3, float conf_threshold
   std::vector<int64_t> shape;
   std::string run_error;
   // `run` is non-const (it owns the Ort::Env used to create tensors).
-  if (!session_.run(input, {1, 3, size, size}, &output, &shape, &run_error)) {
+  if (!session_.run(input, {1, 3, size, size}, &output, &shape, &run_error, conf_threshold)) {
     if (error) *error = "YOLO_INFERENCE_FAILED: " + run_error;
     return result;
   }

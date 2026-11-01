@@ -11,9 +11,9 @@ execute_process(COMMAND "${Python3_EXECUTABLE}"
 if(NOT prepare_result EQUAL 0)
   message(FATAL_ERROR "Cannot prepare the verified C sources")
 endif()
-configure_file("${CMAKE_CURRENT_SOURCE_DIR}/../../optimized/detector_backend_c_actual.cpp" "${generated}/detector_backend_c_actual.cpp" COPYONLY)
-configure_file("${CMAKE_CURRENT_SOURCE_DIR}/../../optimized/internal_onnx.hpp" "${generated}/internal_onnx.hpp" COPYONLY)
-configure_file("${CMAKE_CURRENT_SOURCE_DIR}/../../optimized/specialist_detector.hpp" "${generated}/specialist_detector.hpp" COPYONLY)
+# prepare_c_rknn.py is the single source of truth for the RKNN adapter. The
+# legacy optimized/*.cpp/hpp copies are not overwritten onto its output: doing so
+# silently discarded the generated threshold/provenance changes.
 add_library(pipeline_c_module STATIC
   "${generated}/perception_engine.cpp" "${generated}/balltrack_onnx.cpp"
   "${generated}/preprocessing.cpp" "${generated}/postprocessing.cpp"

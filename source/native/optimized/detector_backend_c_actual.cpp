@@ -4,6 +4,8 @@
 #include "pipeline/hand_schedule.hpp"
 #include "pipeline/pipeline.hpp"
 #include <optional>
+#include <initializer_list>
+#include <utility>
 #include "internal_onnx.hpp"
 #include "specialist_detector.hpp"
 
@@ -67,10 +69,14 @@ public:
       config.yolo_ball_conf=d.value("ball",config.yolo_ball_conf);
       config.hand_conf=d.value("hand",config.hand_conf);
       config.racket_conf=d.value("racket",config.racket_conf);
-      for(double v:{double(config.base_conf),double(config.yolo_ball_conf),double(config.hand_conf),double(config.racket_conf)})
-        if(!std::isfinite(v)||v<0||v>1) throw std::runtime_error("invalid diagnostic confidence");
+      for(const auto &item : std::initializer_list<std::pair<const char*,float>>{
+              {"base_conf",config.base_conf},{"ball",config.yolo_ball_conf},
+              {"hand",config.hand_conf},{"racket",config.racket_conf}})
+        if(!std::isfinite(item.second)||item.second<0||item.second>1)
+          throw std::runtime_error(std::string("C diagnostic threshold out of range [0,1]: ")+item.first);
     }
     thresholds_={{"ball",config.yolo_ball_conf},{"hand",config.hand_conf},{"racket",config.racket_conf},{"base_conf",config.base_conf},{"nms_iou",config.iou}};
+    configHash_ = fileSha256(configPath);
     if(v6_) {
       v6Confidence_=j.value("v6_ball_conf",.10f);
       if(!std::isfinite(v6Confidence_)||v6Confidence_<0||v6Confidence_>1)throw std::runtime_error("invalid V6 confidence");
@@ -174,7 +180,15 @@ public:
                      {"background", "first_frame"},
                      {"infer_ms", p.infer_ms},
                      {"model_sha256", modelHashes_},
+                     {"config_sha256", configHash_},
                      {"warnings", p.warnings}};
+    r.diagnostics["inference_backend"] = "rknn-runtime";
+    r.diagnostics["base_conf"] = thresholds_["base_conf"];
+    r.diagnostics["final_thresholds"] = {
+        {"ball", thresholds_["ball"]},
+        {"hand", thresholds_["hand"]},
+        {"racket", thresholds_["racket"]},
+        {"base_conf", thresholds_["base_conf"]}};
     r.diagnostics["detector_mode"] = v6_ ? "v6_ball_unified_hand_racket" : all_ ? "unified_all" : unified_ ? "unified" : "split";
     r.diagnostics["ball_source"] = v6_ ? "V6_Round2_YOLO" : all_ ? "YOLOv8n_unified" : "BallTrack";
     r.diagnostics["unified_ball_output_used"] = all_ && !v6_;
@@ -261,6 +275,7 @@ private:
   std::array<std::optional<Continuity>, 2> previous_;
   Json modelHashes_;
   Json thresholds_;
+  std::string configHash_;
   std::string modelVersion_, interfaceVersion_;
   bool unified_ = false;
   bool all_ = false;

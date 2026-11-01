@@ -5,6 +5,7 @@ One Linux process per case. Governor changes are temporary and restored in final
 """
 import argparse, hashlib, json, os, platform, resource, subprocess, time
 from pathlib import Path
+from runtime_paths import OpenCVPathError, environment_with_opencv
 
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def main():
@@ -24,13 +25,16 @@ def main():
     exe=a.root/'build/motion7_chain_kinematic';cal=a.root/'calibration.json'
     for x in [exe,cal,a.input,a.model_config]:assert x.is_file(),x
     cmd=[str(exe),str(a.input),str(cal),str(a.model_config),str(out),a.mode,str(int(a.frontend=='fpga')),str(a.limit),'1','0']
-    env=os.environ.copy()
+    try:
+        repo_root=a.root.resolve().parents[1]
+        opencv_lib_dir,env=environment_with_opencv(repo_root)
+    except OpenCVPathError as error:
+        raise SystemExit('BOARD_CASE_FAILED: '+str(error))
     # Clear mode switches inherited from interactive experiments.
     for key in ['CHAIN_TESO','CHAIN_VERIFY_FPGA_MASK','CHAIN_BALL_MODEL','PIPELINE_TESO_SYNC_EVAL']:
         env.pop(key,None)
     env.update(CHAIN_STREAMING='1',CHAIN_PIN='1',CHAIN_CV_THREADS='1',CHAIN_FAST_BINARY_MORPH='1',
-               PIPELINE_B_DIAGNOSTIC_RELAX='1',PIPELINE_MASK_RELEASE='1',CHAIN_PACE_FPS=str(a.pace),CHAIN_TESO_STRIDE=str(a.teso_stride),
-               LD_LIBRARY_PATH='/userdata/codex-full-project-20261017/opencv/lib')
+               PIPELINE_B_DIAGNOSTIC_RELAX='1',PIPELINE_MASK_RELEASE='1',CHAIN_PACE_FPS=str(a.pace),CHAIN_TESO_STRIDE=str(a.teso_stride))
     if not a.no_teso:env['CHAIN_TESO']='1'
     if a.verify_mask:assert a.frontend=='fpga';env['CHAIN_VERIFY_FPGA_MASK']='1'
     governors=[Path(x) for x in ['/sys/devices/system/cpu/cpufreq/policy0/scaling_governor',
@@ -71,6 +75,7 @@ def main():
           'cpu_user_s':after.ru_utime-before.ru_utime,'cpu_system_s':after.ru_stime-before.ru_stime,
           'governors_before':saved,'governors_after':{str(x):x.read_text().strip() for x in governors},
           'sha256':{str(x):sha(x) for x in [exe,cal,a.input,a.model_config]},'samples':samples,
+          'opencv_lib_dir':str(opencv_lib_dir),'ld_library_path':env.get('LD_LIBRARY_PATH',''),
           'clock':'monotonic; board civil clock is not used for latency or algorithm sampling'}
         (output_root/(a.name+'-profile.json')).write_text(json.dumps(receipt,indent=2))
     assert saved==receipt['governors_after']

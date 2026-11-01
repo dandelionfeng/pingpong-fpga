@@ -1,4 +1,5 @@
 #include "runtime_session.hpp"
+#include "threshold_policy.hpp"
 #include <rknn_api.h>
 #include <array>
 #include <opencv2/core.hpp>
@@ -171,8 +172,9 @@ bool OrtSession::load(const std::string &path, bool use_cuda, int, std::string *
 std::vector<int64_t> OrtSession::inputShape() const { return session_ ? canonical(session_->input) : std::vector<int64_t>{}; }
 std::vector<int64_t> OrtSession::outputShape() const { return session_ ? session_->heads.empty()?canonical(session_->output):std::vector<int64_t>{1,4+session_->head_classes,static_cast<int64_t>(session_->anchors)} : std::vector<int64_t>{}; }
 bool OrtSession::run(const std::vector<float> &input,const std::vector<int64_t>& shape,
-                     std::vector<float>* output,std::vector<int64_t>* output_shape,std::string* error) {
-  return runImpl(input,shape,nullptr,0,output,output_shape,error);
+                     std::vector<float>* output,std::vector<int64_t>* output_shape,std::string* error,
+                     float base_conf) {
+  return runImpl(input,shape,nullptr,0,output,output_shape,error,base_conf);
 }
 bool OrtSession::runImage(const uint8_t* bgr,size_t bytes,const std::vector<int64_t>& shape,
                          std::vector<float>* output,std::vector<int64_t>* output_shape,std::string* error) {
@@ -181,11 +183,12 @@ bool OrtSession::runImage(const uint8_t* bgr,size_t bytes,const std::vector<int6
     cv::Mat boxed(static_cast<int>(shape[2]),static_cast<int>(shape[3]),CV_8UC3,const_cast<uint8_t*>(bgr));
     reference=imageToNchw(boxed,int(shape[2]));
   }
-  return runImpl(reference,shape,bgr,bytes,output,output_shape,error);
+  return runImpl(reference,shape,bgr,bytes,output,output_shape,error,-1.0f);
 }
 bool OrtSession::runImpl(const std::vector<float> &input, const std::vector<int64_t> &shape,
                         const uint8_t* image,size_t image_bytes,
-                        std::vector<float> *output, std::vector<int64_t> *output_shape, std::string *error) {
+                        std::vector<float> *output, std::vector<int64_t> *output_shape, std::string *error,
+                        float base_conf) {
   try {
     auto begin=std::chrono::steady_clock::now();
     if (!session_ || shape != inputShape() || shape.size() != 4 || shape[0] != 1)
@@ -203,6 +206,14 @@ bool OrtSession::runImpl(const std::vector<float> &input, const std::vector<int6
     item.fmt = RKNN_TENSOR_NHWC;
     item.pass_through = 0;
     bool optimized=!std::getenv("C_RKNN_BASELINE_IO");
+    // Validate the candidate floor even in full-DFL mode so a bad config cannot
+    // silently run. -1 means "no early filtering" for BallTrack/other callers.
+    CandidateThreshold candidate;
+    std::string candidate_error;
+    if (!candidate_threshold(base_conf, &candidate, &candidate_error))
+      throw std::runtime_error(candidate_error);
+    const bool full_dfl = std::getenv("C_RKNN_FULL_DFL") != nullptr;
+    const bool early_filter = optimized && !full_dfl;
     const auto &attr=session_->input;
     if(image) {
       if(attr.type!=RKNN_TENSOR_INT8 || attr.qnt_type!=RKNN_TENSOR_QNT_AFFINE_ASYMMETRIC ||
@@ -385,15 +396,17 @@ bool OrtSession::runImpl(const std::vector<float> &input, const std::vector<int6
           size_t j=offset+pixel;
           float maximum_logit=clsValue(pixel);
           for(int c=1;c<classes;++c) maximum_logit=std::max(maximum_logit,clsValue(c*plane+pixel));
-          if(optimized && !std::getenv("C_RKNN_FULL_DFL") && maximum_logit < -3.9f) continue;
+          // Candidate floor comes from the caller's config base_conf. The
+          // equivalent logit is log(p/(1-p)); 0 skips nothing and 1 skips all.
+          // C_RKNN_FULL_DFL bypasses this early skip, while YoloDetector still
+          // applies the same confidence threshold after full decoding.
+          if(candidate_should_skip(maximum_logit,candidate,early_filter)) continue;
           float confidence=0;
           for(int c=0;c<classes;++c) {
             float score=1.f/(1.f+std::exp(-clsValue(c*plane+pixel)));
             (*output)[(4+c)*anchors+j]=score;confidence=std::max(confidence,score);
           }
-          // The fixed existing YOLO decoder rejects every row below base_conf=.02.
-          // No published candidate or NMS input changes; full decode remains available for parity.
-          if(optimized && !std::getenv("C_RKNN_FULL_DFL") && confidence<.02f) continue;
+          (void)confidence;  // kept for parity/diagnostics; filtering is by logit above.
           float d[4];
           for(int k=0;k<4;++k) {
             float maximum=-INFINITY;
