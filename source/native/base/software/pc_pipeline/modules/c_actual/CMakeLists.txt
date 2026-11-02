@@ -146,17 +146,29 @@ endif()
 
 # Link the import library by ABSOLUTE path: the repo path may contain non-ASCII
 # characters, in which case a bare "/LIBPATH:..." + name does not resolve.
-if(NOT EXISTS "${C_ACTUAL_ONNXRUNTIME_ROOT}/lib/onnxruntime.lib")
-  message(FATAL_ERROR "onnxruntime.lib not found under ${C_ACTUAL_ONNXRUNTIME_ROOT}/lib")
+# Windows SDKs ship onnxruntime.lib; Linux SDKs ship libonnxruntime.so.
+set(_c_actual_ort_lib "")
+foreach(_name onnxruntime.lib libonnxruntime.so libonnxruntime.so.1)
+  if(EXISTS "${C_ACTUAL_ONNXRUNTIME_ROOT}/lib/${_name}")
+    set(_c_actual_ort_lib "${C_ACTUAL_ONNXRUNTIME_ROOT}/lib/${_name}")
+    break()
+  endif()
+endforeach()
+if(NOT _c_actual_ort_lib)
+  message(FATAL_ERROR
+    "ONNX Runtime library not found under ${C_ACTUAL_ONNXRUNTIME_ROOT}/lib "
+    "(expected onnxruntime.lib or libonnxruntime.so)")
 endif()
-target_link_libraries(c_actual PRIVATE "${C_ACTUAL_ONNXRUNTIME_ROOT}/lib/onnxruntime.lib")
+target_link_libraries(c_actual PRIVATE "${_c_actual_ort_lib}")
 target_include_directories(c_actual PRIVATE "${C_ACTUAL_ONNXRUNTIME_ROOT}/include")
 
 # Ship the runtime DLLs next to the executables so the demo runs out of the box.
-set(C_ACTUAL_RUNTIME_DLLS "${C_ACTUAL_ONNXRUNTIME_ROOT}/lib/onnxruntime.dll")
-if(DEFINED _c_actual_opencv_bin AND EXISTS "${_c_actual_opencv_bin}")
-  file(GLOB _opencv_dlls "${_c_actual_opencv_bin}/opencv_*.dll")
-  list(APPEND C_ACTUAL_RUNTIME_DLLS ${_opencv_dlls})
+if(WIN32)
+  set(C_ACTUAL_RUNTIME_DLLS "${C_ACTUAL_ONNXRUNTIME_ROOT}/lib/onnxruntime.dll")
+  if(DEFINED _c_actual_opencv_bin AND EXISTS "${_c_actual_opencv_bin}")
+    file(GLOB _opencv_dlls "${_c_actual_opencv_bin}/opencv_*.dll")
+    list(APPEND C_ACTUAL_RUNTIME_DLLS ${_opencv_dlls})
+  endif()
 endif()
 
 # ------------------------------------------------- DetectorBackend bridge

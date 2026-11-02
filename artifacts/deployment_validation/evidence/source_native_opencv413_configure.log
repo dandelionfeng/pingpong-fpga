@@ -1,0 +1,19 @@
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found OpenCV: /tmp/opencv413-install (found suitable version "4.13.0", minimum required is "4") found components: core imgproc imgcodecs calib3d features2d 
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Using the multi-header code from /mnt/d/pp_fix_work/build/source_native_opencv413/_deps/json-src/include/
+-- Found OpenCV: /tmp/opencv413-install (found version "4.13.0") found components: core imgproc imgcodecs calib3d 
+-- Found OpenCV: /tmp/opencv413-install (found version "4.13.0") found components: core imgproc imgcodecs 
+-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+CMake Error at rk_runtime/c_rknn/CMakeLists.txt:4 (message):
+  Matching private RKNN header and board runtime are required
+
+
+-- Configuring incomplete, errors occurred!

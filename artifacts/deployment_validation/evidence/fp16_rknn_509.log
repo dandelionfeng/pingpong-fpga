@@ -1,0 +1,267 @@
+I rknn-toolkit2 version: 2.5.0
+I Loading :   0%|                                                           | 0/127 [00:00<?, ?it/s]I Loading : 100%|██████████████████████████████████████████████| 127/127 [00:00<00:00, 66261.55it/s]
+I OpFusing 0:   0%|                                                         | 0/100 [00:00<?, ?it/s]I OpFusing 0:   0%|                                                         | 0/100 [00:00<?, ?it/s]I OpFusing 0:   1%|▍                                              | 1/100 [00:00<00:00, 1399.03it/s]I OpFusing 0:   2%|▉                                              | 2/100 [00:00<00:00, 2137.77it/s]I OpFusing 0:   2%|▉                                              | 2/100 [00:00<00:00, 1527.15it/s]I OpFusing 0:   3%|█▍                                             | 3/100 [00:00<00:00, 1908.53it/s]I OpFusing 0:   4%|█▉                                             | 4/100 [00:00<00:00, 2258.34it/s]I OpFusing 0:   5%|██▎                                            | 5/100 [00:00<00:00, 2087.76it/s]I OpFusing 0:   6%|██▊                                            | 6/100 [00:00<00:00, 2292.39it/s]I OpFusing 0:   7%|███▎                                           | 7/100 [00:00<00:00, 2486.46it/s]I OpFusing 0:   8%|███▊                                           | 8/100 [00:00<00:00, 2614.50it/s]I OpFusing 0:   9%|████▏                                          | 9/100 [00:00<00:00, 2758.81it/s]I OpFusing 0:  10%|████▌                                         | 10/100 [00:00<00:00, 2836.10it/s]I OpFusing 0:  11%|█████                                         | 11/100 [00:00<00:00, 2871.56it/s]I OpFusing 0:  12%|█████▌                                        | 12/100 [00:00<00:00, 2973.63it/s]I OpFusing 0:  14%|██████▍                                       | 14/100 [00:00<00:00, 3113.15it/s]I OpFusing 0:  15%|██████▉                                       | 15/100 [00:00<00:00, 3191.85it/s]I OpFusing 0:  16%|███████▎                                      | 16/100 [00:00<00:00, 3275.36it/s]I OpFusing 0:  16%|███████▎                                      | 16/100 [00:00<00:00, 2938.09it/s]I OpFusing 0:  17%|███████▊                                      | 17/100 [00:00<00:00, 2984.64it/s]I OpFusing 0:  18%|████████▎                                     | 18/100 [00:00<00:00, 3055.22it/s]I OpFusing 0:  19%|████████▋                                     | 19/100 [00:00<00:00, 3082.50it/s]I OpFusing 0:  20%|█████████▏                                    | 20/100 [00:00<00:00, 3151.72it/s]I OpFusing 0:  22%|██████████                                    | 22/100 [00:00<00:00, 3239.19it/s]I OpFusing 0:  23%|██████████▌                                   | 23/100 [00:00<00:00, 3286.18it/s]I OpFusing 0:  24%|███████████                                   | 24/100 [00:00<00:00, 3327.05it/s]I OpFusing 0:  25%|███████████▌                                  | 25/100 [00:00<00:00, 3355.87it/s]I OpFusing 0:  26%|███████████▉                                  | 26/100 [00:00<00:00, 3331.35it/s]I OpFusing 0:  27%|████████████▍                                 | 27/100 [00:00<00:00, 3360.22it/s]I OpFusing 0:  29%|█████████████▎                                | 29/100 [00:00<00:00, 3375.28it/s]I OpFusing 0:  30%|█████████████▊                                | 30/100 [00:00<00:00, 3402.17it/s]I OpFusing 0:  33%|███████████████▏                              | 33/100 [00:00<00:00, 3485.66it/s]I OpFusing 0:  34%|███████████████▋                              | 34/100 [00:00<00:00, 2291.23it/s]I OpFusing 0:  36%|████████████████▌                             | 36/100 [00:00<00:00, 2399.68it/s]I OpFusing 0:  36%|████████████████▌                             | 36/100 [00:00<00:00, 2361.51it/s]I OpFusing 0:  37%|█████████████████                             | 37/100 [00:00<00:00, 2390.98it/s]I OpFusing 0:  38%|█████████████████▍                            | 38/100 [00:00<00:00, 2424.64it/s]I OpFusing 0:  40%|██████████████████▍                           | 40/100 [00:00<00:00, 2501.60it/s]I OpFusing 0:  41%|██████████████████▊                           | 41/100 [00:00<00:00, 2323.43it/s]I OpFusing 0:  42%|███████████████████▎                          | 42/100 [00:00<00:00, 2362.29it/s]I OpFusing 0:  43%|███████████████████▊                          | 43/100 [00:00<00:00, 2388.62it/s]I OpFusing 0:  44%|████████████████████▏                         | 44/100 [00:00<00:00, 2416.39it/s]I OpFusing 0:  46%|█████████████████████▏                        | 46/100 [00:00<00:00, 2500.85it/s]I OpFusing 0:  47%|█████████████████████▌                        | 47/100 [00:00<00:00, 2513.00it/s]I OpFusing 0:  49%|██████████████████████▌                       | 49/100 [00:00<00:00, 2594.47it/s]I OpFusing 0:  50%|███████████████████████                       | 50/100 [00:00<00:00, 2607.81it/s]I OpFusing 0:  51%|███████████████████████▍                      | 51/100 [00:00<00:00, 2627.14it/s]I OpFusing 0:  52%|███████████████████████▉                      | 52/100 [00:00<00:00, 2652.07it/s]I OpFusing 0:  54%|████████████████████████▊                     | 54/100 [00:00<00:00, 2729.25it/s]I OpFusing 0:  55%|█████████████████████████▎                    | 55/100 [00:00<00:00, 2740.59it/s]I OpFusing 0:  57%|██████████████████████████▏                   | 57/100 [00:00<00:00, 2813.94it/s]I OpFusing 0:  58%|██████████████████████████▋                   | 58/100 [00:00<00:00, 2817.71it/s]I OpFusing 0:  59%|███████████████████████████▏                  | 59/100 [00:00<00:00, 2834.31it/s]I OpFusing 0:  61%|████████████████████████████                  | 61/100 [00:00<00:00, 2902.11it/s]I OpFusing 0:  62%|████████████████████████████▌                 | 62/100 [00:00<00:00, 2925.10it/s]I OpFusing 0:  64%|█████████████████████████████▍                | 64/100 [00:00<00:00, 2964.99it/s]I OpFusing 0:  65%|█████████████████████████████▉                | 65/100 [00:00<00:00, 2982.07it/s]I OpFusing 0:  67%|██████████████████████████████▊               | 67/100 [00:00<00:00, 3048.15it/s]I OpFusing 0:  69%|███████████████████████████████▋              | 69/100 [00:00<00:00, 3073.44it/s]I OpFusing 0:  71%|████████████████████████████████▋             | 71/100 [00:00<00:00, 3136.57it/s]I OpFusing 0:  73%|█████████████████████████████████▌            | 73/100 [00:00<00:00, 3172.70it/s]I OpFusing 0:  75%|██████████████████████████████████▌           | 75/100 [00:00<00:00, 3227.18it/s]I OpFusing 0:  76%|██████████████████████████████████▉           | 76/100 [00:00<00:00, 2789.84it/s]I OpFusing 0:  78%|███████████████████████████████████▉          | 78/100 [00:00<00:00, 2835.81it/s]I OpFusing 0:  79%|████████████████████████████████████▎         | 79/100 [00:00<00:00, 2851.70it/s]I OpFusing 0:  82%|█████████████████████████████████████▋        | 82/100 [00:00<00:00, 2919.29it/s]I OpFusing 0:  83%|██████████████████████████████████████▏       | 83/100 [00:00<00:00, 2936.17it/s]I OpFusing 0:  86%|███████████████████████████████████████▌      | 86/100 [00:00<00:00, 3002.74it/s]I OpFusing 0:  88%|████████████████████████████████████████▍     | 88/100 [00:00<00:00, 3054.16it/s]I OpFusing 0:  89%|████████████████████████████████████████▉     | 89/100 [00:00<00:00, 2848.61it/s]I OpFusing 0:  92%|██████████████████████████████████████████▎   | 92/100 [00:00<00:00, 2878.23it/s]I OpFusing 0:  94%|███████████████████████████████████████████▏  | 94/100 [00:00<00:00, 2899.26it/s]I OpFusing 0:  96%|████████████████████████████████████████████▏ | 96/100 [00:00<00:00, 2434.95it/s]I OpFusing 0: 100%|█████████████████████████████████████████████| 100/100 [00:00<00:00, 1354.97it/s]I OpFusing 1 :   0%|                                                        | 0/100 [00:00<?, ?it/s]I OpFusing 1 :  92%|█████████████████████████████████████████▍   | 92/100 [00:00<00:00, 1075.17it/s]I OpFusing 1 :  92%|█████████████████████████████████████████▍   | 92/100 [00:00<00:00, 1065.18it/s]I OpFusing 1 :  93%|█████████████████████████████████████████▊   | 93/100 [00:00<00:00, 1072.50it/s]I OpFusing 1 :  94%|██████████████████████████████████████████▎  | 94/100 [00:00<00:00, 1081.22it/s]I OpFusing 1 :  94%|██████████████████████████████████████████▎  | 94/100 [00:00<00:00, 1078.33it/s]I OpFusing 1 :  96%|███████████████████████████████████████████▏ | 96/100 [00:00<00:00, 1098.31it/s]I OpFusing 1 :  95%|██████████████████████████████████████████▊  | 95/100 [00:00<00:00, 1083.69it/s]I OpFusing 1 :  96%|███████████████████████████████████████████▏ | 96/100 [00:00<00:00, 1090.58it/s]I OpFusing 1 :  97%|███████████████████████████████████████████▋ | 97/100 [00:00<00:00, 1099.07it/s]I OpFusing 1 :  97%|███████████████████████████████████████████▋ | 97/100 [00:00<00:00, 1096.73it/s]I OpFusing 1 :  98%|████████████████████████████████████████████ | 98/100 [00:00<00:00, 1105.42it/s]I OpFusing 1 :  91%|█████████████████████████████████████████▊    | 91/100 [00:00<00:00, 799.73it/s]I OpFusing 1 :  96%|████████████████████████████████████████████▏ | 96/100 [00:00<00:00, 824.45it/s]I OpFusing 1 : 100%|█████████████████████████████████████████████| 100/100 [00:00<00:00, 694.82it/s]I OpFusing 0 :   0%|                                                        | 0/100 [00:00<?, ?it/s]I OpFusing 0 :  83%|██████████████████████████████████████▏       | 83/100 [00:00<00:00, 520.75it/s]I OpFusing 0 :  84%|██████████████████████████████████████▋       | 84/100 [00:00<00:00, 525.85it/s]I OpFusing 0 :  85%|███████████████████████████████████████       | 85/100 [00:00<00:00, 531.82it/s]I OpFusing 0 :  87%|████████████████████████████████████████      | 87/100 [00:00<00:00, 534.46it/s]I OpFusing 0 :  89%|████████████████████████████████████████▉     | 89/100 [00:00<00:00, 532.37it/s]I OpFusing 0 :  91%|█████████████████████████████████████████▊    | 91/100 [00:00<00:00, 543.42it/s]I OpFusing 0 :  92%|██████████████████████████████████████████▎   | 92/100 [00:00<00:00, 548.35it/s]I OpFusing 0 :  94%|███████████████████████████████████████████▏  | 94/100 [00:00<00:00, 559.74it/s]I OpFusing 0 :  95%|███████████████████████████████████████████▋  | 95/100 [00:00<00:00, 565.16it/s]I OpFusing 0 :  97%|████████████████████████████████████████████▌ | 97/100 [00:00<00:00, 569.36it/s]I OpFusing 0 :  98%|█████████████████████████████████████████████ | 98/100 [00:00<00:00, 574.61it/s]I OpFusing 0 : 100%|█████████████████████████████████████████████| 100/100 [00:00<00:00, 487.11it/s]I OpFusing 1 :   0%|                                                        | 0/100 [00:00<?, ?it/s]I OpFusing 1 :  93%|██████████████████████████████████████████▊   | 93/100 [00:00<00:00, 424.76it/s]I OpFusing 1 : 100%|█████████████████████████████████████████████| 100/100 [00:00<00:00, 404.10it/s]I OpFusing 0 :   0%|                                                        | 0/100 [00:00<?, ?it/s]I OpFusing 0 :  93%|██████████████████████████████████████████▊   | 93/100 [00:00<00:00, 335.97it/s]I OpFusing 0 : 100%|█████████████████████████████████████████████| 100/100 [00:00<00:00, 313.59it/s]I OpFusing 1 :   0%|                                                        | 0/100 [00:00<?, ?it/s]I OpFusing 1 : 100%|█████████████████████████████████████████████| 100/100 [00:00<00:00, 300.26it/s]I OpFusing 2 :   0%|                                                        | 0/100 [00:00<?, ?it/s]I OpFusing 2 :  74%|██████████████████████████████████            | 74/100 [00:00<00:00, 210.12it/s]I OpFusing 2 :  85%|███████████████████████████████████████       | 85/100 [00:00<00:00, 229.82it/s]I OpFusing 2 : 100%|█████████████████████████████████████████████| 100/100 [00:00<00:00, 252.86it/s]I OpFusing 0 :   0%|                                                        | 0/100 [00:00<?, ?it/s]I OpFusing 0 :  67%|██████████████████████████████▊               | 67/100 [00:00<00:00, 164.93it/s]I OpFusing 0 : 100%|█████████████████████████████████████████████| 100/100 [00:00<00:00, 221.36it/s]I OpFusing 1 :   0%|                                                        | 0/100 [00:00<?, ?it/s]I OpFusing 1 : 100%|█████████████████████████████████████████████| 100/100 [00:00<00:00, 213.94it/s]I OpFusing 2 :   0%|                                                        | 0/100 [00:00<?, ?it/s]I OpFusing 2 : 100%|█████████████████████████████████████████████| 100/100 [00:00<00:00, 211.97it/s]I OpFusing 2 : 100%|█████████████████████████████████████████████| 100/100 [00:00<00:00, 112.36it/s]
+[1;33mW[0m [1;33mSet temperate env rknn_compute_order=WidthFirst[0m
+I rknn building ...
+E RKNN: [00:24:46.067] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5048, shift = 19, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.067] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 0, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.067] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 16, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.067] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5048, shift = 19, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.067] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 0, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.067] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 16, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.067] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5048, shift = 19, limit: 0x1fff, value: 0x3fe0
+E RKNN: [00:24:46.067] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 0, limit: 0x1fff, value: 0x3fe0
+E RKNN: [00:24:46.067] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 16, limit: 0x1fff, value: 0x3fe0
+E RKNN: [00:24:46.067] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5048, shift = 19, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.067] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 0, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.067] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 16, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.067] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5048, shift = 19, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.067] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 0, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.067] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 16, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.068] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5048, shift = 19, limit: 0x1fff, value: 0x3fe0
+E RKNN: [00:24:46.068] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 0, limit: 0x1fff, value: 0x3fe0
+E RKNN: [00:24:46.068] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 16, limit: 0x1fff, value: 0x3fe0
+E RKNN: [00:24:46.068] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5048, shift = 19, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.068] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 0, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.068] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 16, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.068] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5048, shift = 19, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.068] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 0, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.068] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 16, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.068] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5048, shift = 19, limit: 0x1fff, value: 0x3fe0
+E RKNN: [00:24:46.068] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 0, limit: 0x1fff, value: 0x3fe0
+E RKNN: [00:24:46.068] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 16, limit: 0x1fff, value: 0x3fe0
+E RKNN: [00:24:46.068] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5048, shift = 19, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.068] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 0, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.068] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 16, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.068] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5048, shift = 19, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.068] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 0, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.068] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 16, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.068] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5048, shift = 19, limit: 0x1fff, value: 0x3fe0
+E RKNN: [00:24:46.068] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 0, limit: 0x1fff, value: 0x3fe0
+E RKNN: [00:24:46.068] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 16, limit: 0x1fff, value: 0x3fe0
+E RKNN: [00:24:46.068] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5048, shift = 19, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.068] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 0, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.068] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 16, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.068] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5048, shift = 19, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.068] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 0, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.068] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 16, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.068] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5048, shift = 19, limit: 0x1fff, value: 0x3fe0
+E RKNN: [00:24:46.068] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 0, limit: 0x1fff, value: 0x3fe0
+E RKNN: [00:24:46.068] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 16, limit: 0x1fff, value: 0x3fe0
+E RKNN: [00:24:46.068] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5048, shift = 19, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.068] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 0, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.068] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 16, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.068] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5048, shift = 19, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.068] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 0, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.068] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 16, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.068] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5048, shift = 19, limit: 0x1fff, value: 0x3fe0
+E RKNN: [00:24:46.068] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 0, limit: 0x1fff, value: 0x3fe0
+E RKNN: [00:24:46.068] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 16, limit: 0x1fff, value: 0x3fe0
+E RKNN: [00:24:46.068] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5048, shift = 19, limit: 0x1fff, value: 0x73b8
+E RKNN: [00:24:46.068] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 0, limit: 0x1fff, value: 0x73b8
+E RKNN: [00:24:46.068] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 16, limit: 0x1fff, value: 0x73b8
+E RKNN: [00:24:46.068] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5048, shift = 19, limit: 0x1fff, value: 0x73b8
+E RKNN: [00:24:46.068] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 0, limit: 0x1fff, value: 0x73b8
+E RKNN: [00:24:46.068] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 16, limit: 0x1fff, value: 0x73b8
+E RKNN: [00:24:46.068] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5048, shift = 19, limit: 0x1fff, value: 0x73b8
+E RKNN: [00:24:46.068] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 0, limit: 0x1fff, value: 0x73b8
+E RKNN: [00:24:46.068] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 16, limit: 0x1fff, value: 0x73b8
+E RKNN: [00:24:46.068] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5048, shift = 19, limit: 0x1fff, value: 0x73b8
+E RKNN: [00:24:46.068] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 0, limit: 0x1fff, value: 0x73b8
+E RKNN: [00:24:46.068] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 16, limit: 0x1fff, value: 0x73b8
+E RKNN: [00:24:46.068] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5048, shift = 19, limit: 0x1fff, value: 0x7fc0
+E RKNN: [00:24:46.068] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 0, limit: 0x1fff, value: 0x7fc0
+E RKNN: [00:24:46.068] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 16, limit: 0x1fff, value: 0x7fc0
+E RKNN: [00:24:46.068] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5048, shift = 19, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.068] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 0, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.068] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 16, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.068] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5048, shift = 19, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.068] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 0, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.068] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 16, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.068] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5048, shift = 19, limit: 0x1fff, value: 0x3fe0
+E RKNN: [00:24:46.068] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 0, limit: 0x1fff, value: 0x3fe0
+E RKNN: [00:24:46.068] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 16, limit: 0x1fff, value: 0x3fe0
+E RKNN: [00:24:46.112] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 0, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.112] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 16, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.112] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5048, shift = 19, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.112] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 0, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.112] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 16, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.112] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5048, shift = 19, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.112] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 0, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.112] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 16, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.112] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5048, shift = 19, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.112] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 0, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.112] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 16, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.112] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5048, shift = 19, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.112] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 0, limit: 0x1fff, value: 0x3fe0
+E RKNN: [00:24:46.112] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 16, limit: 0x1fff, value: 0x3fe0
+E RKNN: [00:24:46.112] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5048, shift = 19, limit: 0x1fff, value: 0x3fe0
+E RKNN: [00:24:46.112] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 0, limit: 0x1fff, value: 0x3fe0
+E RKNN: [00:24:46.112] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 16, limit: 0x1fff, value: 0x3fe0
+E RKNN: [00:24:46.112] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5048, shift = 19, limit: 0x1fff, value: 0x3fe0
+E RKNN: [00:24:46.112] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 0, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.112] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 16, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.112] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5048, shift = 19, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.112] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 0, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.112] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 16, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.112] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5048, shift = 19, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.112] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 0, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.112] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 16, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.112] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5048, shift = 19, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.112] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 0, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.112] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 16, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.112] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5048, shift = 19, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.112] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 0, limit: 0x1fff, value: 0x3fe0
+E RKNN: [00:24:46.112] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 16, limit: 0x1fff, value: 0x3fe0
+E RKNN: [00:24:46.112] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5048, shift = 19, limit: 0x1fff, value: 0x3fe0
+E RKNN: [00:24:46.112] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 0, limit: 0x1fff, value: 0x3fe0
+E RKNN: [00:24:46.112] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 16, limit: 0x1fff, value: 0x3fe0
+E RKNN: [00:24:46.112] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5048, shift = 19, limit: 0x1fff, value: 0x3fe0
+E RKNN: [00:24:46.113] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5048, shift = 19, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.113] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 0, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.113] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 16, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.113] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5010, shift = 16, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.113] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5048, shift = 19, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.113] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 0, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.113] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 16, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.113] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5010, shift = 16, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.113] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5048, shift = 19, limit: 0x1fff, value: 0x3fe0
+E RKNN: [00:24:46.113] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 0, limit: 0x1fff, value: 0x3fe0
+E RKNN: [00:24:46.113] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 16, limit: 0x1fff, value: 0x3fe0
+E RKNN: [00:24:46.113] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5010, shift = 16, limit: 0x1fff, value: 0x3fe0
+E RKNN: [00:24:46.113] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5048, shift = 19, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.113] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 0, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.113] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 16, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.113] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5010, shift = 16, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.113] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5048, shift = 19, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.113] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 0, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.113] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 16, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.113] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5010, shift = 16, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.113] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5048, shift = 19, limit: 0x1fff, value: 0x3fe0
+E RKNN: [00:24:46.113] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 0, limit: 0x1fff, value: 0x3fe0
+E RKNN: [00:24:46.113] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 16, limit: 0x1fff, value: 0x3fe0
+E RKNN: [00:24:46.113] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5010, shift = 16, limit: 0x1fff, value: 0x3fe0
+E RKNN: [00:24:46.113] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5048, shift = 19, limit: 0x1fff, value: 0x3138
+E RKNN: [00:24:46.113] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 0, limit: 0x1fff, value: 0x3138
+E RKNN: [00:24:46.113] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 16, limit: 0x1fff, value: 0x3138
+E RKNN: [00:24:46.113] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5010, shift = 16, limit: 0x1fff, value: 0x3138
+E RKNN: [00:24:46.113] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5048, shift = 19, limit: 0x1fff, value: 0x3138
+E RKNN: [00:24:46.113] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 0, limit: 0x1fff, value: 0x3138
+E RKNN: [00:24:46.113] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 16, limit: 0x1fff, value: 0x3138
+E RKNN: [00:24:46.113] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5010, shift = 16, limit: 0x1fff, value: 0x3138
+E RKNN: [00:24:46.113] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5048, shift = 19, limit: 0x1fff, value: 0x3138
+E RKNN: [00:24:46.113] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 0, limit: 0x1fff, value: 0x3138
+E RKNN: [00:24:46.113] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 16, limit: 0x1fff, value: 0x3138
+E RKNN: [00:24:46.113] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5010, shift = 16, limit: 0x1fff, value: 0x3138
+E RKNN: [00:24:46.113] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5048, shift = 19, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.113] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 0, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.113] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 16, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.113] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5010, shift = 16, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.113] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5048, shift = 19, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.113] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 0, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.113] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 16, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.113] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5010, shift = 16, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.113] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5048, shift = 19, limit: 0x1fff, value: 0x3fe0
+E RKNN: [00:24:46.113] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 0, limit: 0x1fff, value: 0x3fe0
+E RKNN: [00:24:46.113] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 16, limit: 0x1fff, value: 0x3fe0
+E RKNN: [00:24:46.113] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5010, shift = 16, limit: 0x1fff, value: 0x3fe0
+E RKNN: [00:24:46.114] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5048, shift = 19, limit: 0x1fff, value: 0x3138
+E RKNN: [00:24:46.114] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 0, limit: 0x1fff, value: 0x3138
+E RKNN: [00:24:46.114] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 16, limit: 0x1fff, value: 0x3138
+E RKNN: [00:24:46.114] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5010, shift = 16, limit: 0x1fff, value: 0x3138
+E RKNN: [00:24:46.114] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5048, shift = 19, limit: 0x1fff, value: 0x3138
+E RKNN: [00:24:46.114] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 0, limit: 0x1fff, value: 0x3138
+E RKNN: [00:24:46.114] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 16, limit: 0x1fff, value: 0x3138
+E RKNN: [00:24:46.114] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5010, shift = 16, limit: 0x1fff, value: 0x3138
+E RKNN: [00:24:46.114] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5048, shift = 19, limit: 0x1fff, value: 0x3138
+E RKNN: [00:24:46.114] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 0, limit: 0x1fff, value: 0x3138
+E RKNN: [00:24:46.114] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 16, limit: 0x1fff, value: 0x3138
+E RKNN: [00:24:46.114] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5010, shift = 16, limit: 0x1fff, value: 0x3138
+E RKNN: [00:24:46.114] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5048, shift = 19, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.114] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 0, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.114] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 16, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.114] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5048, shift = 19, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.114] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 0, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.114] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 16, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.114] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5048, shift = 19, limit: 0x1fff, value: 0x3fe0
+E RKNN: [00:24:46.114] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 0, limit: 0x1fff, value: 0x3fe0
+E RKNN: [00:24:46.114] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 16, limit: 0x1fff, value: 0x3fe0
+E RKNN: [00:24:46.114] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5048, shift = 19, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.114] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 0, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.114] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 16, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.114] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5010, shift = 16, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.114] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5048, shift = 19, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.114] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 0, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.114] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 16, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.114] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5010, shift = 16, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.114] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5048, shift = 19, limit: 0x1fff, value: 0x3fe0
+E RKNN: [00:24:46.114] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 0, limit: 0x1fff, value: 0x3fe0
+E RKNN: [00:24:46.114] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 16, limit: 0x1fff, value: 0x3fe0
+E RKNN: [00:24:46.114] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5010, shift = 16, limit: 0x1fff, value: 0x3fe0
+E RKNN: [00:24:46.114] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 0, limit: 0x1fff, value: 0x41d5
+E RKNN: [00:24:46.114] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 16, limit: 0x1fff, value: 0x41d5
+E RKNN: [00:24:46.114] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 0, limit: 0x1fff, value: 0x41d5
+E RKNN: [00:24:46.114] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 16, limit: 0x1fff, value: 0x41d5
+E RKNN: [00:24:46.114] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 0, limit: 0x1fff, value: 0x41d5
+E RKNN: [00:24:46.114] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 16, limit: 0x1fff, value: 0x41d5
+E RKNN: [00:24:46.114] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 0, limit: 0x1fff, value: 0x41d5
+E RKNN: [00:24:46.114] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 16, limit: 0x1fff, value: 0x41d5
+E RKNN: [00:24:46.114] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 0, limit: 0x1fff, value: 0x41d5
+E RKNN: [00:24:46.114] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 16, limit: 0x1fff, value: 0x41d5
+E RKNN: [00:24:46.114] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 0, limit: 0x1fff, value: 0x41d5
+E RKNN: [00:24:46.114] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 16, limit: 0x1fff, value: 0x41d5
+E RKNN: [00:24:46.114] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 0, limit: 0x1fff, value: 0x41d5
+E RKNN: [00:24:46.114] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 16, limit: 0x1fff, value: 0x41d5
+E RKNN: [00:24:46.114] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 0, limit: 0x1fff, value: 0x41d5
+E RKNN: [00:24:46.114] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 16, limit: 0x1fff, value: 0x41d5
+E RKNN: [00:24:46.114] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 0, limit: 0x1fff, value: 0x41d5
+E RKNN: [00:24:46.114] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 16, limit: 0x1fff, value: 0x41d5
+E RKNN: [00:24:46.114] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 0, limit: 0x1fff, value: 0x47f7
+E RKNN: [00:24:46.114] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 16, limit: 0x1fff, value: 0x47f7
+E RKNN: [00:24:46.114] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5048, shift = 19, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.114] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 0, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.114] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 16, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.114] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5010, shift = 16, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.114] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5048, shift = 19, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.114] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 0, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.114] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 16, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.114] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5010, shift = 16, limit: 0x1fff, value: 0x29e4
+E RKNN: [00:24:46.114] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5048, shift = 19, limit: 0x1fff, value: 0x3fe0
+E RKNN: [00:24:46.114] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 0, limit: 0x1fff, value: 0x3fe0
+E RKNN: [00:24:46.114] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x4038, shift = 16, limit: 0x1fff, value: 0x3fe0
+E RKNN: [00:24:46.114] REGTASK: The bit width of field value exceeds the limit, target: v2, offset: 0x5010, shift = 16, limit: 0x1fff, value: 0x3fe0
+E RKNN: [00:24:46.155] Unkown op target: 0
+E RKNN: [00:24:46.156] Unkown op target: 0
+E RKNN: [00:24:46.156] Unkown op target: 0
+E RKNN: [00:24:46.156] Unkown op target: 0
+E RKNN: [00:24:46.156] Unkown op target: 0
+E RKNN: [00:24:46.160] Unkown op target: 0
+[1;33mW[0m [1;33mRestore temperate env rknn_compute_order=[0m
+I rknn building done.
+
+
+
+
+
+
+
+
+
+compress=0, global_fuse=1, safe_fuse=0, output_optimize=1, op_group_sram_opt=0, op_group_nbuf_opt=0, enable_flash_attention=0, conv_eltwise_activation_fuse=1, enable_rnn_loop=1, memory_plan_strategy=BestFit, enable_core0_only_mode=0, disable_first_conv=0
+build ret = 0
+I Target is None, use simulator!
+[1;33mW[0m [1;33minference: The 'data_format' is not set, and its default value is 'nhwc'![0m
+I GraphPreparing :   0%|                                                    | 0/183 [00:00<?, ?it/s]I GraphPreparing : 100%|███████████████████████████████████████| 183/183 [00:00<00:00, 15900.68it/s]
+I SessionPreparing :   0%|                                                  | 0/183 [00:00<?, ?it/s]I SessionPreparing : 100%|██████████████████████████████████████| 183/183 [00:00<00:00, 3156.69it/s]
+[1;33mW[0m [1;33minference: The 'data_format' is not set, and its default value is 'nhwc'![0m
+[1;33mW[0m [1;33minference: The 'data_format' is not set, and its default value is 'nhwc'![0m
+  100/509
+  200/509
+  300/509
+  400/509
+  500/509
+=== dfl | int8=False | 509 images | dfl range [-36.188, 35.344] | logits range [-52.531, 2.514] ===
+  ball    GT= 100 TP=  51 FP=  12 FN=  49 | P=0.8095 R=0.5100 F1=0.6258 AP50=0.4870
+  hand    GT=1172 TP= 655 FP= 292 FN= 517 | P=0.6917 R=0.5589 F1=0.6182 AP50=0.5068
+  racket  GT= 176 TP= 133 FP=  41 FN=  43 | P=0.7644 R=0.7557 F1=0.7600 AP50=0.6910
+report: /tmp/fp16_509_review.json
