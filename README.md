@@ -4,7 +4,7 @@
 
 ## 下载与运行
 
-**[下载最终发布包：源码包.rar](https://github.com/dandelionfeng/pingpong-fpga/releases/download/stereo-serve-v1.2.1-final-20261103/%E6%BA%90%E7%A0%81%E5%8C%85.rar)**（195,836,989 字节，195.84 MB）。这是完整离线竞赛包；解压后双击“发球测量系统.exe”，保留同目录的 app、runtime、data。支持 Windows 10/11 64 位，PC 查看样例无需安装 Python。
+**[下载最终发布包：源码包.rar](https://github.com/dandelionfeng/pingpong-fpga/releases/download/fpga-competition-2026-final/FPGA-competition-2026-final.rar)**（195,836,989 字节，195.84 MB）。GitHub 附件名为 FPGA-competition-2026-final.rar，与本地“源码包.rar”内容及哈希一致。这是完整离线竞赛包；解压后双击“发球测量系统.exe”，保留同目录的 app、runtime、data。支持 Windows 10/11 64 位，PC 查看样例无需安装 Python。
 
 GitHub 自动生成的 Source code.zip/tar.gz 用于阅读与开发源码。运行展示使用上面的 RAR 附件，其中包含 PC 离线环境、板端部署包、模型、bit 流、FPGA 工程和 serve_01、serve_02 两份回放。
 
