@@ -1,0 +1,44 @@
+{
+  "tag": "fp32_onnx_509",
+  "int8": false,
+  "images": 509,
+  "value_ranges": {
+    "dfl": [
+      -36.14,
+      35.294
+    ],
+    "logits": [
+      -52.553,
+      2.51
+    ]
+  },
+  "classes": {
+    "ball": {
+      "gt": 100,
+      "tp": 51,
+      "fp": 11,
+      "fn": 49,
+      "precision": 0.8226,
+      "recall": 0.51,
+      "f1": 0.6296
+    },
+    "hand": {
+      "gt": 1172,
+      "tp": 654,
+      "fp": 292,
+      "fn": 518,
+      "precision": 0.6913,
+      "recall": 0.558,
+      "f1": 0.6176
+    },
+    "racket": {
+      "gt": 176,
+      "tp": 133,
+      "fp": 42,
+      "fn": 43,
+      "precision": 0.76,
+      "recall": 0.7557,
+      "f1": 0.7578
+    }
+  }
+}

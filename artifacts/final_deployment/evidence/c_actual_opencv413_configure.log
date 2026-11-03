@@ -1,0 +1,11 @@
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- c_actual: using installed OpenCV 4.13.0 (/tmp/opencv413-install/lib/cmake/opencv4)
+-- c_actual: ONNX Runtime root = /tmp/onnxruntime-linux-x64-1.20.1
+-- Configuring done (5.2s)
+-- Generating done (0.3s)
+-- Build files have been written to: /mnt/d/pp_fix_work/build/c_actual_opencv413

@@ -1,0 +1,185 @@
+{
+  "file": "/mnt/d/电脑管家迁移文件/xwechat_files/wxid_ttrefx9qt9o722_32d9/msg/file/2026-10/方案及分工/方案及分工/pingpong-fpga/artifacts/handoff/AFH03_FINAL_V3_FP16_FOR_CAPTAIN/v3_960_fp16_dfl_layout.rknn",
+  "size": 13038908,
+  "num_outputs": 8,
+  "outputs": [
+    {
+      "name": "output0",
+      "index": 0,
+      "shape": [
+        1,
+        7,
+        18900
+      ],
+      "layout": "nchw",
+      "attr_dtype": "float32",
+      "quant_dtype": "float16",
+      "qtype": "",
+      "qmethod": "",
+      "scale": [],
+      "zero_point": [],
+      "min": [],
+      "max": []
+    },
+    {
+      "name": "onnx::Reshape_725",
+      "index": 1,
+      "shape": [
+        1,
+        64,
+        18900
+      ],
+      "layout": "nchw",
+      "attr_dtype": "float32",
+      "quant_dtype": "float16",
+      "qtype": "",
+      "qmethod": "",
+      "scale": [],
+      "zero_point": [],
+      "min": [],
+      "max": []
+    },
+    {
+      "name": "onnx::Sigmoid_769",
+      "index": 2,
+      "shape": [
+        1,
+        3,
+        18900
+      ],
+      "layout": "nchw",
+      "attr_dtype": "float32",
+      "quant_dtype": "float16",
+      "qtype": "",
+      "qmethod": "",
+      "scale": [],
+      "zero_point": [],
+      "min": [],
+      "max": []
+    },
+    {
+      "name": "onnx::Conv_607",
+      "index": 3,
+      "shape": [
+        1,
+        64,
+        120,
+        120
+      ],
+      "layout": "nchw",
+      "attr_dtype": "float32",
+      "quant_dtype": "float16",
+      "qtype": "",
+      "qmethod": "",
+      "scale": [],
+      "zero_point": [],
+      "min": [],
+      "max": []
+    },
+    {
+      "name": "onnx::Conv_643",
+      "index": 4,
+      "shape": [
+        1,
+        128,
+        60,
+        60
+      ],
+      "layout": "nchw",
+      "attr_dtype": "float32",
+      "quant_dtype": "float16",
+      "qtype": "",
+      "qmethod": "",
+      "scale": [],
+      "zero_point": [],
+      "min": [],
+      "max": []
+    },
+    {
+      "name": "onnx::Conv_679",
+      "index": 5,
+      "shape": [
+        1,
+        256,
+        30,
+        30
+      ],
+      "layout": "nchw",
+      "attr_dtype": "float32",
+      "quant_dtype": "float16",
+      "qtype": "",
+      "qmethod": "",
+      "scale": [],
+      "zero_point": [],
+      "min": [],
+      "max": []
+    },
+    {
+      "name": "boxes",
+      "index": 6,
+      "shape": [
+        1,
+        4,
+        18900
+      ],
+      "layout": "nchw",
+      "attr_dtype": "float32",
+      "quant_dtype": "float16",
+      "qtype": "",
+      "qmethod": "",
+      "scale": [],
+      "zero_point": [],
+      "min": [],
+      "max": []
+    },
+    {
+      "name": "scores",
+      "index": 7,
+      "shape": [
+        1,
+        3,
+        18900
+      ],
+      "layout": "nchw",
+      "attr_dtype": "float32",
+      "quant_dtype": "float16",
+      "qtype": "",
+      "qmethod": "",
+      "scale": [],
+      "zero_point": [],
+      "min": [],
+      "max": []
+    }
+  ],
+  "input": {
+    "name": "images",
+    "idx": 0,
+    "shape": [
+      1,
+      3,
+      960,
+      960
+    ],
+    "layout": "nchw",
+    "layout_ori": "nchw",
+    "is_output": false,
+    "range": [
+      0,
+      1
+    ],
+    "origin_dynamic": false,
+    "dtype": "float32",
+    "mean": [
+      0
+    ],
+    "std": [
+      255,
+      255,
+      255
+    ],
+    "rgb2bgr": false
+  },
+  "quantized_tensors": 0,
+  "sdk_version": null,
+  "target_platform": null
+}

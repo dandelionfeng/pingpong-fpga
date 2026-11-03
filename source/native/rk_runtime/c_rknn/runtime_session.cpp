@@ -1,11 +1,14 @@
 #include "runtime_session.hpp"
 #include "threshold_policy.hpp"
+#include "dfl_flat_decoder.hpp"
+#include "output_layout_policy.hpp"
 #include <rknn_api.h>
 #include <array>
 #include <opencv2/core.hpp>
 #include <algorithm>
 #include <chrono>
 #include <cstring>
+#include <cstdio>
 #include <cmath>
 #include <cstdlib>
 #include <arm_neon.h>
@@ -31,11 +34,20 @@ void require(int result, const char *operation) {
   if (result != RKNN_SUCC)
     throw std::runtime_error(std::string(operation) + " returned " + std::to_string(result));
 }
+bool version_at_least(const char *version, int want_major, int want_minor, int want_patch) {
+  int major = 0, minor = 0, patch = 0;
+  if (!version || std::sscanf(version, "%d.%d.%d", &major, &minor, &patch) != 3) return false;
+  if (major != want_major) return major > want_major;
+  if (minor != want_minor) return minor > want_minor;
+  return patch >= want_patch;
+}
 }
 struct RknnSharedContext {
   rknn_context context = 0;
   rknn_tensor_attr input{}, native_input_attr{}, output{};
   std::vector<rknn_tensor_attr> heads;
+  bool flat_dfl=false;
+  FlatDflLayout flat_layout;
   std::array<int8_t,256> input_lut{};
   bool input_xor=false;
   std::array<std::array<float,256>,6> output_lut{};
@@ -85,12 +97,14 @@ bool OrtSession::load(const std::string &path, bool use_cuda, int, std::string *
       require(rknn_set_core_mask(shared->context,core), "rknn_set_core_mask");
       rknn_input_output_num count{};
       require(rknn_query(shared->context, RKNN_QUERY_IN_OUT_NUM, &count, sizeof(count)), "query in/out");
-      if (count.n_input != 1 || (count.n_output != 1 && count.n_output != 6))
-        throw std::runtime_error("Expected one input and one primary output");
+      OutputMode output_mode;
+      std::string output_mode_error;
+      if (count.n_input != 1 || !select_output_mode(count.n_output, &output_mode, &output_mode_error))
+        throw std::runtime_error(output_mode_error.empty() ? "Expected exactly one input" : output_mode_error);
       require(rknn_query(shared->context, RKNN_QUERY_INPUT_ATTR, &shared->input, sizeof(shared->input)), "query input");
       require(rknn_query(shared->context, RKNN_QUERY_NATIVE_INPUT_ATTR, &shared->native_input_attr, sizeof(shared->native_input_attr)), "query native input");
       require(rknn_query(shared->context, RKNN_QUERY_OUTPUT_ATTR, &shared->output, sizeof(shared->output)), "query output");
-      if (count.n_output == 6) {
+      if (output_mode == OutputMode::kRawHeads) {
         auto input_dims=canonical(shared->input);
         if(input_dims.size()!=4 || input_dims[0]!=1 || input_dims[1]!=3 || input_dims[2]!=input_dims[3] || input_dims[2]%32)
           throw std::runtime_error("Raw-head square input contract mismatch");
@@ -107,13 +121,39 @@ bool OrtSession::load(const std::string &path, bool use_cuda, int, std::string *
             throw std::runtime_error("YOLO raw head shape/layout mismatch");
           if(i%2) shared->anchors+=side*side;
         }
+      } else if (output_mode == OutputMode::kFlatDfl) {
+        auto input_dims=canonical(shared->input);
+        if(input_dims.size()!=4 || input_dims[0]!=1 || input_dims[1]!=3 ||
+           input_dims[2]!=960 || input_dims[3]!=960)
+          throw std::runtime_error("8-output DFL model requires a [1,3,960,960] input");
+        shared->input_side=960;
+        std::vector<std::vector<int64_t>> shapes;
+        shapes.reserve(8);
+        for (uint32_t i=0;i<8;++i) {
+          rknn_tensor_attr attr{};
+          attr.index=i;
+          require(rknn_query(shared->context,RKNN_QUERY_OUTPUT_ATTR,&attr,sizeof(attr)),"query DFL output");
+          shapes.push_back(canonical(attr));
+        }
+        std::string layout_error;
+        if (!identify_flat_dfl(shapes, &shared->flat_layout, &layout_error))
+          throw std::runtime_error("8-output DFL layout rejected: " + layout_error);
+        shared->flat_dfl=true;
+        shared->head_classes=shared->flat_layout.classes;
+        shared->anchors=shared->flat_layout.anchors;
       }
       if (shared->input.n_dims != 4 || shared->output.n_dims < 3 || shared->output.n_dims > 4)
         throw std::runtime_error("Unsupported RKNN tensor dimensions");
       rknn_sdk_version sdk{};
       require(rknn_query(shared->context, RKNN_QUERY_SDK_VERSION, &sdk, sizeof(sdk)), "query SDK version");
-      if (std::string(sdk.api_version).rfind("2.3.0", 0) != 0)
-        throw std::runtime_error("This deployment expects the verified RKNN runtime 2.3.0");
+      const bool runtime_23 = std::string(sdk.api_version).rfind("2.3.0", 0) == 0;
+      const bool runtime_25 = version_at_least(sdk.api_version, 2, 5, 0);
+      if (shared->flat_dfl && !runtime_25)
+        throw std::runtime_error(std::string("8-output DFL model requires RKNN runtime >= 2.5.0; found ") +
+                                 sdk.api_version + ". Do not bypass this check; upgrade the board runtime.");
+      if (!shared->flat_dfl && !runtime_23 && !runtime_25)
+        throw std::runtime_error("This deployment expects RKNN runtime 2.3.0 or >=2.5.0; found " +
+                                 std::string(sdk.api_version));
       std::cerr << "RKNN_PHYSICAL_CONTEXT model=" << path << " runtime=" << sdk.api_version
                 << " driver=" << sdk.drv_version << " input=";
       for (auto d:canonical(shared->input)) std::cerr << d << ',';
@@ -170,7 +210,14 @@ bool OrtSession::load(const std::string &path, bool use_cuda, int, std::string *
   }
 }
 std::vector<int64_t> OrtSession::inputShape() const { return session_ ? canonical(session_->input) : std::vector<int64_t>{}; }
-std::vector<int64_t> OrtSession::outputShape() const { return session_ ? session_->heads.empty()?canonical(session_->output):std::vector<int64_t>{1,4+session_->head_classes,static_cast<int64_t>(session_->anchors)} : std::vector<int64_t>{}; }
+std::vector<int64_t> OrtSession::outputShape() const {
+  if (!session_) return {};
+  if (session_->flat_dfl)
+    return {1, 4 + session_->flat_layout.classes, static_cast<int64_t>(session_->flat_layout.anchors)};
+  return session_->heads.empty() ? canonical(session_->output)
+                                 : std::vector<int64_t>{1, 4 + session_->head_classes,
+                                                        static_cast<int64_t>(session_->anchors)};
+}
 bool OrtSession::run(const std::vector<float> &input,const std::vector<int64_t>& shape,
                      std::vector<float>* output,std::vector<int64_t>* output_shape,std::string* error,
                      float base_conf) {
@@ -343,7 +390,32 @@ bool OrtSession::runImpl(const std::vector<float> &input, const std::vector<int6
     checkpoint("rknn_inputs_set_ms");
     require(rknn_run(session_->context, nullptr), "rknn_run");
     checkpoint("rknn_run_ms");
-    if (!session_->heads.empty()) {
+    if (session_->flat_dfl) {
+      rknn_output results[8]{};
+      for (uint32_t i=0;i<8;++i) {
+        results[i].index=i;
+        // Ask the runtime to dequantise/converts every output exactly once.
+        // The delivered INT8 model already reports float32 outputs; a second
+        // manual (q-zp)*scale pass would corrupt them.
+        results[i].want_float=1;
+      }
+      require(rknn_outputs_get(session_->context,8,results,nullptr),"get eight DFL outputs");
+      struct FlatRelease { rknn_context c; rknn_output *p; ~FlatRelease(){rknn_outputs_release(c,8,p);} } release{session_->context,results};
+      const auto &layout=session_->flat_layout;
+      const auto &dfl=results[layout.dfl_index];
+      const auto &cls=results[layout.class_index];
+      if (!dfl.buf || !cls.buf ||
+          dfl.size!=64*layout.anchors*sizeof(float) ||
+          cls.size!=static_cast<size_t>(layout.classes)*layout.anchors*sizeof(float))
+        throw std::runtime_error("8-output DFL output buffer mismatch");
+      output->assign((4+layout.classes)*layout.anchors,0.f);
+      decode_flat_dfl(static_cast<const float*>(dfl.buf),
+                      static_cast<const float*>(cls.buf), layout, candidate,
+                      early_filter, output->data());
+      *output_shape={1,4+layout.classes,static_cast<int64_t>(layout.anchors)};
+      graph_timings[session_->model_name+"/flat_dfl_layout"]=1.;
+      checkpoint("cpu_dfl_ms");
+    } else if (!session_->heads.empty()) {
       rknn_output results[6]{};
       const bool quant_output=(!std::getenv("C_OPT_QOUTPUT") || std::string(std::getenv("C_OPT_QOUTPUT"))!="0") &&
         std::all_of(session_->heads.begin(),session_->heads.end(),[](const auto &a){return a.type==RKNN_TENSOR_INT8 && a.qnt_type==RKNN_TENSOR_QNT_AFFINE_ASYMMETRIC;});

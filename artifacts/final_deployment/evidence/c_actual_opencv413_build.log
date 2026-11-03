@@ -1,0 +1,7 @@
+[ 16%] Building CXX object CMakeFiles/c_actual.dir/src/perception_engine.cpp.o
+[ 33%] Building CXX object CMakeFiles/c_actual.dir/src/yolo_detector_onnx.cpp.o
+[ 50%] Building CXX object CMakeFiles/c_actual.dir/src/balltrack_onnx.cpp.o
+[ 66%] Building CXX object CMakeFiles/c_actual.dir/src/preprocessing.cpp.o
+[ 83%] Building CXX object CMakeFiles/c_actual.dir/src/postprocessing.cpp.o
+[100%] Linking CXX static library libc_actual.a
+[100%] Built target c_actual

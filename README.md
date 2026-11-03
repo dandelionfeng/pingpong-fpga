@@ -29,6 +29,12 @@
 | docs、manifests、licenses | 说明、校验清单和第三方许可 |
 | tools | EXE 构建与源码检查工具 |
 
+## AFH03 部署验证（2026-11-03）
+
+`source/native/rk_runtime/c_rknn/` 已加入 8 输出 DFL 模型适配：识别 `[1,64,18900]` DFL 与首个 `[1,3,18900]` 分类 logits，统一走现有 DFL → NMS → 结果传递链路；保留 1/6 输出模式。8 输出模型要求 RKNN Runtime ≥ 2.5.0，不再用 2.3.0 硬性检查；实际板端加载和 FPS 仍需 AFH03 实测。
+
+验证报告、509 张精度对照、诊断脚本和 SHA256 清单见 [artifacts/final_deployment](artifacts/final_deployment/)。**PC/模拟器结果不能替代 RK3576J 板端结果。**
+
 ## GitHub 源码与完整运行包
 
 仓库保存本版源代码、配置、说明、校验值及 EXE 入口。权重、原视频、私有 SDK、厂商 IP、离线依赖和生成工程由完整本地提交包提供。对应文件可按 `manifests/model-sha256.json` 和运行清单核验。

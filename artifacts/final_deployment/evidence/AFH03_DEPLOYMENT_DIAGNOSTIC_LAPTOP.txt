@@ -1,0 +1,35 @@
+AFH03_DEPLOYMENT_DIAGNOSTIC
+generated_at=2026-11-03T00:51:04+08:00
+host=LAPTOP-ONROQI2O
+script=tools/afh03_deployment_diagnostic.sh
+binary=<not supplied>
+model=<not supplied>
+
+===== 1. chip / kernel / OS =====
+uname                                     MINGW64_NT-10.0-26200 LAPTOP-ONROQI2O 3.6.9-b4195d69.x86_64 2026-06-06 17:49 UTC x86_64 Msys
+os-release                                RK3576_COMPATIBLE=NOT_TESTED (no /proc/device-tree/compatible)
+cpuinfo model                             model name	: Intel(R) Core(TM) i9-14900HX
+cpu_count=32
+meminfo                                   MemTotal:       33341304 kB
+
+===== 2. RKNPU driver / device =====
+rknpu devices                             /sys/kernel/debug/rknpu/version = NOT_TESTED (missing or permission denied)
+/sys/kernel/debug/rknpu/load = NOT_TESTED (missing or permission denied)
+/sys/kernel/debug/rknpu/freq = NOT_TESTED (missing or permission denied)
+rknpu kernel messages                     npu devfreq                               npu thermal                               
+===== 3. RKNN runtime / toolkit =====
+librknnrt locations                       rknn-toolkit2/lite2                       
+===== 4. RGA / camera / GRAY8 =====
+rga devices                               v4l2-ctl = NOT_TESTED (install v4l-utils)
+ov9281 i2c/driver                         
+===== 5. binary and dynamic libraries =====
+BINARY=NOT_TESTED (pass --binary)
+
+===== 6. model file =====
+MODEL=NOT_TESTED (pass --model)
+
+===== 7. summary =====
+BOARD_STATUS=BLOCKED_NOT_AFH03 (run on the RK3576J board for a valid result)
+This report is evidence only for the machine it ran on.
+Do not copy PC/simulator FPS into this file.
+AFH03_DEPLOYMENT_DIAGNOSTIC_DONE
