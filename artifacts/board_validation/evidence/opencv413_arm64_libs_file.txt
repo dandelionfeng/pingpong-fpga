@@ -1,0 +1,2 @@
+/tmp/opencv413-arm64-install/lib/libopencv_core.so.4.13.0:    ELF 64-bit LSB shared object, ARM aarch64, version 1 (GNU/Linux), dynamically linked, BuildID[sha1]=96daef78be64384d1821cde16514120ab9bf8989, not stripped
+/tmp/opencv413-arm64-install/lib/libopencv_imgproc.so.4.13.0: ELF 64-bit LSB shared object, ARM aarch64, version 1 (GNU/Linux), dynamically linked, BuildID[sha1]=9bc7ca3c2aa74cc218172a04c7d0cc0394a95801, not stripped

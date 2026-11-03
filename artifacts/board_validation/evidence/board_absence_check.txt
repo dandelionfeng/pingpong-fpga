@@ -1,0 +1,13 @@
+﻿generated=2026-11-03T13:24:27.7299719+08:00
+adb devices:
+List of devices attached
+
+pnputil USB candidates:
+
+network gateways:
+192.168.88.1
+192.168.126.1
+172.28.144.1
+100.80.219.62
+169.254.145.9
+169.254.186.99

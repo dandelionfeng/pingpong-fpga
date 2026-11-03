@@ -35,6 +35,8 @@
 
 验证报告、509 张精度对照、诊断脚本和 SHA256 清单见 [artifacts/final_deployment](artifacts/final_deployment/)。**PC/模拟器结果不能替代 RK3576J 板端结果。**
 
+第三阶段板端准备、官方 RKNN 2.5.0 资产核验、ARM64 构建和部署脚本见 [artifacts/board_validation](artifacts/board_validation/)。
+
 ## GitHub 源码与完整运行包
 
 仓库保存本版源代码、配置、说明、校验值及 EXE 入口。权重、原视频、私有 SDK、厂商 IP、离线依赖和生成工程由完整本地提交包提供。对应文件可按 `manifests/model-sha256.json` 和运行清单核验。

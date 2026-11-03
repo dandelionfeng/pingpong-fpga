@@ -1,0 +1,5 @@
+/tmp/c_actual_arm64_objs/balltrack_onnx.o:     ELF 64-bit LSB relocatable, ARM aarch64, version 1 (GNU/Linux), not stripped
+/tmp/c_actual_arm64_objs/perception_engine.o:  ELF 64-bit LSB relocatable, ARM aarch64, version 1 (GNU/Linux), not stripped
+/tmp/c_actual_arm64_objs/postprocessing.o:     ELF 64-bit LSB relocatable, ARM aarch64, version 1 (SYSV), not stripped
+/tmp/c_actual_arm64_objs/preprocessing.o:      ELF 64-bit LSB relocatable, ARM aarch64, version 1 (SYSV), not stripped
+/tmp/c_actual_arm64_objs/yolo_detector_onnx.o: ELF 64-bit LSB relocatable, ARM aarch64, version 1 (GNU/Linux), not stripped

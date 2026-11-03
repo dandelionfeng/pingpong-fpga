@@ -1,0 +1,4 @@
+2d4160cd868efd7b83a72587e411c16d6972da5876e067bd73665cea778ce666  /tmp/rknn-2.5.0/rknn_api.h
+4b6cc575bedf8952b13db4b1190fa3b3d2ac213f00be774ff6ccd19d651970c0  /tmp/rknn-2.5.0/librknnrt.so
+bb789400e64095ba94586bad711f0d3bbf6b158f1a0cc8d52ac95ef05249dbf2  /tmp/opencv413-arm64-install/lib/libopencv_core.so.4.13.0
+2508be71e354f8460a775fa92d9c8900181e3e10e9e5996a3f9f99f4fbd0ff38  /tmp/rknn_v3_detect_dfl_arm64

@@ -1,0 +1,10 @@
+RKNN 2.5.0 official assets (Rockchip airockchip/rknn-toolkit2 tag v2.5.0)
+source: https://github.com/airockchip/rknn-toolkit2/tree/v2.5.0/rknpu2/runtime/Linux/librknn_api
+
+2d4160cd868efd7b83a72587e411c16d6972da5876e067bd73665cea778ce666  rknn_api.h  (36,524 bytes)
+4b6cc575bedf8952b13db4b1190fa3b3d2ac213f00be774ff6ccd19d651970c0  librknnrt.so (8,189,368 bytes, aarch64)
+librknnrt version: 2.5.0 (74ea630ce8@2026-09-30T09:41:17)
+
+These vendor files are NOT committed to Git. Use tools/fetch_rknn_2.5.0.sh
+to fetch them into a local directory, or copy them from the official SDK.
+Do not overwrite /usr/lib/librknnrt.so on the board.
