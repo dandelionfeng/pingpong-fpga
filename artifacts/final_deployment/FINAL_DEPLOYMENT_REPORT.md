@@ -158,7 +158,9 @@ codex/final-afh03-deployment-20261103
 git push -u origin codex/final-afh03-deployment-20261103
 ```
 
-结果：**PENDING / 见最终回复**。若失败，保留本地提交并记录确切错误，不 force push。
+结果：**PASS**。`git push -u origin codex/final-afh03-deployment-20261103` 已成功；远程分支存在，远程 HEAD 与本地 HEAD 一致。最终 Commit SHA 见最终回复和远程分支 HEAD（本报告不写自引用 SHA）。
+
+推送前曾遇到 Windows Git 网络 `Connection was reset` / `Failed to connect`；改用 WSL 的 GitHub 连通路径 + 已验证的 GitHub 凭据后成功。未 force push、未覆盖 main。
 
 ## 8. 最终结论
 
