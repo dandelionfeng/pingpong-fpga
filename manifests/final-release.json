@@ -1,14 +1,15 @@
 {
   "name": "FPGA competition 2026",
   "software_version": "1.2.1",
-  "tag": "stereo-serve-v1.2.1-final-20261103",
-  "release_url": "https://github.com/dandelionfeng/pingpong-fpga/releases/tag/stereo-serve-v1.2.1-final-20261103",
+  "tag": "fpga-competition-2026-final",
+  "release_url": "https://github.com/dandelionfeng/pingpong-fpga/releases/tag/fpga-competition-2026-final",
   "asset": {
-    "name": "源码包.rar",
+    "name": "FPGA-competition-2026-final.rar",
     "bytes": 195836989,
     "sha256": "f918ff1d5f11fea70a886c2f2c20d694467ae3a461f4c054073b3bc873d5368c",
     "limit_bytes": 200000000,
-    "publication": "exact user-specified archive; no recompression"
+    "publication": "exact user-specified archive; no recompression",
+    "original_local_name": "源码包.rar"
   },
   "entry": "发球测量系统.exe",
   "exe_sha256": "255a0f5fbdaee755d0bcb7fd75fc4ef207ce2e6b0dd23096bfc167880bbc8f23",
