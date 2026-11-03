@@ -1,5 +1,5 @@
 # 文件与许可说明
 
-自研源代码的权利归原作者。第三方组件的许可随 licenses、runtime 与 app/tools 中的原文件保留。源码包 EXE 内嵌的 pySerial 许可见 `licenses/pySerial-LICENSE.txt`。
+自研源代码的权利归原作者。第三方组件的许可随 licenses、runtime 与 app/tools 中的原文件保留。
 
-GitHub 源码包与完整本地运行包的文件范围见 README。模型、原视频、私有 SDK、厂商 IP 和授权文件在本地管理。
+Git 仓库保存源码、配置、文档与入口程序；最终 Release 附件“源码包.rar”包含用户指定的完整离线竞赛包。第三方运行库、模型和 FPGA 工程的使用遵循其随包许可。发布范围与 SHA-256 见 manifests/final-release.json。

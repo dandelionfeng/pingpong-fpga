@@ -2,25 +2,8 @@
   "version": "1.2.1",
   "windows_exe": {
     "onefile": true,
-    "sha256": "6db248249b5485adb38d467d12649370990653eebbba91022b56bf2351929c2b",
     "normal_launch_passed": true,
     "self_test": true,
-    "source_package": {
-      "runtime_mode": "source-embedded",
-      "self_test_passed": true,
-      "normal_no_open_lifecycle_passed": true,
-      "homepage_and_health_api_passed": true,
-      "recordings_included": 0,
-      "configuration_sha256": "e4c292c565195471769c532f8e1e2af66744542c92f777e6d2cbbb7fd07a9ed2"
-    },
-    "complete_package_compatibility": {
-      "runtime_mode": "complete",
-      "self_test_passed": true,
-      "recordings": 6,
-      "video_ranges": 6,
-      "pairs": 1677,
-      "raw_results_unchanged": true
-    },
     "unicode_and_other_cwd": true,
     "recordings": 6,
     "pairs": 1677
@@ -43,9 +26,9 @@
     "actual_serve10_prior_main_s": 31.416994906,
     "video73_prior_short_capture_pairs": 81
   },
-  "this_packaging_round": "source-package embedded audit runtime plus complete-package compatibility checks; no new FPGA/NPU inference, hardware acceptance or independent physical accuracy test",
+  "this_packaging_round": "PC executable, path portability, recording rename and replay checks; no new FPGA/NPU inference or independent physical accuracy test",
   "model_and_calibration_changes": false,
-  "source_tests": 6,
+  "source_tests": 5,
   "ui_revision": "20261031.02",
   "ui": {
     "height_and_angle_definitions_match_backend": true,

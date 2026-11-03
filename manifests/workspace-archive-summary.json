@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-03",
+  "files": 4364,
+  "bytes": 1266413578,
+  "archive_name": "20261103-final-release",
+  "file_manifest_sha256": "2de4a2aaac23d240a742cc31c8d86f18a787b09cd1c5b1239ab972af50d21425",
+  "git_bundle_sha256": "4fd532cdf80f6caf11791865c77da51da1b0c38ebfc5997a493526c3ced8b9df",
+  "verification": "every original file copied and SHA-256 checked before workspace reorganization; all Git refs saved in verified bundle",
+  "retained_material": [
+    "six-case runtime and original inputs",
+    "local generated projects and dependencies",
+    "report build logs and assets",
+    "older report, audit manual, template and poster prompt"
+  ],
+  "git_history": "preserved; new task branch merged through PR without force-push"
+}

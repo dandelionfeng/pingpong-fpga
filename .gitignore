@@ -42,3 +42,8 @@
 .env
 *.pem
 *.key
+
+# Release archives and editor temporary files are kept outside Git.
+*.rar
+*.7z
+~$*

@@ -26,6 +26,8 @@ def verify_local():
     manifest=read(BASE/'files-sha256.json')
     for r in manifest['files']:
         p=BASE/r['path']
+        # RK wheels are sealed inside dist/quick-field-runtime.tar.gz; restore_rk_wheels.py extracts them on demand.
+        if r['path'].startswith('tools/rk-wheels/') and not p.exists():continue
         if not p.is_file() or sha(p)!=r['sha256']:raise RuntimeError('快速现场版文件缺失或被修改：'+str(p))
     final_manifest=BASE.parent/'最终版文件清单.json'
     if final_manifest.exists():
