@@ -180,7 +180,8 @@ def build(case,output=None,latest=None):
     data['performance']['export']=read(out/'replay-build.json')
     poster_i=min(range(len(times)),key=lambda i:abs(times[i]-data.get('releaseTime',times[len(times)//2])))
     # OpenCV's Windows filename API does not reliably accept Chinese paths.
-    poster=cv2.imdecode(np.fromfile(manifest_path.parent/entries[poster_i]['file'],dtype=np.uint8),cv2.IMREAD_COLOR)
+    poster_source=manifest_path.parent/entries[poster_i]['file']
+    poster=cv2.imdecode(np.fromfile(poster_source,dtype=np.uint8),cv2.IMREAD_COLOR) if poster_source.is_file() else None
     if poster is not None:
         ok,encoded=cv2.imencode('.jpg',poster,[cv2.IMWRITE_JPEG_QUALITY,88])
         if not ok:raise RuntimeError('Replay poster encoding failed')

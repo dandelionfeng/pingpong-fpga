@@ -10,7 +10,7 @@
   "data": "data",
   "default_camera": "/dev/video73",
   "configuration": "app/version.json",
-  "manifest": "manifests/runtime-sha256.json",
+  "manifest": "manifests/package-sha256.json",
   "model_manifest": "manifests/model-sha256.json",
   "publication": "source, UI, configuration, documentation and launcher; local submission package includes offline dependencies and selected recordings",
   "validation": "docs/验证记录.md",

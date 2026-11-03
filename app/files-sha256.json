@@ -98,8 +98,8 @@
     },
     {
       "path": "pc/check_install.py",
-      "bytes": 1528,
-      "sha256": "30885dc447a7632e99e53eb466b7b035c43c769d160c9e0f9ebc5aa42ed1b272"
+      "bytes": 2988,
+      "sha256": "2a0f648988ae4b284cbb3d19f6dab123c92087c1e57a10a7a73841f874ad15ac"
     },
     {
       "path": "pc/command_log.py",
@@ -123,8 +123,8 @@
     },
     {
       "path": "pc/field_actions.py",
-      "bytes": 7807,
-      "sha256": "d569fe44dadb0d5cb4ad0c2e632ffdcde1700c5f810d29ccb0614e14c3a26982"
+      "bytes": 9468,
+      "sha256": "58c06797cefdcc0bf0e6be2f86ab7c722664220cf4432d6345e35c4c26915876"
     },
     {
       "path": "pc/gui_server.py",
@@ -148,13 +148,13 @@
     },
     {
       "path": "pc/quick_common.py",
-      "bytes": 4125,
-      "sha256": "8f4d21f9e8d12775b2281576c479781674532a6e76e36cbac98ba187dbcfe45e"
+      "bytes": 4322,
+      "sha256": "60c54b7c7984c5e910c0b84ac2572a00bdf6f23454c0970848fc721d8c68d877"
     },
     {
       "path": "pc/replay.py",
-      "bytes": 14917,
-      "sha256": "9aeebb0c3bd6b8eb0610a877b7c322bd98a33bdfc032ed95deaf98adc61d53cc"
+      "bytes": 14987,
+      "sha256": "e2e33fb3ab16fa09778bf8a55afcb85a54047f4ca9db85ad8d8aed07bb9abc67"
     },
     {
       "path": "pc/requirements.txt",

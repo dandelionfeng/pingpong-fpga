@@ -26,7 +26,7 @@ prefix=yolo[:yolo.index('// ----------------------------------------------------
 helpers=yolo[yolo.index('// ------------------------------------------------------------------ helpers'):]
 begin=helpers.index('std::vector<float> imageToNchw(')
 end=helpers.index('// ------------------------------------------------------------- YOLO detector',begin)
-tensor=(Path(__file__).resolve().parents[2]/'software/rk_runtime/c_rknn/image_tensor.inc').read_text()
+tensor=(Path(__file__).resolve().parents[2]/'rk_runtime/c_rknn/image_tensor.inc').read_text()
 helpers=helpers[:begin]+tensor+helpers[end:]
 (args.output/'yolo_detector.cpp').write_text(prefix+helpers,encoding='utf-8')
 bridge=(args.source/'src/detector_backend_c_actual.cpp').read_text(encoding='utf-8')

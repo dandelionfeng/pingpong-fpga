@@ -23,26 +23,56 @@ def rebuild_local(name):
     logged([sys.executable,'-B',str(BASE/'pc/replay.py'),str(receipt)],log_path('rebuild_'+name))
     return case/'replay/回放.html'
 
+def _remote_case_signature(remote):
+    names=['measurement-complete.json','summary.json','input/manifest.json']
+    response=shell(['sha256sum',*[remote+'/'+name for name in names]],True)
+    lines=response.stdout.decode('utf-8','replace').splitlines()
+    if len(lines)!=len(names):raise ValueError('板端结果校验清单不完整')
+    signature={}
+    for name,line in zip(names,lines):
+        digest=line.split()[0] if line.split() else ''
+        if not re.fullmatch(r'[0-9a-fA-F]{64}',digest):raise ValueError('板端结果校验值无效')
+        signature[name]=digest.lower()
+    return signature
+
+def _matches_remote(case,signature):
+    return all((case/name).is_file() and sha(case/name)==digest for name,digest in signature.items())
+
 def retrieve(name):
     if not re.fullmatch(r'[A-Za-z0-9_-]+',name):raise ValueError('结果名仅允许字母、数字、下划线及短横线。')
     local_name=resolve_recording_name(name)
-    case=CASE_ROOT/local_name
-    client=read(case/'client-timing.json') if (case/'client-timing.json').exists() else {}
-    if not case.exists():
+    # Historical exhibition aliases stay read-only. New board results retain
+    # their original ID under rk_ when an alias would collide with a sample.
+    if local_name!=name:local_name='rk_'+name
+    case=CASE_ROOT/local_name;remote=RESULT_ROOT+'/'+name
+    signature=_remote_case_signature(remote)
+    reusable=_matches_remote(case,signature)
+    if reusable:
+        try:validate_case(case)
+        except (OSError,ValueError,KeyError):reusable=False
+    client=read(case/'client-timing.json') if reusable and (case/'client-timing.json').exists() else {}
+    if not reusable:
         retrieval_started=time.perf_counter()
-        remote=RESULT_ROOT+'/'+name
-        shell(['test','-f',remote+'/measurement-complete.json'],True)
         incoming=CASE_ROOT/'.incoming';incoming.mkdir(parents=True,exist_ok=True)
-        stage=incoming/(name+'-'+now());assert not stage.exists()
+        stage=incoming/(name+'-'+str(time.time_ns()))
         logged(ADB+['pull',remote,str(stage)],log_path('retrieve_'+name))
         validate_case(stage)
+        if not _matches_remote(stage,signature):raise ValueError('板端结果在取回期间发生变化，请重新取回')
+        root=CASE_ROOT.resolve();backup=None
+        assert stage.resolve().is_relative_to(root) and case.resolve().is_relative_to(root)
+        if case.exists():
+            backup=CASE_ROOT/'.history'/(case.name+'-'+str(time.time_ns()))
+            assert backup.resolve().is_relative_to(root)
+            backup.parent.mkdir(parents=True,exist_ok=True);case.rename(backup)
+        try:stage.rename(case)
+        except BaseException:
+            if backup and backup.exists() and not case.exists():backup.rename(case)
+            raise
+        client['retrieve_s']=time.perf_counter()-retrieval_started
         for suffix in ['-profile.json','-session.log']:
             remote_file=RESULT_ROOT+'/'+name+suffix
             exists=subprocess.run(ADB+['shell','test -f '+shlex.quote(remote_file)],capture_output=True)
             if exists.returncode==0:logged(ADB+['pull',remote_file,str(CASE_ROOT/(case.name+suffix))],log_path('sidecar_'+name))
-        assert stage.resolve().is_relative_to((CASE_ROOT).resolve()) and case.resolve().is_relative_to((CASE_ROOT).resolve())
-        stage.rename(case)
-        client['retrieve_s']=time.perf_counter()-retrieval_started
     validate_case(case)
     (case/'client-timing.json').write_text(json.dumps(client,indent=2),encoding='utf-8')
     from pull_recording import prepare_replay
@@ -57,6 +87,7 @@ def retrieve(name):
     if completion['fit_valid'] and not completion['measurement_estimated']:print('结果：有效离手/拟合；具体数值见回放。')
     else:print('结果：未确认有效拟合；回放中的估算已标记。')
     return page
+
 def validate_case(case):
     for name in ['measurement-complete.json','summary.json','input/manifest.json','version.json']:
         if not (case/name).is_file():raise ValueError('结果尚未保存完整：'+str(case/name))
@@ -74,7 +105,7 @@ def latest_path():
         candidate=Path(pointer.read_text('utf-8-sig').strip())
         if not candidate.is_absolute():candidate=root/candidate
         if candidate.is_file() and candidate.resolve().is_relative_to(root):return candidate.resolve()
-    candidates=[p for p in root.glob('*/replay/回放.html') if (p.parents[1]/'measurement-complete.json').exists()]
+    candidates=[p for pattern in ('*/replay/回放.html','*/replay/index.html') for p in root.glob(pattern) if (p.parents[1]/'measurement-complete.json').exists()]
     if not candidates:raise ValueError('暂无本版本回放，请先用选项8取回已完成结果。')
     page=max(candidates,key=lambda p:p.stat().st_mtime_ns).resolve()
     pointer.write_text(str(page),encoding='utf-8');return page

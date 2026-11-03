@@ -1,0 +1,27 @@
+{
+  "name": "FPGA competition 2026",
+  "software_version": "1.2.1",
+  "tag": "stereo-serve-v1.2.1-final-20261103",
+  "release_url": "https://github.com/dandelionfeng/pingpong-fpga/releases/tag/stereo-serve-v1.2.1-final-20261103",
+  "asset": {
+    "name": "源码包.rar",
+    "bytes": 195836989,
+    "sha256": "f918ff1d5f11fea70a886c2f2c20d694467ae3a461f4c054073b3bc873d5368c",
+    "limit_bytes": 200000000,
+    "publication": "exact user-specified archive; no recompression"
+  },
+  "entry": "发球测量系统.exe",
+  "exe_sha256": "255a0f5fbdaee755d0bcb7fd75fc4ef207ce2e6b0dd23096bfc167880bbc8f23",
+  "recordings": [
+    "serve_01",
+    "serve_02"
+  ],
+  "pairs": 642,
+  "input_jpegs_included": false,
+  "package_manifest": "manifests/package-sha256.json",
+  "package_manifest_scope": "original files inside the immutable RAR; additional repository documentation is outside this manifest",
+  "hardware_validation": "not run in this offline publication",
+  "board_baseline": "previously configured AFH03 Linux image with RKNN and native OpenCV runtimes",
+  "validation": "docs/发布与离线审核.md",
+  "frozen_configuration_sha256": "e4c292c565195471769c532f8e1e2af66744542c92f777e6d2cbbb7fd07a9ed2"
+}
